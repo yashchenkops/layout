@@ -37,62 +37,13 @@ $(function () {
   });
 
   // Открываем и закрываем левое сабменю
-  // $('.sub__dashboard').on('click', function(e){
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-1').slideToggle();
-  // });
-  // $('.sub__reports').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-2').slideToggle();
-  // });
-  // $('.sub__events').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-3').slideToggle();
-  // });
-  // $('.sub__devices').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-4').slideToggle();
-  // });
-  // $('.sub__location').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-5').slideToggle();
-  // });
-  // $('.sub__auto').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-6').slideToggle();
-  // });
-  // $('.sub__customization').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('left__sub-ico').addClass('left__sub-active');
-  //   $('.left__sub-8').slideToggle();
-  // });
-
-  // Оставляем открытым только одно подменю
   $('.menu > li > a').click(function(){
     if ($(this).attr('class') != 'active'){
       $('.left__sub-menu').slideUp();
       $(this).next().slideToggle();
     }
   });
-  // if ( $('.menu > li > a').css('display' == 'block') ){
-  //   $('.menu > li > a').removeClass('left__sub-active');
-  //   $('.menu > li > a').addClass('left__sub-ico');
-  // }
-  // $('.menu > li > a').click(function(){
-    
-  // }),
-  // $('.menu > li > a').click(function(){
-  //   $('.left__sub-menu').removeClass('left__sub-ico');
-  //   $(this).addClass('left__sub-active');
-  // });
   
-
   // Скрываем/показывает плашки(саб меню) на топ меню
   $('.tnav-on1').on('click', function(e){
     e.preventDefault();
