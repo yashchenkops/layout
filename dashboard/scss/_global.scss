@@ -1,0 +1,49 @@
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+p,
+span{
+  margin: 0;
+  padding: 0;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+ul,
+li,
+h1,
+h2,
+h3,
+h4{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+input, button, textarea{
+  border: none;
+  outline: none;
+}
+button{
+  cursor: pointer;
+}
+input{
+  padding: 0 10px;
+}
+body{
+  background-image: url(../images/background.jpg);
+  background-position-x: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.container{
+  max-width: 1570px;
+  margin: 0 auto;
+}

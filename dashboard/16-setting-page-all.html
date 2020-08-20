@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <form>
+        <input class="header__search" type="text" required>
+        <button class="header__search-button" type="submit">
+          <img src="images/ico/search.png" alt="">
+        </button>
+      </form>
+      <a href="#"><img src="images/ico/refresh.png" alt=""></a>
+      <a class="header__inner-warning" href="#"><span>!</span></a>
+      <a href="#"><img src="images/ico/profile.png" alt=""></a>
+    </div>
+  </header>
+  <section class="main">
+    <aside class="main__aside">
+      <div class="main__aside-inner">
+        <div class="menu__wrapper">
+          <ul class="menu">
+            <li>
+              <a class="sub-main sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+              <ul class="left__sub-menu left__sub-1">
+                <li><a href="index.html">Все локации</a></li>
+                <li><a href="2-dashboard-local.html">Локация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub-main sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+              <ul class="left__sub-menu left__sub-2">
+                <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                <li><a href="4-report-create-page.html">Создать отчет</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub-main sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+              <ul class="left__sub-menu left__sub-3">
+                <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub-main sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+              <ul class="left__sub-menu left__sub-4">
+                <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                <li><a href="#">Контроллер</a></li>
+                <li><a href="#">Слейв</a></li>
+                <li><a href="#">Релле</a></li>
+                <li><a href="#">Датчики</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub-main sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+              <ul class="left__sub-menu left__sub-6">
+                <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__alerts left__sub-ico7" href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+            </li>
+            <li>
+              <a class="sub-main sub__customization left__sub-active left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+              <ul class="left__sub-menu left__sub-8" style="display: block;">
+                <li><a class="here-ico" href="16-setting-page-all.html">Компания</a></li>
+                <li><a href="#">Локация</a></li>
+                <li><a href="#">Помещения</a></li>
+                <li><a href="#">Зоны</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Роли</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VoIP</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__close">
+            <span>«</span>
+          </div>
+        </div>
+        <div class="logo">
+          <a class="logo__inner" href="#">
+            <img class="img-logo" src="images/logo.png" alt="">
+            <p>sensor <span>soft</span></p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="main__info">
+      <div class="container">
+        <div class="main__info-header header-none">
+          <div class="main__info-nav-wrapper">
+            <ul class="main__info-nav">
+              <li><a class="rcorner tnav-on11 tnav tnav-off header-ico header-ico11" href="#">Название</a>
+                <div class="main__info-nav-sub1 sub11">
+                  <a href="#">Выбрать помещение</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form1">
+                      <label>
+                        <p>508</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>329</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>1009</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>2354</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form1">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on13 tnav tnav-off header-ico header-ico13" href="#">действия/сценарии</a>
+                <div class="main__info-nav-sub1 sub13">
+                  <a href="#">Выбрать датчик</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form2">
+                      <label>
+                        <p>Включить реле</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Выключить реле</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Сценарий 1</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Сценарий 2</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form2">Выбрать</button>
+                </div>
+              </li>
+            </ul>
+            <div class="main__info-buttons-mob">
+              <button class="main__info-btn-mob main__info-buttons-clear-mob" title="Очистить фильтр">Очистить</button>
+              <button class="main__info-btn-mob main__info-buttons-confirm-mob"
+                title="Применить фильтр">Применить</button>
+            </div>
+          </div>
+          <div class="main__info-burger">
+            <div id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Меню</span>
+          </div>
+          <div class="main__aside-mob">
+            <div class="main__aside-mob-inner">
+              <div class="menu__wrapper">
+                <ul class="menu">
+                  <li>
+                    <a class="border5px sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+                    <ul class="left__sub-menu left__sub-1">
+                      <li><a href="index.html">Все локации</a></li>
+                      <li><a href="2-dashboard-local.html">Локация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+                    <ul class="left__sub-menu left__sub-2">
+                      <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                      <li><a href="4-report-create-page.html">Создать отчет</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+                    <ul class="left__sub-menu left__sub-3">
+                      <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                      <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                      <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                      <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                      <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+                    <ul class="left__sub-menu left__sub-4">
+                      <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                      <li><a href="#">Контроллер</a></li>
+                      <li><a href="#">Слейв</a></li>
+                      <li><a href="#">Релле</a></li>
+                      <li><a href="#">Датчики</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+                    <ul class="left__sub-menu left__sub-6">
+                      <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                      <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                      <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                      <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+                  </li>
+                  <li>
+                    <a class="sub__customization left__sub-active left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+                    <ul class="left__sub-menu left__sub-8" style="display: block;">
+                      <li><a class="here-ico" href="16-setting-page-all.html">Компания</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Помещения</a></li>
+                      <li><a href="#">Зоны</a></li>
+                      <li><a href="#">Пользователи</a></li>
+                      <li><a href="#">Групповая политика</a></li>
+                      <li><a href="#">Роли</a></li>
+                      <li><a href="#">SMS</a></li>
+                      <li><a href="#">Telegram</a></li>
+                      <li><a href="#">VoIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="logo">
+                <a class="logo__inner" href="#">
+                  <img class="img-logo" src="images/logo.png" alt="">
+                  <p>sensor <span>soft</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="main__info-buttons">
+            <button class="main__info-btn main__info-buttons-confirm" title="Применить фильтр"><img
+                src="images/ico/confirm.svg" alt=""></button>
+            <button class="main__info-btn main__info-buttons-clear" title="Очистить фильтр"><img
+                src="images/ico/clear.svg" alt=""></button>
+            <div class="main__info-header-hide" title="Скрыть панель фильтров">
+              <img src="images/ico/hide-header.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="main__info-custom">
+          <div class="custom__main">
+            <div class="custom__main-head">
+              <h3>компания «sensor»</h3>
+              <a href="#">ред. имя</a>
+            </div>
+            <div class="custom__main-location">
+              <div class="custom__main-location-head">
+                <div class="custom__main-location-head-locadd">
+                  <h3 id="location">локации</h3>
+                  <a data-fancybox data-src="#modal9" data-touch="false" href="javascript:;">+</a>
+                </div>
+                <div class="custom__main-location-head-time">
+                  <h3>таймзона</h3>
+                </div>
+              </div>
+              <div class="custom__main-location-body">
+                <div class="custom__main-location-body-locadd">
+                  <ul>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 3</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 4</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal10" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>UTC +2</option>
+                          <option>UTC +1</option>
+                          <option>UTC -6</option>
+                          <option>UTC +7</option>
+                          <option>UTC -4</option>
+                          <option>UTC +2</option>
+                          <option>UTC -5</option>
+                          <option>UTC +3</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="custom-show-all" href="#">развернуть ↴</a>
+                </div>
+              </div>
+            </div>
+            <div class="custom__main-location">
+              <div class="custom__main-location-head">
+                <div class="custom__main-location-head-locadd">
+                  <h3>помещения</h3>
+                  <a data-fancybox data-src="#modal11" data-touch="false" href="javascript:;">+</a>
+                </div>
+              </div>
+              <div class="custom__main-location-body">
+                <div class="custom__main-location-body-locadd">
+                  <ul>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 3</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 4</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal12" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="custom-show-all" href="#">развернуть ↴</a>
+                </div>
+              </div>
+            </div>
+            <div class="custom__main-location">
+              <div class="custom__main-location-head">
+                <div class="custom__main-location-head-locadd">
+                  <h3>зоны</h3>
+                  <a data-fancybox data-src="#modal14" data-touch="false" href="javascript:;">+</a>
+                </div>
+                <div class="custom__main-location-head-time">
+                  <a class="conditions" data-fancybox data-src="#modal13" data-touch="false" href="javascript:;">доп. условия</a>
+                </div>
+              </div>
+              <div class="custom__main-location-body">
+                <div class="custom__main-location-body-locadd">
+                  <ul>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p> рабочий цех 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p> рабочий цех 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 3</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 4</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal15" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                      <div class="custom__main-location-body-locadd-right">
+                        <select class="custom-select">
+                          <option>температурная группа (для порогов на графиках)</option>
+                          <option>температурная группа (для порогов на графиках)</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="custom-show-all" href="#">развернуть ↴</a>
+                </div>
+              </div>
+            </div>
+            <div class="alerts__table">
+              <div class="table__wrapper">
+                <table id="alerts-table12" class="display" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>имя пользователя</th>
+                      <th>логин</th>
+                      <th>пароль</th>
+                      <th>e-mail</th>
+                      <th>мобильный</th>
+                      <th>telegram</th>
+                      <th>группа</th>
+                      <th><img src="images/ico/table-settings.svg" alt="settings"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>polzovatel 1</td>
+                      <td>pol_z_o_v_a_t_e_l__1</td>
+                      <td>gtweg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 1</td>
+                      <td>цех</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>polzovatel 2</td>
+                      <td>pol_z_o_v_a_t_e_l__2</td>
+                      <td>gtweg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 2</td>
+                      <td>склад</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>polzovatel 3</td>
+                      <td>pol_z_o_v_a_t_e_l__3</td>
+                      <td>gdsfdsg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 3</td>
+                      <td>холодильная зона</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>polzovatel 1</td>
+                      <td>pol_z_o_v_a_t_e_l__1</td>
+                      <td>gtweg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 1</td>
+                      <td>цех</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>polzovatel 1</td>
+                      <td>pol_z_o_v_a_t_e_l__1</td>
+                      <td>gtweg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 1</td>
+                      <td>цех</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>polzovatel 1</td>
+                      <td>pol_z_o_v_a_t_e_l__1</td>
+                      <td>gtweg124fes</td>
+                      <td>polzovatel@mail.com</td>
+                      <td>+380 000 000 00 00</td>
+                      <td>polzovatel 1</td>
+                      <td>цех</td>
+                      <td>
+                        <div class="ico-wrapper">
+                          <a data-fancybox data-src="#modal17" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                          <a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="custom-nav">
+                <a class="custom-nav-show-all" href="#">развернуть ↴</a>
+                <a class="custom-nav-btn" class="custom-nav-show-all" data-fancybox data-src="#modal16" data-touch="false" href="javascript:;">добавить</a>
+              </div>
+            </div>
+            <div class="custom__main-location">
+              <div class="custom__main-location-head">
+                <div class="custom__main-location-head-locadd">
+                  <h3>групповая политика</h3>
+                  <a data-fancybox data-src="#modal18" data-touch="false" href="javascript:;">+</a>
+                </div>
+              </div>
+              <div class="custom__main-location-body">
+                <div class="custom__main-location-body-locadd">
+                  <ul>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• холодильник 2</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• рабочий цех 1</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 3</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom__main-location-body-locadd-left">
+                        <p>• склад 4</p>
+                        <div class="locadd-ico">
+                          <a data-fancybox data-src="#modal19" data-touch="false" href="javascript:;"><img src="images/ico/table-pen.svg" alt="edit"></a>
+                          <a href="#"><img src="images/ico/table-delete.png" alt="edit"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="custom-show-all" href="#">развернуть ↴</a>
+                </div>
+              </div>
+            </div>
+            <div class="custom__main-location last-location">
+              <div class="custom__main-location-head custom__main-location-footer">
+                <div class="custom__main-location-head-locadd first-item">
+                  <p class="roles">роли:	<span>root</span>	| <span>admin</span>	|   <span>monitoring</span>	|	<span>monitoring admin</span></p>
+                  <a class="access" href="#">смотреть права доступа</a>
+                </div>
+              </div>
+              <div class="custom__main-location-head custom__main-location-footer">
+                <div class="custom__main-location-head-locadd">
+                  <p>sms</p>
+                  <a href="#">+</a>
+                  <a href="#"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                  <a href="#"><img src="images/ico/delete.svg" alt="delete"></a>
+                </div>
+              </div>
+              <div class="custom__main-location-head custom__main-location-footer">
+                <div class="custom__main-location-head-locadd">
+                  <p>telegram</p>
+                  <a href="#">+</a>
+                  <a href="#"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                  <a href="#"><img src="images/ico/delete.svg" alt="delete"></a>
+                </div>
+              </div>
+              <div class="custom__main-location-head custom__main-location-footer">
+                <div class="custom__main-location-head-locadd">
+                  <p>VoIP</p>
+                  <a href="#">+</a>
+                  <a href="#"><img src="images/ico/table-pen.svg" alt="pen"></a>
+                  <a href="#"><img src="images/ico/delete.svg" alt="delete"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="menu__open">
+      <span>»</span>
+    </div>
+    <div class="main__info-header-show" title="Показать панель фильтров">
+      <img src="images/ico/hide-header.png" alt="">
+    </div>
+  </section>
+
+  <!-- MODAL  -->
+  <div class="popup-create" id="modal9" style="display: none;">
+    <div class="popup-title">
+      новая локация
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal10" style="display: none;">
+    <div class="popup-title">
+      редактировать
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal11" style="display: none;">
+    <div class="popup-title">
+      новое помещение
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>выбрать локацию</option>
+        <option>Локация 1</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal12" style="display: none;">
+    <div class="popup-title">
+      редактировать
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>выбрать локацию</option>
+        <option>Локация 1</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal13" style="display: none;">
+    <div class="popup-title">
+      дополнительные условия
+    </div>
+    <form id="popup-form" action="#" method="POST">
+      <div class="popup-inputs">
+        <div class="popup-inputs-action">
+          <div class="popup-inputs-action-name">
+            <p>диапазон отклонений</p>
+            <div class="name-right">
+              <span>допустимое<br>отклонение</span>
+              <span>максимальное<br>отклонение</span>
+            </div>
+          </div>
+          <div class="popup-inputs-action-body">
+            <div class="popup-inputs-action-body-name">
+              <p>температура t°</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>загрязнение воздуха</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>влажность</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>давление</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>температура</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>влажность</p>
+              <div class="popup-inputs-action-body-name-inputs">
+                <div class="from">
+                  <p>от</p>
+                  <input type="text">
+                </div>
+                <div class="to">
+                  <p>до</p>
+                  <input type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-inputs-info">
+          <div class="popup-inputs-info-input">
+            <input type="text" placeholder="...ввести условие">
+            <button class="popup-inputs-info-input-button">+ условие</button>
+          </div>
+          <div class="popup-inputs-info-checkbox">
+            <label class="popup-inputs-info-checkbox-label">
+              <input type="checkbox">
+              <span class="fake"></span>
+              <p>инверсия графика</p>
+            </label>
+            <label class="popup-inputs-info-checkbox-label">
+              <input type="checkbox">
+              <span class="fake"></span>
+              <p>пороги и уровни</p>
+            </label>
+            <label class="popup-inputs-info-checkbox-label">
+              <input type="checkbox">
+              <span class="fake"></span>
+              <p>инверсия графика</p>
+            </label>
+            <label class="popup-inputs-info-checkbox-label">
+              <input type="checkbox">
+              <span class="fake"></span>
+              <p>пороги и уровни</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal14" style="display: none;">
+    <div class="popup-title">
+      новая зона
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>выбрать помещение</option>
+        <option>помещение 1</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal15" style="display: none;">
+    <div class="popup-title">
+      редактировать
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>рабочий цех 1</option>
+        <option>рабочий цех 2</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal16" style="display: none;">
+    <div class="popup-title">
+      новый пользователь
+    </div>
+    <form id="popup-form" action="#" method="POST">
+      <div class="popup-inputs">
+        <div class="popup-inputs-action">
+          <div class="popup-inputs-action-body">
+            <div class="popup-inputs-action-body-name">
+              <p>имя пользователя</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>логин</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>пароль</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>e-mail</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>мобильный номер</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>telegram</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>группа пользователя</p>
+              <select class="local-select">
+                <option>выбрать группу</option>
+                <option>группа 1</option>
+                <option>группа 2</option>
+                <option>группа 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal17" style="display: none;">
+    <div class="popup-title">
+      редактировать
+    </div>
+    <form id="popup-form" action="#" method="POST">
+      <div class="popup-inputs">
+        <div class="popup-inputs-action">
+          <div class="popup-inputs-action-body">
+            <div class="popup-inputs-action-body-name">
+              <p>имя пользователя</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>логин</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>пароль</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>e-mail</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>мобильный номер</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>telegram</p>
+              <input type="text" placeholder="ввести">
+            </div>
+            <div class="popup-inputs-action-body-name">
+              <p>группа пользователя</p>
+              <select class="local-select">
+                <option>выбрать группу</option>
+                <option>цех</option>
+                <option>холодильная зона</option>
+                <option>морозильная зона</option>
+                <option>цех 2</option>
+                <option>склад 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal18" style="display: none;">
+    <div class="popup-title">
+      новая группа
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>выбрать локацию</option>
+        <option>Локация 1</option>
+      </select>
+      <select class="modal-select">
+        <option>выбрать пользователей</option>
+        <option>пользователь 1</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="popup-create" id="modal19" style="display: none;">
+    <div class="popup-title">
+      редактировать
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <select class="modal-select">
+        <option>выбрать локацию</option>
+        <option>Локация 1</option>
+      </select>
+      <select class="modal-select">
+        <option>выбрать пользователей</option>
+        <option>пользователь 1</option>
+      </select>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- MODAL END -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

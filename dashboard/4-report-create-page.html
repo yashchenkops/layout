@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <form>
+        <input class="header__search" type="text" required>
+        <button class="header__search-button" type="submit">
+          <img src="images/ico/search.png" alt="">
+        </button>
+      </form>
+      <a href="#"><img src="images/ico/refresh.png" alt=""></a>
+      <a class="header__inner-warning" href="#"><span>!</span></a>
+      <a href="#"><img src="images/ico/profile.png" alt=""></a>
+    </div>
+  </header>
+  <section class="main">
+    <aside class="main__aside">
+      <div class="main__aside-inner">
+        <div class="menu__wrapper">
+          <ul class="menu">
+            <li>
+              <a class="sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+              <ul class="left__sub-menu left__sub-1">
+                <li><a href="index.html">Все локации</a></li>
+                <li><a href="2-dashboard-local.html">Локация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__reports left__sub-active left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+              <ul class="left__sub-menu left__sub-2" style="display: block;">
+                <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                <li><a class="here-ico" href="4-report-create-page.html">Создать отчет</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+              <ul class="left__sub-menu left__sub-3">
+                <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+              <ul class="left__sub-menu left__sub-4">
+                <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                <li><a href="#">Контроллер</a></li>
+                <li><a href="#">Слейв</a></li>
+                <li><a href="#">Релле</a></li>
+                <li><a href="#">Датчики</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+              <ul class="left__sub-menu left__sub-6">
+                <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__alerts left__sub-ico7" href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+            </li>
+            <li>
+              <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+              <ul class="left__sub-menu left__sub-8">
+                <li><a href="16-setting-page-all.html">Компания</a></li>
+                <li><a href="#">Локация</a></li>
+                <li><a href="#">Помещения</a></li>
+                <li><a href="#">Зоны</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Роли</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VoIP</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__close">
+            <span>«</span>
+          </div>
+        </div>
+        <div class="logo">
+          <a class="logo__inner" href="#">
+            <img class="img-logo" src="images/logo.png" alt="">
+            <p>sensor <span>soft</span></p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="main__info">
+      <div class="container">
+        <div class="main__info-header">
+          <div class="main__info-burger">
+            <div id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Меню</span>
+          </div>
+          <div class="main__aside-mob">
+            <div class="main__aside-mob-inner">
+              <div class="menu__wrapper">
+                <ul class="menu">
+                  <li>
+                    <a class="border5px sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+                    <ul class="left__sub-menu left__sub-1">
+                      <li><a href="index.html">Все локации</a></li>
+                      <li><a href="2-dashboard-local.html">Локация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__reports left__sub-active left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+                    <ul class="left__sub-menu left__sub-2" style="display: block;">
+                      <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                      <li><a class="here-ico" href="4-report-create-page.html">Создать отчет</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+                    <ul class="left__sub-menu left__sub-3">
+                      <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                      <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                      <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                      <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                      <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+                    <ul class="left__sub-menu left__sub-4">
+                      <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                      <li><a href="#">Контроллер</a></li>
+                      <li><a href="#">Слейв</a></li>
+                      <li><a href="#">Релле</a></li>
+                      <li><a href="#">Датчики</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+                    <ul class="left__sub-menu left__sub-6">
+                      <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                      <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                      <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                      <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+                  </li>
+                  <li>
+                    <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+                    <ul class="left__sub-menu left__sub-8">
+                      <li><a href="16-setting-page-all.html">Компания</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Помещения</a></li>
+                      <li><a href="#">Зоны</a></li>
+                      <li><a href="#">Пользователи</a></li>
+                      <li><a href="#">Групповая политика</a></li>
+                      <li><a href="#">Роли</a></li>
+                      <li><a href="#">SMS</a></li>
+                      <li><a href="#">Telegram</a></li>
+                      <li><a href="#">VoIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="logo">
+                <a class="logo__inner" href="#">
+                  <img class="img-logo" src="images/logo.png" alt="">
+                  <p>sensor <span>soft</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a class="alerts__back" href="#">
+            << <span>Вернуться обратно</span>
+          </a>
+        </div>
+        <div class="main__info-alerts">
+          <form class="main__info-alerts-form">
+            <div class="name filters__new">
+              <div class="left__items">
+                <input type="text" placeholder="Название нового отчета...">
+              </div>
+            </div>
+            <div class="filters">
+              <div class="filters__wrapper">
+                <div class="filter1 item">
+                  <h3 class="filters__title">Период</h3>
+                  <div class="calendar">
+                    <input type="text" id="datepicker" placeholder="Выберите дату на календаре" disabled>
+                    <div class="timeblock">
+                      <input type="text" id="time1" placeholder="00:00">
+                      <input type="text" id="time2" placeholder="00:00">
+                    </div>
+                  </div>
+                </div>
+                <div class="filter2 item">
+                  <h3 class="filters__title filter2__title">Выбрать зону</h3>
+                  <div class="filters__search">
+                    <div class="filters__search-input">
+                      <input type="text" placeholder="Введите запрос">
+                      <button class="search"><img src="images/ico/sub-arrow.svg" alt=""></button>
+                    </div>
+                    <p class="filters__search-p">• Clinical Trails</p>
+                  </div>
+                  <div class="filters__search">
+                    <p class="filters__title filter2__title">выбрать помещение</p>
+                    <div class="filters__search-input">
+                      <input type="text" placeholder="Введите запрос">
+                      <button class="search"><img src="images/ico/sub-arrow.svg" alt=""></button>
+                    </div>
+                    <p class="filters__search-p">• 508</p>
+                  </div>
+                  <div class="filters__search">
+                    <p class="filters__title filter2__title">выбрать зону</p>
+                    <div class="filters__search-input">
+                      <input type="text" placeholder="Введите запрос">
+                      <button class="search"><img src="images/ico/sub-arrow.svg" alt=""></button>
+                    </div>
+                    <p class="filters__search-p">• Холодильная камера</p>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__wrapper">
+                <div class="filter3 item">
+                  <h3 class="filters__title filter2__title">Добавить датчики</h3>
+                  <div class="filters__sensors">
+                    <a class="filters__sensors-add" href="#">
+                      <p>+</p>
+                    </a>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div><div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                    <div class="filters__sensors-item">
+                      <img src="images/decives-ico/thermometer-blue.png" alt="blue">
+                      <p>sensor_1243</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter4 item">
+                  <div class="filters__checkbox-item">
+                    <label>
+                      <p>детализированные данные <span>(все измерения)</span></p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>детализация</p>
+                      <select class="report-select">
+                        <option>5 мин</option>
+                        <option>10 мин</option>
+                        <option>15 мин</option>
+                        <option>20 мин</option>
+                      </select>
+                    </label>
+                    <label>
+                      <p>отображение графиков</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>усредненные данные</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>вывод информации о датчиках</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>общая статистика</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>включить пороговые линии на графике</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filters__formation">
+                  <h3 class="filters__title">Формирование отчета</h3>
+                  <div class="filters__checkbox filters__info">
+                    <div class="period">
+                      <p>Период: </p><span> Период: 14.01.2020, 17:15:03 - 14.0.2020, 19:15:00</span>
+                    </div>
+                    <div class="location">
+                      <p>Локация: </p><span> Clinical Trials</span>
+                    </div>
+                    <div class="zone">
+                      <p>Зона: </p><span> Холодильная камера</span>
+                    </div>
+                    <div class="sensor">
+                      <p>Датчик(и): </p><span> sensor_1975, sensor_9875, sensor_5698, sensor_9875, sensor_5698</span>
+                    </div>
+                    <div class="data">
+                      <p>Детализированные данные: </p><span> Да</span>
+                    </div>
+                    <div class="detalization">
+                      <p>Детализация: </p><span> 30 мин</span>
+                    </div>
+                    <div class="graphics">
+                      <p>Отображение графиков: </p><span> Нет</span>
+                    </div>
+                    <div class="middle-data">
+                      <p>Усредненные данные: </p><span> Нет</span>
+                    </div>
+                  </div>
+                </div>
+            <button class="btn-submit" type="submit">Создать</button>
+          </form>
+          <div class="main__info-latest">
+            <h3>Последние сохранения</h3>
+            <div class="main__info-latest-btn">
+              <a class="all-btn" href="#">Все отчеты</a>
+              <a class="refresh-btn" href="#"><img src="images/ico/refresh.svg" alt="refresh"></a>
+            </div>
+          </div>
+          <div class="alerts__table">
+            <div class="table__wrapper">
+              <table id="alerts-table3" class="display" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>контроллер</th>
+                    <th>слейв</th>
+                    <th>помещение</th>
+                    <th>зона</th>
+                    <th>датчик</th>
+                    <th>данные</th>
+                    <th>шкала</th>
+                    <th>создан</th>
+                    <th><img src="images/ico/table-settings.svg" alt="settings"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Wireless-1</td>
+                    <td>Wireless_sensor_esp-1</td>
+                    <td>508-1</td>
+                    <td>Wireless_esp_sensor_zone-1</td>
+                    <td>wireless_esp_03.03_18:45-1</td>
+                    <td>1004.5-1</td>
+                    <td>Давление, мм рт ст-1</td>
+                    <td>9 мар. 2020 г., 10:17:58-1</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-watch.svg" alt="watch" title="Смотреть всю активность/оповещения"></a><a href="#"><img src="images/ico/table-report.svg" alt="report"></a><a href="#"><img src="images/ico/table-add.svg" alt="add"></a><a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Wireless-2</td>
+                    <td>Wireless_sensor_esp-2</td>
+                    <td>508-2</td>
+                    <td>Wireless_esp_sensor_zone-2</td>
+                    <td>wireless_esp_03.03_18:45-2</td>
+                    <td>1004.5-2</td>
+                    <td>Давление, мм рт ст-2</td>
+                    <td>9 мар. 2020 г., 10:17:58-2</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-watch.svg" alt="watch" title="Смотреть всю активность/оповещения"></a><a href="#"><img src="images/ico/table-report.svg" alt="report"></a><a href="#"><img src="images/ico/table-add.svg" alt="add"></a><a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Wireless-3</td>
+                    <td>Wireless_sensor_esp-3</td>
+                    <td>508-3</td>
+                    <td>Wireless_esp_sensor_zone-3</td>
+                    <td>wireless_esp_03.03_18:45-3</td>
+                    <td>1004.5-3</td>
+                    <td>Давление, мм рт ст-3</td>
+                    <td>9 мар. 2020 г., 10:17:58-3</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-watch.svg" alt="watch" title="Смотреть всю активность/оповещения"></a><a href="#"><img src="images/ico/table-report.svg" alt="report"></a><a href="#"><img src="images/ico/table-add.svg" alt="add"></a><a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Wireless-4</td>
+                    <td>Wireless_sensor_esp-4</td>
+                    <td>508-4</td>
+                    <td>Wireless_esp_sensor_zone-4</td>
+                    <td>wireless_esp_03.03_18:45-4</td>
+                    <td>1004.5-4</td>
+                    <td>Давление, мм рт ст-4</td>
+                    <td>9 мар. 2020 г., 10:17:58-4</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-watch.svg" alt="watch" title="Смотреть всю активность/оповещения"></a><a href="#"><img src="images/ico/table-report.svg" alt="report"></a><a href="#"><img src="images/ico/table-add.svg" alt="add"></a><a href="#"><img src="images/ico/table-delete-archive.png" alt="delete archive"></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu__open">
+      <span>»</span>
+    </div>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

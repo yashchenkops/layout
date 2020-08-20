@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <form>
+        <input class="header__search" type="text" required>
+        <button class="header__search-button" type="submit">
+          <img src="images/ico/search.png" alt="">
+        </button>
+      </form>
+      <a href="#"><img src="images/ico/refresh.png" alt=""></a>
+      <a class="header__inner-warning" href="#"><span>!</span></a>
+      <a href="#"><img src="images/ico/profile.png" alt=""></a>
+    </div>
+  </header>
+  <section class="main">
+    <aside class="main__aside">
+      <div class="main__aside-inner">
+        <div class="menu__wrapper">
+          <ul class="menu">
+            <li>
+              <a class="sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+              <ul class="left__sub-menu left__sub-1">
+                <li><a href="#">Все локации</a></li>
+                <li><a href="#">Локация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+              <ul class="left__sub-menu left__sub-2">
+                <li><a href="#">Все отчеты</a></li>
+                <li><a href="#">Создать отчет</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+              <ul class="left__sub-menu left__sub-3">
+                <li><a href="#">Устройства</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Отчеты</a></li>
+                <li><a href="#">Оповещения</a></li>
+                <li><a href="#">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+              <ul class="left__sub-menu left__sub-4">
+                <li><a href="#">Все устройства</a></li>
+                <li><a href="#">Контроллер</a></li>
+                <li><a href="#">Слейв</a></li>
+                <li><a href="#">Релле</a></li>
+                <li><a href="#">Датчики</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+              <ul class="left__sub-menu left__sub-6">
+                <li><a href="#">Сценарии</a></li>
+                <li><a href="#">Действия</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Группы пользователей</a></li>
+                <li><a href="#">Запросы</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__alerts left__sub-ico7" href="#"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+            </li>
+            <li>
+              <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+              <ul class="left__sub-menu left__sub-8">
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Локация</a></li>
+                <li><a href="#">Помещения</a></li>
+                <li><a href="#">Зоны</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Роли</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VoIP</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__close">
+            <span>«</span>
+          </div>
+        </div>
+        <div class="logo">
+          <a class="logo__inner" href="#">
+            <img class="img-logo" src="images/logo.png" alt="">
+            <p>sensor <span>soft</span></p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="main__info">
+        <div class="container">
+          <div class="main__info-header header-none">
+            <div class="main__info-burger">
+              <div id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span>Меню</span>
+            </div>
+            <div class="main__aside-mob">
+              <div class="main__aside-mob-inner">
+                <div class="menu__wrapper">
+                  <ul class="menu">
+                    <li>
+                      <a class="border5px sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+                      <ul class="left__sub-menu left__sub-1">
+                        <li><a href="#">Все локации</a></li>
+                        <li><a href="#">Локация</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+                      <ul class="left__sub-menu left__sub-2">
+                        <li><a href="#">Все отчеты</a></li>
+                        <li><a href="#">Создать отчет</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+                      <ul class="left__sub-menu left__sub-3">
+                        <li><a href="#">Устройства</a></li>
+                        <li><a href="#">Пользователи</a></li>
+                        <li><a href="#">Отчеты</a></li>
+                        <li><a href="#">Оповещения</a></li>
+                        <li><a href="#">Автоматизация</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+                      <ul class="left__sub-menu left__sub-4">
+                        <li><a href="#">Все устройства</a></li>
+                        <li><a href="#">Контроллер</a></li>
+                        <li><a href="#">Слейв</a></li>
+                        <li><a href="#">Релле</a></li>
+                        <li><a href="#">Датчики</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+                      <ul class="left__sub-menu left__sub-6">
+                        <li><a href="#">Сценарии</a></li>
+                        <li><a href="#">Действия</a></li>
+                        <li><a href="#">Групповая политика</a></li>
+                        <li><a href="#">Группы пользователей</a></li>
+                        <li><a href="#">Запросы</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+                    </li>
+                    <li>
+                      <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+                      <ul class="left__sub-menu left__sub-8">
+                        <li><a href="#">Компания</a></li>
+                        <li><a href="#">Локация</a></li>
+                        <li><a href="#">Помещения</a></li>
+                        <li><a href="#">Зоны</a></li>
+                        <li><a href="#">Пользователи</a></li>
+                        <li><a href="#">Групповая политика</a></li>
+                        <li><a href="#">Роли</a></li>
+                        <li><a href="#">SMS</a></li>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">VoIP</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="logo">
+                  <a class="logo__inner" href="#">
+                    <img class="img-logo" src="images/logo.png" alt="">
+                    <p>sensor <span>soft</span></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="main__info-alerts main__info-alerts-margin">
+          <form class="main__info-alerts-form">
+            <div class="name">
+              <div class="left__items">
+                <input type="text" placeholder="Название нового оповещения...">
+              </div>
+              <div class="right__items">
+                <div class="activity">
+                  <span class="right__items-legend">Активность</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="condition">
+                  <span class="right__items-legend">Режим выполнения условий</span>
+                  <input type="text" placeholder="(И) Все условия должны быть">
+                  <button><img src="images/ico/pen.svg" alt=""></button>
+                </div>
+              </div>
+            </div>
+            <div class="if">
+              <div class="left__items">
+                <p>Текст уведомления когда <span>условие выполнено</span></p>
+                <textarea class="if__textarea" placeholder="Если пусто, будет использоваться стандартное уведомление"></textarea>
+              </div>
+              <div class="right__items">
+                <p>Текст уведомления когда <span>условие перестало выполняться</span></p>
+                <textarea class="if__textarea" placeholder="Если пусто, будет использоваться стандартное уведомление"></textarea>
+              </div>
+            </div>
+            <div class="filters">
+              <div class="filters__wrapper">
+                <div class="filter1 item">
+                  <h3 class="filters__title">Выбрать зону</h3>
+                  <div class="filters__search-field">
+                    <input type="text" placeholder="Введите запрос">
+                    <button class="search"><img src="images/ico/sub-search.svg" alt=""></button>
+                  </div>
+                  <div class="filters__checkbox">
+                      <label>
+                        <p>Холодильная камера 1</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 2</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 3</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 4</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 5</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                  </div>
+                  <div class="filters__buttons">
+                    <button class="btn a-z">A-Z</button>
+                    <button class="btn select">Выбрать</button>
+                  </div>
+                </div>
+                <div class="filter2 item">
+                  <h3 class="filters__title">Выбрать датчик</h3>
+                  <div class="filters__search-field">
+                    <input type="text" placeholder="Введите запрос">
+                    <button class="search"><img src="images/ico/sub-search.svg" alt=""></button>
+                  </div>
+                  <div class="filters__checkbox">
+                    <label>
+                      <p>sensor_5069</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_5529</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_284</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_5682</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_6956</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_5069</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_5529</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>sensor_284</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                  </div>
+                  <div class="filters__buttons">
+                    <button class="btn a-z">A-Z</button>
+                    <button class="btn select">Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__wrapper">
+                <div class="filter3 item">
+                  <h3 class="filters__title">Выбрать условие и значение</h3>
+                  <div class="filters__search-field">
+                    <input type="text" placeholder="Введите запрос">
+                    <button class="search"><img src="images/ico/sub-search.svg" alt=""></button>
+                  </div>
+                  <div class="filters__checkbox">
+                    <div class="hints">
+                      <p>Условие</p>
+                      <p>Значение</p>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Температура меньше С</p>
+                      </label>
+                      <span>10</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Диапазон температур С</p>
+                      </label>
+                      <span>20-90</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Влажность больше %</p>
+                      </label>
+                      <span>10</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Влажность меньше %</p>
+                      </label>
+                      <span>50</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Давление больше рт.мм.ст.</p>
+                      </label>
+                      <span>10</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Давление больше рт.мм.ст.</p>
+                      </label>
+                      <span>130</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Датчик он-лайн</p>
+                      </label>
+                      <span>10</span>
+                    </div>
+                    <div class="values">
+                      <label>
+                        <input type="checkbox">
+                        <span class="fake fake__left"></span>
+                        <p>Датчик оф-лайн</p>
+                      </label>
+                      <span>10</span>
+                    </div>
+                  </div>
+                  <div class="filters__buttons">
+                    <button class="btn a-z">A-Z</button>
+                    <button class="btn select">Выбрать</button>
+                  </div>
+                </div>
+                <div class="filter4 item">
+                  <h3 class="filters__title">Выбрать действие</h3>
+                  <div class="filters__search-field">
+                    <input type="text" placeholder="Введите запрос">
+                    <button class="search"><img src="images/ico/sub-search.svg" alt=""></button>
+                  </div>
+                  <div class="filters__checkbox">
+                    <label>
+                      <p>Уведомление на Email</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>Уведомление в телеграм</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>WEB уведомление</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                    <label>
+                      <p>Вкл\откл реле</p>
+                      <input type="checkbox">
+                      <span class="fake"></span>
+                    </label>
+                  </div>
+                  <div class="filters__buttons">
+                    <button class="btn a-z">A-Z</button>
+                    <button class="btn select">Выбрать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="conditions">
+              <div class="conditions__header">
+                <h3>условия оповещения</h3>
+                <h3>действия</h3>
+              </div>
+              <div class="conditions__main">
+                <div class="conditions__main-left">
+                  <p>Если sensor_1923 (Температура, С) < 10</p>
+                  <p>Если wireless_esp_03.03_18:45 () офлайн</p>
+                  <p>Если wireless_esp_03.03_18:45 (Давление, мм рт ст) < 10</p>
+                  <p>Если sensor_1167 (Температура, С) > 20</p>
+                  <p>Если sensor_3727 (Температура, с) > 30</p>
+                </div>
+                <div class="conditions__main-right">
+                  <p>Уведомление в телеграм</p>
+                  <p>Web уведомление</p>
+                </div>
+              </div>
+            </div>
+            <button class="btn-submit" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="menu__open">
+      <span>»</span>
+    </div>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
