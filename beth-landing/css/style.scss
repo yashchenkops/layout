@@ -484,13 +484,13 @@ button, a{
         background-repeat: no-repeat;
         background-position: center;
         width: 150%;
-        height: 742px;
+        height: 75%;
         z-index: 2;
       }
       &_shape{
         position: absolute;
-        bottom: 70px;
-        left: 28.5%;
+        bottom: 93px;
+        right: 60%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='394px' height='65px'%3E%3Cpath fill-rule='evenodd' fill='rgb(237, 27, 91)' d='M30.907,0.160 L393.418,0.160 L362.516,64.816 L0.005,64.816 L30.907,0.160 Z'/%3E%3C/svg%3E");
         width: 393px;
         height: 64px;
@@ -522,6 +522,7 @@ button, a{
         &_right{
           max-width: 687px;
           width: 100%;
+          align-self: flex-end;
           h2{
             font-family: 'DejaVuSansCondensed-BoldOblique', sans-serif;
             font-size: 36px;
@@ -750,7 +751,7 @@ button, a{
           }
         }
         &_shape{
-          top: 63%;
+          top: 70%;
           left: -3%;
           bottom: auto;
         }
@@ -857,11 +858,6 @@ button, a{
             }
           }
         }
-        &_shape{
-          top: 62%;
-          left: -3%;
-          bottom: auto;
-        }
       }
     }
   }
@@ -939,7 +935,7 @@ button, a{
     .capabilities{
       &__main{
         &_shape{
-          top: 60%;
+          top: 740px;
         }
       }
     }
@@ -965,12 +961,6 @@ button, a{
         padding-top: 30px;
         &_btn{
           display: none;
-          // .btn-blue{
-          //   background-color: transparent;
-          //   padding: 10px;
-          //   border: none;
-          //   font-size: 18px;
-          // }
         }
       }
       &__main{
@@ -1012,6 +1002,16 @@ button, a{
               }
             }
           }
+          &_drawing{
+            &-left{
+              top: 230px;
+              left: 20px;
+            }
+            &-right{
+              top: 200px;
+              right: -120px;
+            }
+          }
         }
       }
     }
@@ -1030,7 +1030,7 @@ button, a{
     .capabilities{
       &__main{
         &_shape{
-          top: 50%;
+          top: 540px;
           left: -7%;
         }
         &_info{
@@ -1092,11 +1092,11 @@ button, a{
         &_inner{
           &_drawing{
             &-left{
-              top: 240px;
+              top: 210px;
               left: -10px;
             }
             &-right{
-              top: 170px;
+              top: 150px;
               right: -160px;
             }
           }
