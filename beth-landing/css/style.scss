@@ -953,7 +953,7 @@ button, a{
     }
   }
 }
-@media (max-width:503px){
+@media (max-width:600px){
   .content{
     .offer{
       &__header{
@@ -963,6 +963,12 @@ button, a{
           display: none;
         }
       }
+    }
+  }
+}
+@media (max-width:503px){
+  .content{
+    .offer{
       &__main{
         &_inner{
           &_top{
