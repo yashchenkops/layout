@@ -1,0 +1,34 @@
+@import 'vars';
+
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+a{
+  display: inline-block;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+p{
+  margin: 0;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: $text;
+}
+
+.button{
+  &__start{
+    @include startButton;
+  }
+  &__reset{
+    @include resetButton;
+  }
+}
