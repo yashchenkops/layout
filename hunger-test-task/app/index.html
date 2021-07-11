@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hunger test</title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <section class="offer">
+    <header class="header">
+      <nav class="header__menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__logo">
+        <img src="img/ico/logo.svg" alt="logo">
+      </a>
+      <nav class="header__menu">
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#">Galerie</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="header__mobile">
+        <button class="menu__burger" type="button">
+          <svg class="burger-btn" width="70" height="50" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+            <rect class="burger-btn--1" width="20" height="3" rx="1" ry="3" />
+            <rect class="burger-btn--2" width="20" height="3" y="6" rx="1" ry="3" />
+            <rect class="burger-btn--3" width="20" height="3" y="12" rx="1" ry="3" />
+          </svg>
+        </button>
+        <ul class="menu__mobile">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#">Galerie</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      </nav>
+    </header>
+    <div class="offer__main">
+      <address class="offer__address">
+        Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
+      </address>
+      <div class="offer__name">
+        <div class="offer__name-title">
+          <p>Restaurant</p>
+          <h1>hungry people</h1>
+        </div>
+        <div class="offer__name-buttons">
+          <a href="#booking" class="offer__name-button button--yellow">Book table</a>
+          <a href="#specialties" class="offer__name-button button--transparent">Explore</a>
+        </div>
+      </div>
+      <div class="offer__social">
+        <a href="#">
+          <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.6315 10.7763L10.1411 7.42742H6.90146V5.24338C6.90146 4.29697 7.33827 3.42335 8.79429 3.42335H10.2867V0.547704C10.2867 0.547704 8.93989 0.2929 7.66587 0.2929C5.00863 0.2929 3.2614 1.93093 3.2614 4.84298V7.42742H0.276547V10.7763H3.2614V18.93H6.90146V10.7763H9.6315Z"
+              fill="white" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.6892 4.37425C18.4172 3.82824 19.0724 3.17303 19.582 2.40862C18.9268 2.69983 18.1624 2.91823 17.398 2.99103C18.1988 2.51782 18.7812 1.78981 19.0724 0.879796C18.3444 1.3166 17.5072 1.64421 16.6699 1.82621C15.9419 1.0618 14.9591 0.624991 13.8671 0.624991C11.7559 0.624991 10.045 2.33582 10.045 4.44706C10.045 4.73826 10.0814 5.02947 10.1542 5.32067C6.98738 5.13867 4.14813 3.60984 2.2553 1.3166C1.92769 1.86261 1.74569 2.51782 1.74569 3.24584C1.74569 4.55626 2.4009 5.72108 3.45652 6.41269C2.83771 6.37629 2.2189 6.23069 1.70929 5.93948V5.97588C1.70929 7.83231 3.01971 9.36114 4.76694 9.72514C4.47573 9.79794 4.11173 9.87075 3.78412 9.87075C3.52932 9.87075 3.31091 9.83435 3.05611 9.79794C3.52932 11.3268 4.94894 12.4188 6.62337 12.4552C5.31295 13.4744 3.67492 14.0932 1.89129 14.0932C1.56369 14.0932 1.27248 14.0568 0.981276 14.0204C2.6557 15.1124 4.65774 15.7312 6.84177 15.7312C13.8671 15.7312 17.6892 9.94355 17.6892 4.88386C17.6892 4.70186 17.6892 4.55626 17.6892 4.37425Z"
+              fill="white" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.29983 4.52228C5.97019 4.52228 4.11376 6.41511 4.11376 8.70835C4.11376 11.038 5.97019 12.8944 8.29983 12.8944C10.5931 12.8944 12.4859 11.038 12.4859 8.70835C12.4859 6.41511 10.5931 4.52228 8.29983 4.52228ZM8.29983 11.4384C6.80741 11.4384 5.56979 10.2372 5.56979 8.70835C5.56979 7.21592 6.77101 6.0147 8.29983 6.0147C9.79226 6.0147 10.9935 7.21592 10.9935 8.70835C10.9935 10.2372 9.79226 11.4384 8.29983 11.4384ZM13.6143 4.37668C13.6143 3.83067 13.1775 3.39386 12.6315 3.39386C12.0855 3.39386 11.6487 3.83067 11.6487 4.37668C11.6487 4.92269 12.0855 5.35949 12.6315 5.35949C13.1775 5.35949 13.6143 4.92269 13.6143 4.37668ZM16.3808 5.35949C16.308 4.04907 16.0168 2.88425 15.0703 1.93784C14.1239 0.99142 12.9591 0.700215 11.6487 0.627414C10.3019 0.554612 6.2614 0.554612 4.91458 0.627414C3.60415 0.700215 2.47573 0.99142 1.49292 1.93784C0.546502 2.88425 0.255297 4.04907 0.182496 5.35949C0.109695 6.70632 0.109695 10.7468 0.182496 12.0936C0.255297 13.404 0.546502 14.5324 1.49292 15.5153C2.47573 16.4617 3.60415 16.7529 4.91458 16.8257C6.2614 16.8985 10.3019 16.8985 11.6487 16.8257C12.9591 16.7529 14.1239 16.4617 15.0703 15.5153C16.0168 14.5324 16.308 13.404 16.3808 12.0936C16.4536 10.7468 16.4536 6.70632 16.3808 5.35949ZM14.6335 13.5132C14.3787 14.2412 13.7963 14.7873 13.1047 15.0785C12.0127 15.5153 9.46465 15.4061 8.29983 15.4061C7.09861 15.4061 4.55057 15.5153 3.49495 15.0785C2.76694 14.7873 2.22093 14.2412 1.92973 13.5132C1.49292 12.4576 1.60212 9.90957 1.60212 8.70835C1.60212 7.54353 1.49292 4.99549 1.92973 3.90347C2.22093 3.21186 2.76694 2.66585 3.49495 2.37464C4.55057 1.93784 7.09861 2.04704 8.29983 2.04704C9.46465 2.04704 12.0127 1.93784 13.1047 2.37464C13.7963 2.62945 14.3423 3.21186 14.6335 3.90347C15.0703 4.99549 14.9611 7.54353 14.9611 8.70835C14.9611 9.90957 15.0703 12.4576 14.6335 13.5132Z"
+              fill="white" />
+          </svg>
+        </a>
+      </div>
+      <div class="offer__timer">
+        <p>Left: <span id="timer">13:59</span></p>
+      </div>
+    </div>
+    <div class="offer__arrow">
+      <a href="#booking">
+        <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.31725 8.08961C5.64486 8.41722 6.19087 8.41722 6.51847 8.08961L11.469 3.13913C11.833 2.77512 11.833 2.22911 11.469 1.90151L10.6681 1.06429C10.3041 0.736688 9.75813 0.736688 9.43052 1.06429L5.89966 4.59515L2.4052 1.06429C2.0776 0.736688 1.53159 0.736688 1.16758 1.06429L0.366768 1.90151C0.0027624 2.22911 0.0027624 2.77512 0.366768 3.13913L5.31725 8.08961Z"
+            fill="#333333">
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section id="booking" class="booking">
+    <div class="booking__wrapper">
+      <div class="booking__form">
+        <h2 class="booking__title">book a table</h2>
+        <form class="form">
+          <div class="form__item">
+            <input class="form__input" type="text" name="name" placeholder="Name">
+          </div>
+          <div class="form__item">
+            <input class="form__input" type="email" name="email" placeholder="Email">
+          </div>
+          <div class="form__item">
+            <input class="form__input" type="phone" name="phone" placeholder="Phone">
+          </div>
+          <div class="form__item">
+            <select class="form__select select--name" name="People">
+              <option value="1">Lorem, ipsum.</option>
+              <option value="2">Lorem ipsum dolor sit.</option>
+              <option value="3">Lorem ipsum dolor sit amet consectetur.</option>
+              <option value="4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <input class="form__input" type="text" name="date" placeholder="Date (mm/dd)">
+          </div>
+          <div class="form__item">
+            <select class="form__select select--time" name="Time">
+              <option value="1">10:00</option>
+              <option value="2">12:30</option>
+              <option value="3">14:00</option>
+              <option value="4">16:00</option>
+              <option value="5">18:20</option>
+            </select>
+          </div>
+          <div class="form__button">
+            <button class="button--yellow" type="submit">Book now</button>
+          </div>
+        </form>
+      </div>
+      <div class="booking__img image--right">
+        <img src="img/booking/booking-img.jpg" alt="Booking">
+      </div>
+    </div>
+    <p class="booking__info">
+      Mon - Fri: <span>8PM - 10PM</span>, Sat - Sun: <span>8PM - 3AM</span>, Phone: <a href="tel:+40729131637">+40 729
+        131 637</a>/<a href="tel:+40726458782">+40 726 458 782</a>
+    </p>
+  </section>
+  <section id="specialties" class="specialties">
+    <p class="specialties__name">
+      specialties
+    </p>
+    <div class="lines">
+      <div class="line"></div>
+    </div>
+    <div class="specialties__wrapper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="specialties__item">
+              <div class="specialties__img image--left">
+                <img src="img/specialty/specialty-img.jpg" alt="Specialty">
+              </div>
+              <div class="specialties__info">
+                <h2 class="specialties__info-title">chocolate pancakes</h2>
+                <p class="specialties__info-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit
+                  maximus, molestie est a, tempor magna.</p>
+                <p class="specialties__info-info">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi
+                  non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem
+                  quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="specialties__item">
+              <div class="specialties__img image--left">
+                <img src="img/specialty/specialty-img.jpg" alt="Specialty">
+              </div>
+              <div class="specialties__info">
+                <h2 class="specialties__info-title">chocolate pancakes</h2>
+                <p class="specialties__info-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit
+                  maximus, molestie est a, tempor magna.</p>
+                <p class="specialties__info-info">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi
+                  non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem
+                  quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="specialties__item">
+              <div class="specialties__img image--left">
+                <img src="img/specialty/specialty-img.jpg" alt="Specialty">
+              </div>
+              <div class="specialties__info">
+                <h2 class="specialties__info-title">chocolate pancakes</h2>
+                <p class="specialties__info-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit
+                  maximus, molestie est a, tempor magna.</p>
+                <p class="specialties__info-info">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi
+                  non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem
+                  quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+  <section id="menu" class="menu">
+    <div class="menu__title">
+      <h2>Delicious menu</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+    </div>
+    <div class="tabs-wrapper">
+      <div class="tabs">
+        <p class="tab">Soupe</p>
+        <p class="tab">Pizza</p>
+        <p class="tab">Pasta</p>
+        <p class="tab">Desert</p>
+        <p class="tab">Wine</p>
+        <p class="tab">Beer</p>
+        <p class="tab">Drinks</p>
+      </div>
+      <div class="tabs-content">
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+          <div class="tab-item__wrapper">
+            <div class="tabs-item__title">
+              <h4>Pizza quatro stagioni lorem, ipsum dolor.</h4>
+              <h4>55,68 USD</h4>
+            </div>
+            <p class="tabs-item__text">
+              Integer ullamcorper neque ue purus euismod
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="events" class="events">
+    <p class="events__name">
+      Private events
+    </p>
+    <div class="lines">
+      <div class="line"></div>
+    </div>
+    <div class="events__wrapper">
+      <div class="events__img image--left">
+        <img src="img/events/events-1.jpg" alt="Events">
+        <div class="events__img-text">
+          <h3>weddings</h3>
+        </div>
+      </div>
+      <div class="events__img image--right">
+        <img src="img/events/events-2.jpg" alt="Events">
+        <div class="events__img-text">
+          <h3>corporate parties</h3>
+        </div>
+      </div>
+    </div>
+    <p class="events__contact">
+      For private events please call: <a href="tel:+40729131637">+40 729 131 637</a>/<a href="tel:+40726458782">+40 726 458 782</a> or use the contact form.
+    </p>
+  </section>
+
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+@media(max-width:1325px) {
+  .offer{
+    &__timer{
+      left: 0;
+    }
+  }
+}
+@media(max-width:1028px) {
+  .booking{
+    &__wrapper{
+      display: block;
+    }
+    &__form{
+      margin-right: 0;
+      .form{
+        max-width: 100%;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        &__item{
+          flex-basis: 49%;
+          max-width: 100%;
+        }
+      }
+    }
+    &__img{
+      max-width: 443px;
+      margin: 0 auto;
+    }
+  }
+  .specialties{
+    &__item{
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    &__img{
+      max-width: 443px;
+      margin: 0 auto 50px;
+    }
+    &__info{
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+@media(max-width:893px) {
+  .header{
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    &__menu{
+      display: none;
+    }
+    &__logo{
+      margin: 0 auto;
+    }
+    &__mobile{
+      display: block;
+    }
+  }
+  .offer{
+    &__timer{
+      top: 15px;
+    }
+    &__name{
+      &::before,
+      &::after{
+        top: -127%;
+        height: 995px;
+      }
+    }
+    &__arrow{
+      &::before{
+        height: 543px;
+      }
+    }
+  }
+}
+@media(max-width:856px) {
+  .menu{
+    .tabs-wrapper{
+      .tabs{
+        flex-wrap: wrap;
+        .tab{
+          flex: 1 0 auto;
+        }
+      }
+      .tabs-content{
+        .tab-item{
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+  .events{
+    &__wrapper{
+      display: block;
+      text-align: center;
+    }
+    &__img{
+      display: inline-block;
+      &:first-child{
+        margin-right: 75px;
+        margin-bottom: 50px;
+      }
+      &:last-child{
+        margin-left: 75px;
+      }
+    }
+  }
+}
+@media(max-width:578px) {
+  .offer{
+    &__name{
+      &-title{
+        h1{
+          font-size: 50px;
+        }
+      }
+      &-button{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        &:first-child{
+          margin: 0 auto 15px;
+        }
+      }
+    }
+  }
+  .menu{
+    .tabs-wrapper{
+      .tabs-content{
+        .tab-item{
+          grid-template-columns: repeat(1, 1fr);
+          .tabs-item{
+            &__title{
+              h4{
+                &:first-child{
+                  width: 300px;
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+          &__wrapper{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width:478px) {
+  .booking{
+    &__form{
+      .form{
+        &__item{
+          flex-basis: 100%;
+          &:nth-child(odd){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
