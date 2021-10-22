@@ -23,7 +23,7 @@
 (function weather() {
   let apiKey = "de2fa1c788f906f2443534e4664b5c6d";
   let city = "Kyiv";
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&units=metric&appid=${apiKey}`;
 
   axios.get(url).then(res => {
     console.log(res.data);
