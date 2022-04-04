@@ -1,0 +1,29 @@
+.circles
+  width 100%
+  height 500px
+  position absolute
+  overflow-x hidden
+
+.circle
+  position absolute
+  width 70rem
+  height 70rem
+  background radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 169, 156, 0) 100%)
+  z-index 1
+
+  &--green
+    background radial-gradient(50% 50% at 50% 50%, rgba(0, 169, 156, 0.2) 0%, rgba(0, 169, 156, 0) 100%)
+
+  &--orange
+    background radial-gradient(50% 50% at 50% 50%, rgba(231, 155, 55, 0.2) 0%, rgba(231, 155, 55, 0) 100%)
+
+  &--blue
+    background radial-gradient(50% 50% at 50% 50%, rgba(119, 102, 246, 0.2) 0%, rgba(119, 102, 246, 0) 100%)
+  
+  &--one
+    top -200px
+    left -200px
+
+  &--two
+    top -320px
+    right -210px
