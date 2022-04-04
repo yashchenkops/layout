@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap')
 
-$font: 'Roboto', sans-serif
+$font = 'Roboto', sans-serif
 
 html
   box-sizing border-box
@@ -22,8 +22,8 @@ html
 body
   font-family $font
   font-weight 400
-  background-color $blue
-  color $black
+  background-color $bg
+  color $white
 
 a
   display inline-block
@@ -57,7 +57,7 @@ h4
   font-weight 500
   margin 0
   padding 0
-  color $black
+  color $white
 
 h1
   font-size 6.4rem
@@ -76,7 +76,7 @@ button
   outline none
   cursor pointer
   background-color transparent
-  color $black
+  color $white
 
   &:focus-visible
     box-shadow 0px 0px 6px 2px rgba(0, 0, 0, 0.3)
@@ -94,4 +94,4 @@ button
     background-color $orangeHover
 
   &:disabled
-    background-color $placeholder
+    // background-color $placeholder
