@@ -1,12 +1,15 @@
-doctype html
-html(lang="en")
+extends includes/page
 
-  include includes/head.pug
+block head 
+  - title = "Flows"
 
-  body
-    header.header 
-      .header__inner
-        
-    
+block styles
+  link(rel="stylesheet", href="css/libs.min.css")
+  link(rel="stylesheet", href="css/style.min.css")
 
-  include includes/scripts.pug
+block scripts 
+  script(src="js/libs.min.js")
+  script(src="js/main.js")
+
+block main
+  
