@@ -1,7 +1,8 @@
 extends includes/page
 
 include includes/modules/circles/index
-include includes/modules/green-button/index
+include includes/modules/button/index
+include includes/modules/picture/index
 
 block head 
   - title = "Flows"
@@ -59,3 +60,46 @@ block main
             | Invest
             svg(width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg')
               path(d='M13.3516 7.25H7.79688L11.5 10.9766C11.6406 11.1172 11.875 11.1172 12.0156 10.9766C12.9297 10.1328 13.5625 8.98438 13.7266 7.67188C13.7734 7.46094 13.5859 7.25 13.3516 7.25ZM12.9766 5.75C12.7891 2.9375 10.5625 0.710938 7.75 0.523438C7.53906 0.5 7.375 0.6875 7.375 0.898438V6.125H12.6016C12.8125 6.125 13 5.96094 12.9766 5.75ZM6.25 7.25V1.69531C6.25 1.48438 6.03906 1.29688 5.82812 1.32031C3.01562 1.71875 0.882812 4.15625 1 7.08594C1.09375 10.0859 3.67188 12.5469 6.69531 12.5C7.86719 12.5 8.96875 12.125 9.85938 11.4688C10.0469 11.3516 10.0469 11.0703 9.88281 10.9062L6.25 7.25Z' fill='#E79B37')
+
+  section.pictures
+    .pictures__row
+      .pictures__img.phone-row.parallax.wow.fadeInUp(data-rellax-speed="5" data-wow-duration="3s" data-wow-offset="50")
+        +picture({
+          lazy: false,
+          path: images + "phones/phones1.png",
+          attr: { "alt": "phones" }
+        })
+        +picture({
+          lazy: false,
+          path: images + "phones/phones2.png",
+          attr: { "alt": "phones" }
+        })
+        +picture({
+          lazy: false,
+          path: images + "phones/phones3.png",
+          attr: { "alt": "phones" },
+          mainAttr: { "class": "pictures__img-row" }
+        })
+      .pictures__img.phone.phone-left.parallax.wow.fadeInLeft(data-rellax-speed="5" data-wow-duration="2s" data-wow-offset="20")
+        +picture({
+          lazy: false,
+          path: images + "phones/left-phone.svg",
+          attr: { "alt": "phones" }
+        })
+      .pictures__img.phone.phone-right.parallax.wow.fadeInRight(data-rellax-speed="5" data-wow-duration="2s" data-wow-offset="10")
+        +picture({
+          lazy: false,
+          path: images + "phones/right-phone.png",
+          attr: { "alt": "phones" }
+        })
+      .pictures__img.lines.parallax.wow.fadeIn(data-rellax-speed="5" data-wow-duration="4s")
+        +picture({
+          lazy: false,
+          path: images + "phones/lines.svg",
+          attr: { "alt": "lines" }
+        })
+
+  +circle({
+    color: "green",
+    number: "three"
+  })

@@ -9,19 +9,8 @@ let gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin');
 
-gulp.task('sass', function(){
-  return gulp.src('app/scss/**/*.scss')
-          .pipe(sass({outputStyle: 'compressed'}))
-          .pipe(rename({suffix: '.min'}))
-          .pipe(autoprefixer({
-            overrideBrowserslist: ['last 8 versions']
-          }))
-          .pipe(gulp.dest('app/css'))
-          .pipe(browserSync.reload({stream: true}))
-});
-
 gulp.task('stylus', function () {
-  return gulp.src('app/stylus/**/*.styl')
+  return gulp.src('app/stylus/style.styl')
     .pipe(stylus({compress: true}))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer({
@@ -34,6 +23,8 @@ gulp.task('stylus', function () {
 gulp.task('style', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
+    'node_modules/rellax/css/main.css',
+    'node_modules/wowjs/css/libs/animate.css'
   ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
@@ -42,7 +33,9 @@ gulp.task('style', function(){
 
 gulp.task('script', function(){
   return gulp.src([
-    'node_modules/jquery/dist/jquery.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/rellax/rellax.js',
+    'node_modules/wowjs/dist/wow.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())
@@ -58,7 +51,7 @@ gulp.task('pug', function(){
   return gulp.src('app/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('app'))
-    
+    .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('js', function(){
@@ -75,11 +68,10 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('app/**/*.scss', gulp.parallel('sass'))
   gulp.watch('app/stylus/**/*.styl', gulp.parallel('stylus'))
-  gulp.watch('app/**/*.js', gulp.parallel('js'))
   gulp.watch('app/**/*.html', gulp.parallel('html'))
   gulp.watch('app/**/*.pug', gulp.parallel('pug'))
+  gulp.watch('app/**/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('sass', 'stylus', 'style', 'js', 'html', 'pug', 'script', 'watch', 'browser-sync'))
+gulp.task('default', gulp.parallel('stylus', 'style', 'script', 'html', 'pug', 'js', 'watch', 'browser-sync'))
