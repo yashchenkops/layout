@@ -1,13 +1,17 @@
 @import '_vars'
 @import '_global'
 @import '../includes/modules/circles/index'
-@import '../includes/modules/green-button/index'
+@import '../includes/modules/button/index'
+@import '../includes/modules/picture/index'
 
 .intro
+  position relative
   background-color rgba(23, 25, 27, 0.6)
   box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
-  backdrop-filter blur(16px)
+  backdrop-filter blur(7px)
   border-radius 0% 0% 60% 60%/0% 0% 20% 20%
+  z-index 2
+  margin-bottom 5rem
 
   &__inner
     padding 9rem 0 7rem
@@ -69,5 +73,50 @@
 
     &::placeholder
       color $text
+
+.pictures
+  &__row
+    position relative
+    max-width 757px
+    margin 0 auto
+    padding 0 10px
+
+  &__img
+    img
+      max-width 100%
+    
+    &-row
+      margin-top 5.3rem
+
+      img
+        max-width 650px
+
+  .phone-row
+    img
+      width 100%
+      margin-bottom -3rem
+
+  .phone
+    position absolute
+    top -210px
+    z-index 3
+
+    &-left
+      left -171px
+
+    &-right
+      right -171px
+
+      img
+        max-width 210px
+
+  .lines
+    position absolute
+    top -72px
+    left -109px
+    z-index 3
+
+    img
+      max-width 97%
 
 @import '_media'
