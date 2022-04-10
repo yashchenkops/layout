@@ -28,10 +28,42 @@ block main
       number: "two"
     })
 
+  header.header
+    .container 
+      .header__inner
+        .header__logo
+          a(href="#")
+            img(src="img/logo.svg", alt="Logo")
+
+        nav.header__menu
+          ul
+            li
+              a(href="#").header__menu--white Flows
+            li
+              a(href="#").header__menu--white Components
+            li
+              a(href="#").header__menu--white Testing
+            li
+              a(href="#").header__menu--white Import/Export
+            li
+              a(href="#") Emulate
+            li
+              a(href="#") Collaborate
+            li
+              a(href="#") Plugins
+            li
+              a(href="#") Easy Start
+
+        .header__button.intro__invest
+          +button(class="invest-button" href="#")
+            | Invest
+            svg(width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M13.3516 7.25H7.79688L11.5 10.9766C11.6406 11.1172 11.875 11.1172 12.0156 10.9766C12.9297 10.1328 13.5625 8.98438 13.7266 7.67188C13.7734 7.46094 13.5859 7.25 13.3516 7.25ZM12.9766 5.75C12.7891 2.9375 10.5625 0.710938 7.75 0.523438C7.53906 0.5 7.375 0.6875 7.375 0.898438V6.125H12.6016C12.8125 6.125 13 5.96094 12.9766 5.75ZM6.25 7.25V1.69531C6.25 1.48438 6.03906 1.29688 5.82812 1.32031C3.01562 1.71875 0.882812 4.15625 1 7.08594C1.09375 10.0859 3.67188 12.5469 6.69531 12.5C7.86719 12.5 8.96875 12.125 9.85938 11.4688C10.0469 11.3516 10.0469 11.0703 9.88281 10.9062L6.25 7.25Z' fill='#E79B37')
+
   section.intro 
     .container
       .intro__inner
-        h1.intro__title Make 
+        h1.intro__title.wow.fadeInDown Make 
           span
             svg(width='175' height='48' viewBox='0 0 175 48' fill='none' xmlns='http://www.w3.org/2000/svg')
               path(d='M28.6458 16.5558C28.6458 14.8965 29.3049 13.3051 30.4783 12.1318C31.6516 10.9584 33.243 10.2992 34.9023 10.2992H38.0306C40.5197 10.2992 42.9067 9.31044 44.6668 7.55047C46.4267 5.79046 47.4155 3.40339 47.4155 0.914368H33.1644C29.477 0.914368 25.9406 2.3792 23.3331 4.9866C20.7258 7.59402 19.2609 11.1304 19.2609 14.8179V19.6841H14.5685C10.8349 19.6841 7.25436 21.1673 4.61435 23.8072C1.97435 26.4472 0.491211 30.0278 0.491211 33.7614C0.491211 37.4949 1.97435 41.0755 4.61435 43.7155C7.25436 46.3555 10.8349 47.8386 14.5685 47.8386C18.3021 47.8386 21.8827 46.3555 24.5226 43.7155C27.1626 41.0755 28.6458 37.4949 28.6458 33.7614V29.0689H38.0306C40.5197 29.0689 42.9067 28.0802 44.6668 26.3202C46.4267 24.5602 47.4155 22.1731 47.4155 19.6841H28.6458V16.5558ZM19.2609 33.7614C19.2609 34.6894 18.9857 35.5967 18.4701 36.3683C17.9545 37.14 17.2216 37.7414 16.3642 38.0966C15.5068 38.4517 14.5633 38.5447 13.653 38.3636C12.7428 38.1826 11.9067 37.7356 11.2504 37.0794C10.5942 36.4231 10.1473 35.5871 9.96625 34.6768C9.78515 33.7666 9.87812 32.8231 10.2333 31.9656C10.5884 31.1082 11.1899 30.3753 11.9616 29.8598C12.7332 29.3442 13.6404 29.0689 14.5685 29.0689H19.2609V33.7614Z' fill='white')
@@ -42,7 +74,7 @@ block main
           |, not 
           span Artboards
 
-        p.intro__message
+        p.intro__message.wow.fadeInDown(data-wow-delay=".2s")
           | A new comprehensive 
           span app
           | roach to 
@@ -50,12 +82,12 @@ block main
           | design on 
           span tablets
 
-        form.intro__form(action="#")
+        form.intro__form(action="#").wow.fadeInDown(data-wow-delay=".4s")
           input.intro__input(type="text" placeholder="Enter your email to become the first tester")
           +button(type="submit")
             | Get App
 
-        .intro__invest
+        .intro__invest.wow.fadeInDown(data-wow-delay=".6s")
           +button(class="invest-button" href="#")
             | Invest
             svg(width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -116,31 +148,31 @@ block main
   })
 
   section.features
-    +circle({
-      color: "green",
-      number: "four"
-    })
-    +circle({
-      color: "orange",
-      number: "five"
-    })
-    +circle({
-      color: "blue",
-      number: "six"
-    })
     .container
       .features__inner
+        +circle({
+          color: "green",
+          number: "four"
+        })
+        +circle({
+          color: "orange",
+          number: "five"
+        })
+        +circle({
+          color: "blue",
+          number: "six"
+        })
         h2.features__title Application  
           span Features
 
         .features__block
-          .features__block-img
+          .features__block-img.wow.fadeInLeft
             +picture({
               lazy: false,
               path: images + "features/features-img1.png",
               attr: { "alt": "phones" }
             })
-          .features__block-info.right
+          .features__block-info.right.wow.fadeInRight
             h3.features__block-title Create 
               span step-by-step 
               | flows
@@ -239,7 +271,7 @@ block main
                 | for Android
 
         .features__block
-          .features__block-info.left
+          .features__block-info.left.wow.fadeInLeft
             h3.features__block-title Make 
               span components 
               | better
@@ -336,7 +368,7 @@ block main
                       stop(offset='0.8009' stop-color='#44ED98')
                       stop(offset='1' stop-color='#40F498')
                 | for Android
-          .features__block-img
+          .features__block-img.wow.fadeInRight
             +picture({
               lazy: false,
               path: images + "features/features-img2.png",
@@ -344,13 +376,13 @@ block main
             })
 
         .features__block 
-          .features__block-img
+          .features__block-img.wow.fadeInLeft
             +picture({
               lazy: false,
               path: images + "features/features-img3.png",
               attr: { "alt": "phones" }
             })
-          .features__block-info.right
+          .features__block-info.right.wow.fadeInRight
             h3.features__block-title Create 
               span Variants 
               | for steps/components/colors/texts
@@ -449,7 +481,7 @@ block main
                 | for Android
 
         .features__block
-          .features__block-info.left
+          .features__block-info.left.wow.fadeInLeft
             h3.features__block-title Create campaigns for  
               span Test 
               | prototypes
@@ -546,7 +578,7 @@ block main
                       stop(offset='0.8009' stop-color='#44ED98')
                       stop(offset='1' stop-color='#40F498')
                 | for Android
-          .features__block-img
+          .features__block-img.wow.fadeInRight
             +picture({
               lazy: false,
               path: images + "features/features-img4.png",
@@ -554,13 +586,13 @@ block main
             })
 
         .features__block 
-          .features__block-img
+          .features__block-img.wow.fadeInLeft
             +picture({
               lazy: false,
               path: images + "features/features-img5.png",
               attr: { "alt": "phones" }
             })
-          .features__block-info.right
+          .features__block-info.right.wow.fadeInRight
             h3.features__block-title 
               span Import
               | /Export Sketch/ 
@@ -661,7 +693,7 @@ block main
                 | for Android
 
         .features__block
-          .features__block-info.left
+          .features__block-info.left.wow.fadeInLeft
             h3.features__block-title Create campaigns for  
               span Test 
               | prototypes
@@ -758,7 +790,7 @@ block main
                       stop(offset='0.8009' stop-color='#44ED98')
                       stop(offset='1' stop-color='#40F498')
                 | for Android
-          .features__block-img
+          .features__block-img.wow.fadeInRight
             +picture({
               lazy: false,
               path: images + "features/features-img6.png",
