@@ -75,48 +75,114 @@
       color $text
 
 .pictures
-  &__row
-    position relative
-    max-width 757px
-    margin 0 auto
-    padding 0 10px
+  position relative
+  max-width 757px
+  margin 0 auto
+  padding 0 10px
 
   &__img
+    .picture
+      display block
+      margin-bottom -2.3rem
+
     img
       max-width 100%
     
     &-row
-      margin-top 5.3rem
+      margin-top 6.9rem
 
       img
-        max-width 650px
+        max-width 598px
 
-  .phone-row
-    img
-      width 100%
-      margin-bottom -3rem
-
-  .phone
+  &__absolute
     position absolute
-    top -210px
-    z-index 3
+    max-width 757px
+    margin 0 auto
+    padding 0 10px
+    width 100%
+    height 300px
+    top 0
 
-    &-left
-      left -171px
+    .phone
+      position absolute
+      top -166px
+      z-index 3
 
-    &-right
-      right -171px
+      &-left
+        left -159px
+        width 761px
 
+      &-right
+        right -139px
+        max-width 187px
+
+.features
+  position relative
+  margin-top -100px
+
+  &__title
+    font-weight 100
+    font-size 5.2rem
+    line-height 1.5
+    text-align center
+    color $text
+    margin-bottom 10rem
+
+    span
+      color $white
+
+  &__block
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 10rem
+
+    &-img
       img
-        max-width 210px
+        max-width 454px
+        width 100%
 
-  .lines
-    position absolute
-    top -72px
-    left -109px
-    z-index 3
+    &-info
+      max-width 375px
+      
+      &.left
+        text-align left
+        margin-right 100px
 
-    img
-      max-width 97%
+        .features__block-buttons
+          justify-content flex-start
+        
+      &.right
+        text-align right
+        margin-left 100px
+
+        .features__block-buttons
+          justify-content flex-end
+
+    &-title
+      font-weight 100
+      font-size 3.2rem
+      line-height 1.5
+      color $text
+      word-break break-word
+      margin-bottom 4rem
+
+      span
+        color $white
+
+    &-message
+      font-weight 100
+      font-size 1.8rem
+      line-height 1.5
+      margin-bottom 4.7rem
+      color $text
+
+    &-buttons
+      display flex
+      align-items center
+
+      .green-button
+        &:last-child
+          margin-left 2.4rem
 
 @import '_media'
