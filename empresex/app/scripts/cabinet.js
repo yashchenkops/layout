@@ -227,6 +227,7 @@ const headerButtonsAction = () => {
   fixedHeader();
   desktopMenu();
   mobileMenu();
+  sectionAnimations();
   cabinetTabs();
   showPassword();
   darkMode();
