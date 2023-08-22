@@ -1,0 +1,66 @@
+extends ../../includes/page-cabinet
+
+block head
+  - var title = "Withdrawal | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/withdrawal.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .withdrawal
+    .cabinet__buy-withdrawal.cabinet__block
+      h3.cabinet__buy-withdrawal-title.inner-title
+        | Withdrawal
+
+      +form-cabinet()
+        .cabinet-item-available
+          p.cabinet-item-available-title Available: 
+            span 101245
+              span  USD
+
+          .form-cabinet-item-row
+            +input-cabinet-text("", "1000", "value")
+            +input-select("Choose currency")
+              +input-select-option(1, "USD")
+              +input-select-option(2, "BTC")
+              +input-select-option(3, "EUR")
+              +input-select-option(4, "GBP")
+              +input-select-option(5, "BTG")
+              +input-select-option(6, "BCH")
+              +input-select-option(7, "ETH")
+
+          .cabinet-item-available-items
+            button(type="button").cabinet-item-available-item 25%
+            button(type="button").cabinet-item-available-item 50%
+            button(type="button").cabinet-item-available-item 75%
+            button(type="button").cabinet-item-available-item 100%
+
+          .cabinet-item-available-button
+            +button(href="#")
+              | Withdrawal
+
+      .cabinet-item-crypto
+        .cabinet-item-crypto-table
+          .cabinet-item-crypto-table-item
+            .cabinet-item-crypto-table-item-title Payment system
+            .cabinet-item-crypto-table-item-value Bitcoin (BTC)
+          .cabinet-item-crypto-table-item
+            .cabinet-item-crypto-table-item-title Fee %
+            .cabinet-item-crypto-table-item-value 1.5% (not less 0.0007 BTC )
+          .cabinet-item-crypto-table-item
+            .cabinet-item-crypto-table-item-title Min Amount
+            .cabinet-item-crypto-table-item-value 0.01 BTC
+          .cabinet-item-crypto-table-item
+            .cabinet-item-crypto-table-item-title Max Amount
+            .cabinet-item-crypto-table-item-value 10 BTC
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

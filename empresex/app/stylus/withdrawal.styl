@@ -1,0 +1,70 @@
+@import "base/_global"
+@import "../includes/modules/form-cabinet/index.styl"
+
+.withdrawal
+  container-cabinet()
+  display flex
+  align-items flex-start
+  justify-content center
+  gap 40px
+
+.cabinet__buy-withdrawal
+  min-height 600px
+  max-width 440px
+
+  .form-cabinet-item-row
+    .form-cabinet-item
+      &:first-child
+        width 70%
+
+      &:last-child
+        width 30%
+
+.cabinet__buy-withdrawal-title
+  margin-bottom 14px
+
+.cabinet-item-available-title
+  font-size 14px
+  font-weight 400
+  line-height normal
+  margin-bottom 5px
+
+  span
+    font-weight 600
+
+.cabinet-item-available-items
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 20px
+
+.cabinet-item-available-item
+  font-size 14px
+  font-weight 600
+  line-height normal
+
+.cabinet-item-available-button
+  text-align right
+
+.cabinet-item-crypto-table
+  display flex
+  align-items flex-start
+  justify-content space-between
+  gap 10px
+  flex-wrap wrap
+
+.cabinet-item-crypto-table-item
+  width 48%
+
+.cabinet-item-crypto-table-item-title
+  font-size 12px
+  font-weight 400
+  line-height normal
+  margin-bottom 6px
+
+.cabinet-item-crypto-table-item-value
+  font-size 14px
+  font-weight 600
+  line-height normal
+
+@import "media/_media-withdrawal.styl"

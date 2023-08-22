@@ -1,0 +1,176 @@
+extends ../../includes/page-cabinet
+
+block head
+  - var title = "Transaction history | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/transaction-history.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .transaction
+    .cabinet__transaction-payment.cabinet__block
+      h3.cabinet__transaction-title.inner-title
+        | Search for transactions
+
+      .cabinet__transaction
+        +form-cabinet()
+          .form-cabinet-wrapper
+            .form-cabinet-left
+              .form-cabinet-between
+                .form-cabinet-item
+                  p.form-cabinet-item-title Date
+                  input.form-cabinet-input.start-date(type='text' placeholder='Start date' aria-label='Start date')
+                span To
+                .form-cabinet-item
+                  input.form-cabinet-input.end-date(type='text' placeholder='End date' aria-label='End date')
+
+              .form-cabinet-between
+                +input-cabinet-text("Amount", "From", "from")
+                span To
+                +input-cabinet-text("", "To", "to")
+                .form-cabinet-left-amount
+                  svg(width='9' height='13' viewBox='0 0 9 13' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M3.85052 13V0H5.39691V13H3.85052ZM4.40722 11.5064C3.54124 11.5064 2.71134 11.405 1.91753 11.2021C1.12371 10.9901 0.484536 10.7181 0 10.3862L0.850515 8.69894C1.31443 8.99397 1.86082 9.2383 2.48969 9.43192C3.12887 9.61631 3.7732 9.70851 4.42268 9.70851C4.91753 9.70851 5.31443 9.66702 5.6134 9.58404C5.92268 9.49184 6.14949 9.36738 6.29382 9.21064C6.43814 9.0539 6.51031 8.87411 6.51031 8.67128C6.51031 8.41312 6.39691 8.21028 6.1701 8.06277C5.9433 7.90603 5.64433 7.78156 5.2732 7.68936C4.90206 7.58794 4.48969 7.49575 4.03608 7.41277C3.59278 7.32057 3.14433 7.20993 2.69072 7.08085C2.24742 6.95177 1.84021 6.78582 1.46907 6.58298C1.09794 6.38014 0.793815 6.11277 0.556701 5.78085C0.329897 5.44894 0.216495 5.02482 0.216495 4.50851C0.216495 3.95532 0.381443 3.45284 0.71134 3.00106C1.05155 2.54007 1.5567 2.17589 2.2268 1.90851C2.90722 1.63192 3.75773 1.49362 4.77835 1.49362C5.45876 1.49362 6.12887 1.56738 6.78866 1.71489C7.44845 1.85319 8.03093 2.06525 8.53608 2.35106L7.76289 4.05213C7.25773 3.79397 6.75258 3.60497 6.24742 3.48511C5.74227 3.35603 5.24742 3.29149 4.76289 3.29149C4.27835 3.29149 3.88144 3.3422 3.57216 3.44362C3.26289 3.54504 3.04124 3.67872 2.90722 3.84468C2.7732 4.00142 2.70619 4.18582 2.70619 4.39787C2.70619 4.64681 2.81959 4.84965 3.04639 5.00638C3.2732 5.1539 3.57217 5.27376 3.9433 5.36596C4.31443 5.45816 4.72165 5.55035 5.16495 5.64255C5.61856 5.73475 6.06701 5.84078 6.51031 5.96064C6.96392 6.0805 7.37629 6.24184 7.74742 6.44468C8.11856 6.64752 8.41753 6.91489 8.64433 7.24681C8.88144 7.57872 9 7.99823 9 8.50532C9 9.04929 8.8299 9.54716 8.48969 9.99894C8.14948 10.4507 7.63918 10.8149 6.95876 11.0915C6.28866 11.3681 5.43814 11.5064 4.40722 11.5064Z' fill='#272727' fill-opacity='0.5')
+
+            .form-cabinet-right
+              +input-select("Choose", "Show types")
+                +input-select-option(1, "All")
+                +input-select-option(2, "Refill")
+                +input-select-option(3, "Withdrawal")
+                +input-select-option(4, "Transer")
+                +input-select-option(5, "Buycrypto")
+
+              +input-select("Choose", "Status")
+                +input-select-option(1, "All")
+                +input-select-option(2, "Waiting")
+                +input-select-option(3, "Sucess")
+                +input-select-option(4, "Pending")
+                +input-select-option(5, "Error")
+                +input-select-option(6, "Declined")
+                +input-select-option(7, "Return")
+                +input-select-option(8, "Fraud")
+                +input-select-option(9, "Chargeback")
+                +input-select-option(10, "Initiated")
+
+              +input-select("Choose", "Show currencies")
+                +input-select-option(1, "All")
+                +input-select-option(2, "BCH")
+                +input-select-option(3, "BEP20 BNB")
+                +input-select-option(4, "BTC")
+                +input-select-option(5, "BTG")
+                +input-select-option(6, "CAD")
+                +input-select-option(7, "ETH")
+                +input-select-option(8, "EUR")
+                +input-select-option(9, "GBP")
+                +input-select-option(10, "LTC")
+
+          .form-cabinet-buttons
+            +button(type="reset")
+              | Reset
+            +button(type="submit")
+              | Search
+
+    .cabinet__transaction-history.cabinet__block
+      h3.cabinet__transaction-history-title.inner-title
+        | Transaction history
+
+      table.cabinet__transaction-history-table
+        thead
+          tr
+            th(scope='col') Date
+            th(scope='col') A type
+            th(scope='col') Pay type
+            th(scope='col') Status
+            th(scope='col') Amount
+            th(scope='col') Fee
+            th(scope='col') Hash
+            th(scope='col') Action
+        tbody
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action')
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+          tr
+            td(data-label='Date') 23.03.2023
+            td(data-label='A type') BTC
+            td(data-label='Pay type') BTC
+            td(data-label='Status') Active
+            td(data-label='Amount') 5.99
+            td(data-label='Fee') 1%
+            td(data-label='Hash') 
+            td(data-label='Action') 
+
+      section.pagination
+        ul.pagination-inner
+          li.prev.hidden-xs.disabled
+            svg(width='10' height='15' viewBox='0 0 10 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M8.36698 -7.13815e-08L-3.27839e-07 7.50008L8.36698 15L10 13.5422L3.23186 7.49992L10 1.45784L8.36698 -7.13815e-08Z' fill='#272727')
+          li.active
+            span(data-page='0') 1
+          li
+            a(href='/blogs/2' data-page='1') 2
+          li.next.hidden-xs
+            a(href='/blogs/2' data-page='1')
+              svg(width='10' height='15' viewBox='0 0 10 15' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M1.63302 15L10 7.49992L1.63302 -1.02506e-06L-5.91947e-07 1.45784L6.76814 7.50008L-6.37241e-08 13.5422L1.63302 15Z' fill='#272727')
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

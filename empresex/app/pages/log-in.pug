@@ -1,0 +1,23 @@
+extends ../includes/empty
+
+block head
+  - var title = "Log In | Empresex"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+
+block main
+  .action
+    .action__title.inner-title Welcome!
+
+    +form-cabinet()
+      +input-cabinet-text("", "Email", "email")
+      +input-cabinet-password("", "Password")
+      .action__button
+        +button(type="submit")
+          | Log In

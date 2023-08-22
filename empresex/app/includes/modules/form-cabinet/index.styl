@@ -1,0 +1,264 @@
+.cabinet-form
+  margin-bottom 20px
+
+.form-cabinet-input
+  display block
+  border-radius 8px
+  background-color $grey
+  font-weight 500
+  font-size 12px
+  line-height 15px
+  color $text
+  padding 5px 10px
+  margin-bottom 10px
+  border none
+  width 100%
+
+  &::placeholder
+    color #A9A9A9
+
+  &--textarea
+    resize none
+    min-height 150px
+    scrollbar()
+
+.selectric
+  border-radius 8px
+  background-color $grey
+  border none
+  height 25px
+
+  .label
+    font-weight 500
+    font-size 12px
+    line-height 2.2
+    color $labelColor
+    height 100%
+    margin-left 10px
+
+  .button
+    background-color transparent
+    height 30px
+
+    &::after
+      border none
+      top 0
+      right 8px
+      background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNSAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMS42MzMwMkw3LjUwMDA4IDEwTDE1IDEuNjMzMDJMMTMuNTQyMiAwTDcuNDk5OTIgNi43NjgxNEwxLjQ1Nzg0IDBMMCAxLjYzMzAyWiIgZmlsbD0iIzI3MjcyNyIgZmlsbC1vcGFjaXR5PSIwLjUiLz4KPC9zdmc+Cg==") no-repeat
+      width 15px
+      height 10px
+
+.selectric-wrapper
+  margin-bottom 8px
+
+  &.selectric-selected
+    .selectric
+      .label
+        color $text
+
+.selectric-scroll
+  background-color $grey
+  border-radius 8px
+  scrollbar()
+
+.selectric-items
+  border-radius 10px
+  border none
+  box-shadow none
+
+.selectric-items li
+  font-weight 400
+  font-size 12px
+  line-height 15px
+  color $text
+
+  &:hover
+    background-color #adadad
+
+input[type="file"]
+  display none
+
+.form-cabinet-upload
+  position relative
+  cursor pointer
+  textOverflow()
+  color $labelColor
+  padding 5px 38px 5px 10px
+
+  &::after
+    position absolute
+    content ""
+    top 50%
+    right 15px
+    transform translateY(-50%)
+    background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjIzMDM3IDIuMDgyMDRWMEg5LjI3NTMyTDkuODAzNjkgMS42NDQxMUgxNlY5LjkxNzk2SDEzLjc2OTZWMTJIMFYyLjA4MjA0SDIuMjMwMzdaTTguNzIyMTcgMC42OTQwMTRMOS4yNTA1NCAyLjMzODEzSDE1LjI1NjVWOS4yMjM5NEgxMy43Njk2VjMuNzI2MTVINy41NzMzMkw3LjA0NDk1IDIuMDgyMDRIMi45NzM4MlYwLjY5NDAxNEg4LjcyMjE3WiIgZmlsbD0iIzcwNzA3MCIvPgo8L3N2Zz4K") no-repeat
+    width 16px
+    height 12px
+
+.form-cabinet--uploaded
+  color $text
+
+.form-cabinet-item
+  position relative
+
+  &.form-cabinet-item--password
+    .form-cabinet-input
+      padding 5px 38px 5px 10px
+
+  &--switch
+    display flex
+    align-items center
+    gap 10px
+
+.form-cabinet-item-title
+  font-weight 400
+  font-size 12px
+  line-height 15px
+  margin-bottom 8px
+
+.form-cabinet-item-row
+  display flex
+  align-items center
+  justify-content space-between
+
+  .form-cabinet-item
+    margin-right 18px
+
+    &:last-child
+      margin-right 0
+
+.password-visibility
+  position absolute
+  right 15px
+  top 30px
+  width 15px
+  height 11px
+  background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNSAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0Ljk1NjkgNS4xNzI1NUMxNC45MzUgNS4xMjMxMyAxNC40MDU2IDMuOTQ3NjcgMTMuMjI4OCAyLjc2OTdDMTEuNjYwNiAxLjIwMDEyIDkuNjggMC4zNzA2MDUgNy41IDAuMzcwNjA1QzUuMzIgMC4zNzA2MDUgMy4zMzkzNyAxLjIwMDEyIDEuNzcxMjUgMi43Njk3QzAuNTk0MzY5IDMuOTQ3NjcgMC4wNjI0OTQxIDUuMTI1MDEgMC4wNDMxMTkgNS4xNzI1NUMwLjAxNDY4OTggNS4yMzY1NiAwIDUuMzA1ODIgMCA1LjM3NTg2QzAgNS40NDU5MSAwLjAxNDY4OTggNS41MTUxNyAwLjA0MzExOSA1LjU3OTE4QzAuMDY0OTk0MSA1LjYyODYgMC41OTQzNjkgNi44MDM0NCAxLjc3MTI1IDcuOTgxNEMzLjMzOTM3IDkuNTUwMzUgNS4zMiAxMC4zNzk5IDcuNSAxMC4zNzk5QzkuNjggMTAuMzc5OSAxMS42NjA2IDkuNTUwMzUgMTMuMjI4OCA3Ljk4MTRDMTQuNDA1NiA2LjgwMzQ0IDE0LjkzNSA1LjYyODYgMTQuOTU2OSA1LjU3OTE4QzE0Ljk4NTMgNS41MTUxNyAxNSA1LjQ0NTkxIDE1IDUuMzc1ODZDMTUgNS4zMDU4MiAxNC45ODUzIDUuMjM2NTYgMTQuOTU2OSA1LjE3MjU1Wk03LjUgNy44Nzc1NkM3LjAwNTU1IDcuODc3NTYgNi41MjIyIDcuNzMwOCA2LjExMTA3IDcuNDU1ODRDNS42OTk5NSA3LjE4MDg4IDUuMzc5NTIgNi43OTAwNyA1LjE5MDMgNi4zMzI4M0M1LjAwMTA4IDUuODc1NiA0Ljk1MTU3IDUuMzcyNDYgNS4wNDgwMyA0Ljg4NzA2QzUuMTQ0NSA0LjQwMTY2IDUuMzgyNiAzLjk1NTc5IDUuNzMyMjMgMy42MDU4M0M2LjA4MTg2IDMuMjU1ODggNi41MjczMiAzLjAxNzU2IDcuMDEyMjcgMi45MjFDNy40OTcyMyAyLjgyNDQ1IDcuOTk5ODkgMi44NzQwMSA4LjQ1NjcxIDMuMDYzNEM4LjkxMzUyIDMuMjUyNzkgOS4zMDM5NyAzLjU3MzUyIDkuNTc4NjggMy45ODUwM0M5Ljg1MzM4IDQuMzk2NTMgMTAgNC44ODAzMyAxMCA1LjM3NTI0QzEwIDYuMDM4ODkgOS43MzY2MSA2LjY3NTM3IDkuMjY3NzcgNy4xNDQ2NEM4Ljc5ODkzIDcuNjEzOTIgOC4xNjMwNCA3Ljg3NzU2IDcuNSA3Ljg3NzU2WiIgZmlsbD0iIzI3MjcyNyIgZmlsbC1vcGFjaXR5PSIwLjUiLz4KPC9zdmc+Cg==") no-repeat
+  cursor pointer
+
+  &.view
+    background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNSAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00LjE3NTM0IDBMMi42NDcwNiAwLjg5MDQ0OEwzLjcyNzI2IDIuNzc4NThDMy4wMjM0MyAzLjE4MiAyLjM2NzUxIDMuNzA0OTEgMS43NzEyNSA0LjM0MjA0QzAuNTk0MzcgNS41OTk1OCAwLjA2MjQ5NDEgNi44NTY0NSAwLjA0MzExOSA2LjkwNzJDMC4wMTQ2ODk4IDYuOTc1NTMgMCA3LjA0OTQ3IDAgNy4xMjQyNUMwIDcuMTk5MDIgMC4wMTQ2ODk4IDcuMjcyOTcgMC4wNDMxMTkgNy4zNDEzQzAuMDY0OTk0MSA3LjM5NDA1IDAuNTk0MzcgOC42NDgyNSAxLjc3MTI1IDkuOTA1NzhDMy4zMzkzNyAxMS41ODA3IDUuMzIgMTIuNDY2MyA3LjUgMTIuNDY2M0M4LjA3MDQzIDEyLjQ2NjMgOC42MjcyMSAxMi40MDU2IDkuMTY2NTMgMTIuMjg2MUwxMC4xNDcxIDE0TDExLjY3NTMgMTMuMTA5NkwxMC44NjIgMTEuNjg3OUMxMS43MjI0IDExLjI2MiAxMi41MTggMTAuNjY1IDEzLjIyODggOS45MDU3OEMxNC40MDU2IDguNjQ4MjUgMTQuOTM1IDcuMzk0MDUgMTQuOTU2OSA3LjM0MTNDMTQuOTg1MyA3LjI3Mjk3IDE1IDcuMTk5MDIgMTUgNy4xMjQyNUMxNSA3LjA0OTQ3IDE0Ljk4NTMgNi45NzU1MyAxNC45NTY5IDYuOTA3MkMxNC45MzUgNi44NTQ0NCAxNC40MDU2IDUuNTk5NTggMTMuMjI4OCA0LjM0MjA0QzExLjY2MDYgMi42NjY0NSA5LjY4IDEuNzgwOSA3LjUgMS43ODA5QzYuNzYzMDYgMS43ODA5IDYuMDQ4OSAxLjg4MjA5IDUuMzY1NzcgMi4wODA3OUw0LjE3NTM0IDBaTTUuMzkxNzEgNS42ODc5NEM1LjIyNTkxIDUuOTY1OTYgNS4xMDg4NCA2LjI3NTgxIDUuMDQ4MDMgNi42MDI0M0M0Ljk1MTU3IDcuMTIwNjIgNS4wMDEwOCA3LjY1Nzc0IDUuMTkwMyA4LjE0NTg2QzUuMzc5NTIgOC42MzM5OCA1LjY5OTk1IDkuMDUxMTkgNi4xMTEwNyA5LjM0NDcyQzYuNTIyMiA5LjYzODI1IDcuMDA1NTUgOS43OTQ5MiA3LjUgOS43OTQ5MkM3LjU3ODY2IDkuNzk0OTIgNy42NTY5MyA5Ljc5MDk2IDcuNzM0NTkgOS43ODMxNEw1LjM5MTcxIDUuNjg3OTRaTTkuMzA2OTMgOC45Njk3MUw2Ljc4NjExIDQuNTYzNDdDNi44NjAzNyA0LjUzOTgyIDYuOTM1ODMgNC41MTk4MSA3LjAxMjI3IDQuNTAzNTdDNy40OTcyMyA0LjQwMDQ5IDcuOTk5ODkgNC40NTMzOSA4LjQ1NjcxIDQuNjU1NThDOC45MTM1MiA0Ljg1Nzc3IDkuMzAzOTcgNS4yMDAxNiA5LjU3ODY4IDUuNjM5NDZDOS44NTMzOCA2LjA3ODc2IDEwIDYuNTk1MjQgMTAgNy4xMjM1OEMxMCA3LjgxMjA5IDkuNzUxMjUgOC40NzMyIDkuMzA2OTMgOC45Njk3MVoiIGZpbGw9IiMyNzI3MjciIGZpbGwtb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPgo=") no-repeat
+    height 14px
+    top 29px
+
+// switch-checkbox
+.switch
+  position relative
+  display inline-block
+  width 37px
+  height 18px
+  border 1px solid $white
+  border-radius 24px
+
+  &-text
+    font-weight 400
+    font-size 14px
+    line-height 17px
+
+  input
+    opacity 0
+    width 0
+    height 0
+
+  &-span
+    position absolute
+    cursor pointer
+    inset 0
+    background-color $grey
+    transition 0.4s
+    border-radius 34px
+
+    &:before
+      position absolute
+      content ""
+      height 18px
+      width 18px
+      left 0
+      bottom -1px
+      background-color #9C9C9C
+      border 1px solid $white
+      transition 0.4s all
+      border-radius 50%
+
+input:focus + .switch-span
+  box-shadow 0 0 1px #2196F3
+
+input:checked + .switch-span:before
+  transform translateX(18px)
+  background-color #272727
+
+// switch-checkbox
+.form-cabinet-between
+  position relative
+  display flex
+  align-items center
+  gap 10px
+  max-width 289px
+  margin-bottom 40px
+
+  &:last-child
+    margin-bottom 0
+
+  &::before
+    position absolute
+    content ""
+    bottom 0
+    width 100%
+    height 30px
+    background #151515
+    border-radius 21px
+    z-index -1
+
+  .form-cabinet-item-title
+    position absolute
+    top -20px
+
+  .form-cabinet-input
+    margin-bottom 0
+    padding 7.5px 18px
+
+  span
+    font-weight 600
+    font-size 12px
+    line-height 15px
+    text-transform uppercase
+
+// date-picker
+.datepicker-dropdown
+  border none
+  box-shadow none
+  overflow hidden
+
+.datepicker-container
+  background radial-gradient(152.17% 138.33% at 54% 126.67%, #202830 0%, #313E47 100%)
+  border-radius 8px
+
+.datepicker-panel>ul>li
+  background-color transparent
+
+.datepicker-panel>ul>li.disabled,
+.datepicker-panel>ul>li.disabled:hover
+  background-color transparent
+  color rgba(4, 4, 4, 0.5)
+
+.datepicker-panel>ul>li:hover
+  background $red
+  border-radius 1px
+  color $white
+
+.datepicker-panel>ul[data-view=week]>li,
+.datepicker-panel>ul[data-view=week]>li:hover
+  background-color transparent
+
+.datepicker-top-left:before,
+.datepicker-top-right:before
+  content none
+
+@media (max-width 768px)
+  .selectric
+    .button
+      padding 0
+
+      &::after
+        margin 10px
+        right 3px

@@ -1,0 +1,209 @@
+@import "base/_global"
+@import "../includes/modules/tabs/index.styl"
+@import "../includes/modules/form-cabinet/index.styl"
+
+.cabinet__block
+  background-color $white
+  border-radius 20px
+  padding 30px 40px
+  max-width 400px
+  width 100%
+
+.dashboard
+  container-cabinet()
+  display flex
+  align-items flex-start
+  justify-content space-between
+  gap 40px
+
+.dashboard__user-history
+  height 600px
+  padding-right 20px
+
+.dashboard__user-history-title
+  margin-bottom 30px
+
+.dashboard__user-history-info
+  overflow auto
+  height 100%
+  max-height 480px
+  padding-right 10px
+  scrollbar()
+
+.dashboard__user-history-titles
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 10px
+  max-width 327px
+
+  &-info
+    font-size 9px
+    font-weight 300
+    line-height 12px
+    text-align center
+
+    &:nth-child(1)
+      width 50px
+
+    &:nth-child(2)
+      width 82px
+
+    &:nth-child(3)
+      width 35px
+
+    &:nth-child(4)
+      width 107px
+
+.dashboard__user-history-item
+  display flex
+  align-items center
+  justify-content space-between
+  gap 15px
+  margin-bottom 10px
+  text-align left
+
+  &:last-child
+    margin-bottom 0
+
+  &-status
+    text-align center
+    font-size 12px
+    font-weight 400
+    line-height 12px
+    max-width 50px
+    min-width 50px
+    width 100%
+
+  &-ip
+    text-align center
+    font-size 12px
+    font-weight 400
+    line-height 12px
+    max-width 82px
+    min-width 82px
+    width 100%
+
+  &-location
+    text-align center
+    font-size 12px
+    font-weight 400
+    line-height 12px
+    max-width 21px
+    min-width 21px
+    width 100%
+
+  &-date
+    text-align center
+    font-size 12px
+    font-weight 400
+    line-height 14px
+    max-width 107px
+    min-width 107px
+    width 100%
+
+.dashboard__user-news
+  padding-top 30px
+
+.dashboard__user-news-title
+  margin-bottom 20px
+
+.dashboard__user-news-ul
+  overflow auto
+  max-height 525px
+  padding-right 20px
+  scrollbar()
+
+.dashboard__user-news-li
+  display flex
+  align-items center
+  justify-content space-between
+  gap 10px
+  margin-bottom 30px
+
+  &:last-child
+    margin-bottom 0
+
+.dashboard__user-news-text
+  max-width 235px
+  min-width 150px
+  width 43%
+  font-weight 400
+  font-size 16px
+  line-height 20px
+
+.dashboard__user-news-time
+  width 15%
+  font-weight 200
+  font-size 12px
+  line-height 15px
+
+.dashboard__user-news-link
+  width 11%
+  font-weight 500
+  font-size 14px
+  line-height 17px
+  text-decoration underline
+
+  &:hover
+    text-decoration none
+
+.dashboard__user-verification-text,
+.dashboard__user-verification-verified,
+.dashboard__user-verification-verified p
+  text-align center
+  font-size 16px
+  font-weight 700
+  text-align center
+  margin-bottom 20px
+
+.dashboard__user-verification-button
+  text-align center
+
+.dashboard__user-form
+  &:last-child
+    .cabinet-form
+      margin-bottom 0
+
+.dashboard__user-form-title
+  font-size 14px
+  margin-bottom 9px
+
+.dashboard__user-form-button
+  display block
+  margin-left auto
+  padding 6px 18px
+
+.dashboard__user-form-subtitle
+  font-size 14px
+  line-height 16px
+  font-weight 400
+  margin-bottom 15px
+
+.dashboard__user-form-list
+  padding-left 10px
+  margin-bottom 5px
+
+.dashboard__user-form-li
+  position relative
+  font-size 10px
+  line-height 12px
+  font-weight 300
+
+  &::before
+    position absolute
+    content "."
+    top -5px
+    left -10px
+    font-size 20px
+    font-weight 300
+
+.dashboard__user-form-error
+  display inline-block
+  color $red
+  font-size 10px
+  line-height 14px
+  font-weight 400
+  margin-bottom 11px
+
+@import "media/_media-dashboard.styl"

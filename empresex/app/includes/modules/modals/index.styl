@@ -1,0 +1,123 @@
+.iziModal
+  background radial-gradient(124.84% 135.37% at 47.06% 119.69%, #191919 0%, #25262E 59.99%, #A32820 78.44%, #FFA800 100%)
+  background-repeat no-repeat
+  background-size cover
+  border-radius 20px !important
+  max-width 597px !important
+
+  .iziModal-wrap
+    position relative
+    display flex
+    flex-direction column
+    align-items center
+    justify-content space-between
+
+    .iziModal-content
+      display flex
+      flex-direction column
+      align-items center
+      justify-content space-between
+      padding 50px 72px !important
+
+html.iziModal-isAttached,
+html.iziModal-isOverflow
+  overflow visible
+
+.modal
+  &-close
+    position absolute
+    top 20px
+    right 20px
+
+    img
+      height 24px
+      width 24px
+
+  &-subtitle
+    font-weight 300
+    font-size 16px
+    line-height 20px
+    max-width 300px
+    margin -20px auto 47px
+
+.modal-forgot-password
+  display block
+  font-weight 400
+  font-size 16px
+  line-height 20px
+  text-decoration underline
+  color $white
+  margin-bottom 50px
+
+.modal-login-inner,
+.modal-signup-inner,
+.modal-restore-inner
+  width 100%
+
+  .modal-login
+    font-weight 400
+    font-size 16px
+    line-height 20px
+    color rgba(255, 255, 255, 0.6)
+    margin-top 30px
+    text-align center
+
+    a
+      text-decoration underline
+
+  .modal-restore-login
+    display flex
+    align-items center
+    justify-content space-between
+    margin-top 30px
+
+    a
+      color rgba(255, 255, 255, 0.6)
+
+.modal-contact-user
+  display flex
+  align-items center
+  gap 35px
+
+  &:not(:last-child)
+    margin-bottom 30px
+
+  &-info
+    &-name
+      font-weight 500
+      font-size 18px
+      line-height 30px
+      margin-bottom 10px
+
+    &-contact
+      display flex
+      align-items center
+      gap 20px
+
+      &:not(:last-child)
+        margin-bottom 5px
+
+      &-link
+        font-weight 300
+        font-size 16px
+        line-height 30px
+
+@media (max-width 768px)
+  .button
+    font-size 16px
+    padding 20px 45px
+
+@media (max-width 650px)
+  .iziModal
+    max-width 100% !important
+    height 100% !important
+
+    &::before
+      display none
+
+    .iziModal-wrap
+      padding 0
+
+      .iziModal-content
+        justify-content center
+        padding 50px 20px !important

@@ -1,0 +1,48 @@
+mixin form-cabinet(attributes)
+  form.form.cabinet-form&attributes(attributes)
+    block
+
+mixin input-select(desription, title)
+  .form-cabinet-item
+    p.form-cabinet-item-title= title
+    select(name='select').form-cabinet-input.form-cabinet-select
+      option(selected="selected" disabled)= desription
+      block
+
+mixin input-select-option(value, text)
+  option(value=value).form-cabinet-option= text
+
+mixin input-upload(text, uploadId)
+  label.form-cabinet-input.form-cabinet-upload(for=uploadId)= text
+  input(type='file' id=uploadId)
+
+mixin input-cabinet-text(title, text, name)
+  .form-cabinet-item
+    p.form-cabinet-item-title= title
+    input(
+      aria-label=(text=text)
+      name= name
+      type="text"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-cabinet-input
+
+mixin input-cabinet-password(title, text)
+  .form-cabinet-item.form-cabinet-item--password
+    p.form-cabinet-item-title= title
+    input(
+      name="password"
+      type="password"
+      required
+      placeholder=(text=text)
+      maxlenght="255"
+    ).form-cabinet-input
+    button(type="button").password-visibility
+
+mixin input-cabinet-switch(text)
+  .form-cabinet-item.form-cabinet-item--switch
+    p.switch-text= text
+    label.switch
+      input(type='checkbox')
+      span.slider.round.switch-span

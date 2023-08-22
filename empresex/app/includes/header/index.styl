@@ -1,0 +1,402 @@
+.header
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 100
+
+  &__top
+    width 100%
+    display flex
+    align-items center
+    justify-content space-between
+    gap 15px
+    height 70px
+
+  &__bottom
+    width 100%
+    display flex
+    align-items center
+    justify-content space-between
+    gap 20px
+    height 100px
+
+  &__logo
+    height 23px
+
+    &-img
+      width 160px
+      height 23px
+      background-image url("../img/global/logo.svg")
+      background-repeat no-repeat
+      background-size contain
+
+  &__menu
+    &-ul
+      display flex
+      align-items center
+      justify-content space-between
+      gap 25px
+
+    &-li
+      font-size 12px
+      font-weight 500
+
+  &__user
+    align-self flex-end
+    width 195px
+
+    &-name
+      font-size 18px
+      font-weight 600
+
+    &-email
+      display inline-block
+      font-size 14px
+      font-weight 400
+      word-break break-word
+      margin-top 9px
+
+  &__balance
+    &-total
+      font-size 20px
+      font-weight 500
+
+    &-number
+      font-size 57px
+      font-weight 800
+
+      span
+        font-size 42px
+
+  &__cards
+    display flex
+    align-items center
+    justify-content center
+    gap 15px
+
+    &-item
+      width 150px
+      border-radius 8px
+      padding 9px 10px 5px 11px
+
+    &-info
+      display flex
+      align-items center
+      justify-content space-between
+      text-align center
+      margin-bottom 10px
+
+      &-value
+        span
+          display block
+          font-weight 600
+          font-size 10px
+
+      &-number
+        font-weight 800
+        font-size 20px
+
+        span
+          font-size 14px
+
+    &--green
+      background-color #ADFFF0
+
+      .header__cards-withdrawal
+        background-color #43D6BB
+
+      .header__cards-transfer
+        background-color rgba(67, 214, 187, 0.6)
+
+    &--red
+      background-color #FFA7A7
+
+      .header__cards-withdrawal
+        background-color #E76565
+
+      .header__cards-transfer
+        background-color rgba(231, 101, 101, 0.6)
+
+    &--yellow
+      background-color #FFFBA0
+
+      .header__cards-withdrawal
+        background-color #E4D440
+
+      .header__cards-transfer
+        background-color rgba(228, 212, 64, 0.6)
+
+    &-action
+      text-align center
+
+      &:hover
+        opacity 0.7
+
+      button
+        text-decoration underline
+        color black
+
+    &-buttons
+      display none
+      margin-top 10px
+
+      button
+        display block
+        border-radius 8px
+        color $white
+        text-align center
+        font-size 10px
+        font-weight 700
+        padding 5px 28px
+        width 100%
+
+        &:last-child
+          margin-top 5px
+
+        &:hover
+          opacity 0.7
+
+.header__desktop
+  padding 20px 15px 0 15px
+  transition all 0.5s
+
+  &.is-fixed
+    padding 0 15px 20px
+    background linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%)
+    backdrop-filter blur(5px)
+    transition all 0.5s
+
+  .header__container
+    max-width 1273px
+    margin 0 auto
+
+.header__mobile
+  display none
+  position relative
+
+  .header__mobile-top
+    display flex
+    position fixed
+    top 15px
+    left 0
+    right 0
+    align-items center
+    justify-content space-between
+    padding 0 15px
+    transition box-shadow 0.5s
+    transition background-color 0.5s
+
+    .header__right
+      display flex
+      align-items center
+
+      .header__burger-button
+        .menu__burger
+          display block
+          cursor pointer
+          width 50px
+          height 40px
+          position relative
+          margin 0
+          padding 0
+          font-size 0
+          z-index 100
+
+        .menu__burger span
+          position absolute
+          left 10px
+          display block
+          background-color $white
+          height 3px
+          width 24px
+          top 18px
+          transition 0.5s
+          border-radius 5px
+
+        .menu__burger span::after,
+        .menu__burger span::before
+          position absolute
+          left -8px
+          display block
+          height 3px
+          background-color $white
+          content ""
+          width 39px
+          transition 0.5s
+          border-radius 5px
+
+        .menu__burger span::after
+          top -9px
+
+        .menu__burger span::before
+          bottom -9px
+
+        .menu__burger.close span
+          background-color transparent
+          transition 0.5s
+
+        .menu__burger.close span::after
+          top 6px
+          left 4px
+          transform rotate(-45deg)
+          transition 0.5s
+          width 26.83px
+          height 4.76px
+
+        .menu__burger.close span::before
+          bottom 8px
+          left 4px
+          transform rotate(45deg)
+          transition 0.5s
+          width 26.83px
+          height 4.76px
+
+  .header__mobile-inner
+    position fixed
+    top -100%
+    padding 35px 30px 71px 25px
+    height 100%
+    width 100%
+    background-color $bg
+    z-index 99
+    visibility hidden
+    overflow auto
+    width 100%
+    height 100%
+    background-color $text
+    background-image url("../img/global/bg-img-white.svg")
+    background-repeat no-repeat
+    background-size 750px
+    background-position -270px 170px
+
+    .header__user
+      margin-top 50px
+      width 100%
+
+      .header__user-name
+        font-size 18px
+        font-weight 500
+        line-height normal
+        color $grey
+
+      .header__user-email
+        font-size 16px
+        font-weight 300
+        line-height normal
+        color $grey
+        margin-top 3px
+
+    .header__menu
+      width 100%
+      text-align center
+      margin-top 60px
+
+      &-ul
+        flex-direction column
+        align-items flex-end
+
+      &-link
+        width 100%
+        padding 3rem 0
+        font-weight 400
+        font-size 20px
+        line-height 24px
+        color $grey
+
+        &:hover
+          text-decoration underline
+
+    .header__signup
+      font-size 25px
+      line-height 30px
+      max-width 170px
+      margin 0 auto 20px
+
+    .header__signin
+      font-weight 500
+      font-size 25px
+      line-height 30px
+      text-decoration underline
+      text-transform uppercase
+      color #FFFFFF
+      opacity 0.5
+
+    &-top
+      display flex
+      align-items center
+      justify-content space-between
+
+  &.is-fixed
+    .header__mobile-top
+      top 0
+      background linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%)
+      backdrop-filter blur(5px)
+      padding 15px
+      height auto
+
+    .header__logo
+      img
+        max-width 100px
+
+  &.is-active
+    .header__mobile-inner
+      visibility visible
+      top 0
+
+    &.is-fixed
+      .header__mobile-top
+        box-shadow none
+        backdrop-filter none
+        background-color transparent
+
+@media (max-width 1200px)
+  .header__top
+    height 60px
+
+  .header__menu-ul
+    gap 7px
+
+  .header__user-name
+    font-size 14px
+
+  .header__user-email
+    font-size 12px
+
+  .header__logo
+    height 11px
+
+  .header__logo-img
+    width 100px
+
+  .header__balance-total
+    font-size 16px
+
+  .header__balance-number
+    font-size 40px
+
+  .header__balance-number span
+    font-size 28px
+
+@media (max-width 1024px)
+  .header__desktop
+    .header__logo
+      img
+        width 150px
+
+@media (max-width 1000px)
+  .header__desktop
+    display none
+
+  .header__mobile
+    display flex
+
+@media (max-width 500px)
+  .header__cards
+    padding 0 15px
+    justify-content flex-start
+    overflow auto
+
+@media (max-width 375px)
+  .dark-mode
+    right 60px !important

@@ -1,0 +1,111 @@
+extends ../../includes/page-cabinet
+
+include ../../includes/modules/tabs/index
+
+block head
+  - var title = "Profile | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/profile.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .profile
+    .profile__user-personal-info.cabinet__tabs
+      +tabs()
+        +tabs-item("1", "active")
+          | Personal information
+
+        +tabs-item("2")
+          | Security
+
+      .profile__tabs-content
+        +tabs-content-item("1", "active")
+          +form-cabinet()
+            +input-cabinet-text("First name", "Name", "name")
+            +input-cabinet-text("Last name", "Last name", "last name")
+            .form-cabinet-item-row
+              +input-cabinet-text("Year", "1997", "year")
+              +input-cabinet-text("Month", "04", "month")
+              +input-cabinet-text("Day", "24", "day")
+            +input-cabinet-text("Country", "Ukraine", "country")
+            +input-select("Choose your state", "State")
+              +input-select-option(1, "Payslip from Employer")
+              +input-select-option(2, "Document confirming dividends")
+              +input-select-option(3, "Loan agreement")
+              +input-select-option(4, "Document showing sale a personal assets")
+              +input-select-option(5, "Most recent Tax declaration")
+            +input-cabinet-text("Region", "Kyiv", "region")
+            +input-cabinet-text("City", "Kyiv", "сity")
+            +input-cabinet-text("Post index", "325236", "post-index")
+            +input-cabinet-text("Street name", "Borisa Hmyri, 1", "street")
+            +input-cabinet-text("Apartment number", "666", "apartment-number")
+            .profile__user-personal-info-button
+              +button(type="submit").profile__user-form-button
+                | Save
+
+        +tabs-content-item("2")
+          +form-cabinet()
+            +input-cabinet-switch("2FA Disabled")
+
+            .profile__user-inner-wrapper
+              p.profile__user-form-subtitle
+                | Using Google Authenticator, scan the QR code. It will display a 6 digit code which you need to enter below.
+
+              .profile__user-form-qr
+                span.profile__user-form-qr-code
+                  | 4NWQQGHFI2N3YVR3
+                .profile__user-form-qr-img
+                  svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    rect(width='120' height='120' fill='#D9D9D9')
+                    path(d='M70.1513 73.0813C67.6508 75.9872 64.7449 77.4063 61.1633 77.4063C57.7843 77.4063 54.4729 75.7168 50.8913 71.9324C62.3797 69.7023 70.4216 60.444 70.4216 48.3474C70.4216 34.4937 59.8117 24.2893 45.6201 24.2893C31.2934 24.2893 20.7511 34.5613 20.7511 48.3474C20.7511 61.8632 30.8879 72 44.7416 72.4055C50.9588 78.8931 55.5542 81.3935 61.0957 81.3935C65.6911 81.3935 69.6782 79.5013 72.5841 75.9872L70.1513 73.0813ZM25.6843 48.3474C25.6843 37.1293 34.1993 28.7495 45.6201 28.7495C56.9734 28.7495 65.4207 37.1293 65.4207 48.3474C65.4207 59.5655 56.9734 67.9453 45.6201 67.9453C34.1993 67.9453 25.6843 59.5655 25.6843 48.3474ZM119.407 72L107.851 55.7811C114.744 53.5509 118.664 48.3474 118.664 40.9137C118.664 30.7768 111.365 24.6947 99.3364 24.6947H81.6307V72H86.6316V56.9975H99.3364C100.688 56.9975 101.904 56.9299 103.121 56.7947L113.933 72H119.407ZM99.2012 52.74H86.6316V29.0198H99.2012C108.662 29.0198 113.663 33.3448 113.663 40.9137C113.663 48.3474 108.662 52.74 99.2012 52.74ZM36.9301 109.18C40.0237 109.18 42.7869 108.129 44.6491 106.087L43.2374 104.675C41.5254 106.447 39.423 107.198 37.0202 107.198C31.9443 107.198 28.1298 103.474 28.1298 98.4877C28.1298 93.5019 31.9443 89.7775 37.0202 89.7775C39.423 89.7775 41.5254 90.5284 43.2374 92.2705L44.6491 90.8588C42.7869 88.8164 40.0237 87.7952 36.9601 87.7952C30.6227 87.7952 25.9372 92.3305 25.9372 98.4877C25.9372 104.645 30.6227 109.18 36.9301 109.18ZM58.1379 109.18C64.4453 109.18 69.1608 104.645 69.1608 98.4877C69.1608 92.3305 64.4453 87.7952 58.1379 87.7952C51.7705 87.7952 47.085 92.3606 47.085 98.4877C47.085 104.615 51.7705 109.18 58.1379 109.18ZM58.1379 107.198C53.062 107.198 49.2776 103.504 49.2776 98.4877C49.2776 93.4719 53.062 89.7775 58.1379 89.7775C63.1838 89.7775 66.9382 93.4719 66.9382 98.4877C66.9382 103.504 63.1838 107.198 58.1379 107.198ZM74.1426 109H82.7026C89.4305 109 93.9658 104.675 93.9658 98.4877C93.9658 92.3005 89.4305 87.9754 82.7026 87.9754H74.1426V109ZM76.3652 107.078V89.8977H82.5825C88.169 89.8977 91.7732 93.4418 91.7732 98.4877C91.7732 103.534 88.169 107.078 82.5825 107.078H76.3652ZM101.179 107.078V99.2686H112.052V97.3764H101.179V89.8977H113.374V87.9754H98.9568V109H113.824V107.078H101.179Z' fill='black')
+
+              +input-cabinet-text("Enter authentication code", "Code from Google 2FA", "code")
+
+              .profile__user-personal-info-button
+                +button(type="submit").profile__user-form-button
+                  | Submit
+
+    .profile__user-reset.cabinet__tabs
+      +tabs()
+        +tabs-item("3", "active")
+          | Password
+
+        +tabs-item("4")
+          | Email&Phone
+
+      .profile__tabs-content
+        +tabs-content-item("3", "active")
+          +form-cabinet()
+            p.profile__user-form-subtitle
+              | Your new password must be at least 8 characters long and contain at least 6 unique characters
+
+            +input-cabinet-password("Enter current password", "Enter current password")
+            +input-cabinet-password("New password", "New password")
+            +input-cabinet-password("Password confirm", "Password confirm")
+
+            .profile__user-personal-info-button
+              +button(type="submit").profile__user-form-button
+                | Reset Password
+
+        +tabs-content-item("4")
+          +form-cabinet()
+            p.profile__user-form-subtitle
+              | After changing your email, you will be logged out and you will need to confirm your email. We will send you a link to your new email address to confirm your new email.
+
+            +input-cabinet-password("Enter current password", "Enter current password")
+            +input-cabinet-text("Set new email address", "Set new email address", "new-email")
+
+            .profile__user-personal-info-button
+              +button(type="submit").profile__user-form-button
+                | Change email
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

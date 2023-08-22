@@ -1,0 +1,54 @@
+extends ../../includes/page-cabinet
+
+block head
+  - var title = "Buy crypto | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/buy-crypto.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .buy-crypto
+    .buy-crypto__wrapper.cabinet__block
+      .buy-crypto__verification-verified
+        p Your data has been verified
+        svg(width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg')
+          rect(width='30' height='30' rx='8' fill='#272727')
+          path(fill-rule='evenodd' clip-rule='evenodd' d='M24.393 11.5949C24.8707 11.1172 24.8707 10.3427 24.393 9.865C23.9152 9.38729 23.1407 9.38729 22.663 9.865L13.7454 18.7826L6.97348 12.0106C6.49577 11.5329 5.72125 11.5329 5.24354 12.0106C4.76583 12.4883 4.76583 13.2628 5.24354 13.7405L12.0155 20.5125L11.9965 20.5315L13.7264 22.2615L24.393 11.5949Z' fill='white')
+
+      h3.buy-crypto__title.inner-title 
+        | Buy Crypto
+
+      +form-cabinet()
+        +input-select("Choose currency", "Buy")
+          +input-select-option(1, "BTC")
+          +input-select-option(2, "TRC20_USDT")
+
+        .form-cabinet-item-row
+          +input-cabinet-text("Enter value", "1000", "value")
+          +input-select("Choose currency", "Sell")
+            +input-select-option(1, "USD")
+            +input-select-option(2, "EUR")
+            +input-select-option(3, "GBP")
+            +input-select-option(4, "CAD")
+
+      .buy-crypto__method
+        .buy-crypto__method-item
+          .buy-crypto__method-title SWIFT
+          .buy-crypto__method-days 3-5 business days
+          .buy-crypto__method-value 1000-10000
+
+        .buy-crypto__method-item
+          .buy-crypto__method-title SEPA
+          .buy-crypto__method-days 1-2 business days
+          .buy-crypto__method-value 1000-10000
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

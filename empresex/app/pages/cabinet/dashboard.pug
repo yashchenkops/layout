@@ -1,0 +1,223 @@
+extends ../../includes/page-cabinet
+
+include ../../includes/modules/tabs/index
+
+block head
+  - var title = "Dashboard | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/dashboard.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .dashboard
+    .dashboard__user-history.cabinet__block
+      h3.dashboard__user-history-title.inner-title
+        | User history
+
+      .dashboard__user-history-titles
+        .dashboard__user-history-titles-info Status
+        .dashboard__user-history-titles-info IP
+        .dashboard__user-history-titles-info Country
+        .dashboard__user-history-titles-info Date
+
+      .dashboard__user-history-info
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login wrong
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+        .dashboard__user-history-item
+          .dashboard__user-history-item-status Login success
+          .dashboard__user-history-item-ip 31.153.3.69
+          .dashboard__user-history-item-location CY
+          .dashboard__user-history-item-date January 20, 2023 12:33 PM
+
+    .dashboard__user-verification.cabinet__tabs
+      +tabs()
+        +tabs-item("1", "active")
+          | Verification
+
+        +tabs-item("2")
+          | POA & SOF
+
+      .dashboard__tabs-content
+        +tabs-content-item("1", "active")
+          //- p.dashboard__user-verification-text Your data has not been verified yet
+
+          //- .dashboard__user-verification-button
+          //-   +button(href="#")
+          //-     | Start verification
+
+          .dashboard__user-verification-verified
+            p Your data has been verified
+            svg(width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg')
+              rect(width='30' height='30' rx='8' fill='#272727')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M24.393 11.5949C24.8707 11.1172 24.8707 10.3427 24.393 9.865C23.9152 9.38729 23.1407 9.38729 22.663 9.865L13.7454 18.7826L6.97348 12.0106C6.49577 11.5329 5.72125 11.5329 5.24354 12.0106C4.76583 12.4883 4.76583 13.2628 5.24354 13.7405L12.0155 20.5125L11.9965 20.5315L13.7264 22.2615L24.393 11.5949Z' fill='white')
+
+        +tabs-content-item("2")
+          .dashboard__user-form
+            h3.dashboard__user-form-title.inner-title
+              | Source of funds
+
+            +form-cabinet()
+              +input-select("Select document")
+                +input-select-option(1, "Payslip from Employer")
+                +input-select-option(2, "Document confirming dividends")
+                +input-select-option(3, "Loan agreement")
+                +input-select-option(4, "Document showing sale a personal assets")
+                +input-select-option(5, "Most recent Tax declaration")
+              +input-upload("Select file", "uploadSof")
+              +button(type="submit").dashboard__user-form-button
+                | Save SOF
+
+          .dashboard__user-form
+            h3.dashboard__user-form-title.inner-title
+              | POA
+
+            p.dashboard__user-form-subtitle
+              | Documents should include your Full name, Address, Issue date and Service provider. Submit one of the below documents:
+
+            ul.dashboard__user-form-list
+              li.dashboard__user-form-li Bank Statement (document not older than 3 months)
+              li.dashboard__user-form-li Utility Bill (Gas, Electric etc. not older than 3 months)
+              li.dashboard__user-form-li Payslip (document not older than 3 months)
+
+            span.dashboard__user-form-error
+              | Expand
+
+            +form-cabinet()
+              +input-upload("Select file", "uploadSoa")
+
+              +button(type="submit").dashboard__user-form-button
+                | Save POA
+
+          .dashboard__user-form
+            h3.dashboard__user-form-title.inner-title
+              | Additional documents
+
+            +form-cabinet()
+              +input-cabinet-text("", "Name", "Name")
+              +input-upload("Select file", "additionFile")
+              +button(type="submit").dashboard__user-form-button
+                | Add
+
+    .dashboard__user-news
+      h3.dashboard__user-news-title.inner-title
+        | News
+
+      ul.dashboard__user-news-ul
+        li.dashboard__user-news-li
+          p.dashboard__user-news-text 8 common ways to lose your Bitcoin and how to prevent it
+          span.dashboard__user-news-time 18.10.2021
+          a(href="#").dashboard__user-news-link Learn more
+
+        li.dashboard__user-news-li
+          p.dashboard__user-news-text Bitcoin continues to sag, while other coins show growth
+          span.dashboard__user-news-time 18.10.2021
+          a(href="#").dashboard__user-news-link Learn more
+
+        li.dashboard__user-news-li
+          p.dashboard__user-news-text 213213
+          span.dashboard__user-news-time 18.10.2021
+          a(href="#").dashboard__user-news-link Learn more
+
+        li.dashboard__user-news-li
+          p.dashboard__user-news-text 213213
+          span.dashboard__user-news-time 18.10.2021
+          a(href="#").dashboard__user-news-link Learn more
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto
