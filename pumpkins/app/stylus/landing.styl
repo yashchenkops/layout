@@ -1,0 +1,119 @@
+@import "base/_global"
+
+.game__inner
+  height 100vh
+  display grid
+  grid-template-rows 1fr auto
+
+.game__wrapper
+  max-width 830px
+  margin 0 auto
+  padding 0 15px
+
+.game__main-inner
+  position relative
+  z-index 10
+
+.game__info
+  grid-row-start 2
+  grid-row-end 3
+
+.game__logo
+  text-align center
+  margin-bottom 30px
+  padding-top 40px
+  user-select none
+
+  &-link
+    width 300px
+
+  &-img
+    width 100%
+
+.game__main
+  display flex
+  width 800px
+  height 625px
+  background-image url("../img/game-bg.png")
+  background-repeat no-repeat
+  background-size contain
+  margin-bottom 60px
+
+  &-inner
+    margin auto
+    display flex
+    flex-wrap wrap
+    gap 10px 30px
+    width 600px
+    height 530px
+
+  &-button
+    width 180px
+    height 180px
+    transition transform 0.3s
+    outline none
+    background-repeat no-repeat
+    background-size contain
+
+    // default
+    &.pumpkin-1
+      background-image url("../img/pumpkins/pumpkin-1.gif")
+
+    &.pumpkin-2
+      background-image url("../img/pumpkins/pumpkin-2.gif")
+
+    &.pumpkin-3
+      background-image url("../img/pumpkins/pumpkin-3.gif")
+
+    // open animation
+    &.pumpkin-opening-1
+      background-image url("../img/pumpkins/pumpkin-open-1.gif")
+
+    &.pumpkin-opening-2
+      background-image url("../img/pumpkins/pumpkin-open-2.gif")
+
+    &.pumpkin-opening-3
+      background-image url("../img/pumpkins/pumpkin-open-3.gif")
+
+    &:hover
+      transform scale(0.97)
+
+    &:disabled
+      cursor default
+
+      &:hover
+        transform none
+
+.game__info
+  position relative
+  padding-bottom 50px
+  z-index 10
+  background linear-gradient(180deg, rgba(0, 22, 34, 0) 0%, rgba(0, 14, 34, 0.39) 14.54%, rgba(0, 20, 34, 0.73) 31.42%, #000A17 100%)
+
+.game__partners
+  text-align center
+  max-width 810px
+  margin 0 auto 20px
+  padding 0 15px
+  user-select none
+
+.game__copyright
+  font-size 10px
+  line-height 1.3
+  font-weight 300
+  color white
+  max-width 830px
+  margin 0 auto
+  padding 0 15px
+
+.game__witch
+  position fixed
+  right 0
+  bottom -4px
+  z-index 9
+  user-select none
+
+  img
+    width 100%
+
+@import "media/_media-landing.styl"
