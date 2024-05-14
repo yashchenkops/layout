@@ -153,4 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initScratchGame();
   initMainSound();
   initButtonSound();
+
+  document.body.style.backgroundImage = "url('./img/bg.png')";
 });
