@@ -21,48 +21,60 @@ const fadeIn = (element, delay) => {
   }, delay);
 };
 
-// game wheel
-const initWheel = () => {
-  wheelButton.classList.remove('animated');
-  wheelButton.classList.add('disabled');
-
-  wheel.classList.remove('animated');
-  wheel.classList.add('spin-to-win');
+const saveGameState = (popupName) => {
+  const gameState = {
+    currentPopup: popupName
+  };
+  localStorage.setItem('gameState', JSON.stringify(gameState));
 };
 
-const initPopupWin = () => {
-  const audio = new Audio();
-  audio.src = './sounds/cute-level-up-popup-1.mp3';
-  audio.volume = 0.1;
-  audio.play();
+const clearGameState = () => {
+  localStorage.removeItem('gameState');
+};
 
-  fadeIn(popupOverlay, 20);
-  popupWin.classList.add('is-visible');
-  document.body.classList.add('scroll-block');
+document.addEventListener('DOMContentLoaded', function() {
+  const gameState = JSON.parse(localStorage.getItem('gameState'));
   
-
-  popupButtonContinue.addEventListener('click', function() {
-    popupOverlay.style.display = 'none';
-    document.body.classList.remove('scroll-block');
-    popupWin.classList.remove('is-visible');
-    gameWheel.classList.add('is-hidden');
-    gameScratch.classList.remove('is-hidden');
-  });
-};
+  if (gameState) {
+    const { currentPopup } = gameState;
+    
+    if (currentPopup === 'popupWin') {
+      fadeIn(popupOverlay, 20);
+      popupWin.classList.add('is-visible');
+      document.body.classList.add('scroll-block');
+    } else if (currentPopup === 'popupBonus') {
+      fadeIn(popupOverlay, 20);
+      popupBonus.classList.add('is-visible');
+      document.body.classList.add('scroll-block');
+    }
+  }
+});
 
 const initSpin = () => {
   wheelButton.addEventListener('click', function() {
     if (wheelButton.classList.contains('animated')) {
-      initWheel();
+      wheelButton.classList.remove('animated');
+      wheelButton.classList.add('disabled');
+
+      wheel.classList.remove('animated');
+      wheel.classList.add('spin-to-win');
       
       setTimeout(() => {
-        initPopupWin(popupOverlay);
+        const audio = new Audio();
+        audio.src = './sounds/cute-level-up-popup-1.mp3';
+        audio.volume = 0.1;
+        audio.play();
+
+        fadeIn(popupOverlay, 20);
+        popupWin.classList.add('is-visible');
+        document.body.classList.add('scroll-block');
+
+        saveGameState('popupWin');
       }, 5000);
     }
   });
 };
 
-// game scratch
 const initScratchGame = () => {
   const scratchItem1 = document.getElementById('js-scratch-canvas-1');
   const scratchItem2 = document.getElementById('js-scratch-canvas-2');
@@ -94,7 +106,9 @@ const initScratchGame = () => {
 
           fadeIn(popupOverlay, 20);
           popupBonus.classList.add('is-visible');
-          document.body.classList.add('scroll-block');          
+          document.body.classList.add('scroll-block');
+          
+          saveGameState('popupBonus');
         }
       }
     });
@@ -112,45 +126,16 @@ const initScratchGame = () => {
   });
 };
 
-// sounds
-const initMainSound = () => {
-  const audio = new Audio('./sounds/sweet-relief-back_music.mp3');
-  let isAudioPlaying = false;
-
-  document.addEventListener('mousemove', function() {
-    playAudioOnce();
-  });
-
-  document.addEventListener('touchstart', function() {
-    playAudioOnce();
-  });
-
-  function playAudioOnce() {
-    if (!isAudioPlaying) {
-      audio.loop = true;
-      audio.volume = 0.05;
-      audio.play();
-      isAudioPlaying = true;
-    }
-  }
-};
-
-const initButtonSound = () => {
-  const buttons = document.querySelectorAll('.button');
-
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-      const audio = new Audio();
-      audio.src = './sounds/button-click.mp3';
-      audio.volume = 0.1;
-      audio.play();
-    });
-  }
-};
+popupButtonContinue.addEventListener('click', function() {
+  popupOverlay.style.display = 'none';
+  document.body.classList.remove('scroll-block');
+  popupWin.classList.remove('is-visible');
+  gameWheel.classList.add('is-hidden');
+  gameScratch.classList.remove('is-hidden');
+  clearGameState();
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   initSpin();
   initScratchGame();
-  initMainSound();
-  initButtonSound();
 });
