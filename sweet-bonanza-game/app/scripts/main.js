@@ -34,24 +34,14 @@ const clearGameState = () => {
 
 const initMainSound = () => {
   const audio = new Audio('./sounds/sweet-relief-back_music.mp3');
-  let isAudioPlaying = false;
-
-  document.addEventListener('mousemove', function() {
-    playAudioOnce();
+  
+  document.addEventListener('click', function() {
+    audio.loop = true;
+    audio.volume = 0.03;
+    audio.play().catch(error => {
+      console.log('Error playing audio:', error);
+    });
   });
-
-  document.addEventListener('touchstart', function() {
-    playAudioOnce();
-  });
-
-  function playAudioOnce() {
-    if (!isAudioPlaying) {
-      audio.loop = true;
-      audio.volume = 0.05;
-      audio.play();
-      isAudioPlaying = true;
-    }
-  }
 };
 
 const initButtonSound = () => {
