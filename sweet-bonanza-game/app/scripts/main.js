@@ -57,7 +57,7 @@ const initSpin = () => {
       
       setTimeout(() => {
         initPopupWin(popupOverlay);
-      }, 500);
+      }, 5000);
     }
   });
 };
@@ -114,8 +114,10 @@ const initScratchGame = () => {
 
 // sounds
 const initMainSound = () => {
-  const backgroundAudio = document.getElementById('backgroundAudio');
-  backgroundAudio.volume = 0.03;
+  const audio = new Audio();
+  audio.src = './sounds/sweet-relief-back_music.mp3';
+  audio.volume = 0.1;
+  audio.play();
 };
 
 const initButtonSound = () => {
