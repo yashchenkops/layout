@@ -114,12 +114,18 @@ const initScratchGame = () => {
 
 // sounds
 const initMainSound = () => {
-  const audio = new Audio("./sounds/sweet-relief-back_music.mp3");
-
-  document.addEventListener('mousemove', function() {
+  function playAudio() {
+    const audio = new Audio('./sounds/sweet-relief-back_music.mp3');
     audio.loop = true;
     audio.volume = 0.05;
     audio.play();
+  }
+
+  document.addEventListener('mousemove', function() {
+    playAudio();
+  });
+  document.addEventListener('touchstart', function() {
+    playAudio();
   });
 };
 
