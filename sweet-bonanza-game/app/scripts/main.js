@@ -32,7 +32,47 @@ const clearGameState = () => {
   localStorage.removeItem('gameState');
 };
 
+const initMainSound = () => {
+  const audio = new Audio('./sounds/sweet-relief-back_music.mp3');
+  let isAudioPlaying = false;
+
+  document.addEventListener('mousemove', function() {
+    playAudioOnce();
+  });
+
+  document.addEventListener('touchstart', function() {
+    playAudioOnce();
+  });
+
+  function playAudioOnce() {
+    if (!isAudioPlaying) {
+      audio.loop = true;
+      audio.volume = 0.05;
+      audio.play();
+      isAudioPlaying = true;
+    }
+  }
+};
+
+const initButtonSound = () => {
+  const buttons = document.querySelectorAll('.button');
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      const audio = new Audio();
+      audio.src = './sounds/button-click.mp3';
+      audio.volume = 0.1;
+      audio.play();
+    });
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
+  initSpin();
+  initScratchGame();
+  initMainSound(); 
+  initButtonSound(); 
+
   const gameState = JSON.parse(localStorage.getItem('gameState'));
   
   if (gameState) {
@@ -50,26 +90,47 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+const initWheel = () => {
+  wheelButton.classList.remove('animated');
+  wheelButton.classList.add('disabled');
+
+  wheel.classList.remove('animated');
+  wheel.classList.add('spin-to-win');
+};
+
+const initPopupWin = () => {
+  const audio = new Audio();
+  audio.src = './sounds/cute-level-up-popup-1.mp3';
+  audio.volume = 0.1;
+  audio.play();
+
+  fadeIn(popupOverlay, 20);
+  popupWin.classList.add('is-visible');
+  document.body.classList.add('scroll-block');
+
+  saveGameState('popupWin');
+};
+
+const initPopupBonus = () => {
+  const audio = new Audio();
+  audio.src = './sounds/cute-level-up-popup-2.mp3';
+  audio.volume = 0.1;
+  audio.play();
+
+  fadeIn(popupOverlay, 20);
+  popupBonus.classList.add('is-visible');
+  document.body.classList.add('scroll-block');
+
+  saveGameState('popupBonus');
+};
+
 const initSpin = () => {
   wheelButton.addEventListener('click', function() {
     if (wheelButton.classList.contains('animated')) {
-      wheelButton.classList.remove('animated');
-      wheelButton.classList.add('disabled');
-
-      wheel.classList.remove('animated');
-      wheel.classList.add('spin-to-win');
+      initWheel();
       
       setTimeout(() => {
-        const audio = new Audio();
-        audio.src = './sounds/cute-level-up-popup-1.mp3';
-        audio.volume = 0.1;
-        audio.play();
-
-        fadeIn(popupOverlay, 20);
-        popupWin.classList.add('is-visible');
-        document.body.classList.add('scroll-block');
-
-        saveGameState('popupWin');
+        initPopupWin();
       }, 5000);
     }
   });
@@ -99,16 +160,7 @@ const initScratchGame = () => {
       callback: function() {
         scratchCount++;
         if (scratchCount === 2) {
-          const audio = new Audio();
-          audio.src = './sounds/cute-level-up-popup-2.mp3';
-          audio.volume = 0.1;
-          audio.play();
-
-          fadeIn(popupOverlay, 20);
-          popupBonus.classList.add('is-visible');
-          document.body.classList.add('scroll-block');
-          
-          saveGameState('popupBonus');
+          initPopupBonus();
         }
       }
     });
@@ -133,9 +185,4 @@ popupButtonContinue.addEventListener('click', function() {
   gameWheel.classList.add('is-hidden');
   gameScratch.classList.remove('is-hidden');
   clearGameState();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  initSpin();
-  initScratchGame();
 });
