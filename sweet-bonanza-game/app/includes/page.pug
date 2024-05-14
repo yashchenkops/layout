@@ -1,0 +1,56 @@
+include ../includes/header/index
+include ../includes/footer/index
+include ../includes/modules/pictures/index
+
+doctype html
+html(lang="en")
+  head
+    - var title
+
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    block head
+
+    title= title
+
+    block styles
+
+  body
+    +header()
+
+    main.main#main-content
+      block main
+
+    +footer()
+
+    .popup__overlay
+      .popup.popup__win
+        .popup__win-wrapper
+          +picture({
+            lazy: false,
+            path: "img/popup-win.png",
+            attr: { "alt": "Popup Win" },
+          })
+
+          button(type="button").button.popup__button.popup__continue
+            | continue
+
+      .popup.popup__bonus
+        .popup__bonus-wrapper
+          +picture({
+            lazy: false,
+            path: "img/popup-bonus.png",
+            attr: { "alt": "Popup Bonus" },
+          })
+
+          a(href="#").button.popup__button
+            | claim!
+
+    .music
+      audio(autoplay='')#backgroundAudio
+        source(src='sounds/sweet-relief-zachariah-hickman.mp3' type='audio/mpeg')
+
+
+    block scripts

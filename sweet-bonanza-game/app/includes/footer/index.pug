@@ -1,0 +1,10 @@
+mixin footer()
+  footer.footer
+    .container
+      .footer__icons
+        each key, value in {'img/icons/10.svg': 'Bitcoin', 'img/icons/11.svg': 'visa', 'img/icons/12.svg': 'mastercard', 'img/icons/13.svg': 'skrill', 'img/icons/14.svg': 'Neteller', 'img/icons/15.svg': 'Noda', 'img/icons/16.svg': 'picksell', 'img/icons/17.svg': 'interac', 'img/icons/18.svg': 'coinspaid', 'img/icons/19.svg': 'pix', 'img/icons/20.svg': 'khipu', 'img/icons/21.svg': 'web pay'}
+          .footer__icons-item
+            img(src=value, alt=key)
+
+      p.footer__info
+        | Copyright © 2022 sloterra.com is a brand name of Mudanimation N.V. Reg. No. 159673, having its registered address at at Zuikertuintjeweg Z/N (Zuikertuin Tower), Curaçao, licensed to conduct online gaming operations by the Government of Curacao under license 365/JAZ Sub-License GLH-OCCHKTW0705042022. Gambling can be addictive. Play responsibly. sloterra.com only accepts customers over 18 years of age.
