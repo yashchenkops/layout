@@ -114,8 +114,8 @@ const initScratchGame = () => {
 
 // sounds
 const initMainSound = () => {
-  const audio = new Audio();
-  audio.src = './sounds/sweet-relief-back_music.mp3';
+  const audio = new Audio("./sounds/sweet-relief-back_music.mp3");
+  audio.loop = true;
   audio.volume = 0.1;
   audio.play();
 };
