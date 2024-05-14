@@ -114,6 +114,7 @@ const initScratchGame = () => {
 
 // sounds
 const initMainSound = () => {
+  const audio = new Audio('./sounds/sweet-relief-back_music.mp3');
   let isAudioPlaying = false;
 
   document.addEventListener('mousemove', function() {
