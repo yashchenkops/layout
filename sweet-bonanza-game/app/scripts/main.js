@@ -115,9 +115,12 @@ const initScratchGame = () => {
 // sounds
 const initMainSound = () => {
   const audio = new Audio("./sounds/sweet-relief-back_music.mp3");
-  audio.loop = true;
-  audio.volume = 0.1;
-  audio.play();
+
+  document.addEventListener('mousemove', function() {
+    audio.loop = true;
+    audio.volume = 0.05;
+    audio.play();
+  });
 };
 
 const initButtonSound = () => {
