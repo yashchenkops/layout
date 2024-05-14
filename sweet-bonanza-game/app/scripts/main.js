@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initMainSound(); 
   initButtonSound(); 
 
-  const gameState = JSON.parse(localStorage.getItem('gameState'));
+  // const gameState = JSON.parse(localStorage.getItem('gameState')); -- LOCAL STORAGE
   
   if (gameState) {
     const { currentPopup } = gameState;
