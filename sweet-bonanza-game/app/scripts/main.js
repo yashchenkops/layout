@@ -105,7 +105,7 @@ const initPopupWin = () => {
   popupWin.classList.add('is-visible');
   document.body.classList.add('scroll-block');
 
-  saveGameState('popupWin', 'wheel');
+  // saveGameState('popupWin', 'wheel');
 };
 
 const initPopupBonus = () => {
@@ -117,7 +117,7 @@ const initPopupBonus = () => {
   popupBonus.classList.add('is-visible');
   document.body.classList.add('scroll-block');
 
-  saveGameState('popupBonus', 'scratch');
+  // saveGameState('popupBonus', 'scratch');
 };
 
 const initSpin = () => {
@@ -157,5 +157,5 @@ popupButtonContinue.addEventListener('click', function() {
   popupBonus.classList.remove('is-visible');
   gameWheel.classList.add('is-hidden');
   gameScratch.classList.remove('is-hidden');
-  saveGameState(null, 'scratch');
+  // saveGameState(null, 'scratch');
 });
