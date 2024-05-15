@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initMainSound(); 
   initButtonSound(); 
 
-  // const gameState = JSON.parse(localStorage.getItem('gameState')); -- LOCAL STORAGE
+  // const gameState = JSON.parse(localStorage.getItem('gameState')); -- LOCAL STORAGE 
   
   if (gameState) {
     const { currentPopup } = gameState;
@@ -121,50 +121,26 @@ const initSpin = () => {
       
       setTimeout(() => {
         initPopupWin();
-      }, 5000);
+      }, 2000);
     }
   });
 };
 
 const initScratchGame = () => {
-  const scratchItem1 = document.getElementById('js-scratch-canvas-1');
-  const scratchItem2 = document.getElementById('js-scratch-canvas-2');
-  const scratchItem3 = document.getElementById('js-scratch-canvas-3');
-  const scratchItems = [scratchItem1, scratchItem2, scratchItem3];
-  let scratchCount = 0;
+  const scratchItems = document.querySelectorAll('.game__scratch-item');
+  let selectedItems = [];
 
-  scratchItems.forEach((item) => {
-    const containerWidth = item.offsetWidth ? 364 : 364;
-    const containerHeight = item.offsetWidth < 1024 ? 253 : 208;
-
-    const scratch = new ScratchCard(item, {
-      scratchType: SCRATCH_TYPE.CIRCLE,
-      containerWidth: containerWidth,
-      containerHeight: containerHeight,
-      imageForwardSrc: './img/scratch-field.png',
-      imageBackgroundSrc: './img/win-scratch.png',
-      clearZoneRadius: 20,
-      nPoints: 30,
-      pointSize: 4,
-      percentToFinish: 20,
-      callback: function() {
-        scratchCount++;
-        if (scratchCount === 2) {
+  scratchItems.forEach(item => {
+    item.addEventListener('click', function() {
+      if (!item.classList.contains('animation-scretch')) {
+        item.classList.add('animation-scretch');
+        selectedItems.push(item);
+        
+        if (selectedItems.length === 2) {
           initPopupBonus();
         }
       }
     });
-
-    scratch
-      .init()
-      .then(() => {
-        scratch.canvas.addEventListener('scratch.move', () => {
-          let percent = scratch.getPercent().toFixed(2);
-        });
-      })
-      .catch(error => {
-        alert(error.message);
-      });
   });
 };
 
