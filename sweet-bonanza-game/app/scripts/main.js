@@ -21,9 +21,10 @@ const fadeIn = (element, delay) => {
   }, delay);
 };
 
-const saveGameState = (popupName) => {
+const saveGameState = (popupName, currentGame) => {
   const gameState = {
-    currentPopup: popupName
+    currentPopup: popupName,
+    currentGame: currentGame
   };
   localStorage.setItem('gameState', JSON.stringify(gameState));
 };
@@ -47,14 +48,13 @@ const initMainSound = () => {
 const initButtonSound = () => {
   const buttons = document.querySelectorAll('.button');
 
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-      const audio = new Audio();
-      audio.src = './sounds/button-click.mp3';
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const audio = new Audio('./sounds/button-click.mp3');
       audio.volume = 0.1;
       audio.play();
     });
-  }
+  });
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -63,10 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
   initMainSound(); 
   initButtonSound(); 
 
-  // const gameState = JSON.parse(localStorage.getItem('gameState')); -- LOCAL STORAGE 
+  const gameState = JSON.parse(localStorage.getItem('gameState'));
   
   if (gameState) {
-    const { currentPopup } = gameState;
+    const { currentPopup, currentGame } = gameState;
+    
+    if (currentGame === 'wheel') {
+      gameWheel.classList.remove('is-hidden');
+      gameScratch.classList.add('is-hidden');
+    } else if (currentGame === 'scratch') {
+      gameWheel.classList.add('is-hidden');
+      gameScratch.classList.remove('is-hidden');
+    }
     
     if (currentPopup === 'popupWin') {
       fadeIn(popupOverlay, 20);
@@ -89,8 +97,7 @@ const initWheel = () => {
 };
 
 const initPopupWin = () => {
-  const audio = new Audio();
-  audio.src = './sounds/cute-level-up-popup-1.mp3';
+  const audio = new Audio('./sounds/cute-level-up-popup-1.mp3');
   audio.volume = 0.1;
   audio.play();
 
@@ -98,12 +105,11 @@ const initPopupWin = () => {
   popupWin.classList.add('is-visible');
   document.body.classList.add('scroll-block');
 
-  saveGameState('popupWin');
+  saveGameState('popupWin', 'wheel');
 };
 
 const initPopupBonus = () => {
-  const audio = new Audio();
-  audio.src = './sounds/cute-level-up-popup-2.mp3';
+  const audio = new Audio('./sounds/cute-level-up-popup-2.mp3');
   audio.volume = 0.1;
   audio.play();
 
@@ -111,7 +117,7 @@ const initPopupBonus = () => {
   popupBonus.classList.add('is-visible');
   document.body.classList.add('scroll-block');
 
-  saveGameState('popupBonus');
+  saveGameState('popupBonus', 'scratch');
 };
 
 const initSpin = () => {
@@ -148,7 +154,8 @@ popupButtonContinue.addEventListener('click', function() {
   popupOverlay.style.display = 'none';
   document.body.classList.remove('scroll-block');
   popupWin.classList.remove('is-visible');
+  popupBonus.classList.remove('is-visible');
   gameWheel.classList.add('is-hidden');
   gameScratch.classList.remove('is-hidden');
-  clearGameState();
+  saveGameState(null, 'scratch');
 });
