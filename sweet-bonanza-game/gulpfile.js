@@ -28,15 +28,6 @@ gulp.task('style', function(){
       .pipe(gulp.dest('app/css'))
 });
 
-gulp.task('script', function(){
-  return gulp.src([
-    'node_modules/scratchcard-js/build/scratchcard.min.js',
-  ])
-      .pipe(concat('libs.min.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('app/scripts'))
-});
-
 gulp.task('html', function(){
   return gulp.src('app/*.html')
     .pipe(browserSync.reload({stream: true}))
@@ -69,4 +60,4 @@ gulp.task('watch', function(){
   gulp.watch('app/**/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('stylus', 'style', 'script', 'html', 'pug', 'js', 'watch', 'browser-sync'))
+gulp.task('default', gulp.parallel('stylus', 'style', 'html', 'pug', 'js', 'watch', 'browser-sync'))
