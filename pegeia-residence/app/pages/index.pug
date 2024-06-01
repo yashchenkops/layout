@@ -1,0 +1,117 @@
+extends ../includes/page
+
+include ../includes/modules/form/index
+
+block head
+  - var title = "PEGEIA | Lux Residences"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+
+block main
+  main.intro#mainSlider
+    .main__wrapper.swiper-wrapper
+      .main__slide.main__slide--intro.swiper-slide(data-hash="home")
+        +header()
+        .intro__wrapper
+          h1.section-title
+            span A place where 
+            | Affluence Becomes Home
+          .intro__date #{new Date().getFullYear()}
+          .intro__slider-nav
+            .intro__button-prev
+            .intro__button-next
+          .intro__pagination
+        #introSlider
+          .swiper-wrapper
+            .intro__slide.swiper-slide
+              +picture({
+                lazy: true,
+                path: "./img/intro/intro-img1.png",
+                mainAttr: {"class": "intro__slide-img"}
+              })
+              .swiper-lazy-preloader.swiper-lazy-preloader-white
+            .intro__slide.swiper-slide
+              +picture({
+                lazy: true,
+                path: "./img/intro/intro-img2.png",
+                mainAttr: {"class": "intro__slide-img"}
+              })
+              .swiper-lazy-preloader.swiper-lazy-preloader-white
+            .intro__slide.swiper-slide
+              +picture({
+                lazy: true,
+                path: "./img/intro/intro-img3.png",
+                mainAttr: {"class": "intro__slide-img"}
+              })
+              .swiper-lazy-preloader.swiper-lazy-preloader-white
+            .intro__slide.swiper-slide
+              +picture({
+                lazy: true,
+                path: "./img/intro/intro-img4.png",
+                mainAttr: {"class": "intro__slide-img"}
+              })
+              .swiper-lazy-preloader.swiper-lazy-preloader-white
+            .intro__slide.swiper-slide
+              +picture({
+                lazy: true,
+                path: "./img/intro/intro-img5.png",
+                mainAttr: {"class": "intro__slide-img"}
+              })
+              .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+      .main__slide.main__slide--stages.swiper-slide(data-hash="stages")
+        | Slide 2
+
+      .main__slide.main__slide--contact.swiper-slide(data-hash="contact")
+        .contact__wrapper
+          .contact__download
+            .container
+              .section-title
+                span Download the
+                |Full designe’s
+
+              .contact__buttons
+                button(type="download").button
+                  | CLIP.MP4
+
+                button(type="download").button
+                  | PDF.EXE
+
+          .contact__main
+            .container
+              .section-title--black
+                span Have questions?
+                | OUR CONTACTS
+
+              .contact__main-socials
+                .item
+                  img.item__icon(src="img/icons/phone.svg" alt="Phone")
+                  a.item__link(href="tel:+35799742586") +357 99 74 25 86
+
+                .item
+                  img.item__icon(src="img/icons/mail.svg" alt="Mail")
+                  a.item__link(href="mailto:pegeia@gmail.com") pegeia@gmail.com
+
+                .item
+                  img.item__icon(src="img/icons/telegram.svg" alt="Telegram")
+                  a.item__link(href="https://t.me/pegeiaresidence" target="blank") @pegeiaresidence
+
+              .contact__main-form
+                h3.form__title Leave us your details and we will contact you!
+                +form()
+                  .form__wrapper
+                    +input-name("Name")
+                    +input-last-name("Surname")
+                    +input-phone("Phone")
+                    +input-email("Email")
+
+                  +button(type="submit") Contact me!
+
+
+          +footer()

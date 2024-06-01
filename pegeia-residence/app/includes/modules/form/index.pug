@@ -1,0 +1,66 @@
+mixin form(attributes)
+  form.form.contact-form&attributes(attributes)
+    block
+
+mixin input-name(text)
+  input(
+    aria-label=(text=text)
+    name="name"
+    type="text"
+    required
+    placeholder=(text=text)
+    maxlenght="255"
+  ).form-control.form-control--first-name
+
+mixin input-last-name(text)
+  input(
+    aria-label=(text=text)
+    name="last name"
+    type="text"
+    required
+    placeholder=(text=text)
+    maxlenght="255"
+  ).form-control.form-control--last-name
+
+mixin input-email(text)
+  input(
+    aria-label=(text=text)
+    name="email"
+    type="email"
+    required
+    placeholder=(text=text)
+    maxlenght="255"
+  ).form-control.form-control--email
+
+mixin input-phone(text)
+  input(
+    aria-label=(text=text)
+    name="phone"
+    type="text"
+    required
+    placeholder=(text=text)
+    minlenght="5"
+    maxlenght="255"
+  ).form-control.form-control--phone
+
+mixin input-checkbox(text, name, legend)
+  -
+    var id = name.id || "";
+
+  .form__item.form__item--checkbox
+    fieldset.checkbox
+      legend
+        span.accessibility-hidden-content
+          | !{legend}
+      input.custom-checkbox(id= id name="checkbox" type="checkbox")
+      label.form-control--checkbox-btn(for= id)
+        span.check-icon
+        | !{text}
+
+mixin input-textarea(text, attributes)
+  .form__item&attributes(attributes)
+    textarea(
+      maxlength="1000"
+      name="questions"
+      placeholder=(text=text)
+    ).form-control.form-control--textarea
