@@ -112,15 +112,23 @@
     .stages__preview
       position relative
 
-      .stages__slider-nav
+      .stages__slider-control
         position absolute
+        display flex
+        align-items center
+        justify-content space-between
+        gap 20px
+        left 0
+        right 0
+        width 100%
+        bottom -50px
+        z-index 2
+
+      .stages__slider-nav
         display flex
         align-items center
         justify-content center
         gap 5px
-        left 0
-        bottom -50px
-        z-index 2
 
       .stages__button-next,
       .stages__button-prev
@@ -138,8 +146,20 @@
       .stages__button-prev
         background-image url("../img/stages/stages-nav-prev.png")
 
+      .stages__slider-count
+        display flex
+        align-items center
+        justify-content center
+        gap 5px
+
+      .stages__inner-pagination
+        font-weight 600
+        font-size 20px
+        line-height 1
+        text-align center
+        color rgba(36, 36, 36, 0.3)
+
       &-wrapper
-        overflow hidden
         max-width 720px
         width 100%
         border-radius 10px
