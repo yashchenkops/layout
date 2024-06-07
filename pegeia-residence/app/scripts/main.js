@@ -81,6 +81,7 @@ const initStagesSlider = () => {
     if (activeInnerSlider.isEnd) {
       if (activeIndex < sliderIds.length - 1) {
         stagesSlider.slideNext();
+        innerSliders[activeIndex + 1].slideTo(0, 0); // Reset the next inner slider to the first slide
       }
     } else {
       activeInnerSlider.slideNext();
@@ -94,6 +95,7 @@ const initStagesSlider = () => {
     if (activeInnerSlider.isBeginning) {
       if (activeIndex > 0) {
         stagesSlider.slidePrev();
+        innerSliders[activeIndex - 1].slideTo(innerSliders[activeIndex - 1].slides.length - 1, 0); // Reset the previous inner slider to the last slide
       }
     } else {
       activeInnerSlider.slidePrev();
@@ -102,7 +104,7 @@ const initStagesSlider = () => {
 
   stagesSlider.on('slideChange', () => {
     const activeIndex = stagesSlider.activeIndex;
-    innerSliders[activeIndex].slideTo(0, 0); // Скинути поточний внутрішній слайдер до першого слайду при зміні слайду в основному слайдері
+    innerSliders[activeIndex].slideTo(0, 0); // Reset the current inner slider to the first slide when the main slider changes
   });
 
   // Вимкнути перетягування для внутрішніх слайдерів
