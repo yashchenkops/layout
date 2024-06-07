@@ -248,6 +248,18 @@ block main
                   svg(width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg')
                     path(fill-rule='evenodd' clip-rule='evenodd' d='M5.59998 0.882324H13.4C14.3573 0.882324 15.1334 1.67249 15.1334 2.64709V12.3529C15.1334 13.3275 14.3573 14.1177 13.4 14.1177H13V4.64709C13 3.18518 11.8359 2 10.4 2H3.98688C4.24036 1.34546 4.86707 0.882324 5.59998 0.882324ZM3.07825 2C3.36182 0.85083 4.3833 0 5.59998 0H13.4C14.8359 0 16 1.18518 16 2.64709V12.3529C16 13.8148 14.8359 15 13.4 15H12.9218C12.6382 16.1492 11.6167 17 10.4 17H2.59998C1.16406 17 0 15.8148 0 14.3529V4.64709C0 3.18518 1.16406 2 2.59998 2H3.07825Z' fill='#242424' fill-opacity='0.3')
 
+                .stages__slider-autoplay
+                  span.stages__slider-autoplay-text screencast autoplaying
+                  button(type="button").stages__slider-autoplay--play.is-active
+                    svg(width='11' height='14' viewbox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      g(opacity='0.5')
+                        path(d='M2 12L8.68656 7.82091C9.30241 7.436 9.31553 6.5437 8.71127 6.14086L2.5 2.00002' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
+                        path(d='M2 12L2 2' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
+                  button(type="button").stages__slider-autoplay--stop
+                    svg(width='13' height='14' viewbox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(d='M11 12L11 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
+                      path(d='M2 12L2 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
+
           .stages__steps
             #stagesSliderThumbs(thumbsSlider)
               .swiper-wrapper
@@ -322,7 +334,7 @@ block main
                 .stages__slide-thumbs.swiper-slide
                   .thumbs__item
                     .thumbs__item-status
-                      | Done!
+                      | In Progress...
                     .thumbs__item-wrapper
                       .thumbs__item-number
                         | 5
@@ -339,7 +351,7 @@ block main
                 .stages__slide-thumbs.swiper-slide
                   .thumbs__item
                     .thumbs__item-status
-                      | Done!
+                      | In Progress...
                     .thumbs__item-wrapper
                       .thumbs__item-number
                         | 6
@@ -356,7 +368,7 @@ block main
                 .stages__slide-thumbs.swiper-slide
                   .thumbs__item
                     .thumbs__item-status
-                      | Done!
+                      | In Progress...
                     .thumbs__item-wrapper
                       .thumbs__item-number
                         | 7
@@ -373,7 +385,7 @@ block main
                 .stages__slide-thumbs.swiper-slide
                   .thumbs__item
                     .thumbs__item-status
-                      | Done!
+                      | In Progress...
                     .thumbs__item-wrapper
                       .thumbs__item-number
                         | 8
@@ -390,7 +402,7 @@ block main
                 .stages__slide-thumbs.swiper-slide
                   .thumbs__item
                     .thumbs__item-status
-                      | Done!
+                      | In Progress...
                     .thumbs__item-wrapper
                       .thumbs__item-number
                         | 9

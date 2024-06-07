@@ -1,6 +1,8 @@
 @import "base/_global"
 
 .main__slide
+  overflow hidden
+
   &--intro
     .intro__wrapper
       display flex
@@ -151,6 +153,7 @@
         align-items center
         justify-content center
         gap 5px
+        width 150px
 
       .stages__inner-pagination
         font-weight 600
@@ -176,14 +179,39 @@
             object-fit cover
             border-radius 10px
 
+      .stages__slider-autoplay
+        display flex
+        align-items center
+        gap 14px
+
+        &-text
+          display inline-block
+          font-size 14px
+          line-height 1.4
+          font-weight 400
+          color rgba(36, 36, 36, 0.3)
+
+        &--play,
+        &--stop
+          display none
+          width 13px
+          height 16px
+
+          &.is-active
+            display block
+
     .stages__steps
       .stages__slide-thumbs
         max-width 25%
 
         &.swiper-slide-thumb-active
-          .thumbs__item-wrapper
-            // box-shadow 0px 0px 30px 5px rgba(204, 204, 204, 0.5)
-            box-shadow 0px 0px 30px 5px rgb(0, 0, 0)
+          .thumbs__item
+            .thumbs__item-wrapper
+              box-shadow 0px 0px 30px 5px rgba(255, 153, 0, 0.5)
+
+            &.done
+              .thumbs__item-wrapper
+                box-shadow 0px 0px 30px 5px rgba(142, 254, 166, 1)
 
       .thumbs__item
         width 100%
