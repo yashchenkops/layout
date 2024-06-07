@@ -23,6 +23,7 @@
     "wow.js": "^1.2.2"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "swiper": "^11.1.1"
   }
 }

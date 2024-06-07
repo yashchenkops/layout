@@ -24,6 +24,7 @@ gulp.task('style', function(){
     'node_modules/normalize.css/normalize.css',
     'node_modules/wow.js/css/libs/animate.css',
     'node_modules/swiper/swiper-bundle.min.css',
+    'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css',
   ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
@@ -34,6 +35,7 @@ gulp.task('script', function(){
   return gulp.src([
     'node_modules/wow.js/dist/wow.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())
