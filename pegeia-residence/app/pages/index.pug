@@ -77,125 +77,150 @@ block main
                 | Here you can check the real time status for every step of building.
 
             .stages__preview
-              #stagesSlider
-                .swiper-wrapper
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider1
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider2
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider3
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider4
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider5
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider6
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider7
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider8
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
-                  .stages__slide.swiper-slide
-                    #stageInnerSlider9
-                      .swiper-wrapper
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "./img/stages/stages-preview.png"
-                          })
-                        .stages__inner-slide.swiper-slide
-                          +picture({
-                            lazy: true,
-                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
-                          })
+              .stages__preview-wrapper
+                #stagesSlider
+                  .swiper-wrapper
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider1
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 1
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 1.1
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://i.pinimg.com/236x/24/15/21/24152197af38deb718eb730992d441d0.jpg"
+                            })
+                            .stages__sliders-num 1.2
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider2
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 2
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 2.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider3
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 3
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 3.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider4
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 4
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 4.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider5
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 5
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 5.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider6
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 6
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 6.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider7
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 7
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 7.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider8
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 8
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 8.1
+                    .stages__slide.swiper-slide
+                      #stageInnerSlider9
+                        .swiper-wrapper
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "./img/stages/stages-preview.png"
+                            })
+                            .stages__sliders-num 9
+                          .stages__inner-slide.swiper-slide
+                            +picture({
+                              lazy: true,
+                              path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                            })
+                            .stages__sliders-num 9.1
 
               .stages__slider-nav
                 .stages__button-prev
