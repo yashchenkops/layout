@@ -93,7 +93,40 @@ const initStagesSlider = () => {
   const nextButton = document.querySelector('.stages__button-next');
   const prevButton = document.querySelector('.stages__button-prev');
 
+  const autoplayInterval = 3000; // Інтервал автоплей
+  let autoplay;
+
+  const startAutoplay = () => {
+    autoplay = setInterval(() => {
+      const activeIndex = stagesSlider.activeIndex;
+      const activeInnerSlider = innerSliders[activeIndex];
+
+      if (activeInnerSlider.isEnd) {
+        if (activeIndex < sliderIds.length - 1) {
+          stagesSlider.slideNext();
+          currentInnerSlideIndices[activeIndex] = 0;
+          innerSliders[activeIndex + 1].slideTo(0, 0);
+          updatePagination(innerSliders[activeIndex + 1]);
+        } else {
+          clearInterval(autoplay);
+        }
+      } else {
+        activeInnerSlider.slideNext();
+        currentInnerSlideIndices[activeIndex] = activeInnerSlider.activeIndex;
+        updatePagination(activeInnerSlider);
+      }
+    }, autoplayInterval);
+  };
+
+  const stopAutoplay = () => {
+    clearInterval(autoplay);
+  };
+
   nextButton.addEventListener('click', () => {
+    playButton.classList.add('is-active');
+    stopButton.classList.remove('is-active');
+    stopAutoplay();
+
     const activeIndex = stagesSlider.activeIndex;
     const activeInnerSlider = innerSliders[activeIndex];
 
@@ -112,6 +145,10 @@ const initStagesSlider = () => {
   });
 
   prevButton.addEventListener('click', () => {
+    playButton.classList.add('is-active');
+    stopButton.classList.remove('is-active');
+    stopAutoplay();
+
     const activeIndex = stagesSlider.activeIndex;
     const activeInnerSlider = innerSliders[activeIndex];
 
@@ -141,6 +178,21 @@ const initStagesSlider = () => {
 
   const activeIndex = stagesSlider.activeIndex;
   updatePagination(innerSliders[activeIndex]);
+
+  const playButton = document.querySelector('.stages__slider-autoplay--play');
+  const stopButton = document.querySelector('.stages__slider-autoplay--stop');
+
+  playButton.addEventListener('click', () => {
+    playButton.classList.remove('is-active');
+    stopButton.classList.add('is-active');
+    startAutoplay();
+  });
+
+  stopButton.addEventListener('click', () => {
+    playButton.classList.add('is-active');
+    stopButton.classList.remove('is-active');
+    stopAutoplay();
+  });
 };
 
 document.addEventListener('DOMContentLoaded', function() {
