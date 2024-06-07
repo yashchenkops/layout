@@ -35,6 +35,15 @@ const initIntroSlider = () => {
 };
 
 const initStagesSlider = () => {
+  const updatePagination = (swiper) => {
+    const paginationEl = document.querySelector('.stages__inner-pagination');
+    if (paginationEl) {
+      const currentSlide = swiper.activeIndex + 1;
+      const totalSlides = swiper.slides.length;
+      paginationEl.textContent = `${currentSlide} / ${totalSlides}`;
+    }
+  };
+
   const stagesSliderThumbs = new Swiper("#stagesSliderThumbs", {
     spaceBetween: 35,
     slidesPerView: 5,
@@ -68,8 +77,18 @@ const initStagesSlider = () => {
     return new Swiper(id, {
       effect: "fade",
       allowTouchMove: false,
+      on: {
+        init: function() {
+          updatePagination(this);
+        },
+        slideChange: function() {
+          updatePagination(this);
+        },
+      },
     });
   });
+
+  const currentInnerSlideIndices = Array(innerSliders.length).fill(0);
 
   const nextButton = document.querySelector('.stages__button-next');
   const prevButton = document.querySelector('.stages__button-prev');
@@ -81,10 +100,14 @@ const initStagesSlider = () => {
     if (activeInnerSlider.isEnd) {
       if (activeIndex < sliderIds.length - 1) {
         stagesSlider.slideNext();
-        innerSliders[activeIndex + 1].slideTo(0, 0); // Reset the next inner slider to the first slide
+        currentInnerSlideIndices[activeIndex] = 0;
+        innerSliders[activeIndex + 1].slideTo(0, 0);
+        updatePagination(innerSliders[activeIndex + 1]);
       }
     } else {
       activeInnerSlider.slideNext();
+      currentInnerSlideIndices[activeIndex] = activeInnerSlider.activeIndex;
+      updatePagination(activeInnerSlider);
     }
   });
 
@@ -95,22 +118,29 @@ const initStagesSlider = () => {
     if (activeInnerSlider.isBeginning) {
       if (activeIndex > 0) {
         stagesSlider.slidePrev();
-        innerSliders[activeIndex - 1].slideTo(innerSliders[activeIndex - 1].slides.length - 1, 0); // Reset the previous inner slider to the last slide
+        currentInnerSlideIndices[activeIndex] = innerSliders[activeIndex - 1].slides.length - 1;
+        innerSliders[activeIndex - 1].slideTo(innerSliders[activeIndex - 1].slides.length - 1, 0);
+        updatePagination(innerSliders[activeIndex - 1]);
       }
     } else {
       activeInnerSlider.slidePrev();
+      currentInnerSlideIndices[activeIndex] = activeInnerSlider.activeIndex;
+      updatePagination(activeInnerSlider);
     }
   });
 
   stagesSlider.on('slideChange', () => {
     const activeIndex = stagesSlider.activeIndex;
-    innerSliders[activeIndex].slideTo(0, 0); // Reset the current inner slider to the first slide when the main slider changes
+    innerSliders[activeIndex].slideTo(currentInnerSlideIndices[activeIndex], 0);
+    updatePagination(innerSliders[activeIndex]);
   });
 
-  // Вимкнути перетягування для внутрішніх слайдерів
   innerSliders.forEach((innerSlider) => {
     innerSlider.allowTouchMove = false;
   });
+
+  const activeIndex = stagesSlider.activeIndex;
+  updatePagination(innerSliders[activeIndex]);
 };
 
 document.addEventListener('DOMContentLoaded', function() {
