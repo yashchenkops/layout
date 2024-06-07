@@ -93,6 +93,109 @@
     .intro__button-prev
       background-image url("../img/intro/intro-nav-prev.png")
 
+  &--stages
+    .stages__wrapper
+      display flex
+      align-items center
+      justify-content space-between
+      gap 20px
+      padding-top 5vw
+      margin-bottom 75px
+
+    .stages__title
+      max-width 420px
+      width 100%
+
+    .section-title--black
+      margin-bottom 25px
+
+    .stages__preview
+      overflow hidden
+      max-width 720px
+      width 100%
+      border-radius 10px
+
+      .stages__slide
+        width 100%
+        height 430px
+        overflow hidden
+        border-radius 10px
+
+        img
+          width 730px
+          height 100%
+          object-fit cover
+          border-radius 10px
+
+    .stages__steps
+      .stages__slide-thumbs
+        max-width 25%
+
+        &.swiper-slide-thumb-active
+          .thumbs__item-wrapper
+            box-shadow 0px 0px 30px 5px rgba(204, 204, 204, 0.5)
+
+      .thumbs__item
+        width 100%
+
+        &-wrapper
+          border-radius 10px
+          padding 10px 10px 20px 10px
+          max-width 220px
+          color $grey
+          cursor pointer
+          background-color rgba(255, 153, 0, 0.5)
+          transition all 0.3s
+
+        &-status
+          font-family $fontTitle
+          font-weight 400
+          font-size 30px
+          line-height 1
+          color $orange
+          margin-bottom 10px
+
+        &-number
+          text-align center
+          font-style italic
+          font-weight 800
+          font-size 25px
+          line-height 1.2
+          text-align center
+          color $white
+
+        &-title
+          font-weight 600
+          font-size 20px
+          line-height 1.2
+
+        &-description
+          display none
+          font-size 14px
+          line-height 1.2
+          font-weight 500
+          margin-top 10px
+
+        &-more
+          display block
+          width max-content
+          margin 10px auto 0
+          font-weight 400
+          font-size 12px
+          line-height 1.2
+          text-decoration underline
+          text-decoration-skip-ink none
+
+          &:hover
+            text-decoration none
+
+        &.done
+          .thumbs__item-status
+            color $green
+
+          .thumbs__item-wrapper
+            background-color #8efea6
+
   &--contact
     .contact__wrapper
       min-height 100%
@@ -105,7 +208,7 @@
       background-repeat no-repeat
       background-size cover
       padding 34px 100px
-      margin-bottom 80px
+      margin-bottom 4vw
 
       .container
         display flex

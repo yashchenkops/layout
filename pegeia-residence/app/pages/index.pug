@@ -66,15 +66,304 @@ block main
               .swiper-lazy-preloader.swiper-lazy-preloader-white
 
       .main__slide.main__slide--stages.swiper-slide(data-hash="stages")
-        | Slide 2
+        .container
+          .stages__wrapper
+            .stages__title
+              h3.section-title--black
+                span What are the
+                | WORK STAGES?
+
+              p.section-subtitle
+                | Here you can check the real time status for every step of building.
+
+            .stages__preview
+              #stagesSlider
+                .swiper-wrapper
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider1
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider2
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider3
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider4
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider5
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider6
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider7
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider8
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+                  .stages__slide.swiper-slide
+                    #stageInnerSlider9
+                      .swiper-wrapper
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "./img/stages/stages-preview.png"
+                          })
+                        .stages__inner-slide.swiper-slide
+                          +picture({
+                            lazy: true,
+                            path: "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+                          })
+
+              .stages__slider-nav
+                .stages__button-prev
+                .stages__button-next
+
+          .stages__steps
+            #stagesSliderThumbs(thumbsSlider)
+              .swiper-wrapper
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item.done
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 1
+
+                      .thumbs__item-title
+                        | Development of concept, exterior, and interior.
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item.done
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 2
+
+                      .thumbs__item-title
+                        | Project development and coordination with government agencies.
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item.done
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 3
+
+                      .thumbs__item-title
+                        | Preparation of the construction site.
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item.done
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 4
+
+                      .thumbs__item-title
+                        | Installation of monolithic reinforced concrete frames for houses and filling openings with bricks, windows, and doors.
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 5
+
+                      .thumbs__item-title
+                        | Laying engineering networks to the house and within rooms involves the following tasks:
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 6
+
+                      .thumbs__item-title
+                        | Interior finishing works inside houses according to the interior design involve:
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 7
+
+                      .thumbs__item-title
+                        | Exterior finishing of houses in accordance with the exterior design includes...
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 8
+
+                      .thumbs__item-title
+                        | Improvement works around the house premises in accordance with the exterior design involve...
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
+
+                .stages__slide-thumbs.swiper-slide
+                  .thumbs__item
+                    .thumbs__item-status
+                      | Done!
+                    .thumbs__item-wrapper
+                      .thumbs__item-number
+                        | 9
+
+                      .thumbs__item-title
+                        | Commissioning of equipment and engineering systems in the house involves...
+
+                      .thumbs__item-description
+                        | Defining the concept of building houses in collaboration with an architect-designer.
+
+                      span.thumbs__item-more
+                        | Learn more
 
       .main__slide.main__slide--contact.swiper-slide(data-hash="contact")
         .contact__wrapper
           .contact__download
             .container
-              .section-title
+              h3.section-title
                 span Download the
-                |Full designe’s
+                | Full designe’s
 
               .contact__buttons
                 button(type="download").button
@@ -85,7 +374,7 @@ block main
 
           .contact__main
             .container
-              .section-title--black
+              h2.section-title--black
                 span Have questions?
                 | OUR CONTACTS
 
@@ -112,6 +401,5 @@ block main
                     +input-email("Email")
 
                   +button(type="submit") Contact me!
-
 
           +footer()
