@@ -195,9 +195,39 @@ const initStagesSlider = () => {
   });
 };
 
+const initFancybox = () => {
+  Fancybox.bind("[data-fancybox]", {
+    Carousel: {
+      infinite: false,
+      dragToSlide: false,
+    },
+    Hash: false,
+    compact: false,
+    contentClick: "toggleCover",
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+    Images: {
+      Panzoom: {
+        panMode: "mousemove",
+        mouseMoveFactor: 1.1,
+        mouseMoveFriction: 0.12
+      },
+    },
+    closeExisting: true,
+    dragToClose: false,
+    wheel: 'slide'
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
   initMainSlider();
   initIntroSlider();
   initStagesSlider();
+  initFancybox();
 });
