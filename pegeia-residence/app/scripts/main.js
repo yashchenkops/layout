@@ -1,7 +1,9 @@
 const initMainSlider = () => {
   let atTop = false;
   let touchStartY = 0;
+  let touchStartX = 0;
   let touchEndY = 0;
+  let touchEndX = 0;
   let isTouchMoving = false;
 
   const handleScroll = (event) => {
@@ -23,6 +25,7 @@ const initMainSlider = () => {
 
   const handleTouchStart = (event) => {
     touchStartY = event.touches[0].clientY;
+    touchStartX = event.touches[0].clientX;
     isTouchMoving = false;
   };
 
@@ -30,28 +33,43 @@ const initMainSlider = () => {
     isTouchMoving = true;
     const secondSlide = document.querySelector('.main__slide--main');
     touchEndY = event.touches[0].clientY;
+    touchEndX = event.touches[0].clientX;
 
-    if (secondSlide.scrollTop === 0 && touchStartY < touchEndY) {
-      atTop = true;
-    } else {
-      atTop = false;
+    const diffY = touchStartY - touchEndY;
+    const diffX = touchStartX - touchEndX;
+
+    if (secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY)) {
+      if (touchStartY < touchEndY) {
+        atTop = true;
+      } else {
+        atTop = false;
+      }
     }
   };
 
   const handleTouchEnd = () => {
     const secondSlide = document.querySelector('.main__slide--main');
-    if (isTouchMoving && secondSlide.scrollTop === 0 && touchStartY < touchEndY) {
+    const diffY = touchStartY - touchEndY;
+    const diffX = touchStartX - touchEndX;
+
+    if (isTouchMoving && secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY) && touchStartY < touchEndY) {
       mainSlider.slideTo(0);
     }
   };
 
   const handleFirstSlideTouchStart = (event) => {
     touchStartY = event.touches[0].clientY;
+    touchStartX = event.touches[0].clientX;
   };
 
   const handleFirstSlideTouchMove = (event) => {
     touchEndY = event.touches[0].clientY;
-    if (touchStartY > touchEndY) {
+    touchEndX = event.touches[0].clientX;
+
+    const diffY = touchStartY - touchEndY;
+    const diffX = touchStartX - touchEndX;
+
+    if (Math.abs(diffX) < Math.abs(diffY) && touchStartY > touchEndY) {
       mainSlider.slideTo(1);
     }
   };
@@ -326,13 +344,25 @@ const initFancybox = () => {
 
 const initMobileMenu = () => {
   const mobileBurger = document.querySelector('.header__burger-button');
+  const mobileBurgerPlate = document.querySelector('.header__burger-button .plate');
   const mobileMenuHeader = document.querySelector('.header__mobile-top');
   const mobileMenuInner = document.querySelector('.header__mobile-inner');
+  const menuLinks = document.querySelectorAll('.header__menu-link');
 
-  mobileBurger.addEventListener('click', () => {
+  const toggleMenu = () => {
     mobileMenuInner.classList.toggle('is-active');
     mobileMenuHeader.classList.toggle('is-active');
-  })
+  };
+
+  mobileBurger.addEventListener('click', toggleMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuInner.classList.remove('is-active');
+      mobileMenuHeader.classList.remove('is-active');
+      mobileBurgerPlate.classList.remove('active');
+    });
+  });
 };
 
 const showMoreThumbsDescription = () => {
