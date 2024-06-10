@@ -27,7 +27,7 @@ const initMainSlider = () => {
 
   const handleTouchMove = (event) => {
     isTouchMoving = true;
-    const secondSlide = document.querySelector('.main__slide--stages');
+    const secondSlide = document.querySelector('.main__slide--main');
     touchEndY = event.touches[0].clientY;
 
     if (secondSlide.scrollTop === 0 && touchStartY < touchEndY) {
@@ -63,7 +63,7 @@ const initMainSlider = () => {
     on: {
       slideChange: function () {
         const firstSlide = document.querySelector('.main__slide--intro');
-        const secondSlide = document.querySelector('.main__slide--stages');
+        const secondSlide = document.querySelector('.main__slide--main');
 
         if (this.activeIndex === 1) {
           this.mousewheel.disable();
