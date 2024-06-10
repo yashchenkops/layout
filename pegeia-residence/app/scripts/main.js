@@ -1,4 +1,66 @@
+const initMobileMenu = () => {
+  const mobileBurger = document.querySelector('.header__burger-button');
+  const mobileMenu = document.querySelector('.header__mobile-inner');
+
+  mobileBurger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('is-active');
+  })
+};
+
 const initMainSlider = () => {
+  let atTop = false;
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let isTouchMoving = false;
+
+  const handleScroll = (event) => {
+    const secondSlide = event.target;
+
+    if (secondSlide.scrollTop === 0) {
+      atTop = true;
+    } else {
+      atTop = false;
+    }
+  };
+
+  const handleWheel = (event) => {
+    if (atTop && event.deltaY < 0) {
+      mainSlider.slideTo(0);
+    }
+  };
+
+  const handleTouchStart = (event) => {
+    touchStartY = event.touches[0].clientY;
+    isTouchMoving = false;
+  };
+
+  const handleTouchMove = (event) => {
+    isTouchMoving = true;
+    const secondSlide = document.querySelector('.main__slide--main');
+    touchEndY = event.touches[0].clientY;
+
+    if (secondSlide.scrollTop === 0 && touchStartY < touchEndY) {
+      atTop = true;
+    } else {
+      atTop = false;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isTouchMoving && atTop && touchStartY < touchEndY) {
+      mainSlider.slideTo(0);
+    }
+  };
+
+  const handleFirstSlideTouchMove = (event) => {
+    const firstSlide = document.querySelector('.main__slide--intro');
+    touchEndY = event.touches[0].clientY;
+
+    if (touchStartY > touchEndY) {
+      mainSlider.slideTo(1);
+    }
+  };
+
   const mainSlider = new Swiper('#mainSlider', {
     direction: 'vertical',
     slidesPerView: 1,
@@ -7,6 +69,33 @@ const initMainSlider = () => {
     hashNavigation: {
       watchState: true,
     },
+    on: {
+      slideChange: function () {
+        const firstSlide = document.querySelector('.main__slide--intro');
+        const secondSlide = document.querySelector('.main__slide--main');
+
+        if (this.activeIndex === 1) {
+          this.mousewheel.disable();
+
+          secondSlide.addEventListener('scroll', handleScroll);
+          secondSlide.addEventListener('wheel', handleWheel);
+          secondSlide.addEventListener('touchstart', handleTouchStart);
+          secondSlide.addEventListener('touchmove', handleTouchMove);
+          secondSlide.addEventListener('touchend', handleTouchEnd);
+        } else {
+          this.mousewheel.enable();
+
+          secondSlide.removeEventListener('scroll', handleScroll);
+          secondSlide.removeEventListener('wheel', handleWheel);
+          secondSlide.removeEventListener('touchstart', handleTouchStart);
+          secondSlide.removeEventListener('touchmove', handleTouchMove);
+          secondSlide.removeEventListener('touchend', handleTouchEnd);
+
+          firstSlide.addEventListener('touchstart', handleTouchStart);
+          firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
+        }
+      }
+    }
   });
 };
 
@@ -47,7 +136,6 @@ const initStagesSlider = () => {
   const stagesSliderThumbs = new Swiper("#stagesSliderThumbs", {
     spaceBetween: 35,
     slidesPerView: 5,
-    freeMode: true,
     watchSlidesProgress: true,
     watchOverflow: true,
   });
@@ -226,6 +314,7 @@ const initFancybox = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
+  initMobileMenu();
   initMainSlider();
   initIntroSlider();
   initStagesSlider();

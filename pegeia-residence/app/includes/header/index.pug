@@ -9,7 +9,7 @@ mixin header()
         .header__right
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'Home': 'home', 'Stages': 'stages', 'Project': 'project','Contact': 'contact'}
+              each key, value in {'Home': 'home', 'Stages': 'main', 'Contact': 'contact'}
                 li.header__menu-li
                   a.header__menu-link.link-underline(href=`#${key}` )= value
 
@@ -42,13 +42,7 @@ mixin header()
       .header__mobile-inner
         nav.header__menu
           ul.header__menu-ul
-            each key, value in {"About": 'about', "Why choose us": 'how-it-works', "Commissions": 'roadmap', "Our brands": 'contacts', "Contact": 'contacts'}
+            each key, value in {'Home': 'home', 'Stages': 'main', 'Contact': 'contact'}
               li.header__menu-li
-                a.header__menu-link(href=`index.html#${key}` )= value
-
-          .header__menu-buttons
-            +button(href="#" data-izimodal-open="#modal-login").button--bordered
-              | Log In
-            +button(href="#" data-izimodal-open="#modal-signup")
-              | Sign up
+                a.header__menu-link(href=`#${key}` )= value
 

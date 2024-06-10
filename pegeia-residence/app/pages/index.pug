@@ -14,477 +14,480 @@ block scripts
   script(src="scripts/main.js")
 
 block main
-  main.intro#mainSlider
+  .intro#mainSlider
     .main__wrapper.swiper-wrapper
-      .main__slide.main__slide--intro.swiper-slide(data-hash="home")
+      .main__slide.main__slide--intro.swiper-slide(data-hash="intro")
         +header()
-        .intro__wrapper
-          h1.section-title
-            span A place where 
-            | Affluence Becomes Home
-          .intro__date #{new Date().getFullYear()}
-          .intro__slider-nav
-            .intro__button-prev
-            .intro__button-next
-          .intro__pagination
-        #introSlider
-          .swiper-wrapper
-            .intro__slide.swiper-slide
-              +picture({
-                lazy: true,
-                path: "./img/intro/intro-img1.png",
-                mainAttr: {"class": "intro__slide-img"}
-              })
-              .swiper-lazy-preloader.swiper-lazy-preloader-white
-            .intro__slide.swiper-slide
-              +picture({
-                lazy: true,
-                path: "./img/intro/intro-img2.png",
-                mainAttr: {"class": "intro__slide-img"}
-              })
-              .swiper-lazy-preloader.swiper-lazy-preloader-white
-            .intro__slide.swiper-slide
-              +picture({
-                lazy: true,
-                path: "./img/intro/intro-img3.png",
-                mainAttr: {"class": "intro__slide-img"}
-              })
-              .swiper-lazy-preloader.swiper-lazy-preloader-white
-            .intro__slide.swiper-slide
-              +picture({
-                lazy: true,
-                path: "./img/intro/intro-img4.png",
-                mainAttr: {"class": "intro__slide-img"}
-              })
-              .swiper-lazy-preloader.swiper-lazy-preloader-white
-            .intro__slide.swiper-slide
-              +picture({
-                lazy: true,
-                path: "./img/intro/intro-img5.png",
-                mainAttr: {"class": "intro__slide-img"}
-              })
-              .swiper-lazy-preloader.swiper-lazy-preloader-white
+        section.intro
+          .container
+            h1.section-title
+              span A place where 
+              | Affluence Becomes Home
+            .intro__slider-control
+              .intro__date #{new Date().getFullYear()}
+              .intro__slider-nav
+                .intro__button-prev
+                .intro__button-next
+              .intro__pagination
+          #introSlider
+            .swiper-wrapper
+              .intro__slide.swiper-slide
+                +picture({
+                  lazy: true,
+                  path: "./img/intro/intro-img1.png",
+                  mainAttr: {"class": "intro__slide-img"}
+                })
+                .swiper-lazy-preloader.swiper-lazy-preloader-white
+              .intro__slide.swiper-slide
+                +picture({
+                  lazy: true,
+                  path: "./img/intro/intro-img2.png",
+                  mainAttr: {"class": "intro__slide-img"}
+                })
+                .swiper-lazy-preloader.swiper-lazy-preloader-white
+              .intro__slide.swiper-slide
+                +picture({
+                  lazy: true,
+                  path: "./img/intro/intro-img3.png",
+                  mainAttr: {"class": "intro__slide-img"}
+                })
+                .swiper-lazy-preloader.swiper-lazy-preloader-white
+              .intro__slide.swiper-slide
+                +picture({
+                  lazy: true,
+                  path: "./img/intro/intro-img4.png",
+                  mainAttr: {"class": "intro__slide-img"}
+                })
+                .swiper-lazy-preloader.swiper-lazy-preloader-white
+              .intro__slide.swiper-slide
+                +picture({
+                  lazy: true,
+                  path: "./img/intro/intro-img5.png",
+                  mainAttr: {"class": "intro__slide-img"}
+                })
+                .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-      .main__slide.main__slide--stages.swiper-slide(data-hash="stages")
-        .container
-          .stages__wrapper
-            .stages__title
-              h3.section-title--black
-                span What are the
-                | WORK STAGES?
+      .main__slide.main__slide--main.swiper-slide(data-hash="main")
+        section.stages
+          .container
+            .stages__wrapper
+              .stages__title
+                h3.section-title--black
+                  span What are the
+                  | WORK STAGES?
 
-              p.section-subtitle
-                | Here you can check the real time status for every step of building.
+                p.section-subtitle
+                  | Here you can check the real time status for every step of building.
 
-            .stages__preview
-              .stages__preview-wrapper
-                #stagesSlider
-                  .swiper-wrapper
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider1
-                        .swiper-wrapper
-                          .swiper-slide
-                            a.test(href="./img/stages/stages-preview.png" data-fancybox="stages-preview-group-first") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/stages-preview.png"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-first")
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/1.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-first")
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/3.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider2
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-second") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/2.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-second") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/3.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/7.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/7.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider3
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-third") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/4.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-third") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/5.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider4
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-fourth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/6.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-fourth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/7.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider5
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/8.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/9.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/9.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/3.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/5.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/10.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/1.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/8.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider6
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-sixth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/10.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-sixth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/1.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider7
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-seventh") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/2.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-seventh") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/3.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider8
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-eighth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/4.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-eighth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/5.jpg"
-                              })
-                    .stages__slide.swiper-slide
-                      #stageInnerSlider9
-                        .swiper-wrapper
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-nineth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/6.jpg"
-                              })
-                          .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-nineth") 
-                              +picture({
-                                lazy: true,
-                                path: "./img/stages/7.jpg"
-                              })
+              .stages__preview
+                .stages__preview-wrapper
+                  #stagesSlider
+                    .swiper-wrapper
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider1
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/stages-preview.png" data-fancybox="stages-preview-group-first") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/stages-preview.png"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-first")
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/1.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-first")
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/3.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider2
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-second") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/2.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-second") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/3.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/7.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/7.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider3
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-third") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/4.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-third") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/5.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider4
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-fourth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/6.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-fourth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/7.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider5
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/8.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/9.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/9.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/3.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/5.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/10.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/1.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/8.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider6
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-sixth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/10.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-sixth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/1.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider7
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-seventh") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/2.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-seventh") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/3.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider8
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-eighth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/4.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-eighth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/5.jpg"
+                                })
+                      .stages__slide.swiper-slide
+                        #stageInnerSlider9
+                          .swiper-wrapper
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-nineth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/6.jpg"
+                                })
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-nineth") 
+                                +picture({
+                                  lazy: true,
+                                  path: "./img/stages/7.jpg"
+                                })
 
-              .stages__slider-control
-                .stages__slider-nav
-                  .stages__button-prev
-                  .stages__button-next
+                .stages__slider-control
+                  .stages__slider-nav
+                    .stages__button-prev
+                    .stages__button-next
 
-                .stages__slider-count
-                  .stages__inner-pagination
-                  svg(width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg')
-                    path(fill-rule='evenodd' clip-rule='evenodd' d='M5.59998 0.882324H13.4C14.3573 0.882324 15.1334 1.67249 15.1334 2.64709V12.3529C15.1334 13.3275 14.3573 14.1177 13.4 14.1177H13V4.64709C13 3.18518 11.8359 2 10.4 2H3.98688C4.24036 1.34546 4.86707 0.882324 5.59998 0.882324ZM3.07825 2C3.36182 0.85083 4.3833 0 5.59998 0H13.4C14.8359 0 16 1.18518 16 2.64709V12.3529C16 13.8148 14.8359 15 13.4 15H12.9218C12.6382 16.1492 11.6167 17 10.4 17H2.59998C1.16406 17 0 15.8148 0 14.3529V4.64709C0 3.18518 1.16406 2 2.59998 2H3.07825Z' fill='#242424' fill-opacity='0.3')
+                  .stages__slider-count
+                    .stages__inner-pagination
+                    svg(width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M5.59998 0.882324H13.4C14.3573 0.882324 15.1334 1.67249 15.1334 2.64709V12.3529C15.1334 13.3275 14.3573 14.1177 13.4 14.1177H13V4.64709C13 3.18518 11.8359 2 10.4 2H3.98688C4.24036 1.34546 4.86707 0.882324 5.59998 0.882324ZM3.07825 2C3.36182 0.85083 4.3833 0 5.59998 0H13.4C14.8359 0 16 1.18518 16 2.64709V12.3529C16 13.8148 14.8359 15 13.4 15H12.9218C12.6382 16.1492 11.6167 17 10.4 17H2.59998C1.16406 17 0 15.8148 0 14.3529V4.64709C0 3.18518 1.16406 2 2.59998 2H3.07825Z' fill='#242424' fill-opacity='0.3')
 
-                .stages__slider-autoplay
-                  span.stages__slider-autoplay-text screencast autoplaying
-                  button(type="button").stages__slider-autoplay--play.is-active
-                    svg(width='11' height='14' viewbox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg')
-                      g(opacity='0.5')
-                        path(d='M2 12L8.68656 7.82091C9.30241 7.436 9.31553 6.5437 8.71127 6.14086L2.5 2.00002' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
-                        path(d='M2 12L2 2' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
-                  button(type="button").stages__slider-autoplay--stop
-                    svg(width='13' height='14' viewbox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
-                      path(d='M11 12L11 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
-                      path(d='M2 12L2 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
+                  .stages__slider-autoplay
+                    span.stages__slider-autoplay-text screencast autoplaying
+                    button(type="button").stages__slider-autoplay--play.is-active
+                      svg(width='11' height='14' viewbox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        g(opacity='0.5')
+                          path(d='M2 12L8.68656 7.82091C9.30241 7.436 9.31553 6.5437 8.71127 6.14086L2.5 2.00002' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
+                          path(d='M2 12L2 2' stroke='#1BFC4D' stroke-width='3' stroke-linecap='round')
+                    button(type="button").stages__slider-autoplay--stop
+                      svg(width='13' height='14' viewbox='0 0 13 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M11 12L11 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
+                        path(d='M2 12L2 2' stroke='#323232' stroke-width='3' stroke-linecap='round')
 
-          .stages__steps
-            #stagesSliderThumbs(thumbsSlider)
-              .swiper-wrapper
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item.done
-                    .thumbs__item-status
-                      | Done!
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 1
+            .stages__steps
+              #stagesSliderThumbs(thumbsSlider)
+                .swiper-wrapper
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item.done
+                      .thumbs__item-status
+                        | Done!
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 1
 
-                      .thumbs__item-title
-                        | Development of concept, exterior, and interior.
+                        .thumbs__item-title
+                          | Development of concept, exterior, and interior.
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item.done
-                    .thumbs__item-status
-                      | Done!
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 2
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item.done
+                      .thumbs__item-status
+                        | Done!
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 2
 
-                      .thumbs__item-title
-                        | Project development and coordination with government agencies.
+                        .thumbs__item-title
+                          | Project development and coordination with government agencies.
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item.done
-                    .thumbs__item-status
-                      | Done!
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 3
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item.done
+                      .thumbs__item-status
+                        | Done!
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 3
 
-                      .thumbs__item-title
-                        | Preparation of the construction site.
+                        .thumbs__item-title
+                          | Preparation of the construction site.
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item.done
-                    .thumbs__item-status
-                      | Done!
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 4
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item.done
+                      .thumbs__item-status
+                        | Done!
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 4
 
-                      .thumbs__item-title
-                        | Installation of monolithic reinforced concrete frames for houses and filling openings with bricks, windows, and doors.
+                        .thumbs__item-title
+                          | Installation of monolithic reinforced concrete frames for houses and filling openings with bricks, windows, and doors.
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item
-                    .thumbs__item-status
-                      | In Progress...
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 5
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item
+                      .thumbs__item-status
+                        | In Progress...
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 5
 
-                      .thumbs__item-title
-                        | Laying engineering networks to the house and within rooms involves the following tasks:
+                        .thumbs__item-title
+                          | Laying engineering networks to the house and within rooms involves the following tasks:
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item
-                    .thumbs__item-status
-                      | In Progress...
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 6
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item
+                      .thumbs__item-status
+                        | In Progress...
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 6
 
-                      .thumbs__item-title
-                        | Interior finishing works inside houses according to the interior design involve:
+                        .thumbs__item-title
+                          | Interior finishing works inside houses according to the interior design involve:
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item
-                    .thumbs__item-status
-                      | In Progress...
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 7
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item
+                      .thumbs__item-status
+                        | In Progress...
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 7
 
-                      .thumbs__item-title
-                        | Exterior finishing of houses in accordance with the exterior design includes...
+                        .thumbs__item-title
+                          | Exterior finishing of houses in accordance with the exterior design includes...
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item
-                    .thumbs__item-status
-                      | In Progress...
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 8
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item
+                      .thumbs__item-status
+                        | In Progress...
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 8
 
-                      .thumbs__item-title
-                        | Improvement works around the house premises in accordance with the exterior design involve...
+                        .thumbs__item-title
+                          | Improvement works around the house premises in accordance with the exterior design involve...
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-                .stages__slide-thumbs.swiper-slide
-                  .thumbs__item
-                    .thumbs__item-status
-                      | In Progress...
-                    .thumbs__item-wrapper
-                      .thumbs__item-number
-                        | 9
+                  .stages__slide-thumbs.swiper-slide
+                    .thumbs__item
+                      .thumbs__item-status
+                        | In Progress...
+                      .thumbs__item-wrapper
+                        .thumbs__item-number
+                          | 9
 
-                      .thumbs__item-title
-                        | Commissioning of equipment and engineering systems in the house involves...
+                        .thumbs__item-title
+                          | Commissioning of equipment and engineering systems in the house involves...
 
-                      .thumbs__item-description
-                        | Defining the concept of building houses in collaboration with an architect-designer.
+                        .thumbs__item-description
+                          | Defining the concept of building houses in collaboration with an architect-designer.
 
-                      span.thumbs__item-more
-                        | Learn more
+                        span.thumbs__item-more
+                          | Learn more
 
-      .main__slide.main__slide--contact.swiper-slide(data-hash="contact")
-        .contact__wrapper
-          .contact__download
-            .container
-              h3.section-title
-                span Download the
-                | Full designe’s
+        section.contact
+          .contact__wrapper
+            .contact__download
+              .container
+                h3.section-title
+                  span Download the
+                  | Full designe’s
 
-              .contact__buttons
-                button(type="download").button
-                  | CLIP.MP4
+                .contact__buttons
+                  button(type="download").button
+                    | CLIP.MP4
 
-                button(type="download").button
-                  | PDF.EXE
+                  button(type="download").button
+                    | PDF.EXE
 
-          .contact__main
-            .container
-              h2.section-title--black
-                span Have questions?
-                | OUR CONTACTS
+            .contact__main
+              .container
+                h2.section-title--black
+                  span Have questions?
+                  | OUR CONTACTS
 
-              .contact__main-socials
-                .item
-                  img.item__icon(src="img/icons/phone.svg" alt="Phone")
-                  a.item__link(href="tel:+35799742586") +357 99 74 25 86
+                .contact__main-socials
+                  .item
+                    img.item__icon(src="img/icons/phone.svg" alt="Phone")
+                    a.item__link(href="tel:+35799742586") +357 99 74 25 86
 
-                .item
-                  img.item__icon(src="img/icons/mail.svg" alt="Mail")
-                  a.item__link(href="mailto:pegeia@gmail.com") pegeia@gmail.com
+                  .item
+                    img.item__icon(src="img/icons/mail.svg" alt="Mail")
+                    a.item__link(href="mailto:pegeia@gmail.com") pegeia@gmail.com
 
-                .item
-                  img.item__icon(src="img/icons/telegram.svg" alt="Telegram")
-                  a.item__link(href="https://t.me/pegeiaresidence" target="blank") @pegeiaresidence
+                  .item
+                    img.item__icon(src="img/icons/telegram.svg" alt="Telegram")
+                    a.item__link(href="https://t.me/pegeiaresidence" target="blank") @pegeiaresidence
 
-              .contact__main-form
-                h3.form__title Leave us your details and we will contact you!
-                +form()
-                  .form__wrapper
-                    +input-name("Name")
-                    +input-last-name("Surname")
-                    +input-phone("Phone")
-                    +input-email("Email")
+                .contact__main-form
+                  h3.form__title Leave us your details and we will contact you!
+                  +form()
+                    .form__wrapper
+                      +input-name("Name")
+                      +input-last-name("Surname")
+                      +input-phone("Phone")
+                      +input-email("Email")
 
-                  +button(type="submit") Contact me!
+                    +button(type="submit") Contact me!
 
-          +footer()
+        +footer()
