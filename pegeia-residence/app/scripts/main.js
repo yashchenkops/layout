@@ -135,9 +135,21 @@ const initStagesSlider = () => {
 
   const stagesSliderThumbs = new Swiper("#stagesSliderThumbs", {
     spaceBetween: 35,
-    slidesPerView: 5,
+    slidesPerView: 2,
     watchSlidesProgress: true,
     watchOverflow: true,
+    breakpoints: {
+      // mobile + tablet - 320-990
+      450: {
+        slidesPerView: 3
+      },
+      620: {
+        slidesPerView: 4
+      },
+      1023: {
+        slidesPerView: 5
+      }
+    }
   });
 
   const stagesSlider = new Swiper("#stagesSlider", {
