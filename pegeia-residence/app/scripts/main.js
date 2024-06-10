@@ -26,7 +26,8 @@ const initMainSlider = () => {
   };
 
   const handleWheel = (event) => {
-    if (atTop && event.deltaY < 0) {
+    const secondSlide = document.querySelector('.main__slide--main');
+    if (secondSlide.scrollTop === 0 && event.deltaY < 0) {
       mainSlider.slideTo(0);
     }
   };
@@ -49,13 +50,13 @@ const initMainSlider = () => {
   };
 
   const handleTouchEnd = () => {
-    if (isTouchMoving && atTop && touchStartY < touchEndY) {
+    const secondSlide = document.querySelector('.main__slide--main');
+    if (isTouchMoving && secondSlide.scrollTop === 0 && touchStartY < touchEndY) {
       mainSlider.slideTo(0);
     }
   };
 
   const handleFirstSlideTouchMove = (event) => {
-    const firstSlide = document.querySelector('.main__slide--intro');
     touchEndY = event.touches[0].clientY;
 
     if (touchStartY > touchEndY) {
@@ -84,6 +85,9 @@ const initMainSlider = () => {
           secondSlide.addEventListener('touchstart', handleTouchStart);
           secondSlide.addEventListener('touchmove', handleTouchMove);
           secondSlide.addEventListener('touchend', handleTouchEnd);
+
+          firstSlide.removeEventListener('touchstart', handleTouchStart);
+          firstSlide.removeEventListener('touchmove', handleFirstSlideTouchMove);
         } else {
           this.mousewheel.enable();
 
@@ -141,7 +145,6 @@ const initStagesSlider = () => {
     watchSlidesProgress: true,
     watchOverflow: true,
     breakpoints: {
-      // mobile + tablet - 320-990
       450: {
         slidesPerView: 3
       },
@@ -195,7 +198,7 @@ const initStagesSlider = () => {
   const nextButton = document.querySelector('.stages__button-next');
   const prevButton = document.querySelector('.stages__button-prev');
 
-  const autoplayInterval = 3000; // Інтервал автоплей
+  const autoplayInterval = 3000;
   let autoplay;
 
   const startAutoplay = () => {
