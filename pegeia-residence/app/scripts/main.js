@@ -74,6 +74,38 @@ const initMainSlider = () => {
     }
   };
 
+  const handleMenuClick = (event) => {
+    event.preventDefault();
+    console.log('Menu link clicked');
+    mainSlider.slideTo(1);
+
+    setTimeout(() => {
+      const contactSection = document.querySelector('.contact__main');
+      if (contactSection) {
+        console.log('Scrolling to contact section');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.log('Contact section not found');
+      }
+    }, 500); // Затримка для завершення переходу до слайду
+  };
+
+  const handleMenuTouchStart = (event) => {
+    event.preventDefault();
+    console.log('Menu link touched');
+    mainSlider.slideTo(1);
+
+    setTimeout(() => {
+      const contactSection = document.querySelector('.contact__main');
+      if (contactSection) {
+        console.log('Scrolling to contact section');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.log('Contact section not found');
+      }
+    }, 500); // Затримка для завершення переходу до слайду
+  };
+
   const mainSlider = new Swiper('#mainSlider', {
     direction: 'vertical',
     slidesPerView: 1,
@@ -95,6 +127,15 @@ const initMainSlider = () => {
         secondSlide.addEventListener('touchstart', handleTouchStart);
         secondSlide.addEventListener('touchmove', handleTouchMove);
         secondSlide.addEventListener('touchend', handleTouchEnd);
+
+        const menuLink = document.querySelector('.header__menu-link[href="#contact"]');
+        if (menuLink) {
+          console.log('Menu link found');
+          menuLink.addEventListener('click', handleMenuClick);
+          menuLink.addEventListener('touchstart', handleMenuTouchStart);
+        } else {
+          console.log('Menu link not found');
+        }
       },
       slideChange: function () {
         const firstSlide = document.querySelector('.main__slide--intro');
