@@ -1,3 +1,12 @@
+const initMobileMenu = () => {
+  const mobileBurger = document.querySelector('.header__burger-button');
+  const mobileMenu = document.querySelector('.header__mobile-inner');
+
+  mobileBurger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('is-active');
+  })
+};
+
 const initMainSlider = () => {
   let atTop = false;
   let touchStartY = 0;
@@ -150,7 +159,6 @@ const initStagesSlider = () => {
     "#stageInnerSlider7",
     "#stageInnerSlider8",
     "#stageInnerSlider9",
-    "#stageInnerSlider10",
   ];
 
   const innerSliders = sliderIds.map((id) => {
@@ -306,6 +314,7 @@ const initFancybox = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
+  initMobileMenu();
   initMainSlider();
   initIntroSlider();
   initStagesSlider();

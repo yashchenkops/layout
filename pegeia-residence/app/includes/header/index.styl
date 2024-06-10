@@ -9,7 +9,7 @@
   padding 30px 15px
   transition padding 0.5s, box-shadow 0.5s
   backdrop-filter blur(10px)
-  background: rgba(36, 36, 36, 0.3)
+  background rgba(36, 36, 36, 0.3)
 
   .header__container
     display flex
@@ -33,10 +33,10 @@
       gap 30px
 
     &-link
-      padding .5rem 0
+      padding 5px 0
       color #E7D0D0
-      font-size 1.6rem
-      line-height 2.1rem
+      font-size 16px
+      line-height 21px
 
 .header__mobile
   display none
@@ -45,7 +45,7 @@
   .header__mobile-top
     display flex
     position fixed
-    top 10px
+    top 5px
     left 0
     right 0
     align-items center
@@ -63,18 +63,13 @@
     .header__right
       display flex
       align-items center
+      margin-right -10px
 
     .header__burger-button
-      transform scale(0.7)
-      background rgba(255, 255, 255, 0.05)
-      border 2px solid rgba(255, 255, 255, 0.1)
-      backdrop-filter blur(40px)
-      border-radius 12px 12px 24px 12px
-
       svg
         position absolute
         left 0
-        height 80px
+        height 70px
         width 80px
 
       .plates
@@ -101,7 +96,7 @@
 
       .line
         fill none
-        stroke $red
+        stroke $white
         stroke-width 6px
         stroke-linecap round
         stroke-linejoin round
@@ -157,82 +152,43 @@
 
   .header__mobile-inner
     position fixed
-    top -100%
     display flex
     flex-direction column
     align-items center
-    justify-content space-between
-    padding 120px 65px 124px 64px
-    height 100%
-    width 100%
-    background-color $bg
-    z-index 99
-    transition top 0.5s, visibility 0.5s
-    visibility hidden
+    justify-content center
+    top -91%
+    bottom 91%
+    left 0
+    right 0
+    backdrop-filter blur(10px)
+    background rgba(36, 36, 36, 0.7)
+    transition all 0.5s, visibility 0.5s
     overflow auto
+    padding 50px
+    z-index 99
+
+    &.is-active
+      top 0
+      bottom 0
 
     .header__menu
       width 100%
       text-align center
-      margin-top 60px
 
-      &-ul
-        margin-bottom 40px
-
-      &-link
-        width 100%
-        padding 3rem 0
-        font-size 2.6rem
-        line-height 3.1rem
-        font-weight 600
-        color $white
-
-      &-buttons
-        .button
-          display block
-          padding 16px 0
-
-        .button--bordered
-          margin-bottom 10px
-
-    .header__button
-      margin-bottom 6rem
-
-      .button
-        font-size 18px !important
-        line-height 22px !important
-        padding 9px 20px !important
-        min-width 170px
-
-  &.is-fixed
-    .header__mobile-top
-      top 0
-      background-color $bg
-      padding 0 15px
-      height auto
-
-  &.is-active
-    .header__mobile-inner
-      visibility visible
-      top 0
-
-    &.is-fixed
-      .header__mobile-top
-        box-shadow none
-        backdrop-filter none
-
-@media (max-width 1024px)
-  .header__desktop
-    .header__logo
-      img
-        width 150px
-
-    .header__menu
       &-li
-        padding 0 1.5rem
+        margin-bottom 70px
+
+        &:last-child
+          margin-bottom 0
 
       &-link
-        font-size 12px
+        display block
+        width 100%
+        font-weight 500
+        font-size 35px
+        line-height 0.85714
+        text-align center
+        color rgba(255, 255, 255, 0.8)
 
 @media (max-width 768px)
   .header__desktop
