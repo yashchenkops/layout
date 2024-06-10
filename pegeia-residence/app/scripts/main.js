@@ -1,14 +1,3 @@
-const initMobileMenu = () => {
-  const mobileBurger = document.querySelector('.header__burger-button');
-  const mobileMenuHeader = document.querySelector('.header__mobile-top');
-  const mobileMenuInner = document.querySelector('.header__mobile-inner');
-
-  mobileBurger.addEventListener('click', () => {
-    mobileMenuInner.classList.toggle('is-active');
-    mobileMenuHeader.classList.toggle('is-active');
-  })
-};
-
 const initMainSlider = () => {
   let atTop = false;
   let touchStartY = 0;
@@ -56,9 +45,12 @@ const initMainSlider = () => {
     }
   };
 
+  const handleFirstSlideTouchStart = (event) => {
+    touchStartY = event.touches[0].clientY;
+  };
+
   const handleFirstSlideTouchMove = (event) => {
     touchEndY = event.touches[0].clientY;
-
     if (touchStartY > touchEndY) {
       mainSlider.slideTo(1);
     }
@@ -73,6 +65,19 @@ const initMainSlider = () => {
       watchState: true,
     },
     on: {
+      init: function () {
+        const firstSlide = document.querySelector('.main__slide--intro');
+        const secondSlide = document.querySelector('.main__slide--main');
+
+        firstSlide.addEventListener('touchstart', handleFirstSlideTouchStart);
+        firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
+
+        secondSlide.addEventListener('scroll', handleScroll);
+        secondSlide.addEventListener('wheel', handleWheel);
+        secondSlide.addEventListener('touchstart', handleTouchStart);
+        secondSlide.addEventListener('touchmove', handleTouchMove);
+        secondSlide.addEventListener('touchend', handleTouchEnd);
+      },
       slideChange: function () {
         const firstSlide = document.querySelector('.main__slide--intro');
         const secondSlide = document.querySelector('.main__slide--main');
@@ -80,29 +85,19 @@ const initMainSlider = () => {
         if (this.activeIndex === 1) {
           this.mousewheel.disable();
 
-          secondSlide.addEventListener('scroll', handleScroll);
-          secondSlide.addEventListener('wheel', handleWheel);
-          secondSlide.addEventListener('touchstart', handleTouchStart);
-          secondSlide.addEventListener('touchmove', handleTouchMove);
-          secondSlide.addEventListener('touchend', handleTouchEnd);
-
-          firstSlide.removeEventListener('touchstart', handleTouchStart);
+          firstSlide.removeEventListener('touchstart', handleFirstSlideTouchStart);
           firstSlide.removeEventListener('touchmove', handleFirstSlideTouchMove);
         } else {
           this.mousewheel.enable();
 
-          secondSlide.removeEventListener('scroll', handleScroll);
-          secondSlide.removeEventListener('wheel', handleWheel);
-          secondSlide.removeEventListener('touchstart', handleTouchStart);
-          secondSlide.removeEventListener('touchmove', handleTouchMove);
-          secondSlide.removeEventListener('touchend', handleTouchEnd);
-
-          firstSlide.addEventListener('touchstart', handleTouchStart);
+          firstSlide.addEventListener('touchstart', handleFirstSlideTouchStart);
           firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
         }
       }
     }
   });
+
+  mainSlider.init(); // Ініціалізація слайдера з додаванням обробників подій
 };
 
 const initIntroSlider = () => {
@@ -329,6 +324,17 @@ const initFancybox = () => {
   });
 };
 
+const initMobileMenu = () => {
+  const mobileBurger = document.querySelector('.header__burger-button');
+  const mobileMenuHeader = document.querySelector('.header__mobile-top');
+  const mobileMenuInner = document.querySelector('.header__mobile-inner');
+
+  mobileBurger.addEventListener('click', () => {
+    mobileMenuInner.classList.toggle('is-active');
+    mobileMenuHeader.classList.toggle('is-active');
+  })
+};
+
 const showMoreThumbsDescription = () => {
   document.querySelectorAll('.thumbs__item-more').forEach(function(button) {
     button.addEventListener('click', function() {
@@ -346,10 +352,10 @@ const showMoreThumbsDescription = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
-  initMobileMenu();
   initMainSlider();
   initIntroSlider();
   initStagesSlider();
   initFancybox();
+  initMobileMenu();
   showMoreThumbsDescription();
 });
