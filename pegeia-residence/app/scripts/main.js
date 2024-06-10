@@ -1,9 +1,11 @@
 const initMobileMenu = () => {
   const mobileBurger = document.querySelector('.header__burger-button');
-  const mobileMenu = document.querySelector('.header__mobile-inner');
+  const mobileMenuHeader = document.querySelector('.header__mobile-top');
+  const mobileMenuInner = document.querySelector('.header__mobile-inner');
 
   mobileBurger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('is-active');
+    mobileMenuInner.classList.toggle('is-active');
+    mobileMenuHeader.classList.toggle('is-active');
   })
 };
 
@@ -324,6 +326,21 @@ const initFancybox = () => {
   });
 };
 
+const showMoreThumbsDescription = () => {
+  document.querySelectorAll('.thumbs__item-more').forEach(function(button) {
+    button.addEventListener('click', function() {
+      const description = this.previousElementSibling;
+      description.classList.toggle('is-active');
+      
+      if (description.classList.contains('is-active')) {
+        this.textContent = 'Show less';
+      } else {
+        this.textContent = 'Learn more';
+      }
+    });
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
   initMobileMenu();
@@ -331,4 +348,5 @@ document.addEventListener('DOMContentLoaded', function() {
   initIntroSlider();
   initStagesSlider();
   initFancybox();
+  showMoreThumbsDescription();
 });

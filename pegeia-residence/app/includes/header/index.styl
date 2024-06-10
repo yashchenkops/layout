@@ -45,16 +45,22 @@
   .header__mobile-top
     display flex
     position fixed
-    top 5px
+    top 0
     left 0
     right 0
     align-items center
     justify-content space-between
-    padding 0 15px
+    padding 5px 15px 0
     z-index 100
-    transition box-shadow 0.5s
+    transition all 0.2s
     overflow hidden
     height 60px
+    backdrop-filter blur(10px)
+    background rgba(36, 36, 36, 0.7)
+
+    &.is-active
+      backdrop-filter blur(0)
+      background rgba(36, 36, 36, 0)
 
     .header__logo
       img
@@ -66,6 +72,9 @@
       margin-right -10px
 
     .header__burger-button
+      position relative
+      right -10px
+
       svg
         position absolute
         left 0
@@ -160,8 +169,6 @@
     bottom 91%
     left 0
     right 0
-    backdrop-filter blur(10px)
-    background rgba(36, 36, 36, 0.7)
     transition all 0.5s, visibility 0.5s
     overflow auto
     padding 50px
@@ -170,6 +177,21 @@
     &.is-active
       top 0
       bottom 0
+      backdrop-filter blur(10px)
+      background rgba(36, 36, 36, 0.7)
+
+      .header__menu-li
+        opacity 1
+        transform translateX(0)
+
+        &:nth-child(1)
+          transition-delay 0.5s
+
+        &:nth-child(2)
+          transition-delay 0.9s
+
+        &:nth-child(3)
+          transition-delay 1.3s
 
     .header__menu
       width 100%
@@ -177,6 +199,9 @@
 
       &-li
         margin-bottom 70px
+        opacity 0
+        transform translateX(-20px)
+        transition opacity 0.5s, transform 0.5s
 
         &:last-child
           margin-bottom 0
