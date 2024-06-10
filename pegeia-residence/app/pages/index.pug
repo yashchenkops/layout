@@ -16,17 +16,18 @@ block scripts
 block main
   main.intro#mainSlider
     .main__wrapper.swiper-wrapper
-      .main__slide.main__slide--intro.swiper-slide(data-hash="home")
+      section.main__slide.main__slide--intro.swiper-slide(data-hash="intro")
         +header()
         .intro__wrapper
           h1.section-title
             span A place where 
             | Affluence Becomes Home
-          .intro__date #{new Date().getFullYear()}
-          .intro__slider-nav
-            .intro__button-prev
-            .intro__button-next
-          .intro__pagination
+          .intro__slider-control
+            .intro__date #{new Date().getFullYear()}
+            .intro__slider-nav
+              .intro__button-prev
+              .intro__button-next
+            .intro__pagination
         #introSlider
           .swiper-wrapper
             .intro__slide.swiper-slide
@@ -65,7 +66,7 @@ block main
               })
               .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-      .main__slide.main__slide--stages.swiper-slide(data-hash="stages")
+      section.main__slide.main__slide--stages.swiper-slide(data-hash="stages")
         .container
           .stages__wrapper
             .stages__title
@@ -83,20 +84,20 @@ block main
                     .stages__slide.swiper-slide
                       #stageInnerSlider1
                         .swiper-wrapper
-                          .swiper-slide
-                            a.test(href="./img/stages/stages-preview.png" data-fancybox="stages-preview-group-first") 
+                          .stages__inner-slide.swiper-slide
+                            a.stages__inner-slide-preview(href="./img/stages/stages-preview.png" data-fancybox="stages-preview-group-first") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/stages-preview.png"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-first")
+                            a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-first")
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/1.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-first")
+                            a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-first")
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/3.jpg"
@@ -105,25 +106,25 @@ block main
                       #stageInnerSlider2
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-second") 
+                            a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-second") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/2.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-second") 
+                            a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-second") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/3.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
+                            a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/7.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
+                            a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/7.jpg"
@@ -132,13 +133,13 @@ block main
                       #stageInnerSlider3
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-third") 
+                            a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-third") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/4.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-third") 
+                            a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-third") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/5.jpg"
@@ -147,13 +148,13 @@ block main
                       #stageInnerSlider4
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-fourth") 
+                            a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-fourth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/6.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-fourth") 
+                            a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-fourth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/7.jpg"
@@ -162,43 +163,43 @@ block main
                       #stageInnerSlider5
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/8.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/9.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/9.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/9.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/3.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/5.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/10.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/1.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
+                            a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/8.jpg"
@@ -207,13 +208,13 @@ block main
                       #stageInnerSlider6
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-sixth") 
+                            a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-sixth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/10.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-sixth") 
+                            a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-sixth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/1.jpg"
@@ -222,13 +223,13 @@ block main
                       #stageInnerSlider7
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-seventh") 
+                            a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-seventh") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/2.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-seventh") 
+                            a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-seventh") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/3.jpg"
@@ -237,13 +238,13 @@ block main
                       #stageInnerSlider8
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-eighth") 
+                            a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-eighth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/4.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-eighth") 
+                            a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-eighth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/5.jpg"
@@ -252,13 +253,13 @@ block main
                       #stageInnerSlider9
                         .swiper-wrapper
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-nineth") 
+                            a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-nineth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/6.jpg"
                               })
                           .stages__inner-slide.swiper-slide
-                            a(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-nineth") 
+                            a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-nineth") 
                               +picture({
                                 lazy: true,
                                 path: "./img/stages/7.jpg"
@@ -442,8 +443,7 @@ block main
                       span.thumbs__item-more
                         | Learn more
 
-      .main__slide.main__slide--contact.swiper-slide(data-hash="contact")
-        .contact__wrapper
+        .contact__wrapper(data-hash="contact")
           .contact__download
             .container
               h3.section-title

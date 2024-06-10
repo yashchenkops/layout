@@ -9,7 +9,7 @@ mixin header()
         .header__right
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'Home': 'home', 'Stages': 'stages', 'Project': 'project','Contact': 'contact'}
+              each key, value in {'Home': 'home', 'Stages': 'stages', 'Project': 'project', 'Contact': 'contact'}
                 li.header__menu-li
                   a.header__menu-link.link-underline(href=`#${key}` )= value
 
