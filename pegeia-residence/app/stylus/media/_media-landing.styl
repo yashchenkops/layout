@@ -33,6 +33,10 @@
             font-size 26px
 
 @media (max-width 768px)
+  .main__wrapper
+    overflow-x auto
+    flex-direction column
+
   .section-title
     font-size 55px
     line-height 0.90909
@@ -59,13 +63,19 @@
       .intro__slider-control
         flex-direction column-reverse
         gap 25px
-        bottom 40px
+        bottom 80px
 
         .intro__slider-nav
           margin 0
           order 1
 
     &--main
+      overflow visible
+
+      .stages
+        overflow-x hidden
+        padding-top 0
+
       .section-title--black
         margin-bottom 5px
 
@@ -79,7 +89,8 @@
               height 50vw
 
       .stages__wrapper
-        margin-top 25px
+        padding-top 70px
+        margin-top 0margin 120px 0 75px
 
       .stages__steps
         .thumbs__item-status

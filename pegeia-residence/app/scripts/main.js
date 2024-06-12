@@ -1,162 +1,178 @@
 const initMainSlider = () => {
-  let atTop = false;
-  let touchStartY = 0;
-  let touchStartX = 0;
-  let touchEndY = 0;
-  let touchEndX = 0;
-  let isTouchMoving = false;
+  let mainSlider;
 
-  const handleScroll = (event) => {
-    const secondSlide = event.target;
+  const enableSlider = () => {
+    if (!mainSlider) {
+      initializeSlider();
+    }
+  };
 
-    if (secondSlide.scrollTop === 0) {
-      atTop = true;
+  const disableSlider = () => {
+    if (mainSlider) {
+      mainSlider.destroy(true, true);
+      mainSlider = null;
+    }
+  };
+
+  const checkScreenSize = () => {
+    if (window.innerWidth <= 768) {
+      disableSlider();
     } else {
-      atTop = false;
+      enableSlider();
     }
   };
 
-  const handleWheel = (event) => {
-    const secondSlide = document.querySelector('.main__slide--main');
-    if (secondSlide.scrollTop === 0 && event.deltaY < 0) {
-      mainSlider.slideTo(0);
-    }
-  };
+  const initializeSlider = () => {
+    let touchStartY = 0;
+    let touchStartX = 0;
+    let touchEndY = 0;
+    let touchEndX = 0;
+    let isTouchMoving = false;
 
-  const handleTouchStart = (event) => {
-    touchStartY = event.touches[0].clientY;
-    touchStartX = event.touches[0].clientX;
-    isTouchMoving = false;
-  };
-
-  const handleTouchMove = (event) => {
-    isTouchMoving = true;
-    const secondSlide = document.querySelector('.main__slide--main');
-    touchEndY = event.touches[0].clientY;
-    touchEndX = event.touches[0].clientX;
-
-    const diffY = touchStartY - touchEndY;
-    const diffX = touchStartX - touchEndX;
-
-    if (secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY)) {
-      if (touchStartY < touchEndY) {
+    const handleScroll = (event) => {
+      const secondSlide = event.target;
+      if (secondSlide.scrollTop === 0) {
         atTop = true;
       } else {
         atTop = false;
       }
-    }
-  };
+    };
 
-  const handleTouchEnd = () => {
-    const secondSlide = document.querySelector('.main__slide--main');
-    const diffY = touchStartY - touchEndY;
-    const diffX = touchStartX - touchEndX;
-
-    if (isTouchMoving && secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY) && touchStartY < touchEndY) {
-      mainSlider.slideTo(0);
-    }
-  };
-
-  const handleFirstSlideTouchStart = (event) => {
-    touchStartY = event.touches[0].clientY;
-    touchStartX = event.touches[0].clientX;
-  };
-
-  const handleFirstSlideTouchMove = (event) => {
-    touchEndY = event.touches[0].clientY;
-    touchEndX = event.touches[0].clientX;
-
-    const diffY = touchStartY - touchEndY;
-    const diffX = touchStartX - touchEndX;
-
-    if (Math.abs(diffX) < Math.abs(diffY) && touchStartY > touchEndY) {
-      mainSlider.slideTo(1);
-    }
-  };
-
-  const handleMenuClick = (event) => {
-    event.preventDefault();
-    console.log('Menu link clicked');
-    mainSlider.slideTo(1);
-
-    setTimeout(() => {
-      const contactSection = document.querySelector('.contact__main');
-      if (contactSection) {
-        console.log('Scrolling to contact section');
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        console.log('Contact section not found');
+    const handleWheel = (event) => {
+      const secondSlide = document.querySelector('.main__slide--main');
+      if (secondSlide.scrollTop === 0 && event.deltaY < 0) {
+        mainSlider.slideTo(0);
       }
-    }, 500); // Затримка для завершення переходу до слайду
-  };
+    };
 
-  const handleMenuTouchStart = (event) => {
-    event.preventDefault();
-    console.log('Menu link touched');
-    mainSlider.slideTo(1);
+    const handleTouchStart = (event) => {
+      touchStartY = event.touches[0].clientY;
+      touchStartX = event.touches[0].clientX;
+      isTouchMoving = false;
+    };
 
-    setTimeout(() => {
-      const contactSection = document.querySelector('.contact__main');
-      if (contactSection) {
-        console.log('Scrolling to contact section');
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        console.log('Contact section not found');
-      }
-    }, 500); // Затримка для завершення переходу до слайду
-  };
+    const handleTouchMove = (event) => {
+      isTouchMoving = true;
+      const secondSlide = document.querySelector('.main__slide--main');
+      touchEndY = event.touches[0].clientY;
+      touchEndX = event.touches[0].clientX;
 
-  const mainSlider = new Swiper('#mainSlider', {
-    direction: 'vertical',
-    slidesPerView: 1,
-    allowTouchMove: false,
-    mousewheel: true,
-    hashNavigation: {
-      watchState: true,
-    },
-    on: {
-      init: function () {
-        const firstSlide = document.querySelector('.main__slide--intro');
-        const secondSlide = document.querySelector('.main__slide--main');
+      const diffY = touchStartY - touchEndY;
+      const diffX = touchStartX - touchEndX;
 
-        firstSlide.addEventListener('touchstart', handleFirstSlideTouchStart);
-        firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
-
-        secondSlide.addEventListener('scroll', handleScroll);
-        secondSlide.addEventListener('wheel', handleWheel);
-        secondSlide.addEventListener('touchstart', handleTouchStart);
-        secondSlide.addEventListener('touchmove', handleTouchMove);
-        secondSlide.addEventListener('touchend', handleTouchEnd);
-
-        const menuLink = document.querySelector('.header__menu-link[href="#contact"]');
-        if (menuLink) {
-          console.log('Menu link found');
-          menuLink.addEventListener('click', handleMenuClick);
-          menuLink.addEventListener('touchstart', handleMenuTouchStart);
+      if (secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY)) {
+        if (touchStartY < touchEndY) {
+          atTop = true;
         } else {
-          console.log('Menu link not found');
+          atTop = false;
         }
+      }
+    };
+
+    const handleTouchEnd = () => {
+      const secondSlide = document.querySelector('.main__slide--main');
+      const diffY = touchStartY - touchEndY;
+      const diffX = touchStartX - touchEndX;
+
+      if (isTouchMoving && secondSlide.scrollTop === 0 && Math.abs(diffX) < Math.abs(diffY) && touchStartY < touchEndY) {
+        mainSlider.slideTo(0);
+      }
+    };
+
+    const handleFirstSlideTouchStart = (event) => {
+      touchStartY = event.touches[0].clientY;
+      touchStartX = event.touches[0].clientX;
+    };
+
+    const handleFirstSlideTouchMove = (event) => {
+      touchEndY = event.touches[0].clientY;
+      touchEndX = event.touches[0].clientX;
+
+      const diffY = touchStartY - touchEndY;
+      const diffX = touchStartX - touchEndX;
+
+      if (Math.abs(diffX) < Math.abs(diffY) && touchStartY > touchEndY) {
+        mainSlider.slideTo(1);
+      }
+    };
+
+    const scrollToSection = (section) => {
+      const targetSection = document.querySelector(section);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    mainSlider = new Swiper('#mainSlider', {
+      direction: 'vertical',
+      slidesPerView: 1,
+      allowTouchMove: false,
+      mousewheel: true,
+      hashNavigation: {
+        watchState: true,
       },
-      slideChange: function () {
-        const firstSlide = document.querySelector('.main__slide--intro');
-        const secondSlide = document.querySelector('.main__slide--main');
-
-        if (this.activeIndex === 1) {
-          this.mousewheel.disable();
-
-          firstSlide.removeEventListener('touchstart', handleFirstSlideTouchStart);
-          firstSlide.removeEventListener('touchmove', handleFirstSlideTouchMove);
-        } else {
-          this.mousewheel.enable();
+      on: {
+        init: function () {
+          const firstSlide = document.querySelector('.main__slide--intro');
+          const secondSlide = document.querySelector('.main__slide--main');
 
           firstSlide.addEventListener('touchstart', handleFirstSlideTouchStart);
           firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
+
+          secondSlide.addEventListener('scroll', handleScroll);
+          secondSlide.addEventListener('wheel', handleWheel);
+          secondSlide.addEventListener('touchstart', handleTouchStart);
+          secondSlide.addEventListener('touchmove', handleTouchMove);
+          secondSlide.addEventListener('touchend', handleTouchEnd);
+
+          document.querySelector('.header__menu-link[href="#home"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.innerWidth > 768) {
+              mainSlider.slideTo(0);
+            }
+          });
+
+          document.querySelector('.header__menu-link[href="#stages"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.innerWidth > 768) {
+              mainSlider.slideTo(1);
+              setTimeout(() => scrollToSection('#stages'), 200);
+            }
+          });
+
+          document.querySelector('.header__menu-link[href="#contact"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.innerWidth > 768) {
+              mainSlider.slideTo(1);
+              setTimeout(() => scrollToSection('#contact'), 200);
+            }
+          });
+        },
+        slideChange: function () {
+          const firstSlide = document.querySelector('.main__slide--intro');
+          const secondSlide = document.querySelector('.main__slide--main');
+
+          if (this.activeIndex === 1) {
+            this.mousewheel.disable();
+
+            firstSlide.removeEventListener('touchstart', handleFirstSlideTouchStart);
+            firstSlide.removeEventListener('touchmove', handleFirstSlideTouchMove);
+          } else {
+            this.mousewheel.enable();
+
+            firstSlide.addEventListener('touchstart', handleFirstSlideTouchStart);
+            firstSlide.addEventListener('touchmove', handleFirstSlideTouchMove);
+          }
         }
       }
-    }
-  });
+    });
 
-  mainSlider.init(); // Ініціалізація слайдера з додаванням обробників подій
+    mainSlider.init();
+  };
+
+  checkScreenSize();
+
+  window.addEventListener('resize', checkScreenSize);
 };
 
 const initIntroSlider = () => {

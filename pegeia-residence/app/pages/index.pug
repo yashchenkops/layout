@@ -14,11 +14,11 @@ block scripts
   script(src="scripts/main.js")
 
 block main
+  +header()
   .intro#mainSlider
     .main__wrapper.swiper-wrapper
       .main__slide.main__slide--intro.swiper-slide(data-hash="intro")
-        +header()
-        section.intro
+        section.intro#intro
           .container
             h1.section-title
               span A place where 
@@ -68,7 +68,7 @@ block main
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
 
       .main__slide.main__slide--main.swiper-slide(data-hash="main")
-        section.stages
+        section.stages#stages
           .container
             .stages__wrapper
               .stages__title
@@ -460,7 +460,7 @@ block main
                   button(type="download").button
                     | PDF.EXE
 
-            .contact__main
+            .contact__main#contact(data-hash="main/contact")
               .container
                 h2.section-title--black
                   span Have questions?
