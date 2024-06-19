@@ -36,6 +36,7 @@ gulp.task('script', function(){
     'node_modules/wow.js/dist/wow.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
+    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())

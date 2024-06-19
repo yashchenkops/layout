@@ -32,39 +32,49 @@ block main
           #introSlider
             .swiper-wrapper
               .intro__slide.swiper-slide
-                +picture({
-                  lazy: true,
-                  path: "./img/intro/intro-img1.png",
-                  mainAttr: {"class": "intro__slide-img"}
-                })
+                +picture-responsive(
+                  lazy=true
+                  mobile= "./img/intro/intro-img1.png"
+                  tablet= "./img/intro/intro-img1.png"
+                  desktop= "./img/intro/intro-img1.png"
+                  alt="First intro picture"
+                )
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
               .intro__slide.swiper-slide
-                +picture({
-                  lazy: true,
-                  path: "./img/intro/intro-img2.png",
-                  mainAttr: {"class": "intro__slide-img"}
-                })
+                +picture-responsive(
+                  lazy=true
+                  mobile= "./img/intro/intro-img2.png"
+                  tablet= "./img/intro/intro-img2.png"
+                  desktop= "./img/intro/intro-img2.png"
+                  alt="Second intro picture"
+                )
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
               .intro__slide.swiper-slide
-                +picture({
-                  lazy: true,
-                  path: "./img/intro/intro-img3.png",
-                  mainAttr: {"class": "intro__slide-img"}
-                })
+                +picture-responsive(
+                  lazy=true
+                  mobile= "./img/intro/intro-img3.png"
+                  tablet= "./img/intro/intro-img3.png"
+                  desktop= "./img/intro/intro-img3.png"
+                  alt="Third intro picture"
+                )
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
               .intro__slide.swiper-slide
-                +picture({
-                  lazy: true,
-                  path: "./img/intro/intro-img4.png",
-                  mainAttr: {"class": "intro__slide-img"}
-                })
+                +picture-responsive(
+                  lazy=true
+                  mobile= "./img/intro/intro-img4.png"
+                  tablet= "./img/intro/intro-img4.png"
+                  desktop= "./img/intro/intro-img4.png"
+                  alt="Fourth intro picture"
+                )
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
               .intro__slide.swiper-slide
-                +picture({
-                  lazy: true,
-                  path: "./img/intro/intro-img5.png",
-                  mainAttr: {"class": "intro__slide-img"}
-                })
+                +picture-responsive(
+                  lazy=true
+                  mobile= "./img/intro/intro-img5.png"
+                  tablet= "./img/intro/intro-img5.png"
+                  desktop= "./img/intro/intro-img5.png"
+                  alt="Fifth intro picture"
+                )
                 .swiper-lazy-preloader.swiper-lazy-preloader-white
 
       .main__slide.main__slide--main.swiper-slide(data-hash="main")
@@ -87,185 +97,138 @@ block main
                         #stageInnerSlider1
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/stages-preview.png" data-fancybox="stages-preview-group-first") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/stages-preview.png"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-first")
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/1.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-first")
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/3.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/1_1920.png" data-fancybox="stages-preview-group-first") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/1_430.png"
+                                  tablet= "./img/stages/1_768.png"
+                                  desktop= "./img/stages/1_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider2
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-second") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/2.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-second") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/3.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/7.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-second") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/7.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/2_1920.png" data-fancybox="stages-preview-group-second")
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/2_430.png"
+                                  tablet= "./img/stages/2_768.png"
+                                  desktop= "./img/stages/2_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider3
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-third") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/4.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/3_1_1920.png" data-fancybox="stages-preview-group-third") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/3_1_430.png"
+                                  tablet= "./img/stages/3_1_768.png"
+                                  desktop= "./img/stages/3_1_1920.png"
+                                  alt=""
+                                )
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-third") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/5.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/3_2_1920.png" data-fancybox="stages-preview-group-third") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/3_2_430.png"
+                                  tablet= "./img/stages/3_2_768.png"
+                                  desktop= "./img/stages/3_2_1920.png"
+                                  alt=""
+                                )
+
+                            .stages__inner-slide.swiper-slide
+                              a.stages__inner-slide-preview(href="./img/stages/3_3_1920.png" data-fancybox="stages-preview-group-third") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/3_3_430.png"
+                                  tablet= "./img/stages/3_3_768.png"
+                                  desktop= "./img/stages/3_3_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider4
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-fourth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/6.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/4_1_1920.png" data-fancybox="stages-preview-group-fourth") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/4_1_430.png"
+                                  tablet= "./img/stages/4_1_768.png"
+                                  desktop= "./img/stages/4_1_1920.png"
+                                  alt=""
+                                )
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-fourth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/7.jpg"
-                                })
+                              a.stages__inner-slide-preview(href="./img/stages/4_2_1920.png" data-fancybox="stages-preview-group-fourth") 
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/4_2_430.png"
+                                  tablet= "./img/stages/4_2_768.png"
+                                  desktop= "./img/stages/4_2_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider5
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/8.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/9.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/9.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/3.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/5.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/10.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/1.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/8.jpg" data-fancybox="stages-preview-group-fifth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/8.jpg"
-                                })
+                              a.stages__inner-slide-preview
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/zagluchska_430.png"
+                                  tablet= "./img/stages/zagluchska_768.png"
+                                  desktop= "./img/stages/zagluchska_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider6
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/10.jpg" data-fancybox="stages-preview-group-sixth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/10.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/1.jpg" data-fancybox="stages-preview-group-sixth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/1.jpg"
-                                })
+                              a.stages__inner-slide-preview
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/zagluchska_430.png"
+                                  tablet= "./img/stages/zagluchska_768.png"
+                                  desktop= "./img/stages/zagluchska_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider7
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/2.jpg" data-fancybox="stages-preview-group-seventh") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/2.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/3.jpg" data-fancybox="stages-preview-group-seventh") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/3.jpg"
-                                })
+                              a.stages__inner-slide-preview
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/zagluchska_430.png"
+                                  tablet= "./img/stages/zagluchska_768.png"
+                                  desktop= "./img/stages/zagluchska_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider8
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/4.jpg" data-fancybox="stages-preview-group-eighth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/4.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/5.jpg" data-fancybox="stages-preview-group-eighth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/5.jpg"
-                                })
+                              a.stages__inner-slide-preview
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/zagluchska_430.png"
+                                  tablet= "./img/stages/zagluchska_768.png"
+                                  desktop= "./img/stages/zagluchska_1920.png"
+                                  alt=""
+                                )
                       .stages__slide.swiper-slide
                         #stageInnerSlider9
                           .swiper-wrapper
                             .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/6.jpg" data-fancybox="stages-preview-group-nineth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/6.jpg"
-                                })
-                            .stages__inner-slide.swiper-slide
-                              a.stages__inner-slide-preview(href="./img/stages/7.jpg" data-fancybox="stages-preview-group-nineth") 
-                                +picture({
-                                  lazy: true,
-                                  path: "./img/stages/7.jpg"
-                                })
+                              a.stages__inner-slide-preview
+                                +picture-responsive(
+                                  lazy=true
+                                  mobile= "./img/stages/zagluchska_430.png"
+                                  tablet= "./img/stages/zagluchska_768.png"
+                                  desktop= "./img/stages/zagluchska_1920.png"
+                                  alt=""
+                                )
 
                 .stages__slider-control
                   .stages__slider-nav

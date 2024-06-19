@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
-    "swiper": "^11.1.1"
+    "swiper": "^11.1.1",
+    "vanilla-lazyload": "^19.1.3"
   }
 }

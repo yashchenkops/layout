@@ -1,3 +1,14 @@
+const addedLazyLoadImages = () => {
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazyload ",
+    load_delay: 0
+  });
+  
+  if (lazyLoadInstance) {
+    lazyLoadInstance.update();
+  }
+};
+
 const initMainSlider = () => {
   let mainSlider;
 
@@ -438,8 +449,9 @@ const showMoreThumbsDescription = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  addedLazyLoadImages();
   new WOW().init();
-  initMainSlider();
+  initMainSlider(); 
   initIntroSlider();
   initStagesSlider();
   initFancybox();

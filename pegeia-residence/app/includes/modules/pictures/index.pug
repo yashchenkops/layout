@@ -1,3 +1,105 @@
+mixin picture-responsive(attributes)
+  -
+    const webpImgFormat = "webp";
+    const mediaMobile = "(max-width: 639px)";
+    const mediaTablet = "(max-width: 959px)";
+    const lazyLoad = attributes.lazy || null;
+    const altText = attributes.alt || "";
+    const mobilePath = attributes.mobile || null;
+    const tabletPath = attributes.tablet || null;
+    const desktopPath = attributes.desktop || null;
+    let mobileImgPath, tabletImgPath, desktopImgPath;
+    let mobileImgFormat, tabletImgFormat, desktopImgFormat;
+    const imageData = [];
+    const lazyPixel = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+
+    if (mobilePath != null && mobilePath.length > 3) {
+      mobileImgPath = mobilePath.substring(0, mobilePath.length - 4)
+      mobileImgFormat = mobilePath.slice(-3);
+
+      imageData.push({
+        media: mediaMobile,
+        type: webpImgFormat,
+        source: mobileImgPath + "." + webpImgFormat + " 1x, " + mobileImgPath + "@2x." + webpImgFormat + " 2x"
+      })
+
+      imageData.push({
+        media: mediaMobile,
+        type: mobileImgFormat,
+        source: mobileImgPath + "." + mobileImgFormat + " 1x, " + mobileImgPath + "@2x." + mobileImgFormat + " 2x"
+      })
+
+      delete attributes.mobile;
+    }
+
+    if (tabletPath != null && tabletPath.length > 3) {
+      tabletImgPath = tabletPath.substring(0, tabletPath.length - 4)
+      tabletImgFormat = tabletPath.slice(-3);
+
+      imageData.push({
+        media: mediaTablet,
+        type: webpImgFormat,
+        source: tabletImgPath + "." + webpImgFormat + " 1x, " + tabletImgPath + "@2x." + webpImgFormat + " 2x"
+      })
+
+      imageData.push({
+        media: mediaTablet,
+        type: tabletImgFormat,
+        source: tabletImgPath + "." + tabletImgFormat + " 1x, " + tabletImgPath + "@2x." + tabletImgFormat + " 2x"
+      })
+
+      delete attributes.tablet;
+    }
+
+    if (desktopPath != null && desktopPath.length > 3) {
+      desktopImgPath = desktopPath.substring(0, desktopPath.length - 4)
+      desktopImgFormat = desktopPath.slice(-3);
+
+      imageData.push({
+        type: webpImgFormat,
+        source: desktopImgPath + "." + webpImgFormat + " 1x, " + desktopImgPath + "@2x." + webpImgFormat + " 2x"
+      })
+
+      imageData.push({
+        type: desktopImgFormat,
+        source: desktopImgPath + "." + desktopImgFormat + " 1x, " + desktopImgPath + "@2x." + desktopImgFormat + " 2x"
+      })
+
+      delete attributes.desktop;
+    }
+
+    delete attributes.alt;
+    delete attributes.lazy;
+
+  picture
+    -for (var i = 0; i <= imageData.length - 1; i++)
+      if (imageData[i].media)
+        if lazyLoad
+          source(class="lazyload" media= imageData[i].media data-srcset= imageData[i].source srcset=lazyPixel type="image/" + imageData[i].type)
+        else
+          source(media= imageData[i].media srcset= imageData[i].source type="image/" + imageData[i].type)
+
+      else
+        if lazyLoad
+          source(class="lazyload" data-srcset= imageData[i].source srcset=lazyPixel type="image/" + imageData[i].type)
+        else
+          source(srcset= imageData[i].source type="image/" + imageData[i].type)
+
+    if lazyLoad
+      if (desktopPath != null && desktopPath.length > 3)
+        img(class="lazyload" src=lazyPixel data-src= desktopImgPath + "." + desktopImgFormat, data-srcset= desktopImgPath + "@2x." + desktopImgFormat + " 2x", alt= altText)&attributes(attributes)
+      else if (tabletPath != null && tabletPath.length > 3)
+        img(class="lazyload" src=lazyPixel data-src= tabletImgPath + "." + tabletImgFormat, data-srcset= tabletImgPath + "@2x." + tabletImgFormat + " 2x", alt= altText)&attributes(attributes)
+      else if (mobilePath != null && mobilePath.length > 3)
+        img(class="lazyload" src=lazyPixel data-src= mobileImgPath + "." + mobileImgFormat, data-srcset= mobileImgPath + "@2x." + mobileImgFormat + " 2x", alt= altText)&attributes(attributes)
+    else
+      if (desktopPath != null && desktopPath.length > 3)
+        img(src= desktopImgPath + "." + desktopImgFormat, srcset= desktopImgPath + "@2x." + desktopImgFormat + " 2x", alt= altText)&attributes(attributes)
+      else if (tabletPath != null && tabletPath.length > 3)
+        img(src= tabletImgPath + "." + tabletImgFormat, srcset= tabletImgPath + "@2x." + tabletImgFormat + " 2x", alt= altText)&attributes(attributes)
+      else if (mobilePath != null && mobilePath.length > 3)
+        img(src= mobileImgPath + "." + mobileImgFormat, srcset= mobileImgPath + "@2x." + mobileImgFormat + " 2x", alt= altText)&attributes(attributes)
+
 mixin picture(data)
   -
     var data = data || {}
@@ -10,6 +112,7 @@ mixin picture(data)
     const imgFormat = path.slice(-3);
     const imgFormatWebp = "webp";
     const imageData = [];
+    const lazyPixel = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
 
     if (imgFormat === "svg") {
       imageData.push({
@@ -26,18 +129,18 @@ mixin picture(data)
   picture&attributes(mainAttributes).picture
     - for (var i = imageData.length - 1; i >= 0; i--)
       if lazy
-        source(data-srcset= imageData[i].source type=`image/${imageData[i].type}` loading="lazy")
+        source(data-srcset= imageData[i].source type=`image/${imageData[i].type}` class="lazyload" srcset=lazyPixel)
       else
         source(srcset= imageData[i].source type=`image/${imageData[i].type}`)
 
     - if (imgFormat === "svg")
       if lazy
-        img(src="/" data-src= imageData[0].source, alt= name loading="lazy")&attributes(attributes)
+        img(src=lazyPixel data-src= imageData[0].source, alt= name class="lazyload")&attributes(attributes)
       else
         img(src= imageData[0].source, alt= name)&attributes(attributes)
 
     - if (imgFormat === "png" || imgFormat === "jpg")
       if lazy
-        img(src=`${imgPath}.${imgFormat}`, srcset=`${imgPath}@2x.${imgFormat} 2x`, alt= name loading="lazy")&attributes(attributes)
+        img(src=lazyPixel data-src=`${imgPath}.${imgFormat}`, data-srcset=`${imgPath}@2x.${imgFormat} 2x`, alt= name class="lazyload" srcset=lazyPixel)&attributes(attributes)
       else
         img(src=`${imgPath}.${imgFormat}`, srcset=`${imgPath}@2x.${imgFormat} 2x`, alt= name)&attributes(attributes)
