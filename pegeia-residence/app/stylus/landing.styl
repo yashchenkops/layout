@@ -234,12 +234,28 @@
       .stages__slide-thumbs
         &.swiper-slide-thumb-active
           .thumbs__item
+            .thumbs__item-status,
+            .thumbs__item-more
+              opacity 1
+              visibility visible
+
+            .thumbs__item-number
+              color $white
+
             .thumbs__item-wrapper
-              box-shadow 0px 0px 30px 5px rgba(255, 153, 0, 0.5)
+              background-color rgba(255, 153, 0, 0.5)
 
             &.done
+              .thumbs__item-status,
+              .thumbs__item-more
+                opacity 1
+                visibility visible
+
+              .thumbs__item-number
+                color $white
+
               .thumbs__item-wrapper
-                box-shadow 0px 0px 30px 5px rgba(142, 254, 166, 1)
+                background-color #8efea6
 
       .thumbs__item
         width 220px
@@ -250,7 +266,6 @@
           padding 10px 10px 20px 10px
           color $grey
           cursor pointer
-          background-color rgba(255, 153, 0, 0.5)
           transition all 0.3s
 
         &-status
@@ -260,6 +275,9 @@
           line-height 1
           color $orange
           margin-bottom 10px
+          opacity 0
+          visibility hidden
+          transition all 0.3s
 
         &-number
           text-align center
@@ -268,7 +286,8 @@
           font-size 25px
           line-height 1.2
           text-align center
-          color $white
+          color $orange
+          transition all 0.3s
 
         &-title
           font-weight 600
@@ -297,6 +316,9 @@
           font-size 12px
           line-height 1.2
           text-decoration underline
+          opacity 0
+          visibility hidden
+          transition all 0.3s
 
           &:hover
             text-decoration none
@@ -305,8 +327,8 @@
           .thumbs__item-status
             color $green
 
-          .thumbs__item-wrapper
-            background-color #8efea6
+          .thumbs__item-number
+            color $green
 
     .contact
       margin-bottom 70px
