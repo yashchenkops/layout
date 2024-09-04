@@ -1,0 +1,52 @@
+mixin header()
+  header.header
+    .header__desktop
+      .header__container
+        .header__left
+          a.header__logo(href="index.html")
+            img(src= "img/logo.svg" alt="Logo")
+
+          nav.header__menu
+            ul.header__menu-ul
+              each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact'}
+                li.header__menu-li
+                  a.header__menu-link.link-underline(href=`#${key}` )= value
+
+        .header__right
+          +button(href="#")
+            | Register
+
+    .header__mobile
+      .header__mobile-wrapper
+        .header__left
+          a.header__logo(href="#")
+            img(src= "img/logo.svg" alt="Logo")
+
+        .header__right
+          if headerMobileRegisterButton
+            +button(type="button")
+              | Register
+
+          button(type="button").header__burger-button
+            span
+            span
+            span
+
+      .header__mobile-inner
+        .header__mobile-inner-wrapper
+          a.header__mobile-inner-logo(href="index.html")
+            img(src= "img/logo.svg" alt="Logo")
+
+          button(type="button").header__menu-close
+            svg(width='28' height='28' viewbox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+              rect(x='3' width='35' height='3' rx='1.5' transform='rotate(45 3 0)' fill='#4F4F4F')
+              rect(x='1' y='25' width='35' height='3' rx='1.5' transform='rotate(-45 1 25)' fill='#4F4F4F')
+
+          nav.header__menu
+            ul.header__menu-ul
+              each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact'}
+                li.header__menu-li
+                  a.header__menu-link(href=`#${key}` )= value
+
+          +button(href="#")
+            | Register

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&family=Roboto+Serif:opsz,wght@8..144,700&display=swap');
+
+$font = "Poppins", sans-serif
+$fontTitle = "Roboto Serif", serif
+
+@import "../includes/header/index.styl"
+@import "../includes/footer/index.styl"
+@import "../includes/modules/button/index.styl"
+
+html,
+body
+  position relative
+  height 100%
+
+html
+  box-sizing border-box
+  scroll-behavior smooth
+
+*,
+*::before,
+*::after
+  box-sizing inherit
+  padding 0
+  margin 0
+
+body
+  display flex
+  flex-direction column
+  font-family $font
+  font-weight 400
+  background-color white
+  overflow-x hidden
+
+main
+  flex 1 0 auto
+
+a
+  display inline-block
+  text-decoration none
+  outline none
+
+  &:focus-visible
+    outline solid
+
+p,
+span,
+ul,
+ol,
+li,
+input,
+textarea
+  font-family $font
+
+ul,
+li,
+ol
+  list-style none
+  padding 0
+  margin 0
+
+h1,
+h2,
+h3,
+h4
+  font-family $fontTitle
+  font-weight 500
+  margin 0
+  padding 0
+
+h1
+  font-size 50px
+  line-height 60px
+  font-weight 700
+
+h2
+  font-size 40px
+  line-height 48px
+
+h3
+  font-size 20px
+
+h4
+  font-size 16px
+
+button
+  border none
+  outline none
+  cursor pointer
+  background-color transparent
+  color white
+  transition all 0.1s
+
+  &:focus-visible
+    outline solid
+
+.main
+  overflow hidden
+
+.scroll-block
+  position relative
+  overflow hidden
+
+  &::before
+    content ''
+    position fixed
+    inset 0
+    background rgba(6, 7, 9, 0.8)
+    z-index 9
+
+.container
+  max-width 1560px
+  padding 0 30px
+  margin 0 auto
+
+.title--gradient
+  text-align center
+
+  span
+    position relative
+    font-family $fontTitle
+    font-weight 700
+    font-size 54px
+    background linear-gradient(179deg, #ff5829 0%, #991a1a 100%)
+    background-clip text
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+
+    &::before,
+    &::after
+      content ''
+      position absolute
+      top 50%
+      transform translateX(-50%)
+      background-size cover
+      width 200px
+      height 5px
+
+    &::before
+      background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCAyMDEgNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC41IiB5PSIwLjQ5ODI5MSIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxIiByeD0iMC41IiBmaWxsPSIjQkJCQkJCIi8+CjxyZWN0IHg9IjcwLjUiIHk9IjQuNDk4MjkiIHdpZHRoPSIxMzAiIGhlaWdodD0iMSIgcng9IjAuNSIgZmlsbD0iI0JCQkJCQiIvPgo8L3N2Zz4K") no-repeat
+      left -30%
+
+    &::after
+      background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAxIiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCAyMDEgNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC41IiB5PSIwLjQ5ODI5MSIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxIiByeD0iMC41IiBmaWxsPSIjQkJCQkJCIi8+CjxyZWN0IHg9IjAuNSIgeT0iNC40OTgyOSIgd2lkdGg9IjEzMCIgaGVpZ2h0PSIxIiByeD0iMC41IiBmaWxsPSIjQkJCQkJCIi8+Cjwvc3ZnPgo=") no-repeat
+      right -90%
+
+@media (max-width 500px)
+  .section-title
+    span
+      font-size 36px
+
+  .section-subtitle
+    font-size 16px !important

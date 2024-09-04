@@ -1,0 +1,67 @@
+.footer
+  text-align center
+  padding 60px 0
+
+.footer__logo
+  margin-bottom 40px
+
+.footer__menu
+  margin-bottom 40px
+
+  &-ul
+    display flex
+    align-items center
+    justify-content center
+    gap 50px
+
+  &-link
+    font-weight 500
+    font-size 18px
+    color #4f4f4f
+
+    &:hover
+      text-decoration underline
+
+  &--secondary
+    .footer__menu
+      &-link
+        color #959595
+
+      &--underline
+        text-decoration underline
+
+    .linkedin
+      display inline-block
+      position relative
+      color #4f4f4f
+
+      &::before
+        content ''
+        position absolute
+        top 0
+        right calc(100% + 5px)
+        width 24px
+        height 24px
+        background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMC44ODU5ODYiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgcng9IjQuNSIgc3Ryb2tlPSIjNEY0RjRGIi8+CjxwYXRoIGQ9Ik04LjgwMjI4IDcuNzAxNzNDOC41NDE5OSA3Ljk2MjAzIDguMjIzMzUgOC4wOTIxOCA3Ljg0NjM2IDguMDkyMThDNy40NjkzOCA4LjA5MjE4IDcuMTUwNzQgNy45NjIwMyA2Ljg5MDQ1IDcuNzAxNzNDNi42MzAxNSA3LjQ0MTQ0IDYuNSA3LjEyMjggNi41IDYuNzQ1ODFDNi41IDYuMzU5ODYgNi42MzAxNSA2LjAzNjczIDYuODkwNDUgNS43NzY0M0M3LjE1MDc0IDUuNTE2MTMgNy40NjkzOCA1LjM4NTk5IDcuODQ2MzYgNS4zODU5OUM4LjIyMzM1IDUuMzg1OTkgOC41NDE5OSA1LjUxNjEzIDguODAyMjggNS43NzY0M0M5LjA2MjU4IDYuMDM2NzMgOS4xOTI3MyA2LjM1OTg2IDkuMTkyNzMgNi43NDU4MUM5LjE5MjczIDcuMTIyOCA5LjA2MjU4IDcuNDQxNDQgOC44MDIyOCA3LjcwMTczWk02LjcwMTk1IDE2LjA2MjdWOC41NDk5NEg5LjAwNDI0VjE2LjA2MjdINi43MDE5NVoiIGZpbGw9IiM0RjRGNEYiLz4KPHBhdGggZD0iTTEyLjgzIDguNTQ5OTRDMTMuMTA2MSA4LjU0OTk0IDEzLjMzIDguNzczOCAxMy4zMyA5LjA0OTk0VjkuNjUzOTZDMTMuODA1NyA4Ljg2NDA5IDE0LjU2NDEgOC40NjkxNiAxNS42MDUzIDguNDY5MTZDMTYuNDY3IDguNDY5MTYgMTcuMTYyNiA4Ljc1NjM5IDE3LjY5MjIgOS4zMzA4M0MxOC4yMzA3IDkuOTA1MjggMTguNSAxMC42ODYyIDE4LjUgMTEuNjczNVYxNS41NjI3QzE4LjUgMTUuODM4OCAxOC4yNzYxIDE2LjA2MjcgMTggMTYuMDYyN0gxNi43MTEyQzE2LjQzNSAxNi4wNjI3IDE2LjIxMTIgMTUuODM4OCAxNi4yMTEyIDE1LjU2MjdWMTEuOTgzMkMxNi4yMTEyIDExLjQ5ODUgMTYuMDgxIDExLjEyNiAxNS44MjA3IDEwLjg2NTdDMTUuNTY5NCAxMC41OTY0IDE1LjIxOTQgMTAuNDYxOCAxNC43NzA2IDEwLjQ2MThDMTQuMzIxOCAxMC40NjE4IDEzLjk2NzIgMTAuNTk2NCAxMy43MDY5IDEwLjg2NTdDMTMuNDU1NiAxMS4xMjYgMTMuMzMgMTEuNDk4NSAxMy4zMyAxMS45ODMyVjE1LjU2MjdDMTMuMzMgMTUuODM4OCAxMy4xMDYxIDE2LjA2MjcgMTIuODMgMTYuMDYyN0gxMS41Mjc3QzExLjI1MTUgMTYuMDYyNyAxMS4wMjc3IDE1LjgzODggMTEuMDI3NyAxNS41NjI3VjkuMDQ5OTRDMTEuMDI3NyA4Ljc3MzggMTEuMjUxNSA4LjU0OTk0IDExLjUyNzcgOC41NDk5NEgxMi44M1oiIGZpbGw9IiM0RjRGNEYiLz4KPC9zdmc+Cg==") no-repeat
+        background-size cover
+
+.footer__info
+  font-weight 500
+  font-size 18px
+  color #959595
+
+@media (max-width 1120px)
+  .footer__menu
+    &-ul
+      gap 20px
+
+    &-link
+      font-size 16px
+
+  .footer__info
+    font-size 16px
+
+@media (max-width 768px)
+  .footer__menu
+    &-ul
+      flex-direction column

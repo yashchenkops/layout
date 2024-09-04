@@ -1,0 +1,85 @@
+mixin contact()
+  section.contact#contact
+    .container
+      .contact__inner
+        h3.section-title.title--gradient.title--big-text
+          span
+            | Contact Us
+
+        p.section-subtitle
+          | Our Affiliate Team is ready to meet all your needs, ensuring your success every step of the way.
+
+        .contact__persons
+          .contact__person
+            .contact__person-thumb
+              .contact__person-thumb-img
+                img(src="img/us.webp" alt="Contact us")
+
+              .contact__person-thumb-at
+                | @
+
+            .contact__person-info
+              .contact__person-info-name
+                | Contact us
+              .contact__person-info-position
+                | via email
+              .contact__person-info-email
+                a(href="mailto:info@impressario.partners")
+                  | info@impressario.partners
+
+          .contact__person
+            .contact__person-thumb
+              .contact__person-thumb-img
+                img(src="img/alek.webp" alt="Alek")
+
+              .contact__person-thumb-at
+                | @
+
+            .contact__person-info
+              .contact__person-info-name
+                | Alek
+              .contact__person-info-position
+                | Head of Affiliates
+              .contact__person-info-email
+                a(href="mailto:alek@impressariocasino.com")
+                  | alek@impressariocasino.com
+
+          .contact__person
+            .contact__person-thumb
+              .contact__person-thumb-img
+                img(src="img/maria.webp" alt="Maria")
+
+              .contact__person-thumb-at
+                | @
+
+            .contact__person-info
+              .contact__person-info-name
+                | Maria
+              .contact__person-info-position
+                | Senior Affiliate Manager
+              .contact__person-info-email
+                a(href="mailto:alek@impressariocasino.com")
+                  | maria@impressariocasino.com
+
+        .contact__cta
+          .contact__cta-info
+            h3.contact__cta-info-title
+              | Impressario’s door is always open!
+
+            p.contact__cta-info-message
+              | Whether you need guidance, support, or fresh ideas, our team is here to help you. Knock and enter!
+
+          .contact__cta-button
+            +button(href="#")
+              | Register
+
+        .contact__form
+          p.contact__form-message
+            | Our Affiliate Team is ready to meet all your needs, ensuring your success every step of the way.
+
+          form(action="#" method="POST").contact-form
+            input.contact-form__input(type="text" name="name" maxlenght="255" placeholder="Name*" required)
+            input.contact-form__input(type="email" name="email" maxlenght="255" placeholder="Email*" required)
+            textarea.contact-form__textarea(name="message" maxlenght="255" placeholder="Message*" required)
+            +button(type="submit").button--bordered
+              | Send

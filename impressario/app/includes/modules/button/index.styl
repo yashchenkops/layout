@@ -1,0 +1,84 @@
+.button
+  display inline-block
+  font-size 18px
+  line-height 1.1
+  font-weight 700
+  padding 15px
+  width 200px
+  background linear-gradient(138deg, #fe2a9d 0%, #ff5515 100%)
+  border-radius 25px
+  color #f0f0f0
+  text-align center
+  transition all 0.3s ease
+
+  &:hover,
+  &:focus-visible
+    background linear-gradient(138deg, #f548bb 0%, #ff7334 100%)
+    outline none
+
+  &:active
+    background linear-gradient(138deg, #ea1689 0%, #eb4101 100%)
+
+  &:disabled
+  &[disabled]
+    background linear-gradient(138deg, #676767 0%, #595959 100%)
+    color #837073
+
+.button--bordered,
+.button--bordered-arrow
+  position relative
+  border-radius 25px
+  padding 15px
+  background transparent
+  color #4f4f4f
+  width 200px
+
+  &::before
+    content ''
+    position absolute
+    inset 0
+    border-radius 25px
+    padding 2px 
+    background linear-gradient(90deg, #FF2B9B, #FF541A)
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude; 
+
+  &:hover,
+  &:focus-visible
+    background linear-gradient(90deg, #F548BB, #FF7334)
+    color white
+
+  &:active
+    background linear-gradient(90deg, #EA1689, #EB4101)
+
+  &:disabled
+  &[disabled]
+    background linear-gradient(90deg, #686768, #5A5A5A)
+
+  &-arrow
+    padding-right 50px
+
+    &::after
+      content ''
+      position absolute
+      top 50%
+      right 25px
+      width 35px
+      height 10px
+      transform translateY(-50%)
+      background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDI2IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS4zNTM2IDQuODUzNTVDMjUuNTQ4OCA0LjY1ODI5IDI1LjU0ODggNC4zNDE3MSAyNS4zNTM2IDQuMTQ2NDVMMjIuMTcxNiAwLjk2NDQ2NkMyMS45NzYzIDAuNzY5MjA0IDIxLjY1OTcgMC43NjkyMDQgMjEuNDY0NSAwLjk2NDQ2NkMyMS4yNjkyIDEuMTU5NzMgMjEuMjY5MiAxLjQ3NjMxIDIxLjQ2NDUgMS42NzE1N0wyNC4yOTI5IDQuNUwyMS40NjQ1IDcuMzI4NDNDMjEuMjY5MiA3LjUyMzY5IDIxLjI2OTIgNy44NDAyNyAyMS40NjQ1IDguMDM1NTNDMjEuNjU5NyA4LjIzMDggMjEuOTc2MyA4LjIzMDggMjIuMTcxNiA4LjAzNTUzTDI1LjM1MzYgNC44NTM1NVpNMCA1SDI1VjRIMFY1WiIgZmlsbD0iIzRGNEY0RiIvPgo8L3N2Zz4K") no-repeat
+      background-size cover
+      transition all .5s
+
+    &:hover
+      &::after
+        right 17px
+        background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDI2IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS4zNTM2IDQuODUzNTVDMjUuNTQ4OCA0LjY1ODI5IDI1LjU0ODggNC4zNDE3MSAyNS4zNTM2IDQuMTQ2NDVMMjIuMTcxNiAwLjk2NDQ2NkMyMS45NzYzIDAuNzY5MjA0IDIxLjY1OTcgMC43NjkyMDQgMjEuNDY0NSAwLjk2NDQ2NkMyMS4yNjkyIDEuMTU5NzMgMjEuMjY5MiAxLjQ3NjMxIDIxLjQ2NDUgMS42NzE1N0wyNC4yOTI5IDQuNUwyMS40NjQ1IDcuMzI4NDNDMjEuMjY5MiA3LjUyMzY5IDIxLjI2OTIgNy44NDAyNyAyMS40NjQ1IDguMDM1NTNDMjEuNjU5NyA4LjIzMDggMjEuOTc2MyA4LjIzMDggMjIuMTcxNiA4LjAzNTUzTDI1LjM1MzYgNC44NTM1NVpNMCA1SDI1VjRIMFY1WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==") no-repeat
+        background-size cover
+
+    &:active
+      &::before
+        background linear-gradient(90deg, #EB168A, #EC4103)

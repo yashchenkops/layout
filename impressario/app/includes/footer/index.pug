@@ -1,0 +1,29 @@
+mixin footer()
+  footer.footer
+    .container
+      .footer__inner
+        a.footer__logo(href="index.html")
+          img(src="img/logo.svg" alt="Logo footer")
+
+        nav.footer__menu
+          ul.footer__menu-ul
+            each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact', 'Register': '#', 'Login': '#'}
+              li.footer__menu-li
+                a.footer__menu-link(href=`#${key}` )= value
+
+        nav.footer__menu.footer__menu--secondary
+          ul.footer__menu-ul
+            li.footer__menu-li
+              a.footer__menu-link.linkedin(href=`#`)
+                | Linkedin
+            li.footer__menu-li
+              a.footer__menu-link(href=`#`)
+                | Cookie Policy
+            li.footer__menu-li
+              a.footer__menu-link.footer__menu-link--underline(href=`#`)
+                | Privacy Policy
+            li.footer__menu-li
+              a.footer__menu-link.footer__menu-link--underline(href=`https://www.spinwise.com/assets/terms-and-conditions.pdf` target="_blank")
+                | Terms & Conditions
+
+        .footer__info © Impressario Casino. All rights reserved #{new Date().getFullYear()}.

@@ -1,0 +1,261 @@
+.contact
+  position relative
+
+  &::before
+    content ''
+    position absolute
+    bottom 0
+    left 0
+    width 100%
+    height 700px
+    background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMSIgaGVpZ2h0PSI2MTQiIHZpZXdCb3g9IjAgMCAxOTIxIDYxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5MjEgMTQyLjMxOUwwLjc4Njg2NSAxNDIuOTc5VjYxMi41ODFMMTkyMSA2MTMuMzY4VjE0Mi4zMTlaIiBmaWxsPSIjRjNGM0YzIi8+CjxwYXRoIGQ9Ik0xOTIxIDk0Ljg4OTRMMSA5NS4zMjFWMTE0LjkyM0wxOTIxIDExNS45MzhWOTQuODg5NFoiIGZpbGw9IiNGM0YzRjMiLz4KPHBhdGggZD0iTTE5MjEgNDcuNDM0NUwxIDQ3LjY2M1Y2Ny4yNjQ1TDE5MjEgNjguNDgzMlY0Ny40MzQ1WiIgZmlsbD0iI0YzRjNGMyIvPgo8cGF0aCBkPSJNMTkyMSAwLjAwNTEyNjk1SDFWMTkuNjA2NkwxOTIxIDIxLjA1MzhWMC4wMDUxMjY5NVoiIGZpbGw9IiNGM0YzRjMiLz4KPC9zdmc+Cg==") no-repeat
+    background-size cover
+
+  &__inner 
+    position relative
+    display block
+
+    &::before
+      font-family $fontTitle
+      display inline-block
+      content "Let's talk"
+      position absolute
+      left 50%
+      top -95px
+      transform translate(-50%)
+      font-weight 700
+      font-size 200px
+      width 100%
+      text-align center
+      color #f3f3f3
+      z-index -1
+
+  .section-title
+    margin-bottom 15px
+
+    span
+      &::before
+        left -40%
+
+      &::after
+        right -105%
+
+  .section-subtitle
+    font-weight 400
+    font-size 22px
+    text-align center
+    color #4f4f4f
+    margin-bottom 60px
+
+  .contact__persons
+    display flex
+    align-items center
+    justify-content center
+    flex-wrap wrap
+    gap 60px 40px
+    max-width 1325px
+    margin 0 auto 70px
+
+  .contact__person
+    display flex
+    align-items flex-end
+    gap 20px
+
+    &-thumb
+      align-items center
+
+      &-img
+        width 134px
+        height 134px
+        margin-bottom 20px
+
+        img
+          max-width 100%
+
+      &-at
+        font-family $fontTitle
+        font-weight 700
+        font-size 20px
+        text-align center
+        color #8f8f8f
+
+    &-info
+      padding-top 27px
+
+      &-name
+        font-family $fontTitle
+        font-weight 700
+        font-size 24px
+        color #4f4f4f
+        margin-bottom 20px
+
+      &-position
+        font-weight 400
+        font-size 20px
+        color #a1a1a1
+        margin-bottom 40px
+
+      &-email
+        a
+          font-weight 400
+          font-size 16px
+          text-decoration underline
+          text-decoration-skip-ink none
+          color #c93721
+
+          &:hover
+            text-decoration none
+
+  .contact__cta
+    display flex
+    align-items center
+    justify-content center
+    gap 100px
+    padding 42px
+    background-color #852819
+    border-radius 15px
+    color #f3f3f3
+
+    &-info
+      text-align center
+      max-width 682px
+
+      &-title
+        font-weight 700
+        font-size 64px
+        line-height 65px
+        text-align center
+        margin-bottom 20px
+
+      &-message
+        font-weight 400
+        font-size 22px
+        line-height 1.5
+        text-align center
+        color #f1f1f1
+
+  .contact__form
+    padding 100px 50px
+
+    &-message
+      font-weight 400
+      font-size 22px
+      text-align center
+      color #4f4f4f
+      margin-bottom 30px
+
+    .contact-form
+      max-width 600px
+      margin 0 auto
+      text-align center
+
+      &__input
+      &__textarea
+        width 100%
+        background-color white
+        border 1px solid #d6d6d6
+        border-radius 8px
+        padding 8px 25px
+        font-weight 400
+        font-size 18px
+        color #4e4e4e
+        line-height 1.5
+        font-weight 400
+        margin-bottom 20px
+
+        &::placeholder
+          font-size 18px
+          line-height 1.5
+          color #bcbcbc
+
+        &:active
+          border-color #CCA367
+
+      &__textarea
+        min-height 100px
+        resize none
+        margin-bottom 40px
+
+@media (max-width 1248px)
+  .contact
+    &__inner 
+      &::before
+        font-size 175px
+        top -75px
+
+@media (max-width 960px)
+  .contact
+    &__inner 
+      &::before
+        font-size 140px
+        top -60px
+
+    .contact__cta
+      flex-direction column
+      gap 30px
+
+@media (max-width 715px)
+  .contact
+    &__inner 
+      &::before
+        line-height .8
+        top -30px
+
+    .contact__cta
+      .contact__cta-info-title
+        font-size 52px
+        line-height 1
+
+    .contact__form
+      padding 100px 0 50px
+
+@media (max-width 500px)
+  .contact
+    .section-title
+      span
+        &::before
+          left -57%
+
+        &::after
+          right -157%
+
+    .section-subtitle
+      margin-bottom 130px
+
+    .contact__persons
+      gap 50px
+
+    .contact__person
+      flex-direction column
+      gap 0px
+
+      &-thumb
+        margin 0 auto
+
+        &-img
+          margin-bottom 10px
+
+        &-at
+          font-size 16px
+
+      &-info
+        text-align center
+        padding-top 5px
+
+        &-name
+          margin-bottom 5px
+          font-size 20px
+
+        &-position
+          margin-bottom 5px
+          font-size 16px
+
+    .contact__cta
+      .contact__cta-info-title
+        font-size 32px
+
+      .contact__cta-info-message
+        font-size 16px
+
+    .contact__form-message
+      font-size 16px

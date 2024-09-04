@@ -1,0 +1,66 @@
+@media (max-width 1632px)
+  .intro
+    .section-cards
+      gap 124px 80px
+
+      .card
+        width calc(50% - 40px)
+
+      .card__info
+        max-width 280px
+
+@media (max-width 1248px)
+  .intro
+    padding-bottom 150px
+
+    .section-cards
+      gap 60px
+
+      .card
+        width 100%
+
+        &__info
+          max-width 100%
+
+@media (max-width 768px)
+  .intro
+    .section-cards
+      .card__img
+        img
+          height 250px
+
+@media (max-width 715px)
+  .intro
+    padding-bottom 90px
+
+    .section-cards
+      .card__img
+        img
+          height 200px
+
+@media (max-width 500px)
+  .intro
+    padding-top 180px
+
+    .section-title
+      span
+        &::before
+          left -85%
+
+        &::after
+          right -235%
+
+    .section-subtitle
+      margin-bottom 70px
+
+    .section-cards
+      .card
+        flex-direction column
+        align-items center
+
+        &__img
+          img
+            height 300px
+      
+        &__info
+          text-align center

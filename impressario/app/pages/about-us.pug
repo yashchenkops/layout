@@ -1,0 +1,51 @@
+extends ../includes/page
+
+include ../includes/sections/contact/index
+
+block head
+  -
+    title = "ImpresSario | About Us"
+    const headerMobileRegisterButton = true;
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/about.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/index.js")
+
+block main
+  section.intro#intro
+    .container
+      .intro__info
+        h1.section-title#typingText
+
+  section.about#about
+    .container
+      .about__inner
+        h3.section-title.title--gradient
+          span
+            | About Us
+
+        .about__info
+          p.about__info-text
+            | A Carnival cannot operate without a dedicated  crew of magicians, acrobats, beast tamers, jugglers, clowns, fire-eaters, sword-swallowers, performers, and carnies. But THIS Carnival could never operate without its Affiliates.
+
+          p.about__info-text
+            | At Impressario Casino, we don’t think that one partner’s gain is another’s loss. On the contrary, we believe in positive-sum and win-win situations. Therefore, we are working together with our Affiliates, with one goal: to take the online gaming world by storm.
+
+          p.about__info-text
+            | Impressario Casino is unique in everything: concept, content, graphics, innovation, and fun. We have left no stone unturned to make our players stay with the Carnival much longer than average and bring their lifetime value to up to 3 times the industry average.
+
+          p.about__info-text
+            | We stand out as a casino that will quickly become a favorite among your players. As their VIP journey starts and they get to enjoy all our special features, you too will reap the rewards of increasing profits through transparent and mutually beneficial deals.
+
+          p.about__info-text
+            | So, in a nutshell, this is the Impressario World. Join the Impressario Partners Affiliate Program and start winning now!
+
+        .about__button
+          +button(href="#")
+            | Register
+
+  +contact()

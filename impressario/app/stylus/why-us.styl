@@ -1,0 +1,102 @@
+@import "base/_global"
+@import "../includes/sections/contact/index.styl"
+
+.header__desktop
+  .header__menu-link
+    color #4f4f4f
+
+.header__mobile
+  .header__mobile-wrapper
+    .header__right
+      .header__burger-button
+        span
+          background-color #4f4f4f
+
+.intro
+  position relative
+  padding-top 230px
+  padding-bottom 250px
+
+  &::before,
+  &::after
+    content ''
+    position absolute
+    left 0
+    background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTk3MiIgaGVpZ2h0PSIzNDEiIHZpZXdCb3g9IjAgMCAxOTcyIDM0MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5NTkuNTIgMC45MDY1NThMOC40MDE0NSAzMjEuMDU3Qy0zLjcyNzI1IDMyMy4wNDcgLTIuMjcwMjUgMzQwLjkyNSAxMC4wMjA3IDM0MC45MjVMMTk2MS4xNCAzNDAuOTI1QzE5NjYuNjYgMzQwLjkyNSAxOTcxLjE0IDMzNi40NDggMTk3MS4xNCAzMzAuOTI1TDE5NzEuMTQgMTAuNzc0NkMxOTcxLjE0IDQuNjA1MzUgMTk2NS42MSAtMC4wOTIzNDQ0IDE5NTkuNTIgMC45MDY1NThaIiBmaWxsPSIjRjNGM0YzIi8+Cjwvc3ZnPgo=") no-repeat
+    background-size cover
+    width 2111px
+    height 338px
+    z-index -1
+
+  &::before
+    top 350px
+
+  &::after
+    bottom 0
+
+  .section-title
+    margin-bottom 15px
+
+    span
+      &::before
+        left -60%
+
+      &::after
+        right -155%
+
+  .section-subtitle
+    font-size 22px
+    line-height 1.5
+    text-align center
+    color #4f4f4f
+    max-width 1100px
+    margin 0 auto 125px
+
+  .section-cards
+    display flex
+    align-items flex-start
+    flex-wrap wrap
+    gap 129px 110px
+    margin-bottom 60px
+
+    .card
+      display flex
+      align-items flex-start
+      gap 29px
+      width calc(50% - 55px)
+
+      &__img
+        img
+          max-width 290px
+          height 329px
+
+      &__info
+        max-width 340px
+
+        &-number
+          font-weight 600
+          font-size 24px
+          line-height 26px
+          color #959595
+          margin-bottom 5px
+
+        &-title
+          font-weight 600
+          font-size 32px
+          line-height 34p
+          color #4f4f4f
+          margin-bottom 20px
+
+        &-description
+          font-weight 400
+          font-size 22px
+          line-height 1.5
+          color #4f4f4f
+
+  .section-button
+    text-align center
+
+.contact
+  margin-top 150px
+
+@import "media/_media-why-us.styl"
