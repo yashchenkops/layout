@@ -1,13 +1,3 @@
-const addedLazyLoadImages = () => {
-  const lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazyload ",
-    load_delay: 0
-  });
-  
-  if (lazyLoadInstance) {
-    lazyLoadInstance.update();
-  }
-};
 
 const initMobileMenu = () => {
   const mobileBurger = document.querySelector('.header__burger-button');
@@ -36,15 +26,8 @@ const initMobileMenu = () => {
   closeCross.addEventListener('click', closeMenu);
 };
 
-const initAccordion = () => {
-  new Accordion('.accordion-container', {
-    duration: 400,
-    showMultiple: false,
-  });
-};
-
 const initTypingText = () => {
-  new TypeIt('#typingText', {
+  new TypeIt('#typingTextAbout', {
     strings: "“Great Affiliates of the World Spread the Impressario’s Word!”",
     speed: 50,
     waitUntilVisible: true,
@@ -54,8 +37,6 @@ const initTypingText = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
-  addedLazyLoadImages();
   initMobileMenu();
-  initAccordion();
   initTypingText();
 });
