@@ -8,13 +8,37 @@
   background-position 0
   background-size cover
   min-height 1012px
-  margin-bottom -60px
+  margin-bottom -50px
+
+  &::before,
+  &::after
+    content ''
+    position absolute
+    background-repeat no-repeat
+    background-size cover
+
+  &::before
+    background-image url('../img/person-intro.webp')
+    width 40vw
+    height 35vw
+    right 0
+    bottom 260px  
+    z-index 0
+
+  &::after
+    background-image url('../img/intro-decoration.webp')
+    width 100%
+    height 19vw
+    z-index 1
+    bottom 51px
 
   &__info
+    position relative
     padding-top 300px
     margin-left 150px
     max-width 773px
     color white
+    z-index 2
 
   .section-title
     position relative
@@ -22,10 +46,12 @@
     font-size 36px
     line-height 1.2
     text-transform uppercase
+    height 87px
     color white
     font-style italic
     text-shadow 2px 2px 0 rgba(0, 0, 0, 0.5)
     margin-bottom 60px
+    z-index 2
 
     &::after
       content ''
@@ -34,10 +60,17 @@
       left 50%
       transform translateX(-50%)
       border-radius 11px
-      width 260px
       height 3px
       box-shadow 2px 2px 0 0 rgba(0, 0, 0, 0.25)
       background #ff592a
+      animation animateWidth 1s 2.5s forwards
+
+      @keyframes animateWidth
+        0%
+          width 0
+
+        100%
+          width 260px
 
   .section-subtitle
     font-weight 400
@@ -52,12 +85,13 @@
 
   .intro__scroll
     position absolute
-    bottom 150px
+    bottom 11vw
     left 50%
     transform translateX(-50%)
     display flex
     align-items center
     flex-direction column
+    z-index 3
 
     span
       display inline-block

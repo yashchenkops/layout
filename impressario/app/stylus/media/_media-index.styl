@@ -5,9 +5,22 @@
     .intro__scroll
       bottom 10vw
 
+@media (max-width 1920px)
+  .intro
+    &::before
+      width 832px
+      height 832px
+      right auto
+      left 43vw
+      bottom 110px
+
 @media (max-width 1632px)
   .intro
     background-position 40%
+    min-height 960px
+    
+    &::after
+      bottom 49px
 
   .why-us
     .section-cards
@@ -50,13 +63,10 @@
 @media (max-width 960px)
   .intro
     background-position 50%
-    margin-bottom -100px
+    margin-bottom -88px
 
     .section-title
       font-size 34px
-
-    .intro__scroll
-      bottom 200px
 
   .commission
     &__inner 
@@ -83,13 +93,16 @@
 @media (max-width 768px)
   .intro
     background-position 56%
-    margin-bottom -140px
+
+    &::before
+      left 27vw
 
     &__info
       max-width 540px
 
     .section-title
       font-size 26px
+      height 63px
 
     .section-subtitle
       font-size 20px
@@ -120,6 +133,10 @@
         top -40px
 
 @media (max-width 715px)
+  .intro
+    &::before
+      left 17vw
+
   .commission
     padding-bottom 0
     
@@ -138,25 +155,46 @@
     padding-bottom 140px
 
 @media (max-width 500px)
+  .container
+    padding 0 15px
+
   .intro
-    background-position 63%
-    margin-bottom -190px
+    background-position 50%
+    min-height 840px
+
+    &::before
+      width 540px
+      height 540px
+
+    &::after
+      bottom 43px
 
     &__info
-      max-width 280px
-      padding-top 340px
+      max-width 100%
+      padding-top 140px
 
     .section-title
       font-size 20px
-      line-height 1.3
-      margin-bottom 30px
+      line-height 1.1
+      margin-bottom 110px
+      height 62px
 
       &::after
-        bottom -15px
+        bottom -60px
+        left 0
+        transform none
+
+        @keyframes animateWidth
+          0%
+            width 0
+
+          100%
+            width 190px
 
     .section-subtitle
       font-size 14px
       margin-bottom 25px
+      max-width 250px
 
     .button
       margin-left 0
@@ -232,3 +270,27 @@
             font-size 16px
             line-height 1.5
             padding-top 10px
+
+@media (max-width 375px)
+  .intro
+    &::before
+      left 6vw
+
+    &::after
+      height 230px
+
+    .section-title
+      font-size 19px
+
+      @keyframes animateWidth
+        0%
+          width 0
+
+        100%
+          width 160px
+
+    .section-subtitle
+      max-width 225px
+
+    .intro__scroll
+      bottom 15vw

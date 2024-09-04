@@ -7,7 +7,7 @@
   background-repeat no-repeat
   background-position center
   background-size cover
-  min-height 730px
+  min-height 710px
   margin-bottom -70px
 
   &__info
@@ -34,10 +34,17 @@
       left 50%
       transform translateX(-50%)
       border-radius 11px
-      width 260px
       height 10px
       box-shadow 2px 2px 0 0 rgba(0, 0, 0, 0.25)
       background #fff
+      animation animateWidth 1s 2.5s forwards
+
+      @keyframes animateWidth
+        0%
+          width 0
+
+        100%
+          width 260px
 
 .about
   .section-title

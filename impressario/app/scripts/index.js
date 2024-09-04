@@ -46,7 +46,7 @@ const initAccordion = () => {
 const initTypingText = () => {
   new TypeIt('#typingText', {
     strings: "“Great Affiliates of the World Spread the Impressario’s Word!”",
-    speed: 50,
+    speed: 5,
     waitUntilVisible: true,
     cursor: false,
   }).go();
