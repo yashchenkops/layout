@@ -29,7 +29,7 @@ const initMobileMenu = () => {
 const initTypingText = () => {
   new TypeIt('#typingTextAbout', {
     strings: "“Great Affiliates of the World Spread the Impressario’s Word!”",
-    speed: 10,
+    speed: 5,
     waitUntilVisible: true,
     cursor: false,
   }).go();

@@ -126,21 +126,11 @@
     z-index 10
 
     .header__mobile-inner-wrapper
-      position relative
       padding 40px 20px
-      overflow hidden
-      height 100%
-
-      &::before
-        content ''
-        position absolute
-        bottom 0
-        left 0
-        background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYwIiBoZWlnaHQ9Ijk0OCIgdmlld0JveD0iMCAwIDM2MCA5NDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF85MTZfMTU0MDU3KSI+CjxwYXRoIGQ9Ik03MzYuMjQ2IDY4Ljk1MzFMLTM3NS4yNDcgMjU5Ljg4MUwtMzcxLjE5IDI2OS4zNzlMNzM2LjI0NiA3OS4xNTE1VjY4Ljk1MzFaIiBmaWxsPSIjODUyODE5Ii8+CjxwYXRoIGQ9Ik03MzYuMjQ3IDQ1Ljk3MjlMLTM3NC42NDUgMjM2Ljc5TC0zNzAuNTg4IDI0Ni4yODhMNzM2LjI0NyA1Ni4xNzEzVjQ1Ljk3MjlaIiBmaWxsPSIjODUyODE5Ii8+CjxwYXRoIGQ9Ik03MzYuMjQ2IDIyLjk4MDJMLTM3NC4wNDMgMjEzLjY5OUwtMzY5Ljk2NyAyMjMuMTk2TDczNi4yNDYgMzMuMTc4NlYyMi45ODAyWiIgZmlsbD0iIzg1MjgxOSIvPgo8cGF0aCBkPSJNNzM2LjI0NiAwTC0zNzMuNDIyIDE5MC42MDhMLTM2OS4zNjUgMjAwLjEwNkw3MzYuMjQ2IDEwLjE5ODRWMFoiIGZpbGw9IiM4NTI4MTkiLz4KPHBhdGggZD0iTTczOC43NyA5My4zNzg3TC0zNzcuNzcgMjg0LjY2NFY5NDguOTYySDczOC43N1Y5My4zNzg3WiIgZmlsbD0iIzg1MjgxOSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzkxNl8xNTQwNTciPgo8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9Ijk0OCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K") no-repeat
-        background-size cover
-        width 100%
-        height calc(100% - 340px)
-        z-index -1
+      min-height 100%
+      background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYwIiBoZWlnaHQ9Ijk0OCIgdmlld0JveD0iMCAwIDM2MCA5NDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF85MTZfMTU0MDU3KSI+CjxwYXRoIGQ9Ik03MzYuMjQ2IDY4Ljk1MzFMLTM3NS4yNDcgMjU5Ljg4MUwtMzcxLjE5IDI2OS4zNzlMNzM2LjI0NiA3OS4xNTE1VjY4Ljk1MzFaIiBmaWxsPSIjODUyODE5Ii8+CjxwYXRoIGQ9Ik03MzYuMjQ3IDQ1Ljk3MjlMLTM3NC42NDUgMjM2Ljc5TC0zNzAuNTg4IDI0Ni4yODhMNzM2LjI0NyA1Ni4xNzEzVjQ1Ljk3MjlaIiBmaWxsPSIjODUyODE5Ii8+CjxwYXRoIGQ9Ik03MzYuMjQ2IDIyLjk4MDJMLTM3NC4wNDMgMjEzLjY5OUwtMzY5Ljk2NyAyMjMuMTk2TDczNi4yNDYgMzMuMTc4NlYyMi45ODAyWiIgZmlsbD0iIzg1MjgxOSIvPgo8cGF0aCBkPSJNNzM2LjI0NiAwTC0zNzMuNDIyIDE5MC42MDhMLTM2OS4zNjUgMjAwLjEwNkw3MzYuMjQ2IDEwLjE5ODRWMFoiIGZpbGw9IiM4NTI4MTkiLz4KPHBhdGggZD0iTTczOC43NyA5My4zNzg3TC0zNzcuNzcgMjg0LjY2NFY5NDguOTYySDczOC43N1Y5My4zNzg3WiIgZmlsbD0iIzg1MjgxOSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzkxNl8xNTQwNTciPgo8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9Ijk0OCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K") no-repeat
+      background-size 100%
+      background-position 0 320px
 
     &.is-active
       right 0
@@ -234,19 +224,16 @@
   .header__mobile
     .header__mobile-inner
       .header__mobile-inner-wrapper
-        &::before
-          width 768px
-          height calc(100% - 180px)
+        background-size 768px
+        background-position 0 180px
 
 @media (max-width 500px)
   .header__mobile
     .header__mobile-inner
       .header__mobile-inner-wrapper
         padding 40px 15px
-
-        &::before
-          width 500px
-          height calc(100% - 270px)
+        background-size 500px
+        background-position 0 270px
 
     .header__mobile-wrapper
       padding 25px 15px 0

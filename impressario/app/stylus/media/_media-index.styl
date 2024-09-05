@@ -12,15 +12,18 @@
       height 832px
       right auto
       left 43vw
-      bottom 70px
+      bottom 135px
 
 @media (max-width 1632px)
   .intro
     background-position 40%
     min-height 960px
+
+    &::before
+      bottom 80px
     
     &::after
-      bottom 49px
+      bottom 48px
 
   .why-us
     .section-cards
@@ -102,7 +105,7 @@
 
     .section-title
       font-size 26px
-      height 63px
+      min-height 63px
 
     .section-subtitle
       font-size 20px
@@ -137,6 +140,9 @@
     &::before
       left 17vw
 
+    .intro__info
+      padding-top 350px
+
   .commission
     padding-bottom 0
     
@@ -160,16 +166,17 @@
 
   .intro
     background-position 50%
-    min-height 840px
+    min-height 740px
 
     &::before
       width 540px
       height 540px
 
     &::after
-      bottom 43px
+      bottom 38px
+      height 25vw
 
-    &__info
+    .intro__info
       max-width 100%
       padding-top 140px
 
@@ -177,7 +184,7 @@
       font-size 20px
       line-height 1.1
       margin-bottom 110px
-      height 62px
+      min-height 62px
 
       &::after
         bottom -60px
@@ -200,6 +207,8 @@
       margin-left 0
 
   .commission
+    padding-top 80px
+
     &__inner 
       &::before
         font-size 100px
