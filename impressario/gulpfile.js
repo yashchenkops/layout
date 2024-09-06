@@ -23,7 +23,6 @@ gulp.task('style', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/wow.js/css/libs/animate.css',
-    'node_modules/swiper/swiper-bundle.min.css',
     'node_modules/accordion-js/dist/accordion.min.css',
   ])
       .pipe(concat('libs.min.css'))
@@ -34,8 +33,6 @@ gulp.task('style', function(){
 gulp.task('script', function(){
   return gulp.src([
     'node_modules/wow.js/dist/wow.min.js',
-    'node_modules/swiper/swiper-bundle.min.js',
-    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
     'node_modules/accordion-js/dist/accordion.min.js',
     'node_modules/typeit/dist/index.umd.js',
   ])

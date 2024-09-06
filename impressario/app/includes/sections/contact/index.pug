@@ -1,4 +1,4 @@
-mixin contact()
+mixin contact(showForm)
   section.contact#contact
     .container
       .contact__inner
@@ -73,13 +73,21 @@ mixin contact()
             +button(href="https://login.impressario.partners/signup.php")
               | Register
 
-        .contact__form
-          p.contact__form-message
-            | Our Affiliate Team is ready to meet all your needs, ensuring your success every step of the way.
+        if showForm
+          .contact__form
+            p.contact__form-message
+              | Our Affiliate Team is ready to meet all your needs, ensuring your success every step of the way.
 
-          form(action="#" method="POST").contact-form
-            input.contact-form__input(type="text" name="name" maxlenght="255" placeholder="Name*" required)
-            input.contact-form__input(type="email" name="email" maxlenght="255" placeholder="Email*" required)
-            textarea.contact-form__textarea(name="message" maxlenght="255" placeholder="Message*" required)
-            +button(type="submit").button--bordered
-              | Send
+            form.contact-form
+              //- Hidden Required Fields
+              input(type="hidden" name="project_name" value="ImpresSario")
+              //- input(type="hidden" name="admin_email" value="info@impressario.partners")
+              input(type="hidden" name="admin_email" value="vebafi5732@ploncy.com")
+              input(type="hidden" name="form_subject" value="Casino Lead")
+              //- END Hidden Required Fields
+
+              input.contact-form__input(type="text" name="name" maxlength="255" placeholder="Name*" required)
+              input.contact-form__input(type="email" name="email" maxlength="255" placeholder="Email*" required)
+              textarea.contact-form__textarea(name="message" maxlength="255" placeholder="Message*" required)
+              +button(type="submit").button--bordered
+                | Send

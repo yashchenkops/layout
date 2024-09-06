@@ -1,14 +1,3 @@
-const addedLazyLoadImages = () => {
-  const lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazyload ",
-    load_delay: 0
-  });
-  
-  if (lazyLoadInstance) {
-    lazyLoadInstance.update();
-  }
-};
-
 const initMobileMenu = () => {
   const mobileBurger = document.querySelector('.header__burger-button');
   const mobileMenuInner = document.querySelector('.header__mobile-inner');
@@ -46,16 +35,40 @@ const initAccordion = () => {
 const initTypingText = () => {
   new TypeIt('#typingText', {
     strings: "“Great Affiliates of the World Spread the Impressario’s Word!”",
-    speed: 5,
+    speed: 10,
     waitUntilVisible: true,
     cursor: false,
   }).go();
 };
 
+const initFormSending = () => {
+  const mailPath = 'mail.php';
+
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let th = this;
+    let params = new FormData(this);
+    let request = new XMLHttpRequest();
+
+    request.open('POST', mailPath, true);
+    request.send(params);
+
+    request.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        setTimeout(function() {
+          th.reset();
+        }, 1000);
+        alert('Thank you!');
+      }
+    };
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
-  addedLazyLoadImages();
   initMobileMenu();
   initAccordion();
   initTypingText();
+  initFormSending();
 });

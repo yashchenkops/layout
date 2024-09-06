@@ -8,7 +8,7 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'About Us': './about-us.html', 'Commissions': '/#commissions', 'Why US': './why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
+              each key, value in {'About Us': '/about-us.html', 'Commissions': '/#commissions', 'Why US': '/why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
                 li.header__menu-li
                   a.header__menu-link.link-underline(href=`${key}` )= value
 
@@ -44,9 +44,9 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'About Us': './about-us.html', 'Commissions': '/#commissions', 'Why US': './why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
+              each key, value in {'About Us': '/about-us.html', 'Commissions': '/#commissions', 'Why US': '/why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
                 li.header__menu-li
-                  a.header__menu-link(href=`#${key}` )= value
+                  a.header__menu-link(href=`${key}` )= value
 
           +button(href="https://login.impressario.partners/signup.php")
             | Register

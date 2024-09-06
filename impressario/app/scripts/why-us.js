@@ -26,16 +26,6 @@ const initMobileMenu = () => {
   closeCross.addEventListener('click', closeMenu);
 };
 
-const initTypingText = () => {
-  new TypeIt('#typingTextAbout', {
-    strings: "“Great Affiliates of the World Spread the Impressario’s Word!”",
-    speed: 10,
-    waitUntilVisible: true,
-    cursor: false,
-  }).go();
-};
-
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
-  initTypingText();
 });
