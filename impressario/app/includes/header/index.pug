@@ -3,28 +3,28 @@ mixin header()
     .header__desktop
       .header__container
         .header__left
-          a.header__logo(href="index.html")
+          a.header__logo(href="/")
             img(src= "img/logo.svg" alt="Logo")
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact'}
+              each key, value in {'About Us': './about-us.html', 'Commissions': '/#commissions', 'Why US': './why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
                 li.header__menu-li
-                  a.header__menu-link.link-underline(href=`#${key}` )= value
+                  a.header__menu-link.link-underline(href=`${key}` )= value
 
         .header__right
-          +button(href="#")
+          +button(href="https://login.impressario.partners/signup.php")
             | Register
 
     .header__mobile
       .header__mobile-wrapper
         .header__left
-          a.header__logo(href="#")
+          a.header__logo(href="/")
             img(src= "img/logo.svg" alt="Logo")
 
         .header__right
           if headerMobileRegisterButton
-            +button(type="button")
+            +button(href="https://login.impressario.partners/signup.php")
               | Register
 
           button(type="button").header__burger-button
@@ -34,7 +34,7 @@ mixin header()
 
       .header__mobile-inner
         .header__mobile-inner-wrapper
-          a.header__mobile-inner-logo(href="index.html")
+          a.header__mobile-inner-logo(href="/")
             img(src= "img/logo.svg" alt="Logo")
 
           button(type="button").header__menu-close
@@ -44,9 +44,9 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact'}
+              each key, value in {'About Us': './about-us.html', 'Commissions': '/#commissions', 'Why US': './why-us.html', 'Software': '/#software', 'FAQ': '/#faq', 'Contact Us': '/#contact'}
                 li.header__menu-li
                   a.header__menu-link(href=`#${key}` )= value
 
-          +button(href="#")
+          +button(href="https://login.impressario.partners/signup.php")
             | Register

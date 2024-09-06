@@ -2,14 +2,35 @@ mixin footer()
   footer.footer
     .container
       .footer__inner
-        a.footer__logo(href="index.html")
+        a.footer__logo(href="/")
           img(src="img/logo.svg" alt="Logo footer")
 
         nav.footer__menu
           ul.footer__menu-ul
-            each key, value in {'About Us': 'about', 'Commissions': 'commissions', 'Why US': 'why-us', 'Software': 'software', 'FAQ': 'faq', 'Contact Us': 'contact', 'Register': '#', 'Login': '#'}
-              li.footer__menu-li
-                a.footer__menu-link(href=`#${key}` )= value
+            li.footer__menu-li
+              a.footer__menu-link(href="./about-us.html")
+                | About Us
+            li.footer__menu-li
+              a.footer__menu-link(href="/#commissions")
+                | Commissions
+            li.footer__menu-li
+              a.footer__menu-link(href="/why-us.html")
+                | Why US
+            li.footer__menu-li
+              a.footer__menu-link(href="/#software")
+                | Software
+            li.footer__menu-li
+              a.footer__menu-link(href="/#faq")
+                | FAQ
+            li.footer__menu-li
+              a.footer__menu-link(href="/#contact")
+                | Contact Us
+            li.footer__menu-li
+              a.footer__menu-link(href="https://login.impressario.partners/signup.php")
+                | Register
+            li.footer__menu-li
+              a.footer__menu-link(href="https://login.impressario.partners/signin.php")
+                | Login
 
         nav.footer__menu.footer__menu--secondary
           ul.footer__menu-ul
@@ -17,13 +38,13 @@ mixin footer()
               a.footer__menu-link.linkedin(href=`#`)
                 | Linkedin
             li.footer__menu-li
-              a.footer__menu-link(href=`#`)
+              a.footer__menu-link.footer__menu-link--underline(href="./docs/IMPRESSARIO-PARTNERS-COOKIES-POLICY-2024-08-10.pdf" target="_blank")
                 | Cookie Policy
             li.footer__menu-li
-              a.footer__menu-link.footer__menu-link--underline(href=`#`)
+              a.footer__menu-link.footer__menu-link--underline(href="./docs/IMPRESSARIO-PARTNERS-PRIVACY-POLICY-2024-08-10.pdf" target="_blank")
                 | Privacy Policy
             li.footer__menu-li
-              a.footer__menu-link.footer__menu-link--underline(href=`https://www.spinwise.com/assets/terms-and-conditions.pdf` target="_blank")
+              a.footer__menu-link.footer__menu-link--underline(href="./docs/IMPRESSARIO-PARTNERS-TERMS-AND-CONDITIONS-2024-09-05.pdf" target="_blank")
                 | Terms & Conditions
 
         .footer__info © Impressario Casino. All rights reserved #{new Date().getFullYear()}.
