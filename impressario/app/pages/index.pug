@@ -24,8 +24,12 @@ block main
         p.section-subtitle.wow.fadeInLeft(data-wow-delay="1.3s")
           | In order to bring you rock-solid results we have left no stone unturned. Join the Impressario Partners Affiliate Program now!
 
-        +button(href="https://login.impressario.partners/signup.php").wow.fadeInLeft(data-wow-delay="1.6s")
-          | Register
+        .section-action
+          +button(href="https://login.impressario.partners/signin.php").button--bordered.wow.fadeInLeft(data-wow-delay="1.6s")
+            | Login
+
+          +button(href="https://login.impressario.partners/signup.php").wow.fadeInLeft(data-wow-delay="1.9s")
+            | Register
 
       .intro__scroll
         span or continue scrolling
