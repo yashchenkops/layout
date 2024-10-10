@@ -22,8 +22,9 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
-    "wow.js": "^1.2.2",
     "accordion-js": "^3.3.4",
-    "typeit": "^8.8.4"
+    "swiper": "^11.1.14",
+    "typeit": "^8.8.4",
+    "wow.js": "^1.2.2"
   }
 }

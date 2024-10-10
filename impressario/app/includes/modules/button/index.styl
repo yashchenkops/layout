@@ -30,7 +30,6 @@
   border-radius 25px
   padding 15px
   background transparent
-  color white
   width 200px
 
   &::before
@@ -44,7 +43,7 @@
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-    mask-composite: exclude; 
+    mask-composite: exclude;
 
   &:hover,
   &:focus-visible
@@ -59,6 +58,7 @@
 
   &-arrow
     padding-right 50px
+    color #4F4F4F
 
     &::after
       content ''
@@ -73,6 +73,8 @@
       transition all .5s
 
     &:hover
+      color white
+
       &::after
         right 17px
         background url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDI2IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yNS4zNTM2IDQuODUzNTVDMjUuNTQ4OCA0LjY1ODI5IDI1LjU0ODggNC4zNDE3MSAyNS4zNTM2IDQuMTQ2NDVMMjIuMTcxNiAwLjk2NDQ2NkMyMS45NzYzIDAuNzY5MjA0IDIxLjY1OTcgMC43NjkyMDQgMjEuNDY0NSAwLjk2NDQ2NkMyMS4yNjkyIDEuMTU5NzMgMjEuMjY5MiAxLjQ3NjMxIDIxLjQ2NDUgMS42NzE1N0wyNC4yOTI5IDQuNUwyMS40NjQ1IDcuMzI4NDNDMjEuMjY5MiA3LjUyMzY5IDIxLjI2OTIgNy44NDAyNyAyMS40NjQ1IDguMDM1NTNDMjEuNjU5NyA4LjIzMDggMjEuOTc2MyA4LjIzMDggMjIuMTcxNiA4LjAzNTUzTDI1LjM1MzYgNC44NTM1NVpNMCA1SDI1VjRIMFY1WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==") no-repeat

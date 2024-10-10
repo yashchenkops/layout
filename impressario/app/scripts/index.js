@@ -65,10 +65,21 @@ const initFormSending = () => {
   });
 };
 
+const initTestimonialsSlider = () => {
+  const swiper = new Swiper('#testimonialsSlider', {
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   new WOW().init();
   initMobileMenu();
   initAccordion();
   initTypingText();
   initFormSending();
+  initTestimonialsSlider();
 });

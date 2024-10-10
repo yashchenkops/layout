@@ -24,6 +24,7 @@ gulp.task('style', function(){
     'node_modules/normalize.css/normalize.css',
     'node_modules/wow.js/css/libs/animate.css',
     'node_modules/accordion-js/dist/accordion.min.css',
+    'node_modules/swiper/swiper-bundle.min.css',
   ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
@@ -35,6 +36,7 @@ gulp.task('script', function(){
     'node_modules/wow.js/dist/wow.min.js',
     'node_modules/accordion-js/dist/accordion.min.js',
     'node_modules/typeit/dist/index.umd.js',
+    'node_modules/swiper/swiper-bundle.min.js',
   ])
       .pipe(concat('libs.min.js'))
       .pipe(uglify())

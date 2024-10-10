@@ -1,6 +1,7 @@
 extends ../includes/page
 
 include ../includes/sections/contact/index
+include ../includes/sections/testimonials/index
 
 block head
   -
@@ -161,5 +162,7 @@ block main
               button.ac-trigger(type='button') How can i contact you?
             .ac-panel
               p.ac-text Drop us a line at <a href="mailto:info@impressario.partners">info@impressario.partners</a>
+
+  +testimonials()
 
   +contact(true)
