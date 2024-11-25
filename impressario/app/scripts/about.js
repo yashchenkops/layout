@@ -35,7 +35,17 @@ const initTypingText = () => {
   }).go();
 };
 
+const initBannerClose = () => {
+  const banner = document.querySelector('.banner')
+  const bannerClose = document.querySelector('.banner__close');
+
+  bannerClose.addEventListener('click', () => {
+    banner.classList.add('is-hidden');
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
   initTypingText();
+  initBannerClose();
 });

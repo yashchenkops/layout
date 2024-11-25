@@ -1,0 +1,27 @@
+mixin banner-meeting()
+  .banner.wow.fadeInRight(data-wow-delay="1s")
+    button(type="button").banner__close
+      svg(width='28' height='29' viewBox='0 0 28 29' fill='none' xmlns='http://www.w3.org/2000/svg')
+        g(filter='url(#filter0_d_1393_19201)')
+          circle(cx='14' cy='14' r='14' fill='#F4E2A9')
+        rect(x='18.9497' y='19.6567' width='15' height='1' rx='0.5' transform='rotate(-135 18.9497 19.6567)' fill='#4F4F4F')
+        rect(x='8.34314' y='18.9497' width='15' height='1' rx='0.5' transform='rotate(-45 8.34314 18.9497)' fill='#4F4F4F')
+        defs
+          filter#filter0_d_1393_19201(x='0' y='0' width='28' height='29' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB')
+            feflood(flood-opacity='0' result='BackgroundImageFix')
+            fecolormatrix(in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha')
+            feoffset(dy='1')
+            fecomposite(in2='hardAlpha' operator='out')
+            fecolormatrix(type='matrix' values='0 0 0 0 0.756863 0 0 0 0 0.588235 0 0 0 0 0.333333 0 0 0 1 0')
+            feblend(mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_1393_19201')
+            feblend(mode='normal' in='SourceGraphic' in2='effect1_dropShadow_1393_19201' result='shape')
+
+    .banner__info
+      .banner__info-city Barcelona
+      .banner__info-meet-us Meet us at
+      .banner__info-name iGB Affiliate
+      .banner__info-place Barcelona, Jan 20-23, 2025
+      .banner__info-stand Stand B32!
+
+    .banner__image
+      img(src="img/banner-img.webp" alt="")
