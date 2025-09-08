@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Quote</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/limarquee.css">
+  <link rel="stylesheet" href="css/revealator.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__main">
+      <div class="container">
+        <div class="header__main_inner">
+          <a href="index.html" class="header__logo">
+            <img src="img/ico/logo.svg" alt="Logo">
+          </a>
+          <form class="header__search form">
+            <div class="header__search_input inputs">
+              <div class="inputs-search">
+                <input type="text" placeholder="What do you need?" name="search" required>
+                <button type="submit">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.9401 21.0798C5.32405 21.0798 0.800049 16.5558 0.800049 10.9398C0.800049 5.32381 5.32405 0.799805 10.9401 0.799805C16.5561 0.799805 21.0801 5.32381 21.0801 10.9398C21.0801 16.5558 16.5561 21.0798 10.9401 21.0798ZM10.9401 2.3598C6.18205 2.3598 2.36005 6.18181 2.36005 10.9398C2.36005 15.6978 6.18205 19.5198 10.9401 19.5198C15.6981 19.5198 19.5201 15.6978 19.5201 10.9398C19.5201 6.18181 15.6981 2.3598 10.9401 2.3598Z"
+                      fill="#FC7D36" />
+                    <path d="M18.492 17.3882L25.4964 24.3926L24.3934 25.4955L17.389 18.4911L18.492 17.3882Z"
+                      fill="#FC7D36" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+          <nav class="header__menu">
+            <ul>
+              <li><a href="#">Get to know us</a></li>
+            </ul>
+          </nav>
+          <div class="header__mobile">
+            <div class="header__mobile_ico">
+              <img src="img/ico/burger.svg" alt="Burger">
+            </div>
+            <div class="header__mobile_menu">
+              <div class="header__mobile_menu-close">
+                <img src="img/ico/close-mobile-menu.svg" alt="Close">
+              </div>
+              <ul class="header__mobile_menu_links">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__sticky">
+      <div class="container">
+        <div class="header__sticky_inner">
+          <div class="header__sticky_left">
+            <div class="header__sticky_left_img">
+              <img src="img/main/pict-sticky.png" alt="Home">
+            </div>
+            <div class="header__sticky_left_text">
+              <p>Wanna start your project now?</p>
+              <p>Give us your ZIP code to get free quotes.</p>
+            </div>
+          </div>
+          <div class="header__sticky_right">
+            <form class="header__sticky_right_form form">
+              <div class="header__sticky_input inputs">
+                <div class="inputs-zip">
+                  <input type="text" placeholder="What do you need?" name="zip" required>
+                  <button type="submit">go!</button>
+                </div>
+              </div>
+            </form>
+            <div class="header__sticky_right_arrow">
+              <svg width="29" height="47" viewBox="0 0 29 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.4034 37.1624C16.0305 38.9358 17.2822 40.9625 19.4099 42.2292C20.4112 42.7359 20.2858 44.3826 19.0342 44.6359C13.1516 46.0293 7.14385 46.0293 1.26145 46.0293C0.0098276 46.0293 -0.365657 44.6359 0.385314 43.7492C4.26533 39.0625 7.14405 33.7423 9.89761 28.2955C10.5236 27.1555 12.4008 27.6622 12.4008 28.9289C12.2757 30.9556 12.526 32.8556 12.6512 34.8824C23.4153 27.2822 26.5443 13.3485 27.1699 0.808216C27.1699 -0.331814 28.6719 -0.205143 28.797 0.808216C30.0487 13.8552 25.5428 29.5622 14.4034 37.1624Z"
+                  fill="#FC8267" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <section class="offer">
+      <div class="container">
+        <div class="offer__wrapper">
+          <div class="offer__cta">
+            <div class="revealator-once revealator-slideright revealator-delay1">
+              <h1 class="offer__cta-title">
+                <span>Home Quote</span><br> will help you
+              </h1>
+              <p class="offer__cta-text">build, design, or redecorate your house.</p>
+            </div>
+            <form class="offer__cta-form form">
+              <div class="offer__cta-inputs inputs">
+                <div class="inputs-zip">
+                  <input type="text" placeholder="Enter your zip code here" name="zip" required>
+                  <button type="submit">go!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="offer__popular">
+            <h3 class="offer__popular_title">
+              Most Popular Projects
+            </h3>
+            <div class="component1__wrapper">
+              <a href="#" class="component-roofing component1 component1-medium">
+                <div class="component1__img">
+                  <img src="img/components/component1-1.jpg" alt="Roofing">
+                </div>
+                <div class="component1__name">
+                  <p>Roofing</p>
+                </div>
+              </a>
+              <a href="#" class="component-solar component1 component1-small">
+                <div class="component1__img">
+                  <img src="img/components/component1-5.jpg" alt="Solar">
+                </div>
+                <div class="component1__name">
+                  <p>Solar</p>
+                </div>
+              </a>
+              <a href="#" class="component-bathroom component1 component1-small">
+                <div class="component1__img">
+                  <img src="img/components/component1-2.jpg" alt="Bathroom ">
+                </div>
+                <div class="component1__name">
+                  <p>Bathroom </p>
+                </div>
+              </a>
+              <a href="#" class="component-hvac component1 component1-small">
+                <div class="component1__img">
+                  <img src="img/components/component1-3.jpg" alt="HVAC ">
+                </div>
+                <div class="component1__name">
+                  <p>HVAC </p>
+                </div>
+              </a>
+              <a href="#" class="component-windows component1 component1-small">
+                <div class="component1__img">
+                  <img src="img/components/component1-4.jpg" alt="Windows">
+                </div>
+                <div class="component1__name">
+                  <p>Windows</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="offer__popular_mobile">
+            <div class="offer__popular_mobile_items">
+              <div class="offer__popular_mobile_item">
+                <div class="offer__popular_mobile_item_img">
+                  <img src="img/ico/popular-items-ico1.svg" alt="item">
+                </div>
+                <p class="offer__popular_mobile_item_title">
+                  Roofing
+                </p>
+              </div>
+              <div class="offer__popular_mobile_item">
+                <div class="offer__popular_mobile_item_img">
+                  <img src="img/ico/popular-items-ico2.svg" alt="item">
+                </div>
+                <p class="offer__popular_mobile_item_title">
+                  HVAC
+                </p>
+              </div>
+              <div class="offer__popular_mobile_item">
+                <div class="offer__popular_mobile_item_img">
+                  <img src="img/ico/popular-items-ico3.svg" alt="item">
+                </div>
+                <p class="offer__popular_mobile_item_title">
+                  Windows
+                </p>
+              </div>
+              <div class="offer__popular_mobile_item">
+                <div class="offer__popular_mobile_item_img">
+                  <img src="img/ico/popular-items-ico4.svg" alt="item">
+                </div>
+                <p class="offer__popular_mobile_item_title">
+                  Bathroom
+                </p>
+              </div>
+              <div class="offer__popular_mobile_item">
+                <div class="offer__popular_mobile_item_img">
+                  <img src="img/ico/popular-items-ico5.svg" alt="item">
+                </div>
+                <p class="offer__popular_mobile_item_title">
+                  Solar
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular">
+      <div class="popular__inner">
+        <h2 class="popular__title">
+          Popular Service in your area
+        </h2>
+        <div class="popular__location">
+          State, City
+        </div>
+        <div class="popular__items">
+          <a href="#" class="component2">
+            <div class="component2__img">
+              <img src="img/components/component2-1.jpg" alt="bedroom">
+            </div>
+            <div class="component2__name">
+              <p>bedroom</p>
+            </div>
+          </a>
+          <a href="#" class="component2">
+            <div class="component2__img">
+              <img src="img/components/component2-2.jpg" alt="roofing">
+            </div>
+            <div class="component2__name">
+              <p>roofing</p>
+            </div>
+          </a>
+          <a href="#" class="component2">
+            <div class="component2__img">
+              <img src="img/components/component2-3.jpg" alt="bathroom">
+            </div>
+            <div class="component2__name">
+              <p>bathroom</p>
+            </div>
+          </a>
+        </div>
+        <div class="popular__start">
+          <h3>Starting Your Project Now!</h3>
+          <form class="popular__start_form form">
+            <div class="popular__start_inputs inputs">
+              <div class="inputs-zip">
+                <input type="text" placeholder="Please enter your Zip code" name="zip" required>
+                <button type="submit">go!</button>
+                <div class="popular__start_inputs_arrow">
+                  <svg width="29" height="47" viewBox="0 0 29 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.035 37.7771L13.6446 37.3515L14.1216 37.026C25.0551 29.5663 29.5389 14.0789 28.3001 1.14047C28.2688 0.908165 28.0906 0.783951 27.9163 0.776897C27.8325 0.773502 27.7774 0.799389 27.7469 0.827717C27.7223 0.850521 27.6699 0.914795 27.6699 1.08483V1.09729L27.6693 1.10974C27.0425 13.6751 23.906 27.8244 12.9396 35.5674L12.2074 36.0844L12.1521 35.1898C12.1208 34.6825 12.0807 34.1764 12.0406 33.6695C11.9244 32.2006 11.8077 30.7247 11.9007 29.1922C11.8943 28.8498 11.6412 28.5699 11.2581 28.4702C10.8765 28.3709 10.5171 28.4901 10.3395 28.8063C7.58549 34.2536 4.68679 39.6141 0.770458 44.3447L0.770482 44.3447L0.766859 44.349C0.500265 44.6638 0.448232 45.0511 0.545691 45.3371C0.634626 45.5982 0.854245 45.8059 1.26145 45.8059C7.15337 45.8059 13.1025 45.8037 18.919 44.426L18.927 44.4241L18.935 44.4225C19.6991 44.2678 19.7829 43.255 19.1842 42.952L19.1689 42.9442L19.1541 42.9354C18.0263 42.264 17.1416 41.3973 16.344 40.4932C15.9939 40.0964 15.6562 39.6872 15.3234 39.2839C15.278 39.2289 15.2327 39.174 15.1875 39.1192C14.8083 38.6603 14.4322 38.21 14.035 37.7771Z"
+                      stroke="white" />
+                  </svg>
+                </div>
+                <div class="popular__start_inputs_lamp"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="how-works">
+      <div class="how-works__inner">
+        <h2>How It Works</h2>
+        <div class="how-works__items">
+          <div class="how-works__item revealator-once revealator-slideright revealator-delay0">
+            <div class="how-works__item_ico revealator-once revealator-zoomin revealator-delay5">
+              <img src="img/main/how-works1.png" alt="Ruler">
+            </div>
+            <h4 class="how-works__item_title">
+              Let us know
+            </h4>
+            <p class="how-works__item_green">
+              what you need
+            </p>
+            <p class="how-works__item_text">
+              Tell us about the services you want to be done.
+            </p>
+          </div>
+          <div class="how-works__item revealator-once revealator-slideright revealator-delay10">
+            <div class="how-works__item_ico revealator-once revealator-zoomin revealator-delay15">
+              <img src="img/main/how-works2.png" alt="Map">
+            </div>
+            <h4 class="how-works__item_title">
+              Find the best pro
+            </h4>
+            <p class="how-works__item_green">
+              for your project
+            </p>
+            <p class="how-works__item_text">
+              We will connect you with a handyman who will do the job quickly and qualitatively.
+            </p>
+          </div>
+          <div class="how-works__item revealator-once revealator-slideright revealator-delay20">
+            <div class="how-works__item_ico revealator-once revealator-zoomin revealator-delay25">
+              <img src="img/main/how-works3.png" alt="Tools">
+            </div>
+            <h4 class="how-works__item_title">
+              Meet your worker
+            </h4>
+            <p class="how-works__item_green">
+              who will complete your project
+            </p>
+            <p class="how-works__item_text">
+              Your pro will contact you shortly after you send a request.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quotes" data-parallax="scroll" data-image-src="img/main/quotes-bg.jpg">
+      <div class="quotes__inner">
+        <h2>Get Free Quotes Now</h2>
+        <p>We can help you meet a professional near you to get real quotes today.</p>
+        <a href="#" class="btn-red">FIND NOW</a>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__inner">
+        <h2>Reviews</h2>
+        <div class="reviews__slider swiper-container">
+          <div class="reviews__slider_wrapper swiper-wrapper">
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_solar">
+                  Solar
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Katherine Way, Newark, NJ
+              </p>
+              <p class="reviews__slider_item_title">
+                Excited to use my new solar panels
+              </p>
+              <div class="reviews__slider_item_review">
+                I just had solar panels installed and I’m excited to start my eco-friendly life. I definitely recommend
+                Home Improvement to all my friends.
+              </div>
+            </div>
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_windows">
+                  Windows
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Alice Smith, Ocean City, DE
+              </p>
+              <p class="reviews__slider_item_title">
+                My new windows are absolutely stunning
+              </p>
+              <div class="reviews__slider_item_review">
+                I’m so happy with the way my kitchen looks after Tod and his team changed the windows there! Home
+                Improvement provided me the best professionals who did a great job. Five out of five!
+              </div>
+            </div>
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_bathroom">
+                  Bathroom
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Oliver Crane, Oakland, CA
+              </p>
+              <p class="reviews__slider_item_title">
+                Finally got new plumbing in my office
+              </p>
+              <div class="reviews__slider_item_review">
+                Home Improvement has connected me with an excellent plumber, Max who finally fixed the plumbing in my
+                office. Thank you, Max and thanks Home Improvement!
+              </div>
+            </div>
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_roofing ">
+                  Roofing
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Angela Lewis, Austin, TX
+              </p>
+              <p class="reviews__slider_item_title">
+                Great free service
+              </p>
+              <div class="reviews__slider_item_review">
+                The roof in my house has been leaking for years and nobody could properly fix that until I found David
+                through Home Improvement.<br>
+                Thank you, guys!
+              </div>
+            </div>
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_hvac">
+                  HVAC
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Jen Lee, New York, NY
+              </p>
+              <p class="reviews__slider_item_title">
+                Now the temperature in my house is always perfect
+              </p>
+              <div class="reviews__slider_item_review">
+                I have been struggling with the AC in my apartment for ages before the team I found through Home
+                Improvement fixed everything. Excellent job!
+              </div>
+            </div>
+            <div class="reviews__slider_item swiper-slide">
+              <div class="reviews__slider_item_top">
+                <div class="reviews__slider_item_top_hvac">
+                  HVAC
+                </div>
+                <div class="reviews__slider_item_top_stars">
+                  <img src="img/ico/stars.svg" alt="Stars">
+                </div>
+              </div>
+              <p class="reviews__slider_item_name">
+                Matt Harris, Chicago, IL
+              </p>
+              <p class="reviews__slider_item_title">
+                Best service ever
+              </p>
+              <div class="reviews__slider_item_review">
+                I just bought my first house and needed an AC system to be installed. Luckily, I found out about Home
+                Improvement that connected me with a great pro Mike! Thanks, Mike! You did a great job!
+              </div>
+            </div>
+          </div>
+          <div class="reviews__slider_pagination"></div>
+          <div class="reviews__slider_prev">
+            <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d)">
+                <path
+                  d="M16.9523 4.82958C17.4299 4.82873 17.8928 4.98052 18.2605 5.25862C18.4675 5.41522 18.6386 5.60755 18.764 5.82459C18.8894 6.04162 18.9667 6.2791 18.9914 6.52343C19.0161 6.76776 18.9877 7.01413 18.9079 7.24843C18.8281 7.48273 18.6984 7.70037 18.5263 7.88887L9.36856 17.8875L18.1992 27.9048C18.369 28.0956 18.4958 28.3152 18.5723 28.5509C18.6488 28.7865 18.6735 29.0337 18.645 29.2781C18.6166 29.5225 18.5354 29.7594 18.4063 29.9751C18.2771 30.1908 18.1026 30.3811 17.8926 30.5351C17.6811 30.7049 17.4334 30.833 17.1651 30.9113C16.8968 30.9896 16.6136 31.0165 16.3334 30.9902C16.0531 30.964 15.7819 30.8851 15.5366 30.7586C15.2914 30.6321 15.0774 30.4608 14.9081 30.2553L5.03501 19.0627C4.73436 18.7289 4.57 18.3103 4.57 17.8782C4.57 17.4461 4.73436 17.0274 5.03501 16.6936L15.2556 5.50113C15.4607 5.27538 15.7212 5.09693 16.016 4.98025C16.3108 4.86357 16.6315 4.81195 16.9523 4.82958Z"
+                  fill="#FFA08B" />
+              </g>
+              <defs>
+                <filter id="filter0_d" x="0.570007" y="0.826172" width="22.43" height="34.1738"
+                  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div class="reviews__slider_next">
+            <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d)">
+                <path
+                  d="M6.04773 30.1704C5.57011 30.1713 5.10725 30.0195 4.73948 29.7414C4.5325 29.5848 4.3614 29.3924 4.23599 29.1754C4.11058 28.9584 4.03332 28.7209 4.00863 28.4766C3.98395 28.2322 4.01233 27.9859 4.09214 27.7516C4.17195 27.5173 4.30163 27.2996 4.47375 27.1111L13.6314 17.1125L4.80081 7.09518C4.63101 6.90437 4.50421 6.68481 4.42769 6.44914C4.35118 6.21346 4.32646 5.96631 4.35495 5.72189C4.38345 5.47746 4.46459 5.24059 4.59373 5.02488C4.72286 4.80917 4.89744 4.61887 5.10743 4.46493C5.31892 4.29511 5.5666 4.16702 5.83492 4.08869C6.10324 4.01036 6.3864 3.98349 6.66663 4.00977C6.94687 4.03604 7.21813 4.11489 7.46339 4.24137C7.70865 4.36785 7.92261 4.53923 8.09185 4.74475L17.965 15.9373C18.2656 16.2711 18.43 16.6897 18.43 17.1218C18.43 17.5539 18.2656 17.9726 17.965 18.3064L7.74435 29.4989C7.53929 29.7246 7.2788 29.9031 6.98402 30.0198C6.68923 30.1364 6.36846 30.1881 6.04773 30.1704Z"
+                  fill="#FFA08B" />
+              </g>
+              <defs>
+                <filter id="filter0_d" x="0" y="0" width="22.43" height="34.1738" filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+        </div>
+      </div>
+    </section>
+    <section class="all-services">
+      <div class="all-services__inner">
+        <h3>All Services</h3>
+        <div class="all-services__slider">
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-1.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Bedroom</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-2.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Hvac</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-3.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Solar</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-4.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Walk-n Tubs</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-1.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Bedroom</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="all-services__slider2">
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-5.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Cabinets</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-6.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Doors</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-7.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Flooring</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-8.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Bathroom</p>
+              </div>
+            </a>
+          </div>
+          <div class="all-services__slider_item">
+            <a href="#" class="component3">
+              <div class="component3__img">
+                <img src="img/components/component3-1.jpg" alt="image">
+              </div>
+              <div class="component3__name">
+                <p>Bedroom</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-us">
+      <div class="contact-us__left">
+        <div class="contact-us__left_wrapper">
+          <h3>Sign up for free projects cost information</h3>
+          <form class="contact-us__form form">
+            <div class="contact-us__inputs inputs">
+              <div class="inputs-item">
+                <div class="inputs-field error-field">
+                  <input type="email" placeholder="Enter your E-mail" name="email">
+                  <p class="error-text">Email is required</p>
+                </div>
+              </div>
+              <div class="inputs-item">
+                <div class="inputs-field">
+                  <input type="text" placeholder="Enter your Zip code" name="zip">
+                  <p class="error-text"></p>
+                </div>
+              </div>
+            </div>
+            <button class="contact-us__btn btn-red" type="button">sIGN UP</button>
+          </form>
+        </div>
+        <div class="contact-us__left_success">
+          <h3>Success!<br>Thanks for subscribing.</h3>
+          <img src="img/main/contact-success-img.png" alt="Flowers">
+        </div>
+      </div>
+      <div class="contact-us__right">
+        <div class="contact-us__right_wrapper">
+          <h3>Get in Touch</h3>
+          <button class="btn-darkgreen">get to know us</button>
+          <button class="btn-green">contact us</button>
+          <div class="contact-us__right_social">
+            <a class="facebook" href="#" target="_blank"></a>
+            <a class="twitter" href="#" target="_blank"></a>
+            <a class="linkedin" href="#" target="_blank"></a>
+            <a class="pinterest" href="#" target="_blank"></a>
+            <a class="instagram" href="#" target="_blank"></a>
+          </div>
+        </div>
+        <div class="contact-us__right_tree">
+          <img src="img/main/tree.png" alt="Tree">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__inner_logo">
+        <a href="#">
+          <img src="img/ico/hq-logo.svg" alt="HQ Logo">
+        </a>
+        <div class="footer__inner_logo_text">
+          <p>© 2020 </p>
+          <p><a href="#">HomeQuote.com</a></p>
+        </div>
+      </div>
+      <ul class="footer__inner_menu">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">California Policy</a></li>
+        <li><a href="#">Terms and use</a></li>
+        <li><a href="#">Do not sell my data</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/jquery3.5.1.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/limarquee.js"></script>
+  <script src="js/revealator.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Infinite slider initialize -->
+  <script>
+    $('.all-services__slider').liMarquee({
+      circular: true, 
+      startShow: true,
+      scrollamount: 45
+    });
+    $('.all-services__slider2').liMarquee({
+      circular: true, 
+      startShow: true,
+      scrollamount: 50
+    });
+  </script>
+  <!-- Infinite slider initialize -->
+
+</body>
+
+</html>

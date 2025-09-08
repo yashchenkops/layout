@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Quote</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/select.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="content">
+    <div class="help">
+      <div class="help__inner">
+        <form class="help__form form">
+          <div class="inputs">
+            <h3 class="help__form_title">How can we help?</h3>
+            <div class="inputs-flex">
+              <div class="inputs-flex-item">
+                <p class="inputs-title">
+                  Name:
+                </p>
+                <div class="inputs-field error-field">
+                  <input type="text" placeholder="Jeremy" name="name">
+                  <p class="error-text">Name is required</p>
+                </div>
+              </div>
+              <div class="inputs-flex-item">
+                <p class="inputs-title">
+                  Subject:
+                </p>
+                <div class="inputs-field">
+                  <input type="text" placeholder="Remodel kitchen" name="subject">
+                  <p class="error-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="inputs-flex">
+              <div class="inputs-flex-item">
+                <p class="inputs-title">
+                  E-mail:
+                </p>
+                <div class="inputs-field">
+                  <input type="email" placeholder="example@mail.com" name="email">
+                  <p class="error-text"></p>
+                </div>
+                <div class="help__form_file inputs-file">
+                  <div class="help__form_file_input">
+                    <p class="inputs-title">
+                      Upload a file:
+                    </p>
+                    <div class="inputs-file-button">
+                      <input type="file" name="file">
+                      <button type="button" tabindex="1"><p>select a file</p> <span><img src="img/ico/file-clip.svg" alt="clip"></span></button>
+                    </div>
+                  </div>
+                  <div class="help__form_file_delete">
+                    <button type="button" class="inputs-file-delete">mykitchen.jpg</button>
+                  </div>
+                </div>
+              </div>
+              <div class="inputs-flex-item">
+                <p class="inputs-title">
+                  Message:
+                </p>
+                <div class="inputs-textarea">
+                  <textarea placeholder="Text description example" name="message"></textarea>
+                  <p class="error-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="help__form_buttons">
+              <button type="reset" class="btn-outlined">cancel</button>
+              <button type="submit" class="btn-green">confirm</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/jquery3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
