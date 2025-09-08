@@ -1,0 +1,37 @@
+$text: #212121;
+$green: #4CAF50;
+$greenHover: #49a14c;
+$greenActive: #459447;
+$red: #f44336;
+$redHover: #e04338;
+$redActive: #d13e33;
+$gray: #bebebe;
+
+@mixin startButton{
+  background-color: $green;
+  color: #fff;
+  padding: 15px 50px;
+  &:hover{
+    background-color: $greenHover;
+  }
+  &:active{
+    background-color: $greenActive;
+  }
+  &:disabled{
+    background-color: $gray;
+  }
+}
+@mixin resetButton{
+  background-color: $red;
+  color: #fff;
+  padding: 15px 50px;
+  &:hover{
+    background-color: $redHover;
+  }
+  &:active{
+    background-color: $redActive;
+  }
+  &:disabled{
+    background-color: $gray;
+  }
+}
