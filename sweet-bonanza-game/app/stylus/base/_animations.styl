@@ -1,0 +1,54 @@
+// wheel animations
+@keyframes spinner
+  0%
+    transform rotate(-10deg)
+
+  50%
+    transform rotate(0deg)
+
+  100% 
+    transform rotate(-10deg)
+
+@keyframes fluctuation
+  0%
+    transform translateY(5px) translateX(-50%)
+
+  50%
+    transform translateY(0) translateX(-50%)
+
+  100% 
+    transform translateY(5px) translateX(-50%)
+
+@keyframes pulse
+  0%
+    transform scale(1.05)
+
+  50%
+    transform scale(1)
+
+  100% 
+    transform scale(1.05)
+
+@keyframes spinToWin
+  0%
+    transform rotate(0deg)
+
+  40%
+    transform rotate(745deg)
+
+  60%
+    transform rotate(722deg)
+
+  80%
+    transform rotate(732deg)
+
+  100% 
+    transform rotate(728deg)
+
+// falling candies
+@keyframes fallingCandies
+  0%
+    transform translateY(0) rotate(0deg)
+  
+  100%
+    transform translateY(1500px) rotate(720deg)

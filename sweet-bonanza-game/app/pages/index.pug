@@ -1,0 +1,112 @@
+extends ../includes/page
+
+block head
+  - var title = "Sweet Bonanza | Sloterra"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts 
+  script(src="scripts/main.js")
+
+block main
+  ul.candies
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_1.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_2.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_3.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_1.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_3.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_1.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_3.png",
+        attr: { "alt": "Candy" },
+      })
+    li.candies__item
+      +picture({
+        lazy: false,
+        path: "img/Candy_2.png",
+        attr: { "alt": "Candy" },
+      })
+
+  .wrapper
+    section.game#gameWheel
+      .container
+        .game__title
+          +picture({
+            lazy: false,
+            path: "img/title-1.png",
+            attr: { "alt": "Title" },
+          })
+
+        .game__spinner
+          .game__wheel.animated
+            +picture({
+              lazy: false,
+              path: "img/wheel.png",
+              attr: { "alt": "Wheel" },
+            })
+
+          .game__arrow
+            +picture({
+              lazy: false,
+              path: "img/win-sign.png",
+              attr: { "alt": "Arrow" },
+            })
+
+          button(type="button").button.game__button.animated
+            img(src="img/icons/button-spin.svg" alt="Button")
+
+    section.game.is-hidden#gameScratch
+      .container--lg
+        .game__title
+          +picture({
+            lazy: false,
+            path: "img/title-2.png",
+            attr: { "alt": "Title" },
+          })
+
+        .game__scratch
+          .game__scratch-wrapper
+            .game__scratch-item.button
+            .game__scratch-prize
+
+          .game__scratch-wrapper
+            .game__scratch-item.button
+            .game__scratch-prize
+
+          .game__scratch-wrapper
+            .game__scratch-item.button
+            .game__scratch-prize

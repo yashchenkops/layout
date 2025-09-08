@@ -1,0 +1,207 @@
+@import "base/_global"
+
+.candies
+  position fixed
+  inset 0
+  overflow hidden
+  z-index 0
+  height 100%
+
+.candies__item
+  position absolute
+  display block
+  animation fallingCandies linear infinite
+  top -450px
+
+  img
+    width 150px
+
+  &:nth-child(1)
+    left 25%
+    animation-delay 0s
+    animation-duration 15s
+
+  &:nth-child(2)
+    left 1%
+    animation-delay 5s
+    animation-duration 12s
+
+  &:nth-child(3)
+    left 70%
+    animation-delay 9s
+    animation-duration 20s
+
+  &:nth-child(4)
+    left 40%
+    animation-delay 14s
+    animation-duration 18s
+
+  &:nth-child(5)
+    left 65%
+    animation-delay 7s
+    animation-duration 15s
+
+  &:nth-child(7)
+    left 32%
+    animation-delay 1.3s
+    animation-duration 19s
+
+  &:nth-child(8)
+    left 90%
+    animation-delay 11s
+    animation-duration 14s
+
+.wrapper
+  position relative
+  z-index 1
+
+#gameWheel,
+#gameScratch
+  &.is-hidden
+    display none
+
+.game__title
+  text-align center
+  margin-top 30px
+
+//game wheel
+.game__spinner
+  position relative
+  width 586px
+  margin -70px auto 0
+
+.game__wheel
+  &.animated
+    animation 2s spinner ease-in-out infinite
+
+  &.spin-to-win
+    animation 5s spinToWin ease-in-out forwards
+
+.game__arrow
+  position absolute
+  top 10px
+  left 50%
+  transform translateX(-50%)
+  animation 1s fluctuation ease-in-out infinite
+
+.game__button
+  position absolute
+  inset 0
+  width 120px
+  height 120px
+  margin auto
+  filter drop-shadow(0 0 30px #7a005f)
+
+  &.animated
+    animation 1s pulse ease-in-out infinite
+
+  &.disabled
+    cursor not-allowed
+    animation-play-state paused
+
+.game__title,
+.game__wheel,
+.game__arrow,
+.game__button
+  img
+    width 100%
+
+//game scratch
+.game__scratch
+  display flex
+  align-items center
+  justify-content center
+  gap 10px
+  margin-top 50px
+  margin-bottom 80px
+
+  &-wrapper
+    position relative
+    max-width 364px
+    width 100%
+    height 256px
+
+  &-item
+    position absolute
+    width 100%
+    padding 35.7%
+    cursor pointer
+    transition all .5s
+    background-image url('../img/scratch-field.png')
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    z-index 2
+
+    &:hover
+      filter drop-shadow(0 0 20px pink)
+
+    &.animation-scretch
+      background-image url('../img/scratch-animation.gif')
+
+  &-prize
+    position absolute
+    top 0
+    left 10px
+    right 10px
+    width 90%
+    padding 35%
+    margin auto
+    background-image url('../img/win-scratch.png')
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    z-index 1
+
+// popup
+.popup__overlay
+  position fixed
+  display none
+  left 0
+  top 0
+  width 100%
+  height 100%
+  backdrop-filter blur(13px)
+  background rgba(114, 20, 115, 0.5)
+  transition all .3s ease-in-out
+  z-index 19
+  overflow auto
+
+.popup
+  width 100%
+  height 100%
+  transition all .3s ease-in-out
+
+.popup__win,
+.popup__bonus
+  display none
+
+  &.is-visible
+    display flex
+
+.popup__win-wrapper,
+.popup__bonus-wrapper
+  display flex
+  position relative
+  margin auto
+  user-select none
+
+
+.popup__button
+  position absolute
+  bottom 60px
+  font-family $fontTitle
+  font-weight 400
+  font-size 43px
+  text-align center
+  color white
+  left 12%
+  background-image url('../img/popup-button.png')
+  background-repeat no-repeat
+  background-size contain
+  background-position center
+  width 440px
+  padding 20px 30px
+  animation 2s pulse ease-in-out infinite
+
+@import "media/_media-landing.styl"
