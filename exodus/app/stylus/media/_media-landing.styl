@@ -1,0 +1,455 @@
+@media (max-width 1024px)
+  .roadmap
+    margin-bottom 0
+
+    &__message
+      margin-bottom 100px
+
+    #roadmapSlider
+      max-height 1000px
+
+      .swiper-wrapper
+        .swiper-slide
+          #linesAnimation,
+          #linesAnimation2
+            width 1100px
+
+  .roadmap__item
+    &-main
+      max-width 140px
+
+      p
+        font-size 14px
+        line-height 18px
+
+      ul
+        li
+          font-size 12px
+          line-height 16px
+
+    &-number
+      width 35px
+      height 35px
+
+      span
+        font-size 24px
+        line-height 32px
+
+    &-time
+      time
+        font-size 14px
+        line-height 18px
+
+    &--first
+      width 200px
+      height 200px
+      top -40px
+
+    &--second
+      width 210px
+      height 210px
+      top 140px
+      left 20px
+
+      .roadmap__item-info
+        top -95px
+
+    &--third
+      width 230px
+      height 230px
+      top -80px
+
+    &--fourth
+      width 200px
+      height 200px
+      top -185px
+      left 60px
+
+    &--fifth
+      width 300px
+      height 300px
+      top -30px
+
+      .roadmap__item-main
+        max-width 160px
+
+    &--sixth
+      width 320px
+      height 320px
+      top -315px
+      left 30px
+
+      .roadmap__item-main
+        max-width 160px
+
+    &--seventh
+      width 290px
+      height 290px
+      top 150px
+      left 20vw
+
+      .roadmap__item-main
+        max-width 230px
+
+    &--eighth
+      width 310px
+      height 310px
+      top -130px
+      left -100px
+
+      .roadmap__item-info
+        bottom -13px
+        right -25px
+
+    &--nineth
+      width 320px
+      height 320px
+      top -380px
+      right 90px
+
+      .roadmap__item-info
+        left 50px
+
+    &--tenth
+      width 250px
+      height 250px
+      top -237px
+      left 140px
+
+      .roadmap__item-main
+        max-width 200px
+
+      .roadmap__item-info
+        top -70px
+        left 40px
+
+  .swiper-button-next,
+  .swiper-button-prev
+    top 30% !important
+
+@media (max-width 993px)
+  .roadmap__item
+    &--nineth
+      top -410px
+      right 10px
+
+    &--tenth
+      left 12vw
+
+@media (max-width 885px)
+  .roadmap__item
+    &--eighth
+      left -40px
+
+    &--nineth
+      right -20px
+
+    &--tenth
+      left 7vw
+
+@media (max-width 823px)
+  .roadmap__item
+    &--tenth
+      left 4vw
+
+@media (max-width 768px)
+  .intro__inner
+    flex-direction column
+    padding-top 15rem
+
+    picture,
+    img
+      width 75%
+      text-align center
+
+  .intro__illustration
+    width 100%
+    margin-right 0
+    text-align center
+
+  .intro__info
+    text-align center
+    width 100%
+    max-width 100%
+
+  .about
+    margin-bottom 150px
+
+  .about__inner
+    flex-direction column-reverse
+
+  .about__info
+    width 100%
+    margin-right 0
+
+  .about__illustration
+    width 100%
+
+    #doorsAnimation
+      svg
+        height 380px !important
+
+  .how-it-works
+    margin-bottom 150px
+
+  .how-it-works__wrapper
+    flex-direction column
+
+  .how-it-works__illustration
+    width 100%
+    margin-right 0
+
+    #cardsAnimation
+      transform scale(1)
+
+  .how-it-works__info
+    width 100%
+
+  .benefits
+    margin-bottom 150px
+
+  .roadmap
+    margin-bottom 80px
+
+  #roadmapSlider
+    display none
+
+  .roadmap__mobile
+    display block
+
+    &-button
+      position relative
+      text-align center
+      margin-top -100px
+      z-index 1
+
+  .roadmap__items
+    position relative
+    flex-direction column
+
+    &:first-child
+      margin-bottom 0
+
+    &::before
+      position absolute
+      content ""
+      top -190px
+      margin 0 auto
+      height 100%
+      width 430px
+      background-image url("../img/roadmap/roadmap-line.svg")
+      background-repeat no-repeat
+      background-position center
+      background-size contain
+      z-index -1
+
+    &.is-active
+      &::before
+        background-image url("../img/roadmap/roadmap-line-full.svg")
+
+  .roadmap__item
+    &:nth-child(n+7)
+      display none
+
+    &.is-active
+      display flex
+
+    &-main
+      p
+        font-size 16px
+        line-height 20px
+
+      ul
+        li
+          font-size 16px
+          line-height 20px
+
+    &--first
+      width 243px
+      height 243px
+      top 0
+      margin-bottom 197px
+
+    &--second
+      width 272px
+      height 272px
+      top -40px
+      left 0
+      margin-bottom 130px
+
+      .roadmap__item-info
+        top -95px
+
+    &--third
+      width 277px
+      height 277px
+      top -80px
+      left 20px
+      margin-bottom 157px
+
+      .roadmap__item-info
+        top -75px
+        right 60px
+
+    &--fourth
+      width 270px
+      height 270px
+      top -140px
+      left -10px
+      margin-bottom 182px
+
+      .roadmap__item-info
+        top -75px
+        left 60px
+        right auto
+
+        .roadmap__item-number
+          margin-top 0
+          margin-bottom 10px
+
+    &--fifth
+      width 358px
+      height 358px
+      top -210px
+      left 70px
+      margin-bottom 150px
+
+      .roadmap__item-main
+        max-width 250px
+
+    &--sixth
+      width 376px
+      height 375px
+      top -260px
+      left -50px
+
+      .roadmap__item-main
+        max-width 160px
+
+    &--seventh
+      width 330px
+      height 330px
+      top -160px
+      left 30px
+
+      .roadmap__item-info
+        bottom -60px
+        top auto
+
+      .roadmap__item-main
+        max-width 220px
+
+        p
+          font-size 14px
+
+    &--eighth
+      top -90px
+      left -30px
+      margin-bottom 140px
+
+      .roadmap__item-info
+        bottom -15px
+
+    &--nineth
+      top -110px
+      right -20px
+      margin-bottom 140px
+
+    &--tenth
+      top -130px
+      left 0
+      margin-bottom 140px
+
+      .roadmap__item-info
+        top -100px
+        left 90px
+
+  .numbers__items
+    flex-direction column
+    align-items center
+
+  .numbers__item
+    margin-bottom 50px
+
+  .advantages__items
+    flex-direction column
+
+  .advantages__item
+    width 100%
+    margin-bottom 90px
+
+    &:last-child
+      margin-bottom 0
+
+  .advantages__item-img
+    margin-bottom 20px
+
+  .advantages__item-title
+    min-height auto
+
+@media (max-width 650px)
+  .intro__illustration
+    &-circle
+      &--top
+        max-width 240px
+        max-height 240px
+
+      &--bottom
+        max-width 150px
+        max-height 150px
+
+  .intro__social
+    display none
+
+  .how-it-works__scheme
+    .scheme--desktop
+      display none
+
+    .scheme--mobile
+      display block
+
+  .benefits__inner
+    flex-direction column
+    align-items center
+
+  .benefits__item
+    width 100%
+    text-align center
+    margin-bottom 50px
+
+    &-icon
+      margin 0 auto
+      width 150px
+
+@media (max-width 425px)
+  .intro__inner
+    margin-bottom 100px
+
+    picture,
+    img
+      width 80%
+
+  .intro__illustration
+    &-circle
+      &--top
+        max-width 170px
+        max-height 170px
+
+      &--bottom
+        max-width 100px
+        max-height 100px
+
+  .roadmap__item
+    &--fourth
+      .roadmap__item-info
+        top -75px
+
+    &--fifth
+      width 325px
+      height 325px
+      left 20px
+
+      .roadmap__item-main,
+      .roadmap__item-info
+        top -70px
+        left 130px

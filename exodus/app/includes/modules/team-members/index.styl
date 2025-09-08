@@ -1,0 +1,64 @@
+.team__members
+  display flex
+  align-items flex-start
+  flex-wrap wrap
+  gap 4rem
+
+.team__members-wrapper
+  position relative
+  width 21.7%
+
+  &:nth-child(n+5)
+    display none
+
+  &.is-visible
+    display block
+
+.team__members-image
+  width 180px
+  height 200px
+  margin 0 auto 16px
+
+  img
+    width 100%
+    height 100%
+
+.team__members-name
+  font-size 18px
+  line-height 22px
+  margin-bottom 12px
+
+.team__members-position,
+.team__members-email
+  font-size 14px
+  line-height 18px
+  text-align center
+  color rgba(255, 255, 255, 0.6)
+
+.team__members-button
+  margin-top 80px
+
+@media (max-width 768px)
+  .team__members-name
+    font-size 16px
+    line-height 1.3
+
+  .team__members-position
+    font-size 12px
+    line-height 1.3
+
+  .team__members
+    justify-content center
+
+  .team__members-wrapper
+    width 25%
+
+@media (max-width 650px)
+  .team__members-wrapper
+    width 40%
+  
+  .team__members-wrapper
+    width 100%
+
+  .team__members-image
+    margin 0 auto 20px

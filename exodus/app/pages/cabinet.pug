@@ -1,0 +1,252 @@
+extends ../includes/page
+
+block head
+  - var title = "Exodus Own Cabinet"
+  - var headerButton = "cabinet"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/cabinet.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+  script(src="scripts/cabinet.js")
+
+block main
+  section.intro
+    .intro__inner
+      .top
+        .field.field--wallet
+          .field__title My wallet
+          button.field__main
+            .field__inner
+              span 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
+            .field__icon
+              img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
+
+        .field.field--invite
+          .field__title
+            h4.field__title-text Your RefLink
+            h4.field__title-text Invited: 
+              span 85
+          button.field__main
+            .field__inner
+              span  0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
+            .field__icon
+              img(src="img/cabinet/copy-icon.svg", alt="copy icon")
+
+      .bottom
+        .purchase
+          .purchase__inner
+            .purchase__top
+              .purchase__top-inner
+                p.purchase__top-info Balance:
+                  span.purchase__top-num 10 
+                  span.purchase__top-cur BNB
+                p.purchase__top-info Reward:
+                  span.purchase__top-num 2 
+                  span.purchase__top-cur BNB
+
+              +button(type="button" data-izimodal-open="#modal-processing").button--red
+                | Withdraw
+
+            .purchase__middle
+              .number
+                .number__buttons
+                  button.number__level.number__level--minus
+                  .number__value 3
+                  button.number__level.number__level--plus
+
+                .number__progress
+                  p.number__progress-percent 60%
+                  span
+
+            .purchase__bottom
+              .purchase__bottom-inner
+                p.purchase__bottom-info Price:
+                  span.purchase__bottom-num 0,1 
+                  span.purchase__bottom-cur BNB
+                p.purchase__bottom-info Total:
+                  span.purchase__bottom-num 0,3 
+                  span.purchase__bottom-cur BNB
+
+              +button(type="button" data-izimodal-open="#modal-error-accept").button--blue-filled
+                | Mint
+        
+        .invited
+          .invited__item
+            .invited__title 20%
+            ul.invited__list.scrollbar(data-mdb-perfect-scrollbar='true')
+              li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+
+          .invited__item
+            .invited__title 10%
+            ul.invited__list.scrollbar(data-mdb-perfect-scrollbar='true')
+              li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+
+          .invited__item
+            .invited__title 5%
+            ul.invited__list.scrollbar(data-mdb-perfect-scrollbar='true')
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+
+  section.spreadsheet#spreadsheet
+    .spreadsheet__inner
+      .table__wrapper
+        table.table
+          thead.thead
+            tr.thead__row
+              th 
+                span Date (UTC)
+              th 
+                span Description
+              th 
+                span Amount
+              th 
+                span Reward Balance
+          tbody.tbody
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span0 BNB
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 12/07/1983
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Withdrawal to wallet
+              td 
+                span.amount--red -0.1125 BNB
+              td 
+                span 11/11/1984
+            tr.tbody__row
+              td 
+                span 07.06.2022 10:12
+              td 
+                span Payment of reward for queue L1
+              td 
+                span.amount--green +0.05 BNB
+              td 
+                span 06/17/1987
+
+      +button(type="button").button--red.table-show-more
+        | Learn more
+
+  section.poweredby
+    .poweredby-inner
+      p.poweredby-text System powered by
+      .poweredby-logo
+        img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
+
+  +modal-connect()
+  +modal-error-accept()
+  +modal-error()
+  +modal-success()
+  +modal-processing()
