@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <form>
+        <input class="header__search" type="text" required>
+        <button class="header__search-button" type="submit">
+          <img src="images/ico/search.png" alt="">
+        </button>
+      </form>
+      <a href="#"><img src="images/ico/refresh.png" alt=""></a>
+      <a class="header__inner-warning" href="#"><span>!</span></a>
+      <a href="#"><img src="images/ico/profile.png" alt=""></a>
+    </div>
+  </header>
+  <section class="main">
+    <aside class="main__aside">
+      <div class="main__aside-inner">
+        <div class="menu__wrapper">
+          <ul class="menu">
+            <li>
+              <a class="sub__dashboard left__sub-active left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+              <ul class="left__sub-menu left__sub-1" style="display: block;">
+                <li><a href="index.html">Все локации</a></li>
+                <li><a class="here-ico" href="2-dashboard-local.html">Локация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+              <ul class="left__sub-menu left__sub-2">
+                <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                <li><a href="4-report-create-page.html">Создать отчет</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+              <ul class="left__sub-menu left__sub-3">
+                <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+              <ul class="left__sub-menu left__sub-4">
+                <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                <li><a href="#">Контроллер</a></li>
+                <li><a href="#">Слейв</a></li>
+                <li><a href="#">Релле</a></li>
+                <li><a href="#">Датчики</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+              <ul class="left__sub-menu left__sub-6">
+                <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__alerts left__sub-ico7" href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+            </li>
+            <li>
+              <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+              <ul class="left__sub-menu left__sub-8">
+                <li><a href="16-setting-page-all.html">Компания</a></li>
+                <li><a href="#">Локация</a></li>
+                <li><a href="#">Помещения</a></li>
+                <li><a href="#">Зоны</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Роли</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VoIP</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__close">
+            <span>«</span>
+          </div>
+        </div>
+        <div class="logo">
+          <a class="logo__inner" href="#">
+            <img class="img-logo" src="images/logo.png" alt="">
+            <p>sensor <span>soft</span></p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="main__info">
+      <div class="container">
+        <div class="main__info-header">
+          <div class="main__info-nav-wrapper">
+            <ul class="main__info-nav">
+              <li><a class="rcorner tnav-on1 tnav tnav-off header-ico header-ico1" href="#">помещение</a>
+                <div class="main__info-nav-sub1 sub1">
+                  <form class="sub-form1">
+                    <input type="text" placeholder="Введите запрос">
+                    <button><img src="images/ico/sub-search.svg" alt=""></button>
+                  </form>
+                  <a href="#">Выбрать помещение</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form1">
+                      <label>
+                        <p>508</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>329</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>1009</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>2354</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form1">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on2 tnav tnav-off header-ico header-ico2" href="#">зона</a>
+                <div class="main__info-nav-sub1 sub2">
+                  <form class="sub-form1">
+                    <input type="text" placeholder="Введите запрос">
+                    <button><img src="images/ico/sub-search.svg" alt=""></button>
+                  </form>
+                  <a href="#">Выбрать зону</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form2">
+                      <label>
+                        <p>Холодильная камера 1</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 2</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 3</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 4</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Холодильная камера 5</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form2">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on3 tnav tnav-off header-ico header-ico3" href="#"> интервал<br>времени</a>
+                <div class="main__info-nav-sub1 sub3">
+                  <a href="#">Выбрать Интервал времени</a><span><br>(В минутах)</span>
+                  <form class="sub-form3" id="sub-form3">
+                    <input type="text" class="range-slider1" name="range1" value="" />
+                  </form>
+                  <button class="sub-btn" type="submit" form="sub-form3">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on4 tnav tnav-off header-ico header-ico4" href="#">значения</a>
+                <div class="main__info-nav-sub1 sub4">
+                  <a href="#">Выбрать значение</a>
+                  <form class="sub-form4" id="sub-form4">
+                    <input type="text" class="range-slider2" name="range2" value="" />
+                  </form>
+                  <button class="sub-btn" type="submit" form="sub-form4">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on5 tnav tnav-off header-ico header-ico5" href="#">период</a>
+                <div class="main__info-nav-sub1 sub5">
+                  <a href="#">Выбрать Интервал времени</a><span><br>(В часах)</span>
+                  <form class="sub-form5" id="sub-form5">
+                    <input type="text" class="range-slider3" name="range3" value="" />
+                  </form>
+                  <button class="sub-btn" type="submit" form="sub-form5">Выбрать</button>
+                </div>
+              </li>
+            </ul>
+            <div class="main__info-buttons-mob">
+              <button class="main__info-btn-mob main__info-buttons-clear-mob" title="Очистить фильтр">Очистить</button>
+              <button class="main__info-btn-mob main__info-buttons-confirm-mob"
+                title="Применить фильтр">Применить</button>
+            </div>
+          </div>
+          <div class="main__info-burger">
+            <div id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Меню</span>
+          </div>
+          <div class="main__aside-mob">
+            <div class="main__aside-mob-inner">
+              <div class="menu__wrapper">
+                <ul class="menu">
+                  <li>
+                    <a class="border5px sub__dashboard left__sub-active left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+                    <ul class="left__sub-menu left__sub-1" style="display: block;">
+                      <li><a href="index.html">Все локации</a></li>
+                      <li><a class="here-ico" href="2-dashboard-local.html">Локация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+                    <ul class="left__sub-menu left__sub-2">
+                      <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                      <li><a href="4-report-create-page.html">Создать отчет</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+                    <ul class="left__sub-menu left__sub-3">
+                      <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                      <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                      <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                      <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                      <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+                    <ul class="left__sub-menu left__sub-4">
+                      <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                      <li><a href="#">Контроллер</a></li>
+                      <li><a href="#">Слейв</a></li>
+                      <li><a href="#">Релле</a></li>
+                      <li><a href="#">Датчики</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__auto left__sub-ico left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+                    <ul class="left__sub-menu left__sub-6">
+                      <li><a href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                      <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                      <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                      <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+                  </li>
+                  <li>
+                    <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+                    <ul class="left__sub-menu left__sub-8">
+                      <li><a href="16-setting-page-all.html">Компания</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Помещения</a></li>
+                      <li><a href="#">Зоны</a></li>
+                      <li><a href="#">Пользователи</a></li>
+                      <li><a href="#">Групповая политика</a></li>
+                      <li><a href="#">Роли</a></li>
+                      <li><a href="#">SMS</a></li>
+                      <li><a href="#">Telegram</a></li>
+                      <li><a href="#">VoIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="logo">
+                <a class="logo__inner" href="#">
+                  <img class="img-logo" src="images/logo.png" alt="">
+                  <p>sensor <span>soft</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="main__info-settings">
+            <div class="main__info-settings-wrapper">
+              <div class="settings__img"><img class="gear-svg" src="images/ico/settings.svg" alt=""></div>
+              <span>Детальные настройки</span>
+            </div>
+          </div>
+          <div class="main__info-buttons">
+            <button class="main__info-btn main__info-buttons-confirm" title="Применить фильтр"><img
+                src="images/ico/confirm.svg" alt=""></button>
+            <button class="main__info-btn main__info-buttons-clear" title="Очистить фильтр"><img
+                src="images/ico/clear.svg" alt=""></button>
+            <div class="main__info-header-hide" title="Скрыть панель фильтров">
+              <img src="images/ico/hide-header.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="main__info-items">
+          <div class="local__main">
+            <div class="local__main-top">
+              <div class="local__main-top-inner">
+                <div class="local__main-name">
+                  <p class="local__main-name-title">Холодильная камера 1</p>
+                  <div class="local__main-name-menu">
+                    <img src="images/ico/sub-arrow.svg" alt="arrow">
+                  </div>
+                  <div class="local__main-name-search">
+                    <form action="#">
+                      <input type="text" required>
+                      <button><img src="images/ico/search2.png" alt="search"></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="local__main-settings">
+                  <div class="local__main-settings-time">
+                    <p>Интервал времени:</p>
+                    <select class="local-select">
+                      <option>1 мин</option>
+                      <option>5 мин</option>
+                      <option>10 мин</option>
+                      <option>15 мин</option>
+                      <option>20 мин</option>
+                      <option>25 мин</option>
+                      <option>30 мин</option>
+                      <option>60 мин</option>
+                    </select>
+                  </div>
+                  <div class="local__main-settings-period">
+                    <p>Период:</p>
+                    <select class="local-select">
+                      <option>1 ч</option>
+                      <option>6 ч</option>
+                      <option>12 ч</option>
+                      <option>24 ч</option>
+                      <option>72 ч</option>
+                    </select>
+                  </div>
+                  <div class="local__main-settings-view">
+                    <p>Вид:</p>
+                    <select class="local-select">
+                      <option>Общий</option>
+                      <option>Подробный</option>
+                    </select>
+                  </div>
+                </div>
+                <a href="#">Все локации</a>
+              </div>
+            </div>
+            <div class="local__main-body">
+              <div class="local__main-body-inner">
+                <div class="main__info-border">
+                  <div class="main__info-item">
+                    <div class="main__info-item-graph">
+                      <canvas id="chart1"></canvas>
+                    </div>
+                    <hr>
+                    <div class="local__main-alerts">
+                      <img src="images/ico/menu-ico7.svg" alt="ico">
+                      <p>У одного датчика в этой локации есть <span>оповещение<span>!</p>
+                      <div class="local__main-alerts-bot">
+                        <p>Если Испаритель > +10’C - Уведомление в Telegram</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu__open">
+      <span>»</span>
+    </div>
+    <div class="main__info-header-show" title="Показать панель фильтров">
+      <img src="images/ico/hide-header.png" alt="">
+    </div>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+
+</html>

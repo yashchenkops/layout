@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <form>
+        <input class="header__search" type="text" required>
+        <button class="header__search-button" type="submit">
+          <img src="images/ico/search.png" alt="">
+        </button>
+      </form>
+      <a href="#"><img src="images/ico/refresh.png" alt=""></a>
+      <a class="header__inner-warning" href="#"><span>!</span></a>
+      <a href="#"><img src="images/ico/profile.png" alt=""></a>
+    </div>
+  </header>
+  <section class="main">
+    <aside class="main__aside">
+      <div class="main__aside-inner">
+        <div class="menu__wrapper">
+          <ul class="menu">
+            <li>
+              <a class="sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+              <ul class="left__sub-menu left__sub-1">
+                <li><a href="index.html">Все локации</a></li>
+                <li><a href="2-dashboard-local.html">Локация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+              <ul class="left__sub-menu left__sub-2">
+                <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                <li><a href="4-report-create-page.html">Создать отчет</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+              <ul class="left__sub-menu left__sub-3">
+                <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+              <ul class="left__sub-menu left__sub-4">
+                <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                <li><a href="#">Контроллер</a></li>
+                <li><a href="#">Слейв</a></li>
+                <li><a href="#">Релле</a></li>
+                <li><a href="#">Датчики</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__auto left__sub-active left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+              <ul class="left__sub-menu left__sub-6" style="display: block;">
+                <li><a class="here-ico" href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sub__alerts left__sub-ico7" href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+            </li>
+            <li>
+              <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+              <ul class="left__sub-menu left__sub-8">
+                <li><a href="16-setting-page-all.html">Компания</a></li>
+                <li><a href="#">Локация</a></li>
+                <li><a href="#">Помещения</a></li>
+                <li><a href="#">Зоны</a></li>
+                <li><a href="#">Пользователи</a></li>
+                <li><a href="#">Групповая политика</a></li>
+                <li><a href="#">Роли</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VoIP</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu__close">
+            <span>«</span>
+          </div>
+        </div>
+        <div class="logo">
+          <a class="logo__inner" href="#">
+            <img class="img-logo" src="images/logo.png" alt="">
+            <p>sensor <span>soft</span></p>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="main__info">
+      <div class="container">
+        <div class="main__info-header header-none">
+          <div class="main__info-nav-wrapper">
+            <ul class="main__info-nav">
+              <li><a class="rcorner tnav-on11 tnav tnav-off header-ico header-ico11" href="#">Название</a>
+                <div class="main__info-nav-sub1 sub11">
+                  <a href="#">Выбрать помещение</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form1">
+                      <label>
+                        <p>508</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>329</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>1009</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>2354</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form1">Выбрать</button>
+                </div>
+              </li>
+              <li><a class="tnav-on13 tnav tnav-off header-ico header-ico13" href="#">действия/сценарии</a>
+                <div class="main__info-nav-sub1 sub13">
+                  <a href="#">Выбрать датчик</a>
+                  <div class="main__info-nav-sub1-filter">
+                    <form class="sub-form2" id="sub-form2">
+                      <label>
+                        <p>Включить реле</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Выключить реле</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Сценарий 1</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                      <label>
+                        <p>Сценарий 2</p>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label>
+                    </form>
+                  </div>
+                  <button class="sub-btn" type="submit" form="sub-form2">Выбрать</button>
+                </div>
+              </li>
+            </ul>
+            <div class="main__info-buttons-mob">
+              <button class="main__info-btn-mob main__info-buttons-clear-mob" title="Очистить фильтр">Очистить</button>
+              <button class="main__info-btn-mob main__info-buttons-confirm-mob"
+                title="Применить фильтр">Применить</button>
+            </div>
+          </div>
+          <div class="main__info-burger">
+            <div id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Меню</span>
+          </div>
+          <div class="main__aside-mob">
+            <div class="main__aside-mob-inner">
+              <div class="menu__wrapper">
+                <ul class="menu">
+                  <li>
+                    <a class="border5px sub__dashboard left__sub-ico left__sub-ico1" href="#"><img class="ico ico-1" src="images/ico/menu-ico1.svg">дашборд</a>
+                    <ul class="left__sub-menu left__sub-1">
+                      <li><a href="index.html">Все локации</a></li>
+                      <li><a href="2-dashboard-local.html">Локация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__reports left__sub-ico left__sub-ico2" href="#"><img class="ico ico-2" src="images/ico/menu-ico2.svg">отчеты</a>
+                    <ul class="left__sub-menu left__sub-2">
+                      <li><a href="3-report-all-page.html">Все отчеты</a></li>
+                      <li><a href="4-report-create-page.html">Создать отчет</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__events left__sub-ico left__sub-ico3" href="#"><img class="ico ico-3" src="images/ico/menu-ico3.svg">события</a>
+                    <ul class="left__sub-menu left__sub-3">
+                      <li><a href="5-archive-dives-page.html">Устройства</a></li>
+                      <li><a href="6-archive-user-page-for-admin.html">Пользователи</a></li>
+                      <li><a href="7-archive-reports-page.html">Отчеты</a></li>
+                      <li><a href="8-archive-alert-page.html">Оповещения</a></li>
+                      <li><a href="9-archive-automatic-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__devices left__sub-ico left__sub-ico4" href="#"><img class="ico ico-4" src="images/ico/menu-ico4.svg">устройства</a>
+                    <ul class="left__sub-menu left__sub-4">
+                      <li><a href="10-all-devices-page.html">Все устройства</a></li>
+                      <li><a href="#">Контроллер</a></li>
+                      <li><a href="#">Слейв</a></li>
+                      <li><a href="#">Релле</a></li>
+                      <li><a href="#">Датчики</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="sub__auto left__sub-active left__sub-ico6" href="#"><img class="ico ico-6" src="images/ico/menu-ico6.svg">автоматизация</a>
+                    <ul class="left__sub-menu left__sub-6" style="display: block;">
+                      <li><a class="here-ico" href="12-automatization-script-page+new-script.html">Сценарии</a></li>
+                      <li><a href="13-automatization-page-new-nabor-ysloviy.html">Набор условий</a></li>
+                      <li><a href="14-automatization-alert-page+new.html">Оповещения</a></li>
+                      <li><a href="15-automatization-new-automatization-page.html">Автоматизация</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="attention-add-new.html"><img class="ico ico-7" src="images/ico/menu-ico7.svg">оповещения</a>
+                  </li>
+                  <li>
+                    <a class="sub__customization left__sub-ico left__sub-ico8" href="#"><img class="ico ico-8" src="images/ico/menu-ico8.svg">настройки</a>
+                    <ul class="left__sub-menu left__sub-8">
+                      <li><a href="16-setting-page-all.html">Компания</a></li>
+                      <li><a href="#">Локация</a></li>
+                      <li><a href="#">Помещения</a></li>
+                      <li><a href="#">Зоны</a></li>
+                      <li><a href="#">Пользователи</a></li>
+                      <li><a href="#">Групповая политика</a></li>
+                      <li><a href="#">Роли</a></li>
+                      <li><a href="#">SMS</a></li>
+                      <li><a href="#">Telegram</a></li>
+                      <li><a href="#">VoIP</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="logo">
+                <a class="logo__inner" href="#">
+                  <img class="img-logo" src="images/logo.png" alt="">
+                  <p>sensor <span>soft</span></p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="main__info-buttons">
+            <button class="main__info-btn main__info-buttons-confirm" title="Применить фильтр"><img
+                src="images/ico/confirm.svg" alt=""></button>
+            <button class="main__info-btn main__info-buttons-clear" title="Очистить фильтр"><img
+                src="images/ico/clear.svg" alt=""></button>
+            <div class="main__info-header-hide" title="Скрыть панель фильтров">
+              <img src="images/ico/hide-header.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="main__info-report main__info-report-header-none">
+          <div class="main__info-report-choose">
+            <select class="local-select">
+              <option>1-20</option>
+              <option>50</option>
+              <option>100</option>
+              <option>Все</option>
+            </select>
+            <p>из 100 <span>|</span> Выбрано: <span class="choose-number">3</span> <span>|</span> <span class="span-action">Действия:</span></p>
+            <div class="main__info-report-choose-img1">
+              <a href="#"><img src="images/ico/table-ico3.png" alt="ico"></a>
+            </div>
+          </div>
+          <div class="main__info-report-btn">
+            <button data-fancybox data-src="#modal2" data-touch="false" href="javascript:;">Создать</button>
+          </div>
+        </div>
+        <div class="main__info-alerts">
+          <div class="alerts__table">
+            <div class="table__wrapper">
+              <table id="alerts-table8" class="display" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th class="table-resize"></th>
+                    <th class="table-second"><input name="select_all" value="1" id="table8-select-all" type="checkbox"></th>
+                    <th>название</th>
+                    <th>действия</th>
+                    <th>оповещения</th>
+                    <th>статус</th>
+                    <th><img src="images/ico/table-settings.svg" alt="settings"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 1</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>Активный</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/pen.svg" alt="watch" title="Редактирова"></a><a href="#"><img src="images/ico/active-ico.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 2</td>
+                    <td>Выключить реле №7, Отправить оповещение в Телеграм</td>
+                    <td>Sms</td>
+                    <td>Активный</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/pen.svg" alt="watch" title="Редактирова"></a><a href="#"><img src="images/ico/active-ico.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 3</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>Активный</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/pen.svg" alt="watch" title="Редактирова"></a><a href="#"><img src="images/ico/active-ico.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 4</td>
+                    <td>Выключить реле №7, Отправить оповещение в Телеграм</td>
+                    <td>Sms</td>
+                    <td>Неактивный</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/pen.svg" alt="watch" title="Редактирова"></a><a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 5</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>Активный</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/pen.svg" alt="watch" title="Редактирова"></a><a href="#"><img src="images/ico/active-ico.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="table__scenario" href="#">архивные сценарии</a>
+            <div class="main__info-report">
+              <div class="main__info-report-choose">
+                <select class="local-select">
+                  <option>1-20</option>
+                  <option>50</option>
+                  <option>100</option>
+                  <option>Все</option>
+                </select>
+                <p>из 100 <span>|</span> Выбрано: <span class="choose-number">3</span> <span>|</span> <span class="span-action">Действия:</span></p>
+                <div class="main__info-report-choose-img1">
+                  <a href="#"><img src="images/ico/action-delete.svg" alt="ico"></a>
+                </div>
+              </div>
+            </div>
+            <div class="table__wrapper">
+              <table id="alerts-table9" class="display" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th class="table-resize"></th>
+                    <th class="table-second"><input name="select_all" value="1" id="table9-select-all" type="checkbox"></th>
+                    <th>название</th>
+                    <th>действия</th>
+                    <th>оповещения</th>
+                    <th>статус</th>
+                    <th><img src="images/ico/table-settings.svg" alt="settings"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 1</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>В архиве</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 2</td>
+                    <td>Выключить реле №7, Отправить оповещение в Телеграм</td>
+                    <td>Sms</td>
+                    <td>В архиве</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 3</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>В архиве</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 4</td>
+                    <td>Выключить реле №7, Отправить оповещение в Телеграм</td>
+                    <td>Sms</td>
+                    <td>В архиве</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-first"></td>
+                    <td class="table-second"></td>
+                    <td>Сценарий 5</td>
+                    <td>Включить реле №1, Переключить реле №6</td>
+                    <td>Sms</td>
+                    <td>В архиве</td>
+                    <td>
+                      <div class="ico-wrapper">
+                        <a href="#"><img src="images/ico/table-off.png" alt="watch" title="Выключить"></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="menu__open">
+      <span>»</span>
+    </div>
+    <div class="main__info-header-show" title="Показать панель фильтров">
+      <img src="images/ico/hide-header.png" alt="">
+    </div>
+  </section>
+
+  <!-- MODAL  -->
+  <div class="popup-edit" id="modal2" style="display: none;">
+    <div class="popup-title">
+      новый сценарий
+    </div>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Введите название">
+      <div class="popup-inputs">
+        <div class="popup-inputs-action">
+          <p>добавить действие</p>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>включить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>выключить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>переключить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>добавить новое действие</p>
+          </label>
+          <input class="input-on" type="text" placeholder="...">
+        </div>
+        <div class="popup-inputs-alerts">
+          <p>добавить действие</p>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>включить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>включить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>включить реле</p>
+          </label>
+          <label>
+            <input type="checkbox">
+            <span class="fake"></span>
+            <p>включить реле</p>
+          </label>
+        </div>
+      </div>
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- MODAL END -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
