@@ -1,0 +1,223 @@
+.header
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 100
+
+.header__desktop
+  padding 30px 15px
+  transition padding 0.5s, box-shadow 0.5s
+  backdrop-filter blur(10px)
+  background rgba(36, 36, 36, 0.3)
+
+  .header__container
+    display flex
+    align-items center
+    justify-content space-between
+    max-width 1240px
+    margin 0 auto
+
+  .header__right
+    display flex
+    align-items center
+
+  .header__logo
+    img
+      width 120px
+
+  .header__menu
+    &-ul
+      display flex
+      align-items center
+      gap 30px
+
+    &-link
+      padding 5px 0
+      color $white
+      font-size 16px
+      line-height 21px
+
+.header__mobile
+  display none
+  position relative
+
+  .header__mobile-top
+    display flex
+    position fixed
+    top 0
+    left 0
+    right 0
+    align-items center
+    justify-content space-between
+    padding 5px 15px 0
+    z-index 100
+    transition all 0.2s
+    overflow hidden
+    height 60px
+    backdrop-filter blur(10px)
+    background rgba(36, 36, 36, 0.7)
+
+    &.is-active
+      backdrop-filter blur(0)
+      background rgba(36, 36, 36, 0)
+
+    .header__logo
+      img
+        max-width 140px
+
+    .header__right
+      display flex
+      align-items center
+      margin-right -10px
+
+    .header__burger-button
+      position relative
+      right -10px
+
+      svg
+        position absolute
+        left 0
+        height 70px
+        width 80px
+
+      .plates
+        position relative
+        width 80px
+        height 80px
+
+      .plate
+        position absolute
+        top 0
+        left 0
+        height 80px
+        width 80px
+
+      .burger
+        filter url("#gooeyness")
+
+      .x
+        transform scale(0)
+        transition transform 400ms
+
+        .line
+          stroke-width 5.5px
+
+      .line
+        fill none
+        stroke $white
+        stroke-width 6px
+        stroke-linecap round
+        stroke-linejoin round
+        transform-origin 50%
+        transition stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms
+
+      .active
+        .x
+          transform scale(1)
+          transition transform 400ms 350ms
+
+        &.plate5
+          .line
+            transition stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms
+
+          .line1
+            stroke-dasharray 1 40
+            stroke-dashoffset -33px
+
+          .line2
+            stroke-dasharray 5 39
+            stroke-dashoffset -37px
+
+          .line3
+            stroke-dasharray 5 39
+            stroke-dashoffset -37px
+
+          .line4
+            stroke-dasharray 1 40
+            stroke-dashoffset -33px
+
+          .x
+            transition transform 400ms 50ms
+
+      .plate5
+        .line
+          transition stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms
+
+        .line1
+          stroke-dasharray 40 40
+
+        .line2
+          stroke-dasharray 21 39
+
+        .line3
+          stroke-dasharray 21 39
+
+        .line4
+          stroke-dasharray 40 40
+
+        .x
+          transition transform 400ms 50ms
+
+  .header__mobile-inner
+    position fixed
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    top -91%
+    bottom 91%
+    left 0
+    right 0
+    transition all 0.5s, visibility 0.5s
+    overflow auto
+    padding 50px
+    z-index 99
+
+    &.is-active
+      top 0
+      bottom 0
+      backdrop-filter blur(10px)
+      background rgba(36, 36, 36, 0.7)
+
+      .header__menu-li
+        opacity 1
+        transform translateX(0)
+
+        &:nth-child(1)
+          transition-delay 0.5s
+
+        &:nth-child(2)
+          transition-delay 0.9s
+
+        &:nth-child(3)
+          transition-delay 1.3s
+
+    .header__menu
+      width 100%
+      text-align center
+
+      &-li
+        margin-bottom 70px
+        opacity 0
+        transform translateX(-20px)
+        transition opacity 0.5s, transform 0.5s
+
+        &:last-child
+          margin-bottom 0
+
+      &-link
+        display block
+        width 100%
+        font-weight 500
+        font-size 35px
+        line-height 0.85714
+        text-align center
+        color rgba(255, 255, 255, 0.8)
+
+@media (max-width 768px)
+  .header__desktop
+    display none
+
+  .header__mobile
+    display flex

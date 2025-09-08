@@ -1,0 +1,401 @@
+@import "base/_global"
+
+.main__slide
+  overflow hidden
+
+  &--intro
+    position relative
+
+    &::before
+      position absolute
+      display block
+      content ""
+      width 60%
+      height 100%
+      background linear-gradient(90deg, rgba(1, 1, 1, 0.7) 0%, rgba(0, 0, 0, 0.5) 48.07%, rgba(0, 0, 0, 0) 100%)
+      z-index 2
+
+    .container
+      max-width 1280px
+      padding 0 15px
+      position absolute
+      margin 0 auto
+      left 0
+      right 0
+      height 100%
+      z-index 2
+
+    .intro__slide
+      user-select none
+
+      picture
+        width 100%
+        height 100%
+
+        img
+          width 100%
+          height 100%
+          object-fit cover
+
+    .section-title
+      position absolute
+      top 40%
+      transform translateY(-40%)
+      font-size 90px
+      line-height 0.88889
+      max-width 600px
+
+      span
+        font-size 50px
+        line-height 0.98447
+
+    .intro__slider-control
+      position absolute
+      left 15px
+      right 15px
+      bottom 80px
+      display flex
+      align-items center
+      justify-content space-between
+      gap 15px
+      z-index 2
+
+      .intro__date
+        color $white
+        font-size 20px
+        line-height 1
+
+      .intro__slider-nav
+        display flex
+        align-items center
+        justify-content center
+        gap 5px
+        margin-left 40px
+
+      .intro__button-next,
+      .intro__button-prev
+        width 100px
+        height 18px
+        cursor pointer
+        transition all 0.3s
+
+        &:hover
+          transform scale(1.1)
+
+      .intro__button-next
+        background-image url("../img/intro/intro-nav-next.png")
+
+      .intro__button-prev
+        background-image url("../img/intro/intro-nav-prev.png")
+
+      .intro__pagination
+        position static
+        display flex
+        align-items center
+        justify-content flex-end
+        gap 18px
+        transition all 0.3s
+        width auto
+
+        .swiper-pagination-bullet
+          width 10px
+          height 10px
+          margin 0
+          background-color rgba(255, 255, 255, 0.8)
+          border 1px solid transparent
+          transition all 0.3s
+
+          &-active
+            border 1px solid $white
+
+  &--main
+    overflow-y auto
+
+    .stages
+      padding-top 120px
+      margin-bottom 75px
+
+    .stages__wrapper
+      display flex
+      align-items center
+      justify-content space-between
+      gap 20px
+      margin-bottom 75px
+
+    .stages__title
+      max-width 420px
+      width 100%
+
+    .section-title--black
+      margin-bottom 25px
+
+    .stages__preview
+      position relative
+
+      .stages__inner-slide
+        width 100% !important
+
+        &-preview
+          cursor url("../img/icons/zoom-ico.svg"), zoom-in !important
+
+      .stages__slider-control
+        position absolute
+        display flex
+        align-items center
+        justify-content space-between
+        gap 20px
+        left 0
+        right 0
+        width 100%
+        bottom -50px
+        z-index 2
+
+      .stages__slider-nav
+        display flex
+        align-items center
+        justify-content center
+        gap 5px
+
+      .stages__button-next,
+      .stages__button-prev
+        width 60px
+        height 34px
+        cursor pointer
+        transition all 0.3s
+        background-position center
+        background-repeat no-repeat
+        background-size contain
+
+        &:hover
+          transform scale(1.1)
+
+      .stages__button-next
+        background-image url("../img/stages/stages-nav-next.png")
+
+      .stages__button-prev
+        background-image url("../img/stages/stages-nav-prev.png")
+
+      .stages__slider-count
+        display flex
+        align-items center
+        justify-content center
+        gap 5px
+        width 150px
+
+      .stages__inner-pagination
+        font-weight 600
+        font-size 20px
+        line-height 1
+        text-align center
+        color rgba(36, 36, 36, 0.3)
+
+      &-wrapper
+        max-width 720px
+        width 100%
+        border-radius 10px
+
+        .stages__slide
+          width 100% !important
+          max-height 100%
+          overflow hidden
+          border-radius 10px
+
+          img
+            width 730px
+            max-width 100%
+            height 100%
+            max-height 420px
+            object-fit cover
+            border-radius 10px
+
+      .stages__slider-autoplay
+        display flex
+        align-items center
+        gap 14px
+
+        &-text
+          display inline-block
+          font-size 14px
+          line-height 1.4
+          font-weight 400
+          color rgba(36, 36, 36, 0.3)
+          width max-content
+
+        &--play,
+        &--stop
+          display none
+          width 13px
+          height 16px
+
+          &.is-active
+            display block
+
+    .stages__steps
+      .stages__slide-thumbs
+        &.swiper-slide-thumb-active
+          .thumbs__item
+            .thumbs__item-status,
+            .thumbs__item-more
+              opacity 1
+              visibility visible
+
+            .thumbs__item-number
+              color $white
+
+            .thumbs__item-wrapper
+              background-color rgba(255, 153, 0, 0.5)
+
+            &.done
+              .thumbs__item-status,
+              .thumbs__item-more
+                opacity 1
+                visibility visible
+
+              .thumbs__item-number
+                color $white
+
+              .thumbs__item-wrapper
+                background-color #8efea6
+
+      .thumbs__item
+        width 220px
+        max-width 100%
+
+        &-wrapper
+          border-radius 10px
+          padding 10px 10px 20px 10px
+          color $grey
+          cursor pointer
+          transition all 0.3s
+
+        &-status
+          font-family $fontTitle
+          font-weight 400
+          font-size 30px
+          line-height 1
+          color $orange
+          margin-bottom 10px
+          opacity 0
+          visibility hidden
+          transition all 0.3s
+
+        &-number
+          text-align center
+          font-style italic
+          font-weight 800
+          font-size 25px
+          line-height 1.2
+          text-align center
+          color $orange
+          transition all 0.3s
+
+        &-title
+          font-weight 600
+          font-size 20px
+          line-height 1.2
+
+        &-description
+          max-height 0
+          overflow hidden
+          opacity 0
+          transition max-height 0.5s ease-out, opacity 0.5s ease-out
+          font-size 14px
+          line-height 1.2
+          font-weight 500
+          margin-top 10px
+
+          &.is-active
+            max-height 150px
+            opacity 1
+
+        &-more
+          display block
+          width max-content
+          margin 10px auto 0
+          font-weight 400
+          font-size 12px
+          line-height 1.2
+          text-decoration underline
+          opacity 0
+          visibility hidden
+          transition all 0.3s
+
+          &:hover
+            text-decoration none
+
+        &.done
+          .thumbs__item-status
+            color $green
+
+          .thumbs__item-number
+            color $green
+
+    .contact
+      margin-bottom 70px
+
+    .contact__download
+      background-image url("../img/contact/full-designes-bg.webp")
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      padding 35px 0
+
+      .container
+        display flex
+        align-items center
+        justify-content space-between
+        gap 10px
+
+      .section-title
+        font-size 50px
+
+        span
+          font-size 40px
+
+      .contact__buttons
+        display flex
+        align-items center
+        gap 10px
+
+        .button
+          min-width 140px
+
+    .contact__main
+      padding-top 70px
+
+      .section-title--black
+        margin-bottom 30px
+
+      .contact__main-socials
+        display flex
+        align-items center
+        justify-content space-between
+        gap 20px
+        margin-bottom 30px
+
+      .item
+        display flex
+        align-items center
+        justify-content space-between
+        gap 10px
+
+        &__link
+          font-weight 500
+          font-size 28px
+          line-height 1.5
+          color $grey
+
+      .contact-form
+        text-align center
+
+      .form__wrapper
+        margin-bottom 20px
+
+      & .button
+        background-color $red
+
+        &:hover
+          background-color #dd0101
+          color $white
+
+@import "media/_media-landing.styl"
