@@ -1,0 +1,13 @@
+$white: #fff;
+$black: #000;
+$yellow: #e8c300;
+
+@mixin smallTitle{
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
