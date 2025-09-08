@@ -1,0 +1,142 @@
+.contact-form
+  margin 0 auto
+  text-align center
+  width 100%
+
+  &--main
+    max-width 637px
+    background rgba(235, 30, 30, 0.2)
+    backdrop-filter blur(40px)
+    border-radius 24px
+    padding 20px 20px 30px 20px
+
+  &-title
+    font-family $font
+    text-align center
+    font-weight 600
+    font-size 24px
+    line-height 29px
+    margin-bottom 35px
+
+  &-wrapper
+    border-radius 24px 24px 96px 24px
+    padding 50px 72px 72px 72px
+    background-color $red
+    background-image url("../img/contact/form-bg.svg")
+    background-repeat no-repeat
+    background-size cover
+    margin-bottom 30px
+
+.form-control
+  display block
+  width 100%
+  background-color $white
+  box-shadow inset 0px 4px 4px rgba(19, 26, 32, 0.1)
+  border-radius 16px
+  border none
+  font-weight 600
+  font-size 14px
+  line-height 24px
+  padding 20px 25px
+  margin-bottom 20px
+  color $bg
+
+  &::placeholder
+    font-weight 600
+    font-size 14px
+    line-height 24px
+    text-transform uppercase
+    color $bg
+    opacity 0.5
+
+  &--textarea
+    resize none
+    min-height 128px
+
+.modal-thankyou-message
+  font-weight 400
+  font-size 16px
+  line-height 30px
+  text-align center
+  margin-bottom 35px
+
+.custom-checkbox
+  position absolute
+  z-index -1
+  opacity 0
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox+label
+  display inline-flex
+  align-items center
+  user-select none
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox+label::before
+  content ""
+  display inline-block
+  width 20px
+  height 20px
+  flex-shrink 0
+  flex-grow 0
+  border 2px solid #FBD4D4
+  border-radius 4px
+  margin-right 0.5em
+  background-repeat no-repeat
+  background-position center center
+  background-size 50% 50%
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before
+  border-color #b3d7ff
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before
+  background-color #b3d7ff
+  border-color #b3d7ff
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before
+  box-shadow 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before
+  border-color #80bdff
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked+label::before
+  border-color $white
+  background-color $white
+  background-image url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7212 0.961362C11.3499 0.589585 10.747 0.58982 10.3752 0.961362L4.31744 7.01936L1.62503 4.32697C1.25325 3.95519 0.650609 3.95519 0.278832 4.32697C-0.0929441 4.69875 -0.0929441 5.30139 0.278832 5.67317L3.6442 9.03854C3.82997 9.22431 4.07357 9.31743 4.31718 9.31743C4.5608 9.31743 4.80463 9.22455 4.9904 9.03854L11.7212 2.30753C12.0929 1.93602 12.0929 1.33312 11.7212 0.961362Z' fill='%23EB1E81'/%3E%3C/svg%3E%0A")
+  background-size contain
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before
+  background-color #e9ecef
+
+.checkbox
+  margin-bottom 1em
+  border none
+  text-align left
+
+.form-control--checkbox-btn
+  font-weight 600
+  font-size 14px
+  line-height 24px
+  text-transform capitalize
+
+@media (max-width 768px)
+  .contact__main
+    .button
+      padding 20px 45px
+
+@media (max-width 650px)
+  .contact-form-wrapper
+    padding 25px 40px 40px 40px
+
+    .button
+      padding 20px 45px
+
+@media (max-width 475px)
+  .contact-form-wrapper
+    padding 20px

@@ -1,0 +1,49 @@
+mixin footer()
+  footer.footer
+    .container
+      .footer__inner
+        .footer__left 
+          a.footer__logo(href="index.html")
+            img(src="img/icons/logo.svg", alt="Logo footer")
+          p.footer__desription
+            | We offer outstanding gambling experience and turn it into the best deal for every player, full of winning opportunities and fair outcomes. It will help you achieve the desired results in a short time.
+          p.footer__desription
+            | © 2021 Spades partners All rights reserved
+
+        .footer__menu
+          nav.footer__nav
+            ul.footer__menu-ul
+              li.footer__menu-li.footer__menu-li--title Home
+              li.footer__menu-li
+                a.footer__menu-link(href="#contact") Comissions
+              li.footer__menu-li
+                a.footer__menu-link(href="#brand") Brands
+              li.footer__menu-li
+                a.footer__menu-link(href="#why") Testimonials
+              li.footer__menu-li
+                a.footer__menu-link(href="#about") Why us
+              li.footer__menu-li
+                a.footer__menu-link(href="#faq") FAQ
+            
+            .footer__menu-right
+              ul.footer__menu-ul
+                li.footer__menu-li.footer__menu-li--title Information
+                li.footer__menu-li
+                  a.footer__menu-link(href="/terms.html" target="_blank") Terms and Conditions
+                li.footer__menu-li
+                  a.footer__menu-link(href="/privacy.html" target="_blank") Privacy Policy
+                li.footer__menu-li
+                  a.footer__menu-link(href="#about") About us
+
+              ul.footer__menu-ul
+                li.footer__menu-li.footer__menu-li--title Contacts
+                li.footer__menu-li
+                  a.footer__menu-link(href="#contact") Contact Us
+                li.footer__menu-li
+                  a.footer__menu-link(href="mailto:cooperation@spadespartners.com") cooperation@spadespartners.com
+
+      .footer__socials
+        .footer__icons
+          each key, value in {'img/icons/Facebook.svg': 'Facebook', 'img/icons/Instagram.svg': 'Instagram', 'img/icons/linkedin.svg': 'Linkedin', 'img/icons/Twitter.svg': 'Twitter'}
+            a.footer__icons-item(href="#" target="_blank")
+              img(src=value, alt=key)

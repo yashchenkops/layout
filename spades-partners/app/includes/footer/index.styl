@@ -1,0 +1,121 @@
+.footer
+  flex-shrink 0
+  padding-bottom 100px
+
+.footer__inner
+  display flex
+  align-items flex-start
+  justify-content space-between
+  column-gap 50px
+
+.footer__left
+  max-width 404px
+
+.footer__logo
+  margin-bottom 2rem
+
+.footer__logo img
+  max-width 100%
+  width 200px
+
+.footer__desription
+  font-weight 500
+  font-size 16px
+  line-height 30px
+  color $text
+  opacity 0.6
+  margin-bottom 30px
+
+  &:last-child
+    margin-bottom 0
+
+.footer__menu
+  max-width 548px
+  width 100%
+
+.footer__nav
+  display flex
+  align-items flex-start
+  justify-content space-between
+  column-gap 20px
+
+.footer__menu-li
+  font-weight 600
+  font-size 16px
+  line-height 30px
+  color $text
+  opacity 0.5
+  margin-bottom 15px
+
+  &--title
+    opacity 1
+
+  &:last-child
+    margin-bottom 0
+
+.footer__menu-link
+  &:hover
+    text-decoration underline
+
+.footer__menu-right
+  .footer__menu-ul
+    &:first-child
+      margin-bottom 70px
+
+    &:last-child
+      margin-bottom 50px
+
+.footer__icons
+  display flex
+  align-items center
+  justify-content flex-end
+
+  &-item
+    display block
+    transition all 0.3s
+    width 50px
+    height 50px
+
+    img
+      width 100%
+
+    &:not(:first-child)
+      margin-left 2rem
+
+    &:hover
+      transform scale(1.2)
+
+@media (max-width 1024px)
+  .footer__menu
+    max-width 435px
+
+
+@media (max-width 768px)
+  .footer__logo img
+    width 160px
+
+@media (max-width 650px)
+  .footer__inner
+    flex-direction column
+    align-items flex-start
+
+  .footer__left
+    order 2
+    margin-right 0
+    margin-bottom 50px
+
+@media (max-width 455px)
+  .footer__nav
+    display block
+
+  .footer__menu-ul
+    margin-bottom 30px
+
+  .footer__menu-right
+    .footer__menu-ul
+      &:first-child
+        margin-bottom 30px
+
+@media (max-width 425px)
+  .footer__menu
+    flex-wrap wrap

@@ -1,0 +1,325 @@
+extends ../includes/page
+
+include ../includes/modules/accordion/index
+include ../includes/modules/form/index
+
+block head
+  - var title = "Spades partners"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+  script(src="scripts/landing.js")
+
+block main
+  section.intro#intro 
+    .container
+      .intro__inner
+        .intro__info.wow.fadeInLeft
+          .intro__title.section-title Quality 
+            span is our specialty
+          p.intro__message
+            | Join Spades Partners  program today and work with one of the best affiliates  in the online casino market.
+          .intro__button
+            +button(href="#" data-izimodal-open="#modal-signup")
+              | Become a partner
+
+        .intro__image
+          +picture({
+            lazy: false,
+            path: "img/intro/intro-img.png",
+            attr: { "alt": "NFT image" },
+            mainAttr: {
+              "class": "wow fadeInRight"
+              }
+          })
+
+  section.benefits#benefits
+    .container
+      .benefits__inner
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon.png", alt="")
+          .benefits__item-title
+            | REGISTER ON A WEBSITE
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_2.png", alt="")
+          .benefits__item-title
+            | CREATE A PARTNER ACCOUNT
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_3.png", alt="")
+          .benefits__item-title
+            | START TO PROMOTE
+        .benefits__item 
+          .benefits__item-icon
+            img(src="img/benefits/Icon_4.png", alt="")
+          .benefits__item-title
+            | EARN LIFETIME REVENUE
+
+  section.about#about
+    .container
+      .about__inner 
+        h2.about__title.section-title
+          span.title-span About 
+          |  Spades partners
+        p.about__message
+          | Join our affiliate program and enjoy the benefits of working with real professionals.
+
+      .about__items
+        .about__item
+          p.about__item-message
+            | We offer outstanding gambling experience and turn it into the best deal for every player, full of winning opportunities and fair outcomes. It will help you achieve the desired results in a short time.
+        .about__item
+          p.about__item-message
+            | Our experienced account managers are always ready to help you generate a substantial income. They can serve our clients in various languages and help increase their profits.
+        .about__item
+          p.about__item-message
+            | We work with the most popular suppliers within the gaming industry to bring the latest online casino games, which make our gambling affiliate program stand out. Don’t waste another minute, come and join us!
+
+  section.partner#partner
+    .container
+      .partner__inner
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon.png", alt="")
+          h4.partner__title International<br> brand
+          p.partner__message
+            | Spades Partners is a stable and quickly growing company. We are officially licenced and a reliable partner.
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-1.png", alt="")
+          h4.partner__title Super Smart<br> Search
+          p.partner__message
+            | Revenue share, Hybrid and CPA deals. Personally tailored proposals to meet your needs.
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-2.png", alt="")
+          h4.partner__title Control everything<br> in one place
+          p.partner__message
+            | Our retention team makes sure you get the most of your traffic!
+        .partner__item
+          .partner__icon 
+            img(src="img/partner/Icon-3.png", alt="")
+          h4.partner__title Work better<br> together
+          p.partner__message
+            | Fast and respectful. Always ready to provide you with top-notch assets and marketing data.
+      
+      .partner__button
+        +button(href="#" data-izimodal-open="#modal-signup")
+          | Become a partner
+
+  section.why#why
+    .container
+      .why__inner
+        h2.why__title.section-title Why 
+          span Spades<br>
+          span.title-span partners
+        .why__wrapper
+          .why__items
+            .why__item
+              .why__icon
+                img(src="img/why/icon1.png", alt="")
+              h4.why__title Payment<br>methods
+              p.why__message
+                | Various payment methods for withdrawals in fiat or crypto currencies. Bank transfer, Neteller, Skrill, CoinsPaid.
+            .why__item
+              .why__icon
+                img(src="img/why/icon2.png", alt="")
+              h4.why__title Personal<br>manager
+              p.why__message
+                | Every partner is assigned a personal manager to help with anything that might come up.
+            .why__item
+              .why__icon
+                img(src="img/why/icon3.png", alt="")
+              h4.why__title Player<br>retention
+              p.why__message
+                | High conversion rates. Loyalty system & multiple bonus programs. Support and  VIP service.
+            .why__item
+              .why__icon
+                img(src="img/why/icon4.png", alt="")
+              h4.why__title True<br>partnership
+              p.why__message
+                | No negative carry over, no hidden fees, no withdrawal commissions, no bundling between brands.
+
+          .why__slider
+            .swiper#whySlider
+              .swiper-wrapper
+                .swiper-slide
+                  .why__item
+                    .why__icon
+                      img(src="img/why/icon1.png", alt="")
+                    h4.why__title Payment<br>methods
+                    p.why__message
+                      | Various payment methods for withdrawals in fiat or crypto currencies. Bank transfer, Neteller, Skrill, CoinsPaid.
+
+                .swiper-slide
+                  .why__item
+                    .why__icon
+                      img(src="img/why/icon2.png", alt="")
+                    h4.why__title Personal<br>manager
+                    p.why__message
+                      | Every partner is assigned a personal manager to help with anything that might come up.
+
+                .swiper-slide
+                  .why__item
+                    .why__icon
+                      img(src="img/why/icon3.png", alt="")
+                    h4.why__title Player<br>retention
+                    p.why__message
+                      | High conversion rates. Loyalty system & multiple bonus programs. Support and  VIP service.
+
+                .swiper-slide
+                  .why__item
+                    .why__icon
+                      img(src="img/why/icon4.png", alt="")
+                    h4.why__title True<br>partnership
+                    p.why__message
+                      | No negative carry over, no hidden fees, no withdrawal commissions, no bundling between brands.
+
+            .swiper-button-wrapper
+              .swiper-button-prev
+              .swiper-fraction
+              .swiper-button-next
+
+          .why__info
+            .why__img
+              +picture({
+                lazy: false,
+                path: "img/why/BG.png",
+                attr: { "alt": "BG" },
+                mainAttr: {
+                  "class": "wow fadeInRight"
+                  }
+              })
+            .why__button 
+              +button(href="/terms.html" target="_blank").button--bordered
+                | Terms & conditions
+
+  section.brand#brand
+    .container
+      .brand__inner
+        h2.brand__title.section-title Our 
+          span.title-span Brands
+
+      .brand__wrapper
+        .brand__img
+          +picture({
+            lazy: false,
+            path: "img/brand/Spades.png",
+            attr: { "alt": "Spades" },
+            mainAttr: {
+              "class": "wow fadeInLeft"
+              }
+          })
+        .brand__info
+          .brand__info-title
+            img(src="img/brand/Sloterra_Casino.svg", alt="Sloterra Casino")
+          p.brand__info-message
+            | Beautifully-designed adventure-themed online casino that has got everything you may be looking for as a gambler. There are generous promotions, a VIP club, efficient support , varied payment methods with no fees to worry about, and surely, an incredible choice of games, including top slots and incredibly realistic live dealer games by the finest providers, the choice is always enjoyable though. All that in total security ensured by a Curacao licence held by only the most determined and solid casinos out there. Say YES to new adventures!
+          .brand__button
+            +button(href="www.sloterra.com" target="_blank").button--bordered
+              | Visit casino
+
+  //- section.review#review
+  //-   .container
+  //-     .review__inner
+  //-        h2.review__title.section-title What people<br>
+  //-         span.title-span are saying
+  //-     .review__slider
+  //-       .swiper#reviewSlider
+  //-         .swiper-wrapper
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-5.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
+
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-3.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
+              
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-4.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners
+
+  //-           .swiper-slide
+  //-             .review__slide
+  //-               .review__slide-bg
+  //-                 .review__slide-title
+  //-                   | "I like to work with Spades, Communication with affiliate managers is on high level, they are friendly and respectful."
+  //-                 .review__slide-info
+  //-                   .review__slide-rating
+  //-                     img(src="img/review/stars-5.svg", alt="")
+  //-                   .review__slide-name Rivaan Mona
+  //-                   .review__slide-position GS Partners            
+
+  //-         .swiper-button-wrapper
+  //-           .swiper-button-prev
+  //-           .swiper-button-next
+
+  section.faq#faq
+    .container 
+      .faq__inner
+        .faq__title.section-title
+          span.title-span FAQ
+
+      +accordion()
+        +accordion-item("<h3>How it works</h3>")
+          | If you have a website you can earn money with Spades Partners. Register for our affiliate program and submit your website URL. Once approved, we'll provide you with affiliate ID and access to all our marketing tools to help you promote some of the hottest and best converting gaming products on the Net. Then you can place our banners and links on your website. The more clicks you have on our links , the more players and, eventually, more money you will earn.
+        +accordion-item("<h3>What is a sub-affiliate program?</h3>")
+          | Our sub-affiliate program offers you a revenue share for referring other affiliates into the Spades Partners. As a Spades Partners, you are entitled to additional commissions when you recruit affiliates for all Sloterra products. You will earn a percentage of the commissions paid to the website (sub-affiliate) that you have recruited for the lifetime of that affiliates activity with Sloterra.
+        +accordion-item("<h3>What is an affiliate program?</h3>")
+          | An affiliate program a partnership between an online merchant and a website owner where the online merchant rewards the website owner for any revenue generated through the merchant's links on the partner's website .  As an affiliate, you are paid a commission every time a customer is referred through your website tracking links and generates a deposit and revenue for the merchant. 
+        +accordion-item("<h3>Do I need to have a website to join?</h3>")
+          | We will review each case on an individual basis. Please contact us at <a href="mailto:contact@spadespartners.com">contact@spadespartners.com</a>.
+        +accordion-item("<h3>How and when will I get paid?</h3>")
+          | We pay affiliate commissions by the 15th of the following month for all orders completed before the 5th day of that month. Minimum withdrawal amount is $100.00. If your balance is less than the minimum amount then it will be carried forward to the next month.
+        +accordion-item("<h3>Can I get an exclusive offer or promotion to use on my website?</h3>")
+          | Sure. Pitch us your idea. We're always happy to discuss any exclusive promotions that can be beneficial to our mutual success. Please get in touch with our team.
+        +accordion-item("<h3>How do I get my tracking referral link and banners?</h3>")
+          | Affiliate links and banners are only available to our approved partners and can be accessed via your affiliate dashboard. 
+        +accordion-item("<h3>How many Spades Partners links can I put on my website?</h3>")
+          | Feel free to put as many Spades Partners links on your site as you like.
+
+  section.contact#contact
+    .container 
+      .contact__inner
+        h2.contact__title.section-title
+          span.title-span Contact 
+          span us
+
+      .contact__main
+        +form.contact-form--main
+          .contact-form-wrapper
+            h3.contact-form-title Let's get partnered!
+            +input-name("NAME")
+            +input-email("EMAIL")
+            +input-phone("PHONE")
+            +input-textarea("MESSAGE")
+          +button(type="submit")
+            | Send
