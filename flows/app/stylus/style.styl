@@ -1,0 +1,241 @@
+@import '_vars'
+@import '_global'
+@import '../includes/modules/circles/index'
+@import '../includes/modules/button/index'
+@import '../includes/modules/picture/index'
+
+.header
+  position fixed
+  top -80px
+  width 100%
+  background linear-gradient(0deg, rgba(25, 24, 39, 0.7), rgba(25, 24, 39, 0.7)), linear-gradient(90.31deg, rgba(0, 169, 156, 0.2) -17.82%, rgba(231, 155, 55, 0.2) 112.82%)
+  box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
+  backdrop-filter blur(16px)
+  border-radius 0 0 500px 500px/0 0 20px 20px
+  transition all .3s
+  z-index 10
+
+  &__inner
+    display flex
+    align-items center
+    justify-content space-between
+
+  &__menu
+    ul
+      display flex
+      align-items center
+
+      li
+        a
+          position relative
+          color $text
+          font-weight 300
+          font-size 14px
+          line-height 16px
+          padding 3.2rem 1.2rem
+
+          &::after
+            position absolute
+            content ''
+            bottom 2px
+            right 0
+            height 2px
+            width 0
+            background-color $white
+            box-shadow 0px 13px 32px $white
+            transition width .3s
+
+          &:hover
+            color $orange
+
+            &::after
+              width 100%
+              left 0
+            
+        .header__menu--white
+          color $white
+
+.intro
+  position relative
+  background-color rgba(23, 25, 27, 0.6)
+  box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
+  backdrop-filter blur(7px)
+  border-radius 0px 0px 1000px 1000px/0px 0px 80px 80px
+  z-index 2
+  margin-bottom 5rem
+
+  &__inner
+    padding 9rem 0 7rem
+    text-align center
+
+  &__title
+    font-size 5.2rem
+    line-height 2
+    font-weight 900
+    color $text
+    margin-bottom 6rem
+
+    span
+      &:nth-child(1)
+        display inline-block
+        position relative
+        margin-right .6rem
+
+        &::before
+          position absolute
+          content ''
+          bottom .6rem
+          background-color $orange
+          border-radius 0px 0px 11.7491px 11.7491px
+          height .7rem
+          animation animateWidth 1s 1.3s forwards
+
+      &:nth-child(2)
+        border 1px dashed $linkHover
+        padding .5rem 1rem
+
+  &__message
+    font-weight 100
+    font-size 2.8rem
+    line-height 3.3rem
+    color $text
+    margin-bottom 5.5rem
+
+    span
+      color $white
+
+  &__form
+    max-width 310px
+    margin 0 auto 5.6rem
+
+  &__input
+    width 100%
+    background rgba(0, 0, 0, 0.2)
+    box-shadow inset 0px 2px 0px rgba(0, 0, 0, 0.2)
+    border-radius 16px
+    padding 2rem 2.4rem
+    font-weight 400
+    font-size 14px
+    line-height 16px
+    color $white
+    outline none
+    border none
+    margin-bottom 16px
+
+    &::placeholder
+      color $text
+
+.pictures
+  position relative
+  max-width 757px
+  margin 0 auto
+  padding 0 10px
+
+  &__img
+    .picture
+      display block
+      margin-bottom -2.3rem
+
+    img
+      max-width 100%
+    
+    &-row
+      margin-top 6.9rem
+
+      img
+        max-width 598px
+
+  &__absolute
+    position absolute
+    max-width 757px
+    margin 0 auto
+    padding 0 10px
+    width 100%
+    height 300px
+    top 0
+
+    .phone
+      position absolute
+      top -166px
+      z-index 3
+
+      &-left
+        left -159px
+        width 761px
+
+      &-right
+        right -139px
+        max-width 187px
+
+.features
+  margin-top -100px
+
+  &__inner
+    position relative
+
+  &__title
+    font-weight 100
+    font-size 5.2rem
+    line-height 1.5
+    text-align center
+    color $text
+    margin-bottom 10rem
+
+    span
+      color $white
+
+  &__block
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 10rem
+
+    &-img
+      img
+        max-width 454px
+        width 100%
+
+    &-info
+      max-width 375px
+      
+      &.left
+        text-align left
+        margin-right 100px
+
+        .features__block-buttons
+          justify-content flex-start
+        
+      &.right
+        text-align right
+        margin-left 100px
+
+        .features__block-buttons
+          justify-content flex-end
+
+    &-title
+      font-weight 100
+      font-size 3.2rem
+      line-height 1.5
+      color $text
+      word-break break-word
+      margin-bottom 4rem
+
+      span
+        color $white
+
+    &-message
+      font-weight 100
+      font-size 1.8rem
+      line-height 1.5
+      margin-bottom 4.7rem
+      color $text
+
+    &-buttons
+      display flex
+      align-items center
+
+      .green-button
+        &:last-child
+          margin-left 2.4rem
+
+@import '_media'
