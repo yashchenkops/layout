@@ -1,0 +1,508 @@
+extends ../includes/page
+
+include ../includes/modules/accordion/index
+include ../includes/modules/dark-mode/index
+include ../includes/modules/tabs/index
+include ../includes/modules/form/index
+include ../includes/modules/form-cabinet/index
+
+block head
+  - var title = "Empresex"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+
+block main
+  header.header
+    .header__container
+      +dark-mode()
+
+    .header__desktop
+      .header__container
+        .header__logo
+          a.header__logo-img(href="index.html")
+
+        nav.header__menu
+          ul.header__menu-ul
+            li.header__menu-li
+              a(href="#") About US
+            li.header__menu-li
+              a(href="#") Terms&Conditions
+            li.header__menu-li
+              a(href="#") How to buy
+            li.header__menu-li
+              a(href="#") Blog
+
+        .header__action
+          a(href="#").header__action-login Log In
+          a(href="#").header__action-signup Sign Up
+
+    .header__mobile
+      .header__mobile-top
+        .header__left
+          .header__logo
+            a.header__logo-img(href="index.html")
+
+        .header__right
+          .header__burger-button
+            button.menu__burger.menu__burger--mobile
+              svg(width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M0 2C0 0.895431 0.895431 0 2 0H25V4H2C0.89543 4 0 3.10457 0 2Z' fill='#272727')
+                path(d='M5.7998 10C5.7998 8.89543 6.69524 8 7.7998 8H24.7998V12H7.7998C6.69524 12 5.7998 11.1046 5.7998 10Z' fill='#272727')
+                path(d='M11 18C11 16.8954 11.8954 16 13 16H25V20H13C11.8954 20 11 19.1046 11 18Z' fill='#272727')
+
+      .header__mobile-inner
+        .header__mobile-inner-top
+          .header__mobile-inner-top-logo
+            a(href="index.html")
+              img(src="../img/global/logo-white.svg" alt="")
+
+          button(type="button").header__mobile-inner-top-close
+            svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M1.07143 18.9284C0.479694 18.3366 0.479694 17.3772 1.07143 16.7855L17.8571 -0.000158473L19.9999 2.14269L3.21428 18.9284C2.62255 19.5201 1.66316 19.5201 1.07143 18.9284Z' fill='white')
+              path(d='M1.07164 1.07143C1.66337 0.479694 2.62276 0.479694 3.21449 1.07143L20.0002 17.8571L17.8573 19.9999L1.07164 3.21428C0.47991 2.62255 0.479909 1.66316 1.07164 1.07143Z' fill='white')
+
+        .header__user
+          h3.header__user-name User373
+          span.header__user-email randommm23@gmail.com
+
+        nav.header__menu
+          ul.header__menu-ul
+            each key, value in {"Dashboard": "dashboard", "Profile": "profile", "Buy crypto": "buy-crypto", "Withdrawal": "withdrawal", "Exchange": "exchange", "Transaction history": "transaction-history", "Support": "support", "Balances": "balances", "Sign out": "sign-out"}
+              li.header__menu-li
+                a.header__menu-link(href=`index.html#${key}` )= value
+
+  section.intro
+    .container 
+      .intro__inner
+        h1.intro__title
+          | Impressive?
+          span Empresex!
+
+        h3.intro__subtitle
+          | Who are we? A top currency exchanger that helps people save and multiply their investments. "Another scam", you say...but as soon as you appreciate our advantages described below, you will immediately understand that this is not the case. Action!
+
+        a(href="#").intro__button.button
+          | Check this out
+
+  section.hub
+    .container
+      .hub__inner
+        .hub__info
+          h2.hub__info-title incentive 
+            span own hub
+
+          .hub__info-subtitle We have created the most comfortable and understandable interface of the user's own cabinet, so that the convenience of operations does not cause doubts and all the necessary information is concentrated in one place. Damn it, it's easier to use than your grandmother's kitchen scissors and as multitasking as grandpa's Swiss Army knife.
+
+        .hub__images.wow.fadeInRightBig(data-wow-delay=".2s" data-wow-duration="2s")
+          .hub__images-menu.hub__images--small
+            img(src="img/global/menu-dark.svg" alt="")
+
+          .hub__images-menu-white.hub__images--small
+            img(src="img/global/menu-white.svg" alt="")
+
+          .hub__images-mobile.hub__images--small
+            img(src="img/global/mobile.svg" alt="")
+
+          .hub__images-dashboard.hub__images--big
+            img(src="img/global/dashboard.svg" alt="")
+
+  section.media
+    .container
+      .media__inner
+        .media__info
+          h2.media__info-title What 
+            span media 
+            | say?
+
+          .media__info-subtitles
+            .media__info-subtitles-item.active
+              | If you are not involved in mining, do not trade, and/or receive a salary in cryptocurrency, then you barely remember anything about crypto exchanges. What if one day you decide to give it a try? Most probably, you are interested in such a service with the lowest exchange rate. Well, at least, in my case that was the primary factor to consider. I was surfing the web, trying to find the best option...
+            .media__info-subtitles-item
+              | If you are not involved in mining, do not trade, and/or receive a salary in cryptocurrency, then you barely remember anything about crypto exchanges. What if one day you decide to give it a try? Most probably, you are interested in such a service with the lowest exchange rate. Well, at least, 
+            .media__info-subtitles-item
+              | If you are not involved in mining, do not trade, and/or receive a salary in cryptocurrency, then you barely remember anything
+        .media__cards
+          .media__cards-item.active
+            .media__cards-item-img
+
+            a(href="#").media__cards-item-link read full review
+
+          .media__cards-item
+            .media__cards-item-img
+
+            a(href="#").media__cards-item-link read full review
+
+          .media__cards-item
+            .media__cards-item-img
+
+            a(href="#").media__cards-item-link read full review
+
+  section.review
+    .container
+      .review__inner
+        .review__slider
+          #review
+            .review-wrapper
+              .review-item
+                .review-item__name Jessica
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This is awesome!I’m in love of it!
+
+              .review-item
+                .review-item__name Adam
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This product is greate. So, why I put 4 stars? It’s to motivate you keep going and became more better! Belive in you guys.
+
+              .review-item
+                .review-item__name Dmitriy
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+
+                .review-item__review
+                  | Work harder guys or you will know how Kryvyi Rih quarry looks inside!
+
+              .review-item
+                .review-item__name Robert
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | I tried it 2 month ago, and now I’m a billionaire, close friend of Ilon Mask. He pleased me to fly with him on Mars. Please, fix it.
+
+            .review-wrapper
+              .review-item
+                .review-item__name Robert
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | I tried it 2 month ago, and now I’m a billionaire, close friend of Ilon Mask. He pleased me to fly with him on Mars. Please, fix it.
+
+              .review-item
+                .review-item__name Adam
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This product is greate. So, why I put 4 stars? It’s to motivate you keep going and became more better! Belive in you guys.
+
+              .review-item
+                .review-item__name Jessica
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This is awesome!I’m in love of it!
+
+              .review-item
+                .review-item__name Dmitriy
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+
+                .review-item__review
+                  | Work harder guys or you will know how Kryvyi Rih quarry looks inside!
+
+            .review-wrapper
+              .review-item
+                .review-item__name Jessica
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This is awesome!I’m in love of it!
+
+              .review-item
+                .review-item__name Adam
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This product is greate. So, why I put 4 stars? It’s to motivate you keep going and became more better! Belive in you guys.
+
+              .review-item
+                .review-item__name Dmitriy
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+
+                .review-item__review
+                  | Work harder guys or you will know how Kryvyi Rih quarry looks inside!
+
+              .review-item
+                .review-item__name Robert
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | I tried it 2 month ago, and now I’m a billionaire, close friend of Ilon Mask. He pleased me to fly with him on Mars. Please, fix it.
+
+            .review-wrapper
+              .review-item
+                .review-item__name Robert
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | I tried it 2 month ago, and now I’m a billionaire, close friend of Ilon Mask. He pleased me to fly with him on Mars. Please, fix it.
+
+              .review-item
+                .review-item__name Adam
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This product is greate. So, why I put 4 stars? It’s to motivate you keep going and became more better! Belive in you guys.
+
+              .review-item
+                .review-item__name Jessica
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+                .review-item__review
+                  | This is awesome!I’m in love of it!
+
+              .review-item
+                .review-item__name Dmitriy
+                .review-item__stars
+                  svg(width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M8.5 0.698242L10.4084 6.5716L16.584 6.5716L11.5878 10.2015L13.4962 16.0749L8.5 12.445L3.50383 16.0749L5.41219 10.2015L0.416019 6.5716L6.59163 6.5716L8.5 0.698242Z' fill='#272727')
+
+
+                .review-item__review
+                  | Work harder guys or you will know how Kryvyi Rih quarry looks inside!
+
+        .review__info
+          h2.review__title 
+            | They are happy 
+            span reviews
+
+  section.faq
+    .container
+      .faq__inner
+        h2.faq__title FAQ
+        +accordion()
+          +accordion-item("<h3>How much will a member get for referring new members?</h3>")
+            | For the first two referrals, the participant receives 100% from each, starting from the third, 50% for each new participant. The referral program only works to&nbsp;attract new members to&nbsp;the first level.
+          +accordion-item("<h3>If I buy more NFTs in the same level, will another queue open?</h3>")
+            | No. You will simply have more NFTs. One NFT is&nbsp;enough to&nbsp;participate in&nbsp;the program. You can buy NFT as&nbsp;a&nbsp;gift.
+          +accordion-item("<h3>Can I buy the 5th level immediately without going through the other levels below?</h3>")
+            | It&nbsp;will be&nbsp;possible to&nbsp;buy Level 5&nbsp;NFTs on&nbsp;the secondary market. You can mint NFT by&nbsp;levels strictly sequentially. In&nbsp;order to&nbsp;mint level 5&nbsp;NFTs, you must have NFTs of&nbsp;the first 4&nbsp;levels in&nbsp;your wallet.
+          +accordion-item("<h3>If I buy an NFT from level 2 and give it as a gift, will the new owner be able to take part in level 2 right away with it?</h3>")
+            | No. Ownership of&nbsp;NFT tokens of&nbsp;all previous levels will be&nbsp;checked. If&nbsp;the wallet of&nbsp;the new owner contains NFT level&nbsp;1, he&nbsp;will be&nbsp;able to&nbsp;activate the 2nd level and join the queue.
+          +accordion-item("<h3>If I join the tier 2 queue and sell my only tier 2 NFT, will I still be in the queue?</h3>")
+            | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
+          +accordion-item("<h3>Will my place in the queue be sold along with the NFT?</h3>")
+            | No.
+
+          .faq__hidden-blocks
+            +accordion-item("<h3>Can I withdraw money from my balance while in the queue?</h3>")
+              | You can withdraw all available funds on&nbsp;your balance at&nbsp;any time. Information about your balance and a&nbsp;button for withdrawing all money from it&nbsp;are available in&nbsp;your Personal Account.
+            +accordion-item("<h3>Can I partially withdraw money?</h3>")
+              | No. You can only withdraw the entire amount on&nbsp;your balance.
+            +accordion-item("<h3>What do I need to do to get in line?</h3>")
+              | In&nbsp;the first level, you need to&nbsp;buy a&nbsp;level 1&nbsp;NFT and earn a&nbsp;qualification. You will automatically be&nbsp;placed in&nbsp;a&nbsp;queue after qualifying.
+            +accordion-item("<h3>How to get a qualification?</h3>")
+              | You may get qualification by&nbsp;referring two new level 1&nbsp;NFT buyers or&nbsp;doing a&nbsp;turbo boost (buy without attracting buyers at&nbsp;double price of&nbsp;level&nbsp;1).
+            +accordion-item("<h3>How to get into the queue of the next level?</h3>")
+              | To&nbsp;get to&nbsp;the next level, you need to&nbsp;have passed the qualification in&nbsp;the first level and have the NFT of&nbsp;the previous levels.
+
+        +button.faq__button-learn-more(type="button")
+          | Learn more
+
+  section.try
+    .container
+      .try__inner
+        h2.try__title.try__title--black don’t be depressive<br>
+          span Try empresex!
+        h2.try__title.try__title--white don’t be depressive<br>
+          span Try empresex!
+
+  footer.footer
+    .container
+      .footer__inner
+        .footer__logo
+          a.footer__logo-img(href="index.html")
+
+        ul.footer__ul
+          li.footer__li
+            a(href="#") About US
+          li.footer__li
+            a(href="#") Terms&Conditions
+          li.footer__li
+            a(href="#") How to buy
+          li.footer__li
+            a(href="#") Blog
+
+        ul.footer__ul
+          li.footer__li
+            a(href="#") Refund & Cancalation
+          li.footer__li
+            a(href="#") Contact Us
+          li.footer__li
+            a(href="#") API
+          li.footer__li
+            a(href="#") FAQ
+
+  button.contact__button
+    #contactButtonAnim
+
+  .contact
+    +tabs()
+      +tabs-item("1", "active")
+        svg(width='20' height='18' viewBox='0 0 20 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M0.480601 8.88945L4.95405 10.4946C5.02945 10.509 5.10686 10.5038 5.18012 10.4794L5.18606 10.4753C6.23292 9.74728 15.4191 3.35915 15.9499 3.14405C16.0337 3.11613 16.0795 3.21136 16.0795 3.21136L7.81358 11.9473C7.81358 11.9473 7.51587 15.7426 7.41085 16.902C7.41085 16.902 7.25458 18.3067 8.47015 16.902C9.39424 15.8341 10.4082 14.8348 10.8412 14.4171C12.4 15.6011 14.098 16.9262 14.8238 17.6137C15.0633 17.8697 15.3959 18.0112 15.7289 17.9993C16.4069 17.9712 16.5963 17.151 16.5963 17.151C16.5963 17.151 19.7594 3.134 19.8651 1.25582C19.8837 0.93158 19.9775 0.450356 19.7506 0.177704C19.5212 -0.0976431 19.0702 0.00284366 18.7851 0.108609C18.7851 0.108609 1.43 6.97803 0.438816 7.73884C0.0380502 8.04498 -0.0762305 8.6407 0.480601 8.88945Z' fill='#272727')
+
+      +tabs-item("2")
+        svg(width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M10.0287 2.62958C9.38234 2.36132 8.68427 2.21942 7.9717 2.21942C6.53844 2.21942 5.16387 2.79349 4.1504 3.81532C3.13693 4.83716 2.56757 6.22307 2.56757 7.66817C2.56757 8.67023 2.84134 9.64384 3.34712 10.4873C2.69335 10.216 2.09244 9.8154 1.58284 9.30159C0.569363 8.27975 0 6.89384 0 5.44874C0 4.00365 0.569363 2.61774 1.58284 1.5959C2.59631 0.574062 3.97087 0 5.40414 0C6.8374 0 8.21197 0.574062 9.22544 1.5959C9.53615 1.90917 9.80511 2.25666 10.0287 2.62958Z' fill='#272727')
+          path(d='M15.1686 13.0954C15.4402 12.4341 15.5801 11.7253 15.5801 11.0095C15.5801 10.2937 15.4402 9.58494 15.1686 8.92364C15.0581 8.65481 14.9268 8.39597 14.776 8.14941C14.852 8.17719 14.9275 8.20671 15.0023 8.23797C15.6582 8.51188 16.2541 8.91337 16.7561 9.41951C17.2581 9.92565 17.6563 10.5265 17.928 11.1878C18.1997 11.8491 18.3395 12.5579 18.3395 13.2737C18.3395 13.9895 18.1997 14.6982 17.928 15.3595C17.6563 16.0208 17.2581 16.6217 16.7561 17.1278C16.2541 17.634 15.6582 18.0355 15.0023 18.3094C14.3464 18.5833 13.6435 18.7243 12.9335 18.7243C11.4998 18.7243 10.1247 18.15 9.11091 17.1278C8.81122 16.8257 8.55036 16.4917 8.33154 16.1338C8.91675 16.3477 9.53967 16.4601 10.1741 16.4601C10.884 16.4601 11.587 16.3191 12.2429 16.0452C12.8988 15.7713 13.4947 15.3698 13.9967 14.8637C14.4987 14.3575 14.8969 13.7567 15.1686 13.0954Z' fill='#272727')
+          path(fill-rule='evenodd' clip-rule='evenodd' d='M17.0785 12.7052C17.5087 11.6582 17.7301 10.536 17.7301 9.40268C17.7301 8.26938 17.5087 7.14717 17.0785 6.10013C16.6484 5.0531 16.0179 4.10173 15.2231 3.30037C14.4283 2.499 13.4847 1.86332 12.4462 1.42962C11.4078 0.995926 10.2947 0.772705 9.17071 0.772705C8.04667 0.772705 6.93365 0.995926 5.89517 1.42962C4.8567 1.86332 3.91312 2.499 3.11831 3.30037C2.3235 4.10173 1.69302 5.0531 1.26287 6.10013C0.832723 7.14717 0.611328 8.26938 0.611328 9.40268C0.611328 10.536 0.832723 11.6582 1.26287 12.7052C1.69302 13.7523 2.3235 14.7036 3.11831 15.505C3.91312 16.3064 4.8567 16.942 5.89517 17.3757C6.93365 17.8094 8.04667 18.0327 9.17071 18.0327C10.2947 18.0327 11.4078 17.8094 12.4462 17.3757C13.4847 16.942 14.4283 16.3064 15.2231 15.505C16.0179 14.7036 16.6484 13.7523 17.0785 12.7052ZM5.92045 8.20321C6.12933 8.56491 6.41797 8.87292 6.76387 9.10322C7.22215 9.40656 7.70933 9.6627 8.21809 9.86779C8.78695 10.1083 9.2283 10.3122 9.54213 10.4794C9.80751 10.6115 10.0484 10.7888 10.2541 11.0037C10.4098 11.1709 10.4964 11.392 10.496 11.6216C10.5027 11.7836 10.4711 11.9448 10.404 12.092C10.3368 12.2392 10.236 12.3681 10.1098 12.468C9.77264 12.6974 9.36932 12.8062 8.96402 12.7769C8.73484 12.7793 8.50613 12.7554 8.28226 12.7058C8.1007 12.6654 7.92311 12.6086 7.75165 12.536C7.60152 12.4702 7.39648 12.3716 7.13652 12.2401C6.92747 12.1273 6.69476 12.0668 6.45784 12.0635C6.24521 12.0547 6.03737 12.1289 5.87726 12.2707C5.8009 12.3443 5.74121 12.4337 5.70233 12.5328C5.66345 12.632 5.6463 12.7384 5.65207 12.8449C5.64729 13.0468 5.70748 13.2449 5.82359 13.4092C5.96343 13.5884 6.14426 13.7307 6.35049 13.8236C7.15719 14.1773 8.03167 14.3446 8.91035 14.3135C9.54976 14.3265 10.1862 14.2216 10.7884 14.004C11.2881 13.8245 11.7233 13.4978 12.0378 13.0659C12.3467 12.6097 12.5032 12.0656 12.4845 11.513C12.4965 11.0617 12.3848 10.6159 12.1618 10.2248C11.9354 9.85272 11.6303 9.53598 11.2684 9.29733C10.8103 8.99835 10.3243 8.74561 9.81731 8.54274C9.76311 8.51588 9.70702 8.49314 9.64949 8.47471C9.12999 8.25751 8.73923 8.08317 8.47722 7.95168C8.24331 7.84075 8.03147 7.68738 7.85222 7.49918C7.70137 7.33897 7.61816 7.12562 7.62024 6.90438C7.61301 6.73586 7.65065 6.56848 7.72923 6.41971C7.80781 6.27094 7.92444 6.14625 8.06693 6.05867C8.4046 5.85501 8.79327 5.75444 9.18614 5.76906C9.48756 5.76587 9.78804 5.80366 10.0795 5.88141C10.3962 5.97378 10.706 6.08849 11.0068 6.22469C11.1289 6.28197 11.2616 6.31219 11.3962 6.31331C11.4939 6.31594 11.5912 6.29761 11.6814 6.25953C11.7717 6.22145 11.853 6.16448 11.92 6.09237C11.9908 6.01411 12.0456 5.92252 12.0814 5.82281C12.1172 5.72311 12.1332 5.61726 12.1285 5.5113C12.1317 5.30733 12.0613 5.10918 11.9305 4.95394C11.7529 4.76525 11.5327 4.62303 11.2888 4.53951C11.0232 4.44083 10.7485 4.36912 10.4688 4.32543C10.0781 4.2606 9.68262 4.2299 9.2867 4.23368C8.68157 4.23006 8.08038 4.33247 7.5098 4.53639C6.98517 4.71556 6.51683 5.03213 6.15244 5.45387C5.80181 5.87385 5.61642 6.40979 5.63171 6.9593C5.61926 7.39229 5.71879 7.82107 5.92045 8.20321Z' fill='#272727')
+
+      +tabs-item("3")
+        svg(width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(fill-rule='evenodd' clip-rule='evenodd' d='M9.70673e-06 9.45754C0.00184281 4.24901 4.19247 0.0115009 9.34548 0.0115009C10.5728 0.00856273 11.7884 0.251899 12.9221 0.727424C14.0558 1.20295 15.0849 1.90122 15.95 2.7818C16.8199 3.6576 17.5095 4.69925 17.9787 5.84645C18.4479 6.99365 18.6875 8.22361 18.6836 9.46511C18.6816 14.674 14.491 18.9119 9.34197 18.9119H9.33846C7.66178 18.911 6.01764 18.4558 4.58369 17.5949L4.24227 17.3903L0.706519 18.3281L1.65042 14.8424L1.42815 14.485C0.492599 12.9791 -0.00252807 11.2361 9.70673e-06 9.45754ZM5.83587 4.12686C6.03985 4.13503 6.2658 4.14459 6.48053 4.61646C6.62679 4.93842 6.87268 5.53792 7.06908 6.01675C7.2146 6.37154 7.33294 6.66008 7.36345 6.72037C7.43513 6.86204 7.48266 7.02791 7.38729 7.21675C7.37263 7.24578 7.35911 7.27314 7.3462 7.29926C7.27514 7.44306 7.22265 7.54926 7.10119 7.68924C7.05267 7.74517 7.0025 7.8055 6.95239 7.86578C6.85428 7.98377 6.75635 8.10155 6.67126 8.18562C6.52759 8.32683 6.378 8.48037 6.54535 8.76386C6.71271 9.04735 7.28756 9.97506 8.13916 10.7263C9.05576 11.5348 9.85171 11.8762 10.2547 12.049C10.3329 12.0825 10.3963 12.1097 10.4429 12.1328C10.7296 12.2744 10.8965 12.2507 11.0637 12.0616C11.2309 11.8724 11.7793 11.2344 11.9705 10.9507C12.1617 10.6671 12.3526 10.7141 12.6152 10.8087C12.8777 10.9034 14.2859 11.5889 14.5727 11.7307C14.6291 11.7586 14.6818 11.7838 14.7306 11.807C14.9299 11.9021 15.0645 11.9663 15.122 12.0616C15.1935 12.1801 15.1933 12.7471 14.9547 13.4089C14.7162 14.0707 13.5467 14.709 13.0212 14.7562C12.9707 14.7607 12.9204 14.7666 12.8687 14.7726C12.3831 14.829 11.7704 14.9002 9.58352 14.0471C6.88991 12.9963 5.11458 10.3911 4.75027 9.85652C4.72074 9.81318 4.70048 9.78345 4.68976 9.76926L4.68636 9.76477C4.53124 9.55957 3.52012 8.22209 3.52012 6.8383C3.52012 5.53382 4.16811 4.84974 4.46651 4.53472C4.48706 4.51302 4.50596 4.49307 4.52287 4.47479C4.78528 4.19114 5.09569 4.12023 5.28673 4.12023L5.83587 4.12686Z' fill='#272727')
+
+      +tabs-item("4")
+        svg(width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M18.6209 10.5903C18.6209 9.90924 18.5604 9.25439 18.4482 8.62573H9.50635V12.3453H14.616C14.3916 13.5415 13.7184 14.5543 12.7085 15.2353V17.6539H15.7898C17.5851 15.9775 18.6209 13.5153 18.6209 10.5903Z' fill='#272727')
+          path(d='M9.50608 19.9769C12.0695 19.9769 14.2187 19.1213 15.7896 17.6544L12.7082 15.2358C11.8624 15.8121 10.7835 16.1613 9.50608 16.1613C7.03757 16.1613 4.94019 14.4762 4.18928 12.2061H1.03027V14.6857C2.59252 17.8203 5.79468 19.9769 9.50608 19.9769Z' fill='#272727')
+          path(d='M4.18921 12.197C3.99932 11.6207 3.88711 11.0096 3.88711 10.3722C3.88711 9.73478 3.99932 9.12359 4.18921 8.54732V6.06763H1.0302C0.382859 7.35986 0.0117188 8.81799 0.0117188 10.3722C0.0117188 11.9263 0.382859 13.3845 1.0302 14.6767L3.49008 12.7384L4.18921 12.197Z' fill='#272727')
+          path(d='M9.50609 4.59238C10.9043 4.59238 12.1472 5.08133 13.1398 6.02431L15.8586 3.27395C14.2101 1.71978 12.0695 0.768066 9.50609 0.768066C5.79468 0.768066 2.59252 2.9247 1.03027 6.06797L4.18928 8.54766C4.9402 6.27752 7.03757 4.59238 9.50609 4.59238Z' fill='#272727')
+
+    .contact__tabs-content
+      +tabs-content-item("1", "active")
+        +form-cabinet()
+          +input-cabinet-text("", "Name", "name")
+          +input-cabinet-text("", "Surname", "surname")
+          textarea.form-cabinet-input(name="message") 
+
+          +button(type="submit").contact__tabs-button
+            | Send
+
+      +tabs-content-item("2")
+        +form-cabinet()
+          +input-cabinet-text("", "Name", "name")
+          +input-cabinet-text("", "Surname", "surname")
+          textarea.form-cabinet-input(name="message")
+
+          +button(type="submit").contact__tabs-button
+            | Send
+
+      +tabs-content-item("3")
+        +form-cabinet()
+          +input-cabinet-text("", "Name", "name")
+          +input-cabinet-text("", "Surname", "surname")
+          textarea.form-cabinet-input(name="message")
+
+          +button(type="submit").contact__tabs-button
+            | Send
+
+      +tabs-content-item("4")
+        +form-cabinet()
+          +input-cabinet-text("", "Name", "name")
+          +input-cabinet-text("", "Surname", "surname")
+          textarea.form-cabinet-input(name="message")
+
+          +button(type="submit").contact__tabs-button
+            | Send

@@ -1,0 +1,12 @@
+mixin tabs()
+  .tab-wrapper
+    ul.tabs
+      block
+
+mixin tabs-item(tabNumber, active)
+  li.tab-link(data-tab=tabNumber class=active)
+    block
+
+mixin tabs-content-item(itemNumber, active)
+  .tab-content(id="tab-" + itemNumber class=active)
+    block

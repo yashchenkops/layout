@@ -1,0 +1,62 @@
+.button
+  display inline-block
+  font-size 14px
+  line-height 1.4
+  font-weight 500
+  padding 8px 11px
+  background-color $text
+  border-radius 8px
+  transition all 0.3s
+  color $white
+  text-align center
+  cursor pointer
+
+  &__buy
+    position relative
+
+    &::after
+      content ""
+      position absolute
+      left 0
+      top 15px
+      width 100%
+      height 80%
+      background-color #000
+      border-radius 10px
+      z-index 1
+
+    &-main
+      position relative
+      transition 0.3s all
+      display block
+      color $white
+      font-size 18px
+      font-weight 500
+      border-radius 10px
+      padding 12px 50px
+      z-index 2
+      overflow hidden
+      background-color $text
+
+      &::before
+        position absolute
+        content ""
+        top -340%
+        left -38%
+        width 350px
+        height 350px
+        background-image url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUxIiBoZWlnaHQ9IjM1MSIgdmlld0JveD0iMCAwIDM1MSAzNTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxtYXNrIGlkPSJwYXRoLTEtaW5zaWRlLTFfNDQyXzE2NjciIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTI1MC43ODEgMTc2LjU4OUMyNTAuNzgxIDIxNy42ODggMjE3LjQ2NCAyNTEuMDA1IDE3Ni4zNjUgMjUxLjAwNUMxMzUuMjY2IDI1MS4wMDUgMTAxLjk0OSAyMTcuNjg4IDEwMS45NDkgMTc2LjU4OUMxMDEuOTQ5IDEzNS40OSAxMzUuMjY2IDEwMi4xNzIgMTc2LjM2NSAxMDIuMTcyQzIxNy40NjQgMTAyLjE3MiAyNTAuNzgxIDEzNS40OSAyNTAuNzgxIDE3Ni41ODlaIi8+CjwvbWFzaz4KPHBhdGggZD0iTTI0OS43ODEgMTc2LjU4OUMyNDkuNzgxIDIxNy4xMzUgMjE2LjkxMiAyNTAuMDA1IDE3Ni4zNjUgMjUwLjAwNVYyNTIuMDA1QzIxOC4wMTYgMjUyLjAwNSAyNTEuNzgxIDIxOC4yNCAyNTEuNzgxIDE3Ni41ODlIMjQ5Ljc4MVpNMTc2LjM2NSAyNTAuMDA1QzEzNS44MTggMjUwLjAwNSAxMDIuOTQ5IDIxNy4xMzUgMTAyLjk0OSAxNzYuNTg5SDEwMC45NDlDMTAwLjk0OSAyMTguMjQgMTM0LjcxNCAyNTIuMDA1IDE3Ni4zNjUgMjUyLjAwNVYyNTAuMDA1Wk0xMDIuOTQ5IDE3Ni41ODlDMTAyLjk0OSAxMzYuMDQyIDEzNS44MTggMTAzLjE3MiAxNzYuMzY1IDEwMy4xNzJWMTAxLjE3MkMxMzQuNzE0IDEwMS4xNzIgMTAwLjk0OSAxMzQuOTM3IDEwMC45NDkgMTc2LjU4OUgxMDIuOTQ5Wk0xNzYuMzY1IDEwMy4xNzJDMjE2LjkxMiAxMDMuMTcyIDI0OS43ODEgMTM2LjA0MiAyNDkuNzgxIDE3Ni41ODlIMjUxLjc4MUMyNTEuNzgxIDEzNC45MzcgMjE4LjAxNiAxMDEuMTcyIDE3Ni4zNjUgMTAxLjE3MlYxMDMuMTcyWiIgZmlsbD0id2hpdGUiIG1hc2s9InVybCgjcGF0aC0xLWluc2lkZS0xXzQ0Ml8xNjY3KSIvPgo8cGF0aCBkPSJNNDIuNDM0NSAyMTUuOTgyTDEyOC4yOSAxNTAuNTYzTDEyOC40NzMgMTUwLjQyNEwxMjguNDg2IDE1MC4xOTRMMTM0LjcxMSA0Mi40MzQ1TDIwMC4xMzEgMTI4LjI5TDIwMC4yNyAxMjguNDczTDIwMC40OTkgMTI4LjQ4NkwzMDguMjU5IDEzNC43MTFMMjIyLjQwMyAyMDAuMTMxTDIyMi4yMiAyMDAuMjdMMjIyLjIwNyAyMDAuNDk5TDIxNS45ODIgMzA4LjI1OUwxNTAuNTYzIDIyMi40MDNMMTUwLjQyNCAyMjIuMjJMMTUwLjE5NCAyMjIuMjA3TDQyLjQzNDUgMjE1Ljk4MloiIHN0cm9rZT0id2hpdGUiLz4KPC9zdmc+Cg==")
+        animation buttonBackgroundRotate 30s linear infinite
+
+      background-repeat no-repeat
+      background-position center
+
+      &:hover
+        transform translateY(2px)
+
+      &:hover,
+      &:focus-visible
+        box-shadow none
+
+      &:active
+        transform translateY(5px)

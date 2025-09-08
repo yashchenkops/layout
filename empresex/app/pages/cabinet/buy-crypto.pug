@@ -1,0 +1,28 @@
+extends ../../includes/page-cabinet
+
+block head
+  - var title = "Buy crypto | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/buy-crypto.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .buy-crypto
+    .buy-crypto__verification-inner.cabinet__block
+      .buy-crypto__verification-text
+        | Your data has not been verified yet
+
+      .buy-crypto__verification-button
+        +button(href="/cabinet/buy-crypto-2.html")
+          | Start Verification
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

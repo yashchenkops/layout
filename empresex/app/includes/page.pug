@@ -1,0 +1,28 @@
+include modules/form/index
+include modules/button/index
+include modules/pictures/index
+
+doctype html
+html(lang="en")
+  head
+    - var title
+
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    block head
+
+    title= title
+
+    block styles
+
+  body.cabinet
+    main.main#main
+      block main
+
+    #openingAnim
+    #loaderAnim
+
+    script(src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous") 
+    block scripts

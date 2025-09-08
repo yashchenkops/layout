@@ -1,0 +1,77 @@
+@import "base/_global"
+@import "../includes/modules/form-cabinet/index.styl"
+
+.buy-crypto
+  container-cabinet()
+  display flex
+  align-items flex-start
+  justify-content center
+  gap 40px
+
+.buy-crypto__title
+  margin-bottom 10px
+
+.buy-crypto__wrapper
+  .form-cabinet-item-row
+    .form-cabinet-item
+      &:first-child
+        width 70%
+
+      &:last-child
+        width 30%
+
+.buy-crypto__verification-verified
+  text-align center
+  margin-bottom 50px
+
+.buy-crypto__verification-verified p
+  text-align center
+  font-size 16px
+  font-weight 700
+  text-align center
+  margin-bottom 20px
+
+.buy-crypto__verification-button
+  text-align center
+
+.buy-crypto__method
+  display flex
+  align-items center
+  justify-content space-between
+  gap 20px
+
+.buy-crypto__method-item
+  width 50%
+  text-align center
+  border-radius 8px
+  background $grey
+  padding 14px 35px 22px 24px
+
+.buy-crypto__method-title
+  font-size 14px
+  font-weight 700
+  line-height normal
+  margin-bottom 13px
+
+.buy-crypto__method-days
+  font-size 12px
+  font-weight 400
+  line-height normal
+  margin-bottom 13px
+
+.buy-crypto__method-value
+  font-size 12px
+  font-weight 600
+  line-height normal
+  text-decoration-line underline
+
+.buy-crypto__verification-inner
+  min-height 600px
+
+.buy-crypto__verification-text
+  font-size 16px
+  font-weight 700
+  line-height normal
+  margin-bottom 24px
+
+@import "media/_media-buy-crypto.styl"

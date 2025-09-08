@@ -1,0 +1,84 @@
+@import "base/_global"
+
+.balances
+  &__cards
+    display flex
+    align-items center
+    justify-content center
+    gap 15px
+
+    &-item
+      width 320px
+      border-radius 8px
+      padding 15px 21px
+
+    &-info
+      display flex
+      align-items center
+      justify-content space-between
+      text-align center
+      margin-bottom 10px
+
+      &-value
+        span
+          display block
+          font-size 12.971px
+          font-weight 600
+          line-height normal
+
+      &-number
+        font-size 38px
+        font-style normal
+        font-weight 800
+        line-height normal
+
+        span
+          font-size 26px
+
+      &-button
+        display block
+        margin 0 auto
+        padding 9px 27px
+        font-size 12px
+        color $white
+        font-weight 700
+        line-height normal
+        border-radius 8px
+
+    &--green
+      background-color #ADFFF0
+
+      .header__cards-withdrawal
+        background-color #43D6BB
+
+      .header__cards-transfer
+        background-color rgba(67, 214, 187, 0.6)
+
+      .balances__cards-info-button
+        background-color #43D6BB
+
+    &--red
+      background-color #FFA7A7
+
+      .header__cards-withdrawal
+        background-color #E76565
+
+      .header__cards-transfer
+        background-color rgba(231, 101, 101, 0.6)
+
+      .balances__cards-info-button
+        background-color #E76565
+
+    &--yellow
+      background-color #FFFBA0
+
+      .header__cards-withdrawal
+        background-color #E4D440
+
+      .header__cards-transfer
+        background-color rgba(228, 212, 64, 0.6)
+
+      .balances__cards-info-button
+        background-color #E4D440
+
+@import "media/_media-balances.styl"

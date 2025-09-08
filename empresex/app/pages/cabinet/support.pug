@@ -1,0 +1,70 @@
+extends ../../includes/page-cabinet
+
+include ../../includes/modules/tabs/index
+
+block head
+  - var title = "Support | Empresex"
+
+block styles
+  link(rel="stylesheet" href="../css/libs.min.css")
+  link(rel="stylesheet" href="../css/support.min.css")
+
+block scripts
+  script(src="../scripts/libs.min.js")
+  script(src="../scripts/cabinet.js")
+
+block main
+  .support
+    .cabinet__faq.cabinet__block
+      h3.cabinet__faq-title.inner-title
+        | FAQ
+
+      .cabinet__faq-wrapper
+        a(href="#").cabinet__faq-item
+          h4.cabinet__faq-item-title Documents verification
+          span.cabinet__faq-item-desription 1 articles
+        a(href="#").cabinet__faq-item
+          h4.cabinet__faq-item-title Payment methods
+          span.cabinet__faq-item-desription 1 articles
+        a(href="#").cabinet__faq-item
+          h4.cabinet__faq-item-title FAQ
+          span.cabinet__faq-item-desription 10 articles
+
+    .cabinet__user-verification.cabinet__tabs
+      +tabs()
+        +tabs-item("1", "active")
+          | Technical support
+
+        +tabs-item("2")
+          | My tickets
+
+      .cabinet__tabs-content
+        +tabs-content-item("1", "active")
+          .cabinet__support
+            p.cabinet__support-subtitle
+              | Before asking a question, look at the FAQ, you may find a solution. If you do not find a solution to your question, create a request for technical support and we will respond to you as soon as possible.
+
+            .cabinet__support-button-wrapper
+              +button(type="button").cabinet__support-button
+                svg(width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(fill-rule='evenodd' clip-rule='evenodd' d='M6.36364 0H3.63636V3.63636L0 3.63636V6.36364H3.63636V10H6.36364V6.36364H10V3.63636L6.36364 3.63636V0Z' fill='#272727' fill-opacity='0.5')
+                span Create a request for technical support
+
+            .cabinet__support-form
+              +form-cabinet()
+                +input-cabinet-text("Full Name", "Arturioo", "full-name")
+                +input-cabinet-text("Email", "artik.sopiga97@gmail.com", "email")
+                +input-cabinet-text("Subject", "TEST", "subject")
+                p.cabinet__support-form-text Tell us about your problem. The more details, the better
+                textarea.form-cabinet-input.form-cabinet-input--textarea
+                +button(type="submit").cabinet__support-form-button
+                  | Send form
+
+        +tabs-content-item("2")
+          .cabinet__user-form
+
+  +dark-mode()
+
+  .button__buy--mobile
+    .button__buy
+      a(href="#").button__buy-main Buy crypto

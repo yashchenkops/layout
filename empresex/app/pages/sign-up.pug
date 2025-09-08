@@ -1,0 +1,35 @@
+extends ../includes/empty
+
+block head
+  - var title = "Sign Up | Empresex"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+
+block main
+  .action
+    .action__title.inner-title Registration
+
+    +form-cabinet()
+      +input-cabinet-text("", "Name", "name")
+      +input-cabinet-text("", "Last name", "last-name")
+      +input-cabinet-text("", "Email", "email")
+      +input-cabinet-text("", "Phone number", "tel")
+      +input-cabinet-password("", "Password")
+      +input-cabinet-password("", "Password confirm")
+      .form__item.form__item--checkbox
+        fieldset.checkbox
+          legend
+            span.accessibility-hidden-content
+          input#terms.custom-checkbox(name='checkbox' type='checkbox')
+          label.form-control--checkbox-btn(for='terms')
+            span.check-icon
+            p.form-control--checkbox-text I agree to empresex.com <a href="#" class="form-control--checkbox-link">Terms and Conditions</a>
+      .action__button
+        +button(type="submit")
+          | Sign up

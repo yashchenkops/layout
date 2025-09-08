@@ -1,0 +1,58 @@
+@import "base/_global"
+@import "../includes/modules/tabs/index.styl"
+@import "../includes/modules/form-cabinet/index.styl"
+
+.profile
+  container-cabinet()
+  display flex
+  align-items flex-start
+  justify-content center
+  gap 40px
+
+.profile__user-inner-wrapper
+  display none
+
+.profile__user-form-button
+  display block
+  margin-left auto
+  padding 6px 18px
+
+.profile__user-personal-info
+  .cabinet-form
+    margin-bottom 0
+
+.profile__user-form-subtitle
+  font-size 12px
+  font-weight 300
+  line-height normal
+  margin-bottom 23px
+
+.profile__user-form-qr
+  text-align center
+  margin-bottom 21px
+
+  &-code
+    display inline-block
+    font-size 12px
+    font-weight 500
+    line-height normal
+    margin-bottom 8px
+
+  &-img
+    width 120px
+    height 120px
+    margin 0 auto
+
+.profile__user-personal-info
+  .profile__tabs-content
+    .form-cabinet-item--switch
+      justify-content center
+      margin-top 40px
+      margin-bottom 33px
+
+      .switch-text
+        font-size 16px
+        font-style normal
+        font-weight 400
+
+@import "media/_media-profile.styl"

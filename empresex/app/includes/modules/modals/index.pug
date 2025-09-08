@@ -1,0 +1,60 @@
+mixin modal-login(data) 
+  .modal.modal-connect#modal-login
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg" alt="Close")
+    .modal-login-inner
+      +form
+        h3.contact-form-title Log in
+        +input-email("EMAIL")
+        +input-password("PASSWORD")
+        a(href="#" data-izimodal-open="#modal-restore").modal-forgot-password
+          | Forgot your password? 
+        +button(type="submit")
+          | Log In
+      p.modal-login
+        | Do not have account? <a href="#" data-izimodal-open="#modal-signup">Sign up</a>
+
+mixin modal-restore(data) 
+  .modal.modal-connect#modal-restore
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg" alt="Close")
+    .modal-restore-inner
+      +form
+        h3.contact-form-title Password recovery
+        p.modal-subtitle We will send you a link to your e-mail address to reset your password.
+        +input-email("EMAIL")
+        +input-password("PASSWORD")
+        +button(type="submit")
+          | Recover
+      .modal-restore-login
+        p.modal-login
+          a(href="#" data-izimodal-open="#modal-login") Log In
+        p.modal-login
+          a(href="#" data-izimodal-open="#modal-signup") Create an account 
+
+mixin modal-signup(data) 
+  .modal.modal-connect#modal-signup
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg" alt="Close")
+    .modal-signup-inner
+      +form
+        h3.contact-form-title Sign up
+        +input-name("Full name")
+        +input-last-name("Full name")
+        +input-email("EMAIL")
+        +input-phone("Phone number")
+        +input-password("PASSWORD")
+        +input-password-confirm("Password confirmation")
+        +input-checkbox("I accept the Affiliate Terms & Conditions", {id: "terms"})
+        +button(type="submit")
+          | Sign Up
+
+      p.modal-login
+        | Already registered? <a href="#" data-izimodal-open="#modal-login">Login</a>
+
+mixin modal-test(data) 
+  .modal.modal-connect#modal-test
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg" alt="Close")
+    .modal-signup-inner
+      | test
