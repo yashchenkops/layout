@@ -1,0 +1,11 @@
+@media (max-width: 575px) {
+  .modal{
+    margin-top: 0;
+    &__content{
+      display: block;
+    }
+    &__img{
+      margin-bottom: 30px;
+    }
+  }
+}
